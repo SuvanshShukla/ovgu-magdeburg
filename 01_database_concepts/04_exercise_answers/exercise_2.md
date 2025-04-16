@@ -12,7 +12,7 @@
 > 8. Synchronisation: like keeping your watch's time up-to-date
 > 9. Recovery: an example of recovery would be putting a vase back together by gluing all the broken pieces.
 
-## 2. Explain the terms database model and database schema! How are these two terms related? What is the difference between a database schema and a data- base? Give examples.
+## 2. Explain the terms database model and database schema! How are these two terms related? What is the difference between a database schema and a database? Give examples.
 
 > A database model is a way to represent structure in data that relates to the real world. A database schema defines the blueprint of what the database is made of, like what fields, their types etc.
 > These terms are related in design 
