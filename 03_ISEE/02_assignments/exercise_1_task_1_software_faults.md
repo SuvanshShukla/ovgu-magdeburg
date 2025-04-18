@@ -24,5 +24,14 @@ Such outages and disruptions not only had an economic effect, they may very well
 
 ### How this may have been avoided
 
-Such faults can rarely be attributed to single root causes. Only systemic mistakes and blindspots can really let such a far reaching fault go through the cracks of a fairly large and [competent company](https://www.crowdstrike.com/en-us/blog/crowdstrike-wins-2025-google-cloud-security-partner-of-the-year-award/) like crowdstrike
+Such faults can rarely be attributed to single root causes. Only systemic mistakes and blindspots can really let such a far reaching fault go through the cracks of a fairly large and [competent company](https://www.crowdstrike.com/en-us/blog/crowdstrike-wins-2025-google-cloud-security-partner-of-the-year-award/) like crowdstrike.
 
+In my opinion, better and more thorough testing protocols could have been added to catch such faults before shipping or deploying the changes. Better and more thorough code reviews should also be done to catch such possibilities during the development stage itself.
+
+Certain steps can also be taken on the consumer part of the equation as well. Where airline companies can set policies to personally test and vet all updates before allowing the on their own devices to pull and incorporate the new changes. 
+
+### Special considerations
+
+The software CrowdStrike Falcon is fairly well made an [doesn't have a lot of competition](https://www.sangfor.com/blog/cybersecurity/15-top-endpoint-detection-and-response-edr-solutions#:~:text=to%20choose%20from.-,3.%20crowdstrike%20falcon,-Widely%20known%20as) in the field it operates or in the features it provides. I believe that working on alternatives to such kinds of software and perhaps making them open source could provide consumers more robust and cheaper alternatives.
+
+Although [privileged access](https://theconversation.com/what-is-crowdstrike-falcon-and-what-does-it-do-is-my-computer-safe-235123) or kernel level access may be necessary for software such as crowdstrike falcon to function properly we can also consider revoking kernel level access and maybe incorporate it's basic functionality in the OS instead. This would reduces chances of such faults ever occurring due to third party software. 
