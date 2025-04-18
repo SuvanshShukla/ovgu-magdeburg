@@ -11,4 +11,5 @@ The process model that would be most suitable for this scenario would be the "Sp
 
 ## Task II - Wildlife camera
 
+The process model that would be the most suitable for such a project would be the waterfall model. Since only a single person would be working on the project there would be no need for extensive and complicated organization. Since the design of the camera is already done and the requirements of usage are also specified and not subject to change a waterfall model's focus on separate stages would enable streamlined work and there would be no fear of re-work or having to trace the previous stages. The camera being primarily for wildlife photography would be placed in a very remote location so new feature deployments would be rare if any at all. This would meant that the step-by-step sequence of work would likely not be interrupted. Finally since the camera and software would need to work continuously for the next six months, maintenance of the developed software would also play an imporant role, this is something that the waterfall model would be extremely suitable for. 
 
