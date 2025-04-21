@@ -33,4 +33,31 @@ ALTER TABLE student ADD age INT NOT NULL CHECK (age>=0);
 
 ## 3. Given the example database in the appendix, create the tables for the relations WINE and PRODUCER. The default value for COLOR is RED. Moreover, the uniqueness of the growing area shall be granted.
 
+```sql
+CREATE TABLE wine (
+    name VARCHAR(100),
+    color VARCHAR(100),
+    year INT,
+    vinyard VARCHAR(100),
+    PRIMARY KEY (name),
+    FOREIGN KEY (vinyard) REFERENCES PRODUCER(vinyard)
+);
 
+CREATE TABLE producer (
+    vinyard VARCHAR(100),
+    area VARCHAR(100),
+    region VARCHAR(100),
+    PRIMARY KEY (vinyard)
+);
+```
+
+## 4. Use SQL to create a relation for football players! Football players have a first and a last name, a birth date, a shirt number and a position, where they are playing. The position is restricted to following values: Goalkeeper, defence, forwards and midfield. Prepare two different solutions to check the value domain of the position attribute.
+
+```sql
+CREATE TABLE players (
+    f_name VARCHAR(100),
+    l_name VARCHAR(100),
+    dob DATE,
+    s_num INT,
+    position VARCHAR()
+);
