@@ -119,3 +119,52 @@ insert into producer values
 ('M\"uller', 'Rheingau', 'Hessen'),
 ('Bighorn', 'Santa Barbara', 'Kalifornien');
 ```
+
+## Complete queries that I pasted in pgAdmin
+
+```sql
+-- CREATE TABLE producer (
+--     vinyard VARCHAR(100),
+--     area VARCHAR(100) UNIQUE,
+--     region VARCHAR(100),
+--     PRIMARY KEY (vinyard)
+-- );
+
+-- CREATE TABLE wine (
+--     name VARCHAR(100),
+--     color VARCHAR(100) DEFAULT 'RED',
+--     year INT,
+--     vinyard VARCHAR(100),
+--     PRIMARY KEY (name),
+--     FOREIGN KEY (vinyard) REFERENCES PRODUCER(vinyard)
+-- );
+
+select * from producer;
+select * from wine;
+
+-- insert into wine values
+-- ('La Rose Grand Cru', 'RED', 1998, 'Ch\^ateau La Rose'),
+-- ('Creek Shiraz', 'RED', 2003, 'Creek'),
+-- ('Zinfandel', 'red', 2004, 'Helena'),
+-- ('Pinot Noir', 'red', 2001, 'Creek'),
+-- ('Merlot', 'red', 1999, 'Helena'),
+-- ('Riesling Reserve', 'white', 1999, 'M\"uller'),
+-- ('Chardonnay', 'white', 2002, 'Bighorn');
+
+-- insert into producer values
+-- ('Creek', 'Barossa Valley', 'South Australia'),
+-- ('Helena', 'Napa Valley', 'Kalifornien'),
+-- ('Ch\^ateau La Rose', 'Saint-Emilion', 'Bordeaux'),
+-- ('Ch\^ateau La Pointe', 'Pomerol', 'Bordeaux'),
+-- ('M\"uller', 'Rheingau', 'Hessen'),
+-- ('Bighorn', 'Santa Barbara', 'Kalifornien');
+
+-- alter table wine rename vinyard to vineyard;
+-- alter table producer drop constraint "producer_area_key";
+insert into wine (name, year, vineyard) values ('Merlot', 2009, (select vineyard from producer where region ='South Austrailia'));
+INSERT INTO producer (vineyard, area, region) VALUES ('Johannishof', 'Rheingau', 'Hessen');
+
+
+-- truncate table wine;
+-- drop table producer cascade;
+```
