@@ -6,6 +6,7 @@
 > 2. Operations: sowing seeds in a farm (insertion)
 > 3. Catalog: nutritional information chart on food products
 > 4. User views: chessboard, users sitting on both sides see the chess pieces from different perspectives but their coordinates represent the same locations regardless of side
+> 4.1. a better example would be a department store, where a simple worker would only be able to see the stock of the department store he works at. The regional manager of the department store chain would be able to see the stock of all the department stores of all the stores under his region.
 > 5. Integrity: the age of a person (cannot be negative)
 > 6. Security: passwords, codes and encryption keys
 > 7. Transactions: bank transactions, 
@@ -17,6 +18,11 @@
 > A database model is a way to represent structure in data that relates to the real world. A database schema defines the blueprint of what the database is made of, like what fields, their types etc.
 > These terms are related in design 
 
+The more accurate/better answer after the exercise class:
+
+Database models explain how the entities would be related to each other. The schema would be an implementation of the model. There are different database models like relational, object oriented, graph & XML.   
+The model is therefore conceptual. The schema is representational.   
+No-SQL would also be a database model.
 
 ## 3. Explain the 3-Level-Schema-Architecture!
 
