@@ -2,7 +2,7 @@
 
 ## 1. What is meant by classification? Explain the two phases of classification.
 
-Classification reflects what makes the instances in each class different from the instances in the other classes.
+Classification reflects what makes the instances in each class different from the instances in the other classes.   
 There are two phases of classification learning and query phase.
 
 ## 2. Please provide a real-world example of a classification problem
