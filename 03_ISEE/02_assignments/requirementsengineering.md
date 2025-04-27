@@ -64,4 +64,10 @@ The four phases of requirements analysis are:
 
 ### 2.b What is done in each of the phases?
 
+**Identifying stakeholders**: this phase involves meeting with all the relevant persons that may be involved with the development or deployment of the project.
 
+**Define project goals**: This phase involves setting all the relevant goals that need to be achieved for complete and timely delivery of the project.
+
+**Get requirements from stakeholders**: This phase involves defining the requirements that would be actively worked on during the development lifecycle.
+
+**Categorize requirements**: This phase involves organizing and grouping similar requirements for better organized workflow for iterative development.
