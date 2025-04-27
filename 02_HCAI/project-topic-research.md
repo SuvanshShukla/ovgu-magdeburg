@@ -8,7 +8,7 @@ started this on 24/04/2025
 - Main challenges faced by non-techincal people when writing prompts
 - Why are some prompts more effective than others
 
-## Chosen Topic - Evaluation of potential threats for users in HCAI systems
+## Chosen Domain - Evaluation of potential threats for users in HCAI systems
 
 Big idea question: "What are some possible ways AI could be abused or exploited by bad actors"
 
@@ -33,7 +33,8 @@ Possible sub-topics for discussion:
 
 ### Possible papers to read for the above domain
 
-- https://arxiv.org/pdf/2306.05499
-- https://arxiv.org/pdf/2302.12173
-- https://arxiv.org/pdf/2209.02128
+- [Prompt Injection attack against LLM-integrated Applications](https://arxiv.org/pdf/2306.05499)
+- [Not what you’ve signed up for: Compromising Real-World
+LLM-Integrated Applications with Indirect Prompt Injection](https://arxiv.org/pdf/2302.12173)
+- [EVALUATING THE SUSCEPTIBILITY OF PRE-TRAINED LANGUAGE MODELS VIA HANDCRAFTED ADVERSARIAL EXAMPLES](https://arxiv.org/pdf/2209.02128)
 
