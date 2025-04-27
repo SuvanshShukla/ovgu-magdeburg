@@ -1,5 +1,7 @@
 # Task 2.1 - Requirements Engineering
 
+Written By: Suvansh Shukla (matriculation number: 256245)
+
 ## Task 1 - Requirements
 
 ### 1. What is a requirements analysis?
