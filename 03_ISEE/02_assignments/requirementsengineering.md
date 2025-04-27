@@ -73,3 +73,4 @@ The four phases of requirements analysis are:
 **Get requirements from stakeholders**: This phase involves defining the requirements that would be actively worked on during the development lifecycle.
 
 **Categorize requirements**: This phase involves organizing and grouping similar requirements for better organized workflow for iterative development.
+
