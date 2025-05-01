@@ -31,7 +31,7 @@ Though both terms deal with requirements, they do have some differences. Require
 
 ### 5. What are functional and non-functional requirements? Give 3 examples each that were not mentioned in the lecture!
 
-Functional requirements are requirements that the client or end-user has explicitly demanded and are vital for application/project delivery. Meanwhile non-functional requirements are requirements that specify how the functional requirements should perform and how they would achieve their intended purpose.
+Functional requirements are requirements that the client or end-user has explicitly demanded and are vital for application/project delivery. Meanwhile non-functional requirements are requirements that specify how the functional requirements should perform and how they would achieve their intended purpose.  
 
 Examples of functional requirements for a fantasy RPG video game:
 
@@ -39,7 +39,7 @@ Examples of functional requirements for a fantasy RPG video game:
 - the user should be able to equip weapons
 - the user should be able to cast spells
 
-Examples of non-functional requirements for the same game:
+Examples of non-functional requirements for the same game:  
 
 - the game world should load quickly
 - the game should not be buggy
@@ -47,9 +47,9 @@ Examples of non-functional requirements for the same game:
 
 ### 6. What are stakeholders and how can you differentiate them from customers and users?
 
-Stakeholders are members of the team that have some stake in the completion of the project even though they may not directly be involved int the development lifecycle.
+Stakeholders are members of the team that have some legitimate interest in the completion of the project, even though they may not directly be involved in the development lifecycle.   
 
-They are different from customers and users as they are not the intended audience or target group for whom the application is being developed. 
+They are different from customers and users as they are not necessarily the intended audience or target group for whom the application is being developed. They simply have a part (direct or indirect) to play in the completion of the project.
 
 ## Task 2 - Requirements analysis
 
@@ -59,18 +59,18 @@ In the lecture, 4 phases of requirements analysis were mentioned.
 
 The four phases of requirements analysis are:
 
-1. Identify key stakeholders
-2. Define project goals
-3. Get requirements from stakeholders
-4. Categorize requirements
+1. Eliciting
+2. Documenting
+3. Validating
+4. Managing
 
 ### 2.b What is done in each of the phases?
 
-**Identifying stakeholders**: this phase involves meeting with all the relevant persons that may be involved with the development or deployment of the project.
+**Eliciting**: This phase involves actually obtaining and getting the requirements from stakeholders. This is important to resolve any potential conflicts among stakeholders   
 
-**Define project goals**: This phase involves setting all the relevant goals that need to be achieved for complete and timely delivery of the project.
+**Documenting**: In this phase we write down or save whatever requirements we may have collected so far. This is done to keep store of what requirements are there and what they are.   
 
-**Get requirements from stakeholders**: This phase involves defining the requirements that would be actively worked on during the development lifecycle.
+**Validating**: After storing all the collected rquirements it is necessary to be sure that these are all valid and need implementation. The quality of the documented requirements is also checked in this phase.  
 
-**Categorize requirements**: This phase involves organizing and grouping similar requirements for better organized workflow for iterative development.
+**Managing**: This phase involves structuring, organizing and assigning the relevant requirements to the relvant roles that will work on each requirement.
 
