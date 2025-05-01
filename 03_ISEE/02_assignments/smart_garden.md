@@ -6,29 +6,29 @@ Written By: Suvansh Shukla (matriculation number: 256245)
 
 1. Segregation of area:
 
-Different areas in the garden bed should be separated appropriately for the different kinds of plants that will be grown.   
-There should be enough area to include vegetables, fruits and flowers.
+Different areas in the garden bed should be separated appropriately for the different kinds of plants that will be grown.       
+There should be enough area to include vegetables, fruits and flowers.  
 
 2. Monitor Solar Radiation:  
 
-There should be a cap on the amount of solar radiation hitting the soil of the garden bed.  
+There should be a cap on the amount of solar radiation hitting the soil of the garden bed.      
 Regulation of the solar radiation would be required to adapt the sunshade to cover or uncover the garden bed.   
 
 3. Soil water content management:
 
-Water level of the soil needs to be maintained at an optimum level.     
+Water level of the soil must be maintained at an optimum level.     
 There needs to be an alert if the level of water is too low in a certain area of the garden bed.
 
 4. WLAN connectivity: 
 
-WLAN connectivity is vital to receive all the relevant alerts related to water level and solar radiation.
-Other weather phenomena related alerts could also be included later on.
+WLAN connectivity must be present so that we can receive all the relevant alerts related to water level and solar radiation.    
+Other weather phenomena related alerts could also be included later on.     
 
 5. Monitor plant temperature:
 
-Temperture monitoring can be done via simple thermometer attached to the side of the garden bed.
+Temperture monitoring can be done via simple thermometer attached to the side of the garden bed.    
 It would then be hooked upto some sensor which would electronically send alerts to us over WLAN.    
-These alerts could be via email, SMS, etc. and would inform us about sudden changes in temperature or extremes in temperature during the summer and winter seasons.
+These alerts could be via email, SMS, etc. and would inform us about sudden changes in temperature or extremes in temperature during the summer and winter seasons.     
 
 ### The following are the 3 non-functional requirements of the Smart Home project
 
