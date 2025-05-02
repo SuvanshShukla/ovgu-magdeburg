@@ -55,3 +55,27 @@ Cons: I have found 2~3 papers that are on a similar topic
 - https://www.sciencedirect.com/science/article/abs/pii/S0007681318300387
 - https://www.sciencedirect.com/science/article/pii/S0963868723000185
 - https://dl.acm.org/doi/fullHtml/10.1145/3565698.3565773
+
+## Slide contents
+
+- three papers for review, summarize each and mention their methodology
+- take down any new and useful tools
+- use the HCAI templates
+
+1. Title slide, names of both persons
+2. Content (papers reviewed, tools used, useful in HCAI)
+3. Introduce our topic
+4. Papers referrenced and reviewed
+5. Methodology/approach used to pursue our project topic
+6. Any extra tools we may be using (overleaf, google surveys, latex, datasets)
+7. HCAI principles involved in our topic
+8. Thank you slide/ questions
+
+---
+
+## 5. Methodology/Approach
+
+1. Review papers related 
+2. Survey people who use chatbots/LLMs
+3. Do case studies
+
