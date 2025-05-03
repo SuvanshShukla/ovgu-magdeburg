@@ -73,4 +73,20 @@ join product;
 
 This means to fetch all rows and columns from tables, customer and orders by matching `Cid` then join orders and line items by matching `Oid` then join line item and product by matching `Pid`.
 
+## 4. Given the relational schema in task 3. Express the following queries using relational algebra!
+
+### (a) Get the names of all customers.
+
+π name (customer)
+
+### (b) Get all orders of customer Meier.
+
+σ 
+
+### (c) List all products that have not been sold on 13.05.2003.
+
+σ(product) - σ date=13.05.2003 (product)
+
+### (d) List all products that dealer Meier sold to customer Schulze.
+
 
