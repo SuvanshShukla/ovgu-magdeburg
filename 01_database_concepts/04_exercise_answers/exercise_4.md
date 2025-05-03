@@ -81,7 +81,7 @@ This means to fetch all rows and columns from tables, customer and orders by mat
 
 ### (b) Get all orders of customer Meier.
 
-σ 
+orders ⨝ (σ name=Meier (customer)) 
 
 ### (c) List all products that have not been sold on 13.05.2003.
 
@@ -89,4 +89,14 @@ This means to fetch all rows and columns from tables, customer and orders by mat
 
 ### (d) List all products that dealer Meier sold to customer Schulze.
 
+products ⨝ line_item ⨝ ((σ name=Meier (dealer)) ⨝ orders ⨝ (σ name=Schulze (customer)))
 
+products ⨝ line_item ⨝ (σ did=(π did (σ name=Meier (dealer)))(orders) ∪ σ cid=(π cid (σ name=Schulze (customer)))(orders))
+
+```sql
+select * from products 
+join line_item 
+join orders
+where orders.did in (select did from dealer where name = 'Meier')
+and orders.cid in (select cid from customer where name = 'Schulze');
+```
