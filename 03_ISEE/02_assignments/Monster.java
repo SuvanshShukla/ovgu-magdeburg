@@ -1,0 +1,65 @@
+//Submission for Exercise 2 Task 4: Class Monster
+//Author: Suvansh Shukla
+//Matriculation Number: 256245
+public class Monster implements IMonster{
+
+    String name;
+    float hp;
+    float weight;
+    float mult;
+    int attack;
+
+    /**
+     * Reduce hp by damage taken.
+     * Damage taken is reduced if weight of the monster is greater than 13.7kg
+     * @param damage any float
+     */
+    @Override
+    public void receiveDamage(float damage) {
+        if (hp > 0.00) {
+            if (weight > 13.37) {
+                damage = (float) (damage - (0.2 * damage));
+            }
+            hp = hp - damage;
+        }
+    }
+
+    /**
+     * Strengthens or weakens the attack based on mult value
+     * @param mult - float between -2.0 & 5.0
+     */
+    @Override
+    public void augmentAttack(float mult){
+        if (mult > -2.0f && mult <= 5.0) {
+            attack = (int) (attack * mult);
+        }
+    }
+
+    /**
+     * Constructs an object of the monster class
+     * @param name name of the monster
+     * @param hp health points of the monster, cannot exceed 1
+     * @param weight weight of the monster in kg, must be at least 100g
+     * @param attack attack value, must be an int
+     * @param mult attack value multiplier, must be between -2.0 and 5.0
+     */
+    public Monster(String name, float hp, float weight, int attack, float mult) {
+
+        if (weight <0.1) {
+            this.weight = 0.1f;
+        } else {
+            this.weight = weight;
+        }
+
+        if(hp > 1) {
+            this.hp = 1;
+        } else {
+            this.hp = hp;
+        }
+
+        this.name = name;
+        this.attack = attack;
+        this.mult = mult;
+    }
+}
+
