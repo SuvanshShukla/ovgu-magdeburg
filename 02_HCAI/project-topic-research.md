@@ -112,3 +112,22 @@ Cons: I have found 2~3 papers that are on a similar topic
 
 - This paper tries to establish and review guidelines that should be present between usage of AI by humans
 - It helps highlight that unrestricted or unguided usage is not as effective nor trustworthy as following a framework
+
+--- 
+
+## Slide 7: HCAI Principles Involved in our topic
+
+Our topic is relevant to the following mandatory components:
+
+1. HCAI Aspect of Fairness
+    Usage of AI in an undisclosed and deceptive manner would increase plagiarism and risk integrity
+
+2. HCAI Aspect of Trustworthiness
+    Usage of AI may increase fraud and enable malicious intent in academic and professional environments
+
+3. User Perspective of a real world scenario
+    We would be dealing with real world usage of AI by users of all fields and backgrounds
+
+4. User Perspective of human interaction
+    We would be looking into the motivations of people behind usage of AI for misuse, fraud and deception
+
