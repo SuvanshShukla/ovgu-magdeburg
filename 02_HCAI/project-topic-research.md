@@ -75,7 +75,36 @@ Cons: I have found 2~3 papers that are on a similar topic
 
 ## 5. Methodology/Approach
 
-1. Review papers related 
-2. Survey people who use chatbots/LLMs
-3. Do case studies
+1. Literature Review of papers regarding AI dependence 
+2. Survey people who use chatbots/LLMs for real world data
+3. Search for case studies on AI dependence
+4. Study HAI guidelines introduced by Google, Microsoft, IBM etc.
+5. Review of regulations for use of AI in competency assessments (like interviews, exams, etc.)
 
+### Doe, J., & Smith, J. (2023). Academic self-efficacy and dependence on artificial intelligence in a sample of university students. ResearchGate.
+
+[LINK](https://www.researchgate.net/publication/389312740_Academic_self-efficacy_and_dependence_on_artificial_intelligence_in_a_sample_of_university_studentsj)
+
+- Basically this paper says that students that are better at studies will be less dependent on AI
+- helps put into prespective how the inherent capability of individuals makes them more likely to reach out to AI for assisstance.
+
+### Owen, A., & M, G. (2023). Ethical considerations in artificial intelligence and the growing dependence on data: Challenges, implications, and future perspectives. ResearchGate.
+
+[LINK](https://www.researchgate.net/publication/390128547_Ethical_Considerations_in_Artificial_Intelligence_and_the_Growing_Dependence_on_Data_Challenges_Implications_and_Future_Perspectives)
+
+- This paper deals with the ethical dilema of using AI, as it must be trained on the intellectual work of others
+- It tries to highlight uses of known and unknown breaches of privacy, bias, and transparency
+
+### Teresa H., Nina P., & Oliver P. (2023) Ethical management of human-AI interaction: Theory development review. ScienceDirect.
+
+[LINK](https://www.sciencedirect.com/science/article/pii/S0963868723000185)
+
+- This paper deals with who would get the final blame for the consequences of AI use
+- It helps shed light on how difficult it is to fix accountability when a mistake or fault occurs with AI assisted work
+
+### Fan Li & Yuan Lu (2024) Human-AI interaction and ethics of AI: how well are we following the guidelines. ACM.
+
+[LINK](https://dl.acm.org/doi/10.1145/3565698.3565773)
+
+- This paper tries to establish and review guidelines that should be present between usage of AI by humans
+- It helps highlight that unrestricted or unguided usage is not as effective nor trustworthy as following a framework
