@@ -81,6 +81,10 @@ Cons: I have found 2~3 papers that are on a similar topic
 4. Study HAI guidelines introduced by Google, Microsoft, IBM etc.
 5. Review of regulations for use of AI in competency assessments (like interviews, exams, etc.)
 
+---
+
+## Contents for Slide 4: Papers referrenced and reviewed 
+
 ### Doe, J., & Smith, J. (2023). Academic self-efficacy and dependence on artificial intelligence in a sample of university students. ResearchGate.
 
 [LINK](https://www.researchgate.net/publication/389312740_Academic_self-efficacy_and_dependence_on_artificial_intelligence_in_a_sample_of_university_studentsj)
