@@ -4,25 +4,25 @@
 public class Monster implements IMonster{
 
     String name;
-    float maxHp;
-    float hp;
+    int maxHp;
+    int hp;
     float weight;
     float mult;
     int attack;
 
     @Override
     public String getName() {
-        return name;
+        return this.name;
     }
 
     @Override
-    public float getHealth() {
-        return hp;
+    public int getHealth() {
+        return Math.max(this.hp, 0);
     }
 
     @Override
-    public float getMaxHealth() {
-        return maxHp;
+    public int getMaxHealth() {
+        return Math.max(this.maxHp, 1);
     }
 
     /**
@@ -33,22 +33,22 @@ public class Monster implements IMonster{
      */
     @Override
     public boolean isAlive() {
-        return hp > 0;
+        return this.hp > 0;
     }
 
     @Override
-    public float getBaseAttack() {
-        return attack;
+    public int getBaseAttack() {
+        return this.attack;
     }
 
     @Override
     public int getAttack() {
-        return attack;
+        return (int) (this.attack * this.mult);
     }
 
     @Override
     public float getWeight() {
-        return weight;
+        return this.weight;
     }
 
     /**
@@ -58,8 +58,12 @@ public class Monster implements IMonster{
      */
     @Override
     public void setAttackMultiplier(float multiplier) {
-        if (multiplier >= -2.0f && multiplier <= 5.0f) {
-            mult = multiplier;
+        if (multiplier > 5.0f) {
+            this.mult = 5.0f;
+        } else if (multiplier < -2.0f) {
+            this.mult = -2.0f;
+        } else {
+            this.mult = multiplier;
         }
     }
 
@@ -69,23 +73,15 @@ public class Monster implements IMonster{
      * @param damage any float
      */
     @Override
-    public void receiveDamage(float damage) {
-        if (hp > 0.00) {
-            if (weight > 13.37) {
-                damage = (float) (damage - (0.2 * damage));
-            }
-            hp = hp - damage;
+    public void receiveDamage(int damage) {
+        if (this.weight > 13.37) {
+            damage = (int) (damage * 0.8f);
         }
-    }
-
-    /**
-     * Strengthens or weakens the attack based on mult value
-     * @param mult - float between -2.0 & 5.0
-     */
-    @Override
-    public void augmentAttack(float mult){
-        if (mult > -2.0f && mult <= 5.0) {
-            attack = (int) (attack * mult);
+        this.hp = this.hp - damage;
+        if (this.hp < 0){
+            this.hp = 0;
+        } else if (this.hp > this.maxHp) {
+           this.hp = maxHp;
         }
     }
 
@@ -97,7 +93,7 @@ public class Monster implements IMonster{
      * @param attack attack value, must be an int
      * @param mult attack value multiplier, must be between -2.0 and 5.0
      */
-    public Monster(String name, float maxHp, float weight, int attack, float mult) {
+    public Monster(String name, int maxHp, float weight, int attack, float mult) {
 
         if (weight <0.1) {
             this.weight = 0.1f;
@@ -105,13 +101,15 @@ public class Monster implements IMonster{
             this.weight = weight;
         }
 
-        if (maxHp < 1) {
-            this.maxHp = 1;
-        } else {
-            this.maxHp = maxHp;
-        }
+        this.maxHp = Math.max(maxHp, 1);
 
-        if (mult >= -2.0f && mult <= 5.0f) {
+        this.hp = maxHp;
+
+        if (mult > 5.0f) {
+            this.mult = 5.0f;
+        } else if (mult < -2.0f) {
+            this.mult = -2.0f;
+        } else {
             this.mult = mult;
         }
 
