@@ -36,9 +36,25 @@ create table made_from (
 
 `select oid from line_item;` -> Get all order IDs from line item table.
 
+| oid | 
+|-----|
+|  3  |
+|  3  |
+|  5  |
+|  7  |
+|  7  |
+|  10 |
+|  10 |
+|  10 |
+
 ### (b) π Name (Dealer ⨝ Orders)
 
 `select name from dealer join orders;` -> Get all names from the result when we fetch all rows from the dealer table that has the same `Did` as the rows in the orders table.
+
+| name      |
+|-----------|
+| G.Hals    | 
+| P.Schmidt |
 
 ### (c) π Did (Dealer) - π Did (offers)
 
@@ -50,6 +66,10 @@ where did not in (
 ```
 
 This means to get all the Did values from the dealer table that are not present in the offers table.
+
+| did |
+|-----|
+|  13 |
 
 ### (d) π Date ((σ Date<01.03.2003 (Orders) ∪ (σ Date>01.05.2003 (Orders))))
 
@@ -63,6 +83,12 @@ where date > to_date(01.05.2003);
 
 This means to fetch all the dates from the orders table where orders are before 01.03.2003 and after 01.05.2003.
 
+| date       |
+|------------|
+| 01.12.2002 |
+| 13.05.2003 |
+| 01.09.2003 |
+
 ### (e) Customer ⨝ Orders ⨝ line_item ⨝ Product
 
 ```sql
@@ -72,6 +98,20 @@ join product;
 ```
 
 This means to fetch all rows and columns from tables, customer and orders by matching `Cid` then join orders and line items by matching `Oid` then join line item and product by matching `Pid`.
+
+| cid | name       |
+|-----|------------|
+| 17  | A.Meier    |
+| 17  | A.Meier    |
+| 17  | A.Meier    |
+| 17  | A.Meier    |
+| 17  | A.Meier    |
+| 23  | I.Schulze  |
+| 17  | A.Meier    |
+| 17  | A.Meier    |
+| 13  | M.Mueller  |
+| 13  | M.Mueller  |
+| 13  | M.Mueller  |
 
 ## 4. Given the relational schema in task 3. Express the following queries using relational algebra!
 
