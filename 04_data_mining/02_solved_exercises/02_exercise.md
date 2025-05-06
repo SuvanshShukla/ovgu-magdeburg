@@ -40,6 +40,10 @@ P(A|C) = 0.5
 
 This means there is only a 50% chance that a person who has tested positive is sick.
 
+> [!Note]
+> Look at an additional question in the book. Section `5.3.1 Bayes Theorem`.
+> It will help you understand how to apply Bayes Theorem.
+
 ## 2. How does a Naïve Bayes classifier work? Explain using the underlying formula. Why is it “naive”?
 
 
