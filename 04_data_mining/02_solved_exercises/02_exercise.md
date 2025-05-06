@@ -46,4 +46,27 @@ This means there is only a 50% chance that a person who has tested positive is s
 
 ## 2. How does a Naïve Bayes classifier work? Explain using the underlying formula. Why is it “naive”?
 
+The Naïve Bayes classifier works by first assuming that there is co-independence between the all the attributes,   
+given that the class label `y`. Assuming that the set of all `x` attributes is `X` the probability that a new `x` would be under `y` as well would be represented by `P(Y|X)`. 
+
+
+Which reads like this: the probability that a new set of attributes `X` would be classified under the class label `Y` knowing that previous sets of `x` were also classified `y`.
+
+The classification formula for this is:
+
+```
+P(Y|X) = ( P(Y) * ⨅ d, i-1 P(Xi|Y) ) / P(X)
+```
+
+What the above formula means is that we try to calculate the total probability for each `X` that has been classified as `Y`.    
+
+Since `P(X)` is constant here for every `Y`, we just need to focus on maximizing `⨅ d, i-1 P(Xi|Y)`.
+
+Normally we would have to calculate the conditional probability of each combination of `x`. But this enables us to simply calculate each `Xi` for the class `Y`. This is more practical.
+
+## 3. How does the Naïve Bayes classifier handle numeric attributes? Give the formula.
+
+
+
+## 4. For the dataset provided in Table 1, compute the conditional probabilities of all attribute values, given the target attribute Defaulted Borrower (DB=Y and DB=N). Classify the following instance according to the the Naïve Bayes Classifier without handling zero conditional probabilities: X = (Home Owner = N, Marital Status = Married, Annual Income = 90)
 
