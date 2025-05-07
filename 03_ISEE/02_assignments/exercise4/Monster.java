@@ -14,7 +14,7 @@ public class Monster implements IMonster {
   private float atk_multplier = 1.0f;
 
   // --------------------------------------------------------------- //
-  public Monster(String name, int max_health, float weight, int base_atck,
+  public Monster(String name, int max_health,  int base_atck, float weight,
                  float multiplier) {
     // --- init final members
     this.name = name;
