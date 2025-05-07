@@ -32,9 +32,9 @@ public class MonsterLoader {
             try {
               Monster monster = new Monster(
                         lines.get(i + 1).replaceFirst("name ", ""),
-                        (int) Float.parseFloat(lines.get(i + 2).replaceFirst("maxHP ", "")),
-                        Float.parseFloat(lines.get(i + 3).replaceFirst("attack ", "")),
-                        (int) Float.parseFloat(lines.get(i + 4).replaceFirst("weight ", "")),
+                        Integer.parseInt(lines.get(i + 2).replaceFirst("maxHP ", "")),
+                        Integer.parseInt(lines.get(i + 3).replaceFirst("attack ", "")),
+                        Float.parseFloat(lines.get(i + 4).replaceFirst("weight ", "")),
                         Float.parseFloat(lines.get(i + 5).replaceFirst("multi ", ""))
                 );
               monsters.add(monster);
