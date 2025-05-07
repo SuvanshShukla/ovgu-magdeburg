@@ -1,12 +1,12 @@
 /* ToDo: import standard java libraries you need e.g. java.io, java.utils, ... */
+//Author: Suvansh Shukla
+//Matriculation Number: 256245
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class MonsterLoader {
@@ -27,19 +27,37 @@ public class MonsterLoader {
     try {
       List<String> lines = Files.readAllLines(filePath);
 
-      for (String i : lines){
-        System.out.println(i);
+      for (int i=0; i<lines.size(); i++){
+        if (!lines.get(i).isBlank() && lines.get(i).contains("Monster")) {
+          Monster monster = new Monster(
+                  lines.get(i+1).replaceFirst("name ",""),
+                  (int) Float.parseFloat(lines.get(i+2).replaceFirst("maxHP ","")),
+                  Float.parseFloat(lines.get(i+3).replaceFirst("attack ","")),
+                  (int) Float.parseFloat(lines.get(i+4).replaceFirst("weight ","")),
+                  Float.parseFloat(lines.get(i+5).replaceFirst("multi ",""))
+          );
+          monsters.add(monster);
+        }
       }
+
     } catch (IOException e) {
       System.out.println("File Not Found.");
     }
 
-      return Collections.emptyList();
+      return monsters;
   }
 
   // --------------------------------------------------------------- //
   public static void main(String[] args) {
-    /* ToDo: test your code */
-    loadMonsterFile("./monster_ok.txt");
+
+    List<Monster> loadedMonsters = loadMonsterFile("./monster_ok.txt");
+    List<Monster> failedMonsters = loadMonsterFile("./monster_fail.txt");
+
+    loadedMonsters.addAll(failedMonsters);
+
+    for (Monster monster : loadedMonsters){
+      System.out.println(monster.toString());
+    }
+
   }
 }
