@@ -29,20 +29,20 @@ public class MonsterLoader {
 
       for (int i=0; i<lines.size(); i++){
         if (!lines.get(i).isBlank() && lines.get(i).contains("Monster")) {
-          Monster monster = new Monster(
-                  lines.get(i+1).replaceFirst("name ",""),
-                  (int) Float.parseFloat(lines.get(i+2).replaceFirst("maxHP ","")),
-                  Float.parseFloat(lines.get(i+3).replaceFirst("attack ","")),
-                  (int) Float.parseFloat(lines.get(i+4).replaceFirst("weight ","")),
-                  Float.parseFloat(lines.get(i+5).replaceFirst("multi ",""))
-          );
-          monsters.add(monster);
+            try {
+              Monster monster = new Monster(
+                        lines.get(i + 1).replaceFirst("name ", ""),
+                        (int) Float.parseFloat(lines.get(i + 2).replaceFirst("maxHP ", "")),
+                        Float.parseFloat(lines.get(i + 3).replaceFirst("attack ", "")),
+                        (int) Float.parseFloat(lines.get(i + 4).replaceFirst("weight ", "")),
+                        Float.parseFloat(lines.get(i + 5).replaceFirst("multi ", ""))
+                );
+              monsters.add(monster);
+            } catch (Exception ignored) { }
         }
       }
 
-    } catch (IOException e) {
-      System.out.println("File Not Found.");
-    }
+    } catch (IOException ignored) { }
 
       return monsters;
   }
@@ -53,9 +53,11 @@ public class MonsterLoader {
     List<Monster> loadedMonsters = loadMonsterFile("./monster_ok.txt");
     List<Monster> failedMonsters = loadMonsterFile("./monster_fail.txt");
 
-    loadedMonsters.addAll(failedMonsters);
-
     for (Monster monster : loadedMonsters){
+      System.out.println(monster.toString());
+    }
+
+    for (Monster monster : failedMonsters) {
       System.out.println(monster.toString());
     }
 
