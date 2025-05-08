@@ -23,7 +23,16 @@ create table made_from (
 );
 ```
 
+Note: you forgot it but you need to add `ON UPDATE CASCADE` this would help keep referential integrity when updating data.
+
 ## 2. Which possibilities does the DDL provide to guarantee referential integrity in case of deletes or updates?
+
+The following provide referential integrity in case of updates or updates:
+
+1. CASCADE
+2. DEFAULT
+3. NULL
+4. RESTRICT
 
 ## 3. Given the following relational schema of the database found in the appendix:
 ## Customer (Cid, Name) offers (Did -> Dealer, Pid -> Product) 
@@ -47,6 +56,8 @@ create table made_from (
 |  10 |
 |  10 |
 
+NOTE: by default the projection only returns distinct values!
+
 ### (b) π Name (Dealer ⨝ Orders)
 
 `select name from dealer join orders;` -> Get all names from the result when we fetch all rows from the dealer table that has the same `Did` as the rows in the orders table.
@@ -55,6 +66,8 @@ create table made_from (
 |-----------|
 | G.Hals    | 
 | P.Schmidt |
+
+NOTE: the third name should also be visible, have another look at the column names
 
 ### (c) π Did (Dealer) - π Did (offers)
 
@@ -113,6 +126,8 @@ This means to fetch all rows and columns from tables, customer and orders by mat
 | 13  | M.Mueller  |
 | 13  | M.Mueller  |
 
+NOTE: this should have all the columns visible!
+
 ## 4. Given the relational schema in task 3. Express the following queries using relational algebra!
 
 ### (a) Get the names of all customers.
@@ -140,3 +155,5 @@ join orders
 where orders.did in (select did from dealer where name = 'Meier')
 and orders.cid in (select cid from customer where name = 'Schulze');
 ```
+
+NOTE: this last one is still not 100% correct
