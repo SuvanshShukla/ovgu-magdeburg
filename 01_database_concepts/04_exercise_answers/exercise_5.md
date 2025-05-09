@@ -63,5 +63,5 @@ starting with 1, 2, 3, . . . up to the number of offered exercise classes.
 (e). For each exercise performance, the student, the exercise and the grade are
 stored.
 
-[task 3 image](./exercise5-images/dbc-exercise-5-3.svg)
+![task 3 image](./exercise5-images/dbc-exercise-5-3.svg)
 
