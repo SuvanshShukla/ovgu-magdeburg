@@ -14,3 +14,16 @@ ding to the task.
 ## products!
 
 ![task 1 image](./exercise5-images/dbc-exercise-5-1.svg)
+
+## 2. The government needs a database about universities and their faculties. A uni-
+## versity has a unique name, an address and a number of enrolled students. Mo-
+## reover, every university has at least two faculties. Thereby, faculties belong to
+## exactly one university. Within one university, faculties are uniquely identified
+## by their name. That means, faculties of different universities can have the same
+## name. Additionally, for every faculty the name of the faculty's head must be
+## stored.
+## Prepare an entity-relationship schema of the requested database about univer-
+## sities!
+
+![task 2 image](./exercise5-images/dbc-exercise-5-2.svg)
+
