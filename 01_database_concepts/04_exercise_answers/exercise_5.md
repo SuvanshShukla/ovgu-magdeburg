@@ -13,4 +13,4 @@ ding to the task.
 ## Prepare an entity-relationship schema of the requested database about software
 ## products!
 
-
+![task 1 image](./exercise5-images/dbc-exercise-5-1.svg)
