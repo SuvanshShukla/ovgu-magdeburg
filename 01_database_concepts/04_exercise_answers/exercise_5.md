@@ -65,3 +65,16 @@ stored.
 
 ![task 3 image](./exercise5-images/dbc-exercise-5-3.svg)
 
+## Question 4
+
+ A club of audiophiles who like to exchange CDs would like to be able to trace
+the whereabouts of them. Each CD belongs to one or more owners and has an
+identifying number, the artist's name, a title, and a genre. Each CD has multiple
+tracks whose titles should also be recorded. The database should further provide
+information about which member currently owns a CD. Each CD is assigned to
+exactly one member. The members are given an identifying number, a name,
+address, and telephone number. Each owner is a member, but not vice versa. In
+addition to the characteristics of a member, for owners, the music genre they
+prefer is stored.
+
+
