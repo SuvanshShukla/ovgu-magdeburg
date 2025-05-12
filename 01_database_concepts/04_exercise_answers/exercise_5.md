@@ -77,4 +77,10 @@ address, and telephone number. Each owner is a member, but not vice versa. In
 addition to the characteristics of a member, for owners, the music genre they
 prefer is stored.
 
+First possible answer:
 
+![task 4 first try](./exercise5-images/dbc-exercise-5-4-1.svg)
+
+Second possible answer:
+
+![task 4 second try](./exercise5-images/dbc-exercise-5-4-2.svg)
