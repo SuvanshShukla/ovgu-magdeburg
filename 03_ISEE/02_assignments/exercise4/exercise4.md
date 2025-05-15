@@ -14,17 +14,17 @@ To register for an exam, students have to log in to NLUS (Next Level University 
 ```mermaid
 sequenceDiagram
     Student->>+NLUS: Matriculation Number, Password
-    NLUS->>-Student: Confirmation
+    NLUS-->>-Student: Confirmation
+    activate Student
     Student->>+NLUS: Exam ID, TAN
+    deactivate Student
     NLUS->>Exam Admin: Exam ID, TAN
     activate Exam Admin
-    loop
-        Exam Admin->>Exam Admin: Check TAN
-        Exam Admin->>Exam Admin: Generate <br> New Exam ID
-    end
-    Exam Admin->>NLUS: Confirmation
+    Exam Admin->>Exam Admin: Check TAN
+    Exam Admin->>Exam Admin: Generate <br> New Exam ID
+    Exam Admin-->>NLUS: Confirmation
     deactivate Exam Admin
-    NLUS->>-Student: Display Registration
+    NLUS-->>-Student: Display Registration
 ```
 
 Here's what it looks like as an image:
