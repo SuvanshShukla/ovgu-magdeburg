@@ -1,4 +1,4 @@
-# Exercise 4
+# Exercise 4 - Sequence Diagrams
 
 ## Learning objective
 
