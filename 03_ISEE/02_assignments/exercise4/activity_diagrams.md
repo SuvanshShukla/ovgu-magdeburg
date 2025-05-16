@@ -18,5 +18,5 @@ Create an activity diagram for the following scenario! In this example, swimlane
 
 A traveler goes to the baggage check-in at the airport to check in her suitcase. She places her suitcase on the baggage carousel. The baggage staff then weigh the suitcase. If the suitcase is too heavy, the traveler has to repack something. Once she has repacked, she must put the baggage down again and the baggage staff must then weigh the suitcase again, which may again be too heavy. If the luggage is too heavy and the customer does not want to repack, she can also pay an additional charge. The traveler then proceeds to the security check. There she hands in her hand luggage. While this is being checked by security staff, she goes through the security gate and then collects her luggage again. This area can only be left once both the traveler and her baggage have been checked.
 
-![]()
+![airport.svg](./airport.svg.svg)
 
