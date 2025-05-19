@@ -46,8 +46,8 @@ snowboarder(ID, f_name, l_name, dob, home_mount, best_trick, license, wc_point)
 sponsor(name, budget)
 competition(name, year, prize)
 support(ID -> snowboarder, name -> sponsor, money)
-hosted(name -> sponsor, name -> competition, year -> competition)
-attend(ID -> snowboarder, name -> competition, year-> competition, qualified)
+hosted(name -> sponsor, name,year -> competition)
+attend(ID -> snowboarder, name,year -> competition, qualified)
 
 Task 2:
 
@@ -79,7 +79,7 @@ key to R2 to define the resulting relational schema.
 state(name, region)
 member(name, district, start_date, party)
 bill(name, date, outcome, proposed_by)
-represented_by(name -> state, name -> member, district -> member)
-voted(name -> member, district -> member, name -> bill, date -> bill)
+represented_by(name -> state, name,district -> member)
+voted(name,district -> member, name,date -> bill)
 ```
 
