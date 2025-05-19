@@ -40,3 +40,12 @@ Very rough outline of what our therapy bot implementation would look like:
 3. Train the LLM on the dataset 
 
 **HCAI Exercise Friday 16/05/2025** : We would need to have our report ready one week before the main presentation, and we would thus have one extra week to work on our implementation.
+
+## Discussons 17/05/2025
+
+Division of labour: 
+
+- Ashish: coding implementation
+- Angel: theoretical part
+- Gayathry: theoretical part
+- Suvansh: coding implementation
