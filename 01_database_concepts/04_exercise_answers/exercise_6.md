@@ -39,6 +39,23 @@ Transfer the entity-relationship schemata from task 1 and task 2 into relational
 schemata! For this, use the following notation: R1(a,b → R2,c) denoting a as
 primary key and b as foreign key to R2 to define the resulting relational schema.
 
+```
+Task1:
+
+snowboarder(ID, f_name, l_name, dob, home_mount, best_trick, license, wc_point)
+sponsor(name, budget)
+competition(name, year, prize)
+support(ID -> snowboarder, name -> sponsor, money)
+hosted(name -> sponsor, name -> competition, year -> competition)
+attend(ID -> snowboarder, name -> competition, year-> competition, qualified)
+
+Task 2:
+
+lecture(unique_no, name)
+bachelor(unique_no -> lecture, no_enrolled)
+master(unique_no -> lecture, lecturer_name)
+```
+
 ## Question 4
 
 Design an ER schema for managing information about votes in the US House of
@@ -57,3 +74,12 @@ Congressman votes on each bill.
 Transfer the ER-Schema from task 4 into relation schemata! For this, use the
 following notation: R1(a,b → R2,c) denoting a as primary key and b as foreign
 key to R2 to define the resulting relational schema.
+
+```
+state(name, region)
+member(name, district, start_date, party)
+bill(name, date, outcome, proposed_by)
+represented_by(name -> state, name -> member, district -> member)
+voted(name -> member, district -> member, name -> bill, date -> bill)
+```
+
