@@ -21,6 +21,8 @@ stored. Snowboarders attend competitions to qualify for other competitions and
 we want to store at which competition the snowboarder qualified for which other
 competition in the database.
 
+![dbc-exercise-6-1.svg](./exercise6-images/dbc-exercise-6-1.svg)
+
 ## Question 2
 
 In a database, information about lectures should be stored. Every lecture has
@@ -28,6 +30,8 @@ a unique number and a name. Every lecture is either for Bachelor or Master
 students only. For Master lectures, the lecturers name should be stored. For
 Bachelor lectures, the number of enrolled students should be stored. Prepare an
 entity-relationship schema. Avoid redundancy!
+
+![dbc-exercise-6-2.svg](./exercise6-images/dbc-exercise-6-2.svg)
 
 ## Question 3
 
@@ -45,6 +49,8 @@ and a party. Each member represents a state, and each state has between one
 and 52 representatives. The database tracks each bill by name, date, outcome,
 and the Congressmen who proposed it. The database further tracks how each
 Congressman votes on each bill.
+
+![dbc-exercise-6-4.svg](./exercise6-images/dbc-exercise-6-4.svg)
 
 ## Question 5
 
