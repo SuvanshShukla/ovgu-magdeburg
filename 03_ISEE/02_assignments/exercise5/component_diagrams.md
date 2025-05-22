@@ -14,3 +14,5 @@ This interface can also be accessed by a music app component located on an exter
 
 The sound system itself also has a speaker and a subwoofer component.
 
+![mixer.svg](./mixer.svg)
+
