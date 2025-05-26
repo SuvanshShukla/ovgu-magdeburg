@@ -124,7 +124,44 @@ In 2nd Normal Form
 | 8                	| low         |
 | 17               	| high        |
 | 30               	| low         |
+   
+| Caffeine Content 	| Company 	
+|------------------	|---------	
+| 16               	| Meier   	
+| 8                	| Meier   	
+| 17               	| Dept    	
+| 30               	| HB      	
 
+In 3rd Normal Form:
+
+| Company 	| Export  | Product  |
+|---------	|-------- |--------- |
+| Meier   	| yes     | tea      |
+| Meier   	| yes     | coffee   |
+| Dept    	| no      | tea      |
+| Dept    	| no      | coffee   |
+| HB      	| no      | tea      |
+| HB      	| no      | coffee   |
+
+| Company 	| Export  |
+|---------	|-------- |
+| Meier   	| yes     |
+| Dept    	| no      |
+| HB      	| no      |
+
+| Caffeine Content 	| Popularity  |
+|------------------	|------------ |
+| 16               	| high        |
+| 8                	| low         |
+| 17               	| high        |
+| 30               	| low         |
+   
+| Caffeine Content 	| Company 	
+|------------------	|---------	
+| 16               	| Meier   	
+| 8                	| Meier   	
+| 17               	| Dept    	
+| 30               	| HB      	
 
 ## Question 5
 
