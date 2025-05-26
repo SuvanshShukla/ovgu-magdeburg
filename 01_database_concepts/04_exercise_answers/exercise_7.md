@@ -35,9 +35,9 @@ A \rightarrow  B, BC \rightarrow  E, ED \rightarrow  A
 Answer:
 
 ```math
-ACD \rightarrow B,E \linebreak
-BCD \rightarrow E, A \linebreak
-ECD \rightarrow A, B \linebreak
+ACD \rightarrow B,E\\
+BCD \rightarrow E, A\\
+ECD \rightarrow A, B\\
 ```
 
 ## Question 3
