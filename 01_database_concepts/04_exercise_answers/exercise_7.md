@@ -35,9 +35,9 @@ A \rightarrow  B, BC \rightarrow  E, ED \rightarrow  A
 Answer:
 
 ```math
-ACD \rightarrow B,E\\
-BCD \rightarrow E, A\\
-ECD \rightarrow A, B\\
+ACD \rightarrow B,E \\
+BCD \rightarrow E, A \\
+ECD \rightarrow A, B \\
 ```
 
 ## Question 3
@@ -88,11 +88,25 @@ Given a relation about drinking suppliers:
 Following functional dependencies exist:
 
 ```math
-(Company, P roduct \rightarrow  Export, Caf f eineContent, P opularity) ,
-(Company \rightarrow  Export) , (Caf f eineContent \rightarrow  P opularity) ,
-(Caf f eineContent \rightarrow  Company) .
+(Company, Product \rightarrow  Export, CaffeineContent, Popularity) ,
+(Company \rightarrow  Export) , (CaffeineContent \rightarrow  Popularity) ,
+(CaffeineContent \rightarrow  Company) .
 ```
 
 Transfer the relation step-by-step into the Boyce-Codd-Normal Form (BCNF).
 Present each intermediate result!
+
+In 1st Normal Form 
+
+| Company 	| Product 	| Export 	| Caffeine Content 	| Popularity 	|
+|---------	|---------	|--------	|------------------	|------------	|
+| Meier   	| tea     	| yes    	| 16               	| high       	|
+| Meier   	| coffee  	| yes    	| 8                	| low        	|
+| Dept    	| tea     	| no     	| 17               	| high       	|
+| Dept    	| coffee  	| no     	| 17               	| high       	|
+| HB      	| tea     	| no     	| 30               	| low        	|
+| HB      	| coffee  	| no     	| 30               	| low        	|
+
+In 2nd Normal Form 
+
 
