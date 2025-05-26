@@ -51,4 +51,6 @@ G = \{ A \rightarrow  BC, E \rightarrow  ABC, F \rightarrow  CD, CD \rightarrow 
 Determine all keys!
 
 ```latex
-
+F \rightarrow C,D,B,E,A
+EF \rightarrow A,B,C,D 
+```
