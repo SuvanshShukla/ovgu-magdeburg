@@ -52,5 +52,25 @@ Determine all keys!
 
 ```latex
 F \rightarrow C,D,B,E,A
+
+AB \rightarrow ❌
+AC \rightarrow ❌
+AD \rightarrow ❌
+AE \rightarrow ❌
+AF \rightarrow ✔
+
+BC \rightarrow ❌
+BD \rightarrow ❌
+BE \rightarrow ❌
+BF \rightarrow ✔
+
+CD \rightarrow ✔ 
+CE \rightarrow ❌
+CF \rightarrow ✔
+
+DE \rightarrow
+DF \rightarrow
+
 EF \rightarrow A,B,C,D 
 ```
+
