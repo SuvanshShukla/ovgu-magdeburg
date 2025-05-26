@@ -137,10 +137,30 @@ car\_sale(plate\_number, seller, sale\_date, commision, discount)
 with following functional dependencies:
 
 ```math
-sale\_date \rightarrow  discount <br>
-seller \rightarrow  commision <br>
+sale\_date \rightarrow  discount \\
+seller \rightarrow  commision \\
 ```
 
 To which normal form does this relational schema apply? If necessary, transform the schema into 3. normal form. Is the schema minimal?
 
+Is it in the 1st Normal Form: Yes, because each column in this table only contains atomic values.
+
+Is it in the 2nd Normal Form: No, because `commision` can be uniquely determined just by `seller`. This violates the principles of 2nd normal form because there should be no partial dependency, i.e. each non-key attribute should be fully depenedent on the primary key
+
+Is it in the 3rd Normal Form: No, because the table is not in 2nd Normal Form
+
+2nd Normal Form:
+
+```
+car_sale1(plate_number, seller, sale_date, discount)
+car_sale2(seller, commission)
+```
+
+3rd Normal Form:
+
+```
+car_sale1(plate_number, seller, sale_date)
+car_sale2(seller, commision)
+car_sale3(sale_date, discount)
+```
 
