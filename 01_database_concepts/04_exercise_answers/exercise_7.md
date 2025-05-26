@@ -20,7 +20,7 @@ A primary key is any key which is chosen to uniquely identify rows in a table
 
 An example of a relation `r` which contradicts all dependencies is:
 
-```
+```math
 r = {A2, A3} -> A4
 ```
 
@@ -28,13 +28,13 @@ r = {A2, A3} -> A4
 
 Find all keys for relation R(ABCDE). Following functional dependencies exist in relation R:
 
-```latex
+```math
 A \rightarrow  B, BC \rightarrow  E, ED \rightarrow  A
 ```
 
 Answer:
 
-```latex
+```math
 ACD \rightarrow B,E 
 BCD \rightarrow E, A
 ECD \rightarrow A, B
@@ -44,33 +44,55 @@ ECD \rightarrow A, B
 
 Given relation R(ABCDEF) and following functional dependencies:
 
-```latex
+```math
 G = \{ A \rightarrow  BC, E \rightarrow  ABC, F \rightarrow  CD, CD \rightarrow  BEF \}
 ```
 
 Determine all keys!
 
 ```math
-F \rightarrow C,D,B,E,A
+F \rightarrow C,D,B,E,A \\
 
-AB \rightarrow ❌
-AC \rightarrow ❌
-AD \rightarrow ❌
-AE \rightarrow ❌
-AF \rightarrow ✔
+AB \rightarrow ❌ \\
+AC \rightarrow ❌ \\
+AD \rightarrow ❌ \\
+AE \rightarrow ❌ \\
+AF \rightarrow ✔  \\
 
-BC \rightarrow ❌
-BD \rightarrow ❌
-BE \rightarrow ❌
-BF \rightarrow ✔
+BC \rightarrow ❌ \\
+BD \rightarrow ❌ \\
+BE \rightarrow ❌ \\
+BF \rightarrow ✔  \\
 
-CD \rightarrow ✔ 
-CE \rightarrow ❌
-CF \rightarrow ✔
+CD \rightarrow ✔  \\
+CE \rightarrow ❌ \\
+CF \rightarrow ✔  \\
 
-DE \rightarrow
-DF \rightarrow
+DE \rightarrow A,B,C,F \\
+DF \rightarrow A,B,C,E \\
 
-EF \rightarrow A,B,C,D 
+EF \rightarrow A,B,C,D \\
 ```
+
+## Question 4
+
+Given a relation about drinking suppliers:
+
+| Company 	| Product      	| Export 	| Caffeine Content 	| Popularity 	|
+|---------	|--------------	|--------	|------------------	|------------	|
+| Meier   	| tea          	| yes    	| 16               	| high       	|
+| Meier   	| coffee       	| yes    	| 8                	| low        	|
+| Dept    	| {tea,coffee} 	| no     	| 17               	| high       	|
+| HB      	| {tea,coffee} 	| no     	| 30               	| low        	|
+
+Following functional dependencies exist:
+
+```math
+(Company, P roduct \rightarrow  Export, Caf f eineContent, P opularity) ,
+(Company \rightarrow  Export) , (Caf f eineContent \rightarrow  P opularity) ,
+(Caf f eineContent \rightarrow  Company) .
+```
+
+Transfer the relation step-by-step into the Boyce-Codd-Normal Form (BCNF).
+Present each intermediate result!
 
