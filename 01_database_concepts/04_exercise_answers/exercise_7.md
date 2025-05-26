@@ -109,4 +109,38 @@ In 1st Normal Form
 
 In 2nd Normal Form 
 
+| Company 	| Product 	| Export  |
+|---------	|---------	|-------- |
+| Meier   	| tea     	| yes     |
+| Meier   	| coffee  	| yes     |
+| Dept    	| tea     	| no      |
+| Dept    	| coffee  	| no      |
+| HB      	| tea     	| no      |
+| HB      	| coffee  	| no      |
+
+| Caffeine Content 	| Popularity  |
+|------------------	|------------ |
+| 16               	| high        |
+| 8                	| low         |
+| 17               	| high        |
+| 30               	| low         |
+
+
+## Question 5
+
+Given following relational schema:
+
+```math
+car_sale(plate _number, seller, sale_date, commision, discount)
+```
+
+with following functional dependencies:
+
+```math
+sale date \rightarrow  discount <br>
+seller \rightarrow  commision <br>
+```
+
+To which normal form does this relational schema apply? If necessary, transform the schema into 3. normal form. Is the schema minimal?
+
 
