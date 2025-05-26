@@ -131,13 +131,13 @@ In 2nd Normal Form
 Given following relational schema:
 
 ```math
-car_sale(plate _number, seller, sale_date, commision, discount)
+car\_sale(plate\_number, seller, sale\_date, commision, discount)
 ```
 
 with following functional dependencies:
 
 ```math
-sale date \rightarrow  discount <br>
+sale\_date \rightarrow  discount <br>
 seller \rightarrow  commision <br>
 ```
 
