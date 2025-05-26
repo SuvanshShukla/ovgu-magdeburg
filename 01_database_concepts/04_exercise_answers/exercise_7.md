@@ -50,7 +50,7 @@ G = \{ A \rightarrow  BC, E \rightarrow  ABC, F \rightarrow  CD, CD \rightarrow 
 
 Determine all keys!
 
-$$
+```math
 F \rightarrow C,D,B,E,A
 
 AB \rightarrow ❌
@@ -72,5 +72,5 @@ DE \rightarrow
 DF \rightarrow
 
 EF \rightarrow A,B,C,D 
-$$
+```
 
