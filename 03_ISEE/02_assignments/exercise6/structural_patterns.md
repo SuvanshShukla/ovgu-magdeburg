@@ -17,3 +17,6 @@ You should now extend the implementation of the Swordsman so that the troops can
 - Expand the UML diagram with the notation presented in the lecture!
 - Think about 2 possible capabilities that can be added to the ‘Wordsman’ force.
 - Do not use multiple inheritance!
+
+![swordsman solution class diagram](./swordsman.svg)
+
