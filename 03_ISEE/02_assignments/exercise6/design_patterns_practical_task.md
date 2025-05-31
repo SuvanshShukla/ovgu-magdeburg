@@ -11,3 +11,4 @@ Design patterns are often used in practice. Here you are to find design patterns
 - Find at least 2 design patterns that are used in the code!
 - Describe in the file paintbots_pattern.md which patterns you have found and which files/classes are involved!
 
+see here for the solution: [paintbots_pattern](./paintbots_pattern.md)
