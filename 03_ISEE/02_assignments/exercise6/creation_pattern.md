@@ -11,5 +11,5 @@ In the development of an online card game, we are working on a tool for creating
 
 Which design pattern presented in the lecture offers a good solution to the problem described? Draw a UML diagram using the notation presented in the lecture.
 
-![]()
+![card solution](./card.svg)
 
