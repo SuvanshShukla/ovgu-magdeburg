@@ -44,7 +44,7 @@ Given the following two sets of functional dependencies:
 Test systematicall, if both sets are equivalent, one set is a superset of the other,        
 or none of the sets is semantically contained in the other!     
 
-Let,
+Let,    
 X = {A ->  B, A ->  C, CD ->  E, B ->  D}       
 Y = {A ->  BC, AD ->  E, DB ->  B, A ->  D}         
 
