@@ -129,6 +129,8 @@ Decomposing data according to (a):
 | Meier   | C2     |
 | Schmidt | C1     |
 
+Joining data according to (a):
+
 | STUDENT | INSTRUCTOR | COURSE |
 | ------- | ---------- | ------ |
 | Mueller | Heinz      | C1     |
@@ -153,6 +155,18 @@ Decomposing data according to (b):
 | C2     | Meier   |
 | C1     | Schmidt |
 
+Joining data according to (b):
+
+| COURSE | INSTRUCTOR | STUDENT |
+| ------ | ---------- | ------- |
+| C1     | Heinz      | Mueller |
+| C2     | Heinz      | Meier   |
+| C1     | Heinz      | Schmidt |
+| C1     | Paul       | Meier   |
+| C1     | Peter      | Mueller |
+| C1     | Peter      | Meier   |
+| C1     | Peter      | Schmidt |
+
 Decomposing according to (c):
 
 | INSTRUCTOR | COURSE |
@@ -168,4 +182,12 @@ Decomposing according to (c):
 | Paul       | Meier   |
 | Peter      | Schmidt |
 
+Joining data according to (b):
+
+| INSTRUCTOR | COURSE | STUDENT |
+| ---------- | ------ | ------- |
+| Heinz      | C1     | Mueller |
+| Heinz      | C1     | Meier   |
+| Paul       | C2     | Meier   |
+| Peter      | c1     | Schmidt |
 
