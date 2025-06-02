@@ -72,3 +72,27 @@ R1(A, C), R2(B, C, D) -- is lossless & dependency preserving
 R1(A, B), R2(B, C, D) -- is not lossless
 R1(A, B, C), R2(B, C, D) -- is lossless & dependency preserving
 
+## Question 4
+
+A database designer decomposed relation R(ABCDE) into relations R1(ABC) and R2(CDE). State at least two functional dependencies in R so that the
+decomposition into R1 \& R2 is:
+
+(a) neither lossless nor dependency preserving
+(b) lossless but not dependency preserving
+(c) not lossless but dependency preserving
+(d) lossless as well as dependency preserving
+
+For an FD/relation to be lossless, the following conditions must be met:
+
+- no information must be lost during decomposition
+- the natural join of the relations should return the original relation 
+
+For an FD/relation to be dependency preserving, the FDs of the original schema must still hold true for the decomposed schema
+
+So,
+
+(a) The FDs: `ABC -> D & C -> E` would make the decomposition neither lossless nor dependency preserving
+(b) The FDs: `AB -> C & AC -> DE` would make the decomposition lossless but not dependency preserving
+(c) The FDs: `ABC -> C & C -> DE` would make the decomposition dependency preserving but not lossless
+(d) The FDs: `AB -> C & C -> DE` would make the decomposition lossless as well as dependency preserving
+
