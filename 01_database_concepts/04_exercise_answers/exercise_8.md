@@ -54,3 +54,21 @@ Considering the FD: AD -> E, from the previous decomposition we know that A -> C
 Considering the FD: A -> D, from the first decomposition we found that A -> B, so we can derive B -> D, which is also present in X. 
 Finally, Considering the FD: DB -> B. No FD in X can determine DB -> B. Hence, X ⊂ Y.
 
+## Question 3
+
+Given the following functional dependencies over relation R(A,B,C,D):
+
+A ->  C, B ->  CD
+
+Which of the following decompositions is lossless and/or dependency preserving?
+
+• R1(A, B), R2(A, C, D)
+• R1(A, C), R2(B, C, D)
+• R1(A, B), R2(B, C, D)
+• R1(A, B, C), R2(B, C, D)
+
+R1(A, B), R2(A, C, D) -- is not lossless
+R1(A, C), R2(B, C, D) -- is lossless & dependency preserving
+R1(A, B), R2(B, C, D) -- is not lossless
+R1(A, B, C), R2(B, C, D) -- is lossless & dependency preserving
+
