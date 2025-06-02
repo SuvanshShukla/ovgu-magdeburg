@@ -38,17 +38,17 @@ BCNF Normal Form: AB -> D | B -> C | E -> A
 
 Given the following two sets of functional dependencies:
 
-• A ->  B, A ->  C, CD ->  E, B ->  D
-• A ->  BC, AD ->  E, DB ->  B, A ->  D
+- A ->  B, A ->  C, CD ->  E, B ->  D
+- A ->  BC, AD ->  E, DB ->  B, A ->  D
 
-Test systematicall, if both sets are equivalent, one set is a superset of the other,
-or none of the sets is semantically contained in the other!
+Test systematicall, if both sets are equivalent, one set is a superset of the other,        
+or none of the sets is semantically contained in the other!     
 
 Let,
-X = {A ->  B, A ->  C, CD ->  E, B ->  D}
-Y = {A ->  BC, AD ->  E, DB ->  B, A ->  D} 
+X = {A ->  B, A ->  C, CD ->  E, B ->  D}       
+Y = {A ->  BC, AD ->  E, DB ->  B, A ->  D}         
 
-Considering Y, 
+Considering Y,      
 Taking the FD: A -> B,C we decompose it into A -> B & A -> C. Both of these FDs are present in X.   
 Considering the FD: AD -> E, from the previous decomposition we know that A -> C, so we can derive CD -> E which is also present in X.      
 Considering the FD: A -> D, from the first decomposition we found that A -> B, so we can derive B -> D, which is also present in X.         
@@ -62,10 +62,10 @@ A ->  C, B ->  CD
 
 Which of the following decompositions is lossless and/or dependency preserving?
 
-• R1(A, B), R2(A, C, D)
-• R1(A, C), R2(B, C, D)
-• R1(A, B), R2(B, C, D)
-• R1(A, B, C), R2(B, C, D)
+- R1(A, B), R2(A, C, D)
+- R1(A, C), R2(B, C, D)
+- R1(A, B), R2(B, C, D)
+- R1(A, B, C), R2(B, C, D)
 
 R1(A, B), R2(A, C, D) -- is not lossless    
 R1(A, C), R2(B, C, D) -- is lossless & dependency preserving    
@@ -77,24 +77,24 @@ R1(A, B, C), R2(B, C, D) -- is lossless & dependency preserving
 A database designer decomposed relation R(ABCDE) into relations R1(ABC) and R2(CDE). State at least two functional dependencies in R so that the
 decomposition into R1 \& R2 is:
 
-(a) neither lossless nor dependency preserving
-(b) lossless but not dependency preserving
-(c) not lossless but dependency preserving
-(d) lossless as well as dependency preserving
+(a) neither lossless nor dependency preserving      
+(b) lossless but not dependency preserving      
+(c) not lossless but dependency preserving      
+(d) lossless as well as dependency preserving       
 
-For an FD/relation to be lossless, the following conditions must be met:
+For an FD/relation to be lossless, the following conditions must be met:        
 
 - no information must be lost during decomposition
 - the natural join of the relations should return the original relation 
 
-For an FD/relation to be dependency preserving, the FDs of the original schema must still hold true for the decomposed schema
+For an FD/relation to be dependency preserving, the FDs of the original schema must still hold true for the decomposed schema       
 
-So,
+So,     
 
-(a) The FDs: `ABC -> D & C -> E` would make the decomposition neither lossless nor dependency preserving
-(b) The FDs: `AB -> C & AC -> DE` would make the decomposition lossless but not dependency preserving
-(c) The FDs: `ABC -> C & C -> DE` would make the decomposition dependency preserving but not lossless
-(d) The FDs: `AB -> C & C -> DE` would make the decomposition lossless as well as dependency preserving
+(a) The FDs: `ABC -> D & C -> E` would make the decomposition neither lossless nor dependency preserving        
+(b) The FDs: `AB -> C & AC -> DE` would make the decomposition lossless but not dependency preserving       
+(c) The FDs: `ABC -> C & C -> DE` would make the decomposition dependency preserving but not lossless       
+(d) The FDs: `AB -> C & C -> DE` would make the decomposition lossless as well as dependency preserving     
 
 ## Question 5
 
@@ -107,11 +107,10 @@ Given following relation:
 | Meier   | C2     | Paul       |
 | Schmidt | C1     | Peter      |
 
-Decompose the data according to the three given possibilities and join them
-together afterwards.
+Decompose the data according to the three given possibilities and join them together afterwards.
 
-(a) Teach1(STUDENT, INSTRUCTOR) Teach2(STUDENT,COURSE) 
-(b) Teach1(COURSE, INSTRUCTOR) Teach2(COURSE, STUDENT) 
-(c) Teach1(INSTRUCTOR, COURSE) Teach2(INSTRUCTOR, STUDENT)
+(a) Teach1(STUDENT, INSTRUCTOR) Teach2(STUDENT,COURSE)      
+(b) Teach1(COURSE, INSTRUCTOR) Teach2(COURSE, STUDENT)      
+(c) Teach1(INSTRUCTOR, COURSE) Teach2(INSTRUCTOR, STUDENT)      
 
 
