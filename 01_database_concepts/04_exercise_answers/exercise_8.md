@@ -36,4 +36,21 @@ BCNF Normal Form: AB -> D | B -> C | E -> A
 
 ## Question 2
 
+Given the following two sets of functional dependencies:
+
+• A ->  B, A ->  C, CD ->  E, B ->  D
+• A ->  BC, AD ->  E, DB ->  B, A ->  D
+
+Test systematicall, if both sets are equivalent, one set is a superset of the other,
+or none of the sets is semantically contained in the other!
+
+Let,
+X = {A ->  B, A ->  C, CD ->  E, B ->  D}
+Y = {A ->  BC, AD ->  E, DB ->  B, A ->  D} 
+
+Considering Y, 
+Taking the FD: A -> B,C we decompose it into A -> B & A -> C. Both of these FDs are present in X.
+Considering the FD: AD -> E, from the previous decomposition we know that A -> C, so we can derive CD -> E which is also present in X.
+Considering the FD: A -> D, from the first decomposition we found that A -> B, so we can derive B -> D, which is also present in X. 
+Finally, Considering the FD: DB -> B. No FD in X can determine DB -> B. Hence, X ⊂ Y.
 
