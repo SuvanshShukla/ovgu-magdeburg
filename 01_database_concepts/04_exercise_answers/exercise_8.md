@@ -29,10 +29,10 @@ Notice how B is in both keys.
 
 Normalizing all the way to BCNF:
 
-1st Normal Form: AB -> C,D,E 
-2nd Normal Form: AB -> DE | B -> C 
-3rd Normal Form: AB -> D | B -> C | AB -> E 
-BCNF Normal Form: AB -> D | B -> C | E -> A 
+1st Normal Form: AB -> C,D,E    
+2nd Normal Form: AB -> DE | B -> C      
+3rd Normal Form: AB -> D | B -> C | AB -> E     
+BCNF Normal Form: AB -> D | B -> C | E -> A     
 
 ## Question 2
 
