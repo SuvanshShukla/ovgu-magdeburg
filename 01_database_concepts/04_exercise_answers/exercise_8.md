@@ -4,7 +4,7 @@
 
 Given relational schema R(ABCDE) with following functional dependencies:
 
-AB-> CDE, B -> C, C -> D, E -> A
+AB -> CDE, B -> C, C -> D, E -> A
 
 Determine all keys and generate the BCNF step by step.
 
