@@ -74,8 +74,8 @@ R1(A, B, C), R2(B, C, D) -- is lossless & dependency preserving
 
 ## Question 4
 
-A database designer decomposed relation R(ABCDE) into relations R1(ABC) and R2(CDE). State at least two functional dependencies in R so that the
-decomposition into R1 \& R2 is:
+A database designer decomposed relation R(ABCDE) into relations R1(ABC) and R2(CDE).    
+State at least two functional dependencies in R so that the decomposition into R1 \& R2 is:
 
 (a) neither lossless nor dependency preserving      
 (b) lossless but not dependency preserving      
@@ -112,5 +112,60 @@ Decompose the data according to the three given possibilities and join them toge
 (a) Teach1(STUDENT, INSTRUCTOR) Teach2(STUDENT,COURSE)      
 (b) Teach1(COURSE, INSTRUCTOR) Teach2(COURSE, STUDENT)      
 (c) Teach1(INSTRUCTOR, COURSE) Teach2(INSTRUCTOR, STUDENT)      
+
+Decomposing data according to (a):
+
+| STUDENT | INSTRUCTOR |  
+| ------- | ---------- |
+| Mueller | Heinz      |
+| Meier   | Heinz      |
+| Meier   | Paul       |
+| Schmidt | Peter      |
+
+| STUDENT | COURSE |
+| ------- | ------ |
+| Mueller | C1     |
+| Meier   | C1     |
+| Meier   | C2     |
+| Schmidt | C1     |
+
+| STUDENT | INSTRUCTOR | COURSE |
+| ------- | ---------- | ------ |
+| Mueller | Heinz      | C1     |
+| Meier   | Heinz      | C1     |
+| Meier   | Heinz      | C2     |
+| Meier   | Paul       | C1     |
+| Meier   | Paul       | C2     |
+| Schmidt | Peter      | C1     |
+
+Decomposing data according to (b):
+
+| COURSE | INSTRUCTOR |     
+| ------ | ---------- |     
+| C1     | Heinz      |     
+| C2     | Paul       |     
+| C1     | Peter      |     
+
+| COURSE | STUDENT |
+| ------ | ------- |
+| C1     | Mueller |
+| C1     | Meier   |
+| C2     | Meier   |
+| C1     | Schmidt |
+
+Decomposing according to (c):
+
+| INSTRUCTOR | COURSE |
+| ---------- | ------ |
+| Heinz      | C1     |
+| Paul       | C2     |
+| Peter      | C1     |
+
+| INSTRUCTOR | STUDENT |  
+| ---------- | ------- |
+| Heinz      | Mueller |
+| Heinz      | Meier   |
+| Paul       | Meier   |
+| Peter      | Schmidt |
 
 
