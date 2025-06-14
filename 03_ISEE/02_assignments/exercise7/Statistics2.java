@@ -1,4 +1,4 @@
-public class Statistics {
+public class Statistics2 {
   public static void main(String[] args) {
     double x = 2.0;
     // int [] d = {1, 2 , 3 , 5 , 1 , 6 , 1 , 4 , 3 , 1};
