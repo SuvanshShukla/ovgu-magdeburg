@@ -1,13 +1,11 @@
-# Exercise 7 - Coding Conventions - Praxis I
+# Exercise 7 -  Coding Conventions - Praxis II
 
-## Task - Making code “nicer “
+## Task - Making code more accessible
 
-Changes made to make the code "nicer":
+Changes made to make the code more accessible:
 
-- removed unused and commented out code
-- fixed indentation of code 
-- reduce unnecessary whitespace
-- removed unnecessary `System.out.println()`
-- remove unused variable
-- remove unnecessary type conversions
+- add relevant spacing between statements
+- moved repeated code into it's separate method
+- closed input as soon as it is registered
+- removed unnecessary ERROR log
 
