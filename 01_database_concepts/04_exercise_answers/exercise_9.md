@@ -158,20 +158,14 @@ where y.student_id <> x.student_id;
 
 ## Question 5. Given the following tables:
 
-| Name    | Pid  |
-| ------- | ---- |
-| Meier   | 1586 |
-| Mueller | 1001 |
-| chmidt  | 905  |
+| Name    | Pid  |  | Pid  | Salary |
+| ------- | ---- |  | ---- | ------ |
+| Meier   | 1586 |  | 1586 | 4000   |
+| Mueller | 1001 |  | 1235 | 2500   |
+| chmidt  | 905  |  | 905  | 1000   |
+                    | 512  | 1575   |
 
-| Pid  | Salary |
-| ---- | ------ |
-| 1586 | 4000   |
-| 1235 | 2500   |
-| 905  | 1000   |
-| 512  | 1575   |
-
-Join the tables using a 
+Join the tables using a:
 
 (a) Natural-Join
 
