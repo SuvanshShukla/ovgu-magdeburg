@@ -2,19 +2,19 @@
 
 Given the following relational schema:
 
-> flight (label, date, destination, fligth time, distance) 
-> departure ( (flight_label, flight_date) ->  flight,(type, serial number) -> plane, captain))
-> employee (ID, name, address, job, salary)
-> plane_type (type, manufacturer, number_of_seats, cruising_speed) 
-> plane (type -> plane_type, serial_number, purchase_date, flight_hours) 
-> spare part (ID, label, price) 
-> requires (type -> plane_type, serial_number -> plane, spare_part_ID -> spare_part) 
-> pilot (employee_ID -> employee, license, flight_hours) 
-> technician (employee ID ->  employee, team number) 
-> can_fly (employee ID ->  pilot, type ->  plane_type) 
-> can maintain (employee ID ->  technician, type ->  plane_type) 
-> passenger (passenger ID, name, address, age) 
-> booking (passenger ID ->  passenger, (flight_label, flight_date) ->  flight, class, seat number, price)
+> flight (label, date, destination, fligth time, distance)      
+> departure ( (flight_label, flight_date) ->  flight,(type, serial number) -> plane, captain))      
+> employee (ID, name, address, job, salary)     
+> plane_type (type, manufacturer, number_of_seats, cruising_speed)      
+> plane (type -> plane_type, serial_number, purchase_date, flight_hours)        
+> spare part (ID, label, price)         
+> requires (type -> plane_type, serial_number -> plane, spare_part_ID -> spare_part)        
+> pilot (employee_ID -> employee, license, flight_hours)        
+> technician (employee ID ->  employee, team number)        
+> can_fly (employee ID ->  pilot, type ->  plane_type)      
+> can maintain (employee ID ->  technician, type ->  plane_type)        
+> passenger (passenger ID, name, address, age)      
+> booking (passenger ID ->  passenger, (flight_label, flight_date) ->  flight, class, seat number, price)       
 
 ## Quesiton 1. Formulate SQL queries
 
