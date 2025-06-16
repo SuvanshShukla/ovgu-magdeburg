@@ -57,7 +57,7 @@ select name from employee where name like '%l%l%';
 (g) Query name, job and salary of all employees whose job is either Dipl. Ing. or steward/ ess and that earn are least 6000€ .
 
 ```SQL
-
+select name, job, salary from employee where job like 'Dipl%' or job like 'steward%' and salary >= 6000;
 ```
 
 ## 2. Define the following queries in SQL:
