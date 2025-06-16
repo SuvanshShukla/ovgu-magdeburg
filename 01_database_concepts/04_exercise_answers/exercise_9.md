@@ -1,5 +1,21 @@
 # Database Concepts Exercise 9 
 
+Given the following relational schema:
+
+> flight (label, date, destination, fligth time, distance) 
+> departure ( (flight_label, flight_date) ->  flight,(type, serial number) -> plane, captain))
+> employee (ID, name, address, job, salary)
+> plane_type (type, manufacturer, number_of_seats, cruising_speed) 
+> plane (type -> plane_type, serial_number, purchase_date, flight_hours) 
+> spare part (ID, label, price) 
+> requires (type -> plane_type, serial_number -> plane, spare_part_ID -> spare_part) 
+> pilot (employee_ID -> employee, license, flight_hours) 
+> technician (employee ID ->  employee, team number) 
+> can_fly (employee ID ->  pilot, type ->  plane_type) 
+> can maintain (employee ID ->  technician, type ->  plane_type) 
+> passenger (passenger ID, name, address, age) 
+> booking (passenger ID ->  passenger, (flight_label, flight_date) ->  flight, class, seat number, price)
+
 ## Quesiton 1. Formulate SQL queries
 
 (a) Query name and salary of all employees that earn more than 6450€ .
@@ -74,5 +90,43 @@ select concat(name, ' earns ', salary, ' per month, but desires to earn ', salar
 
 ```SQL
 select initcap(type) as name, char_length(type) length from plane_type;
+```
+
+## Question 3. Use SQL to retrieve following information:
+
+(a) How many planes (not types) are stored in relation departure?
+
+```SQL
+select count(*) from plane;
+```
+
+(b) Determine the number of employees that have a doctor's degree (Dr. or PhD)!
+
+```SQL
+select count(*) from employee where job in ('doctor', 'professor') group by job;
+```
+
+(c) What is the average salary by job?
+
+```SQL
+select job, avg(salary) from employee;
+```
+
+(d) Return the total price and the number of bookings for all journeys in 1993 in relation booking.
+
+```SQL
+select sum(price), count(*) from booking where flight_date between '1993-01-01' and '1993-12-31';
+```
+
+(e) Determine the minimum salary for every job!
+
+```SQL
+select job, MIN(salary) from employee group job;
+```
+
+(f) Retrieve the dif f erence between the maximum and minimum salary of the all employees.
+
+```SQL
+
 ```
 
