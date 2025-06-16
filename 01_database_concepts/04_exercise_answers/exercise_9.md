@@ -143,4 +143,39 @@ Maybe, a reformulation will improve the query performance. In order to reformula
 
 (a) What is the result of this query?
 
+This query returns the exam IDs of exams with students that are not taking anyother exams.
+
+(b) You found two ways to reformulate the query. Reformulate the query
+
+1. Without using a nested query in the WHERE clause!
+
+```SQL
+select distinct(x.exam_id) from exams x join exams y on x.exam_id = y.exam_id 
+where y.student_id <> x.student_id;
+```
+
+2. Without using tuple variables (to distinguish the use of the same relation), but by using aggregation functions.
+
+## Question 5. Given the following tables:
+
+| Name    | Pid  |
+| ------- | ---- |
+| Meier   | 1586 |
+| Mueller | 1001 |
+| chmidt  | 905  |
+
+| Pid  | Salary |
+| ---- | ------ |
+| 1586 | 4000   |
+| 1235 | 2500   |
+| 905  | 1000   |
+| 512  | 1575   |
+
+Join the tables using a 
+
+(a) Natural-Join
+(b) Left-Outer-Join
+(c) Right-Outer-Join
+(d) Full-Outer-Join
+
 
