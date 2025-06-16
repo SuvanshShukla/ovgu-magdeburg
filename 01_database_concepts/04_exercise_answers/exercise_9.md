@@ -124,9 +124,22 @@ select sum(price), count(*) from booking where flight_date between '1993-01-01' 
 select job, MIN(salary) from employee group job;
 ```
 
-(f) Retrieve the dif f erence between the maximum and minimum salary of the all employees.
+(f) Retrieve the difference between the maximum and minimum salary of the all employees.
 
 ```SQL
+select MAX(salary) - MIN(salary) from employees;
+```
+## 4. You are new in the university IT department. Your task is to reformulate following SQL query as it is to slow currently:
 
 ```
+SELECT DISTINCT X.exam ID FROM exams X
+WHERE X.exam ID IN (
+SELECT Y.exam ID FROM exams Y
+WHERE Y.student ID <> X.student ID);
+```
+
+Maybe, a reformulation will improve the query performance. In order to reformulate it, solve following tasks:
+
+(a) What is the result of this query?
+
 
