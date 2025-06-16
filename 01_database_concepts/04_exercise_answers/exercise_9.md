@@ -174,8 +174,26 @@ where y.student_id <> x.student_id;
 Join the tables using a 
 
 (a) Natural-Join
+
+```SQL
+select * from name natural join salary;
+```
+
 (b) Left-Outer-Join
+
+```SQL
+select * from name a left outer join salary s on s.pid = a.pid;
+```
 (c) Right-Outer-Join
+
+```SQL
+select * from name a right outer join salary s on s.pid = a.pid;
+```
+
 (d) Full-Outer-Join
+
+```SQL
+select * from name a full outer join salary s on s.pid = a.pid;
+```
 
 
