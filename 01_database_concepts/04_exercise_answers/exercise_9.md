@@ -43,3 +43,35 @@ select name from employee where name like '%l%l%';
 ```SQL
 
 ```
+
+## 2. Define the following queries in SQL:
+
+(a) Determine employee Id, name and salary of all employees. Add an intermediate column new salary to the query result that shows the current salary increased by 15\%. The new salary must be returned as integer value.
+
+```SQL
+select id, name, salary, (salary + (salary * 0.15)) as new_salary from employee;
+```
+
+(b) Given your solution from task (a), add another intermediate column that shows the difference between the original salary and the new salary. The difference must also be returned as integer value.
+
+```SQL
+select id, name, salary, (salary + (salary * 0.15)) as new_salary, (salary - (salary + (salary * 0.15)) as salary_difference from employee;
+```
+
+(c) For every plane, list its type, serial number and operating hours. Operating hours must be returned in a column called operating hours. The operating hours are computed by calculating the difference between today and the purchase date of the respective plane. Use a standard date function to calculate the difference and return your result as integer. Finally, sort your list by operating hours.
+
+```SQL
+select type, serial_number, 
+```
+
+(d) Create a query that returns following string for every employee: < name > earns < salary > per month, but desires to earn < 3\ast salary >. Replace all placeholders with the respective data using SQL. The new column is called desired salary.
+
+```SQL
+```
+
+(e) List all plane types. Thereby, all first letters must be capitalized, the rest must be uncapitalized. Return the length of the type name in a second column. The columns are called name und length.
+
+```SQL
+```
+
+
