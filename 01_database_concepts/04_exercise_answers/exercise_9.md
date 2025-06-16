@@ -21,13 +21,13 @@ Given the following relational schema:
 (a) Query name and salary of all employees that earn more than 6450€ .
 
 ```SQL
-select name, salary from eployee where salary > 6450;
+select name, salary from employee where salary > 6450;
 ```
 
 (b) Query name and salary of all employees that do not earn between 6000 and 10000.
 
 ```SQL
-select name, salary from employees where salary between 6000 and 10000;
+select name, salary from employee where salary not between 6000 and 10000;
 ```
 
 (c) Query all planes that are of type A-340 or TRIDENT. Sort by purchase date.
@@ -57,7 +57,7 @@ select name from employee where name like '%l%l%';
 (g) Query name, job and salary of all employees whose job is either Dipl. Ing. or steward/ ess and that earn are least 6000€ .
 
 ```SQL
-select name, job, salary from employee where job like 'Dipl%' or job like 'steward%' and salary >= 6000;
+select name, job, salary from employee where (job like 'Dipl%' or job like 'steward%') and salary >= 6000;
 ```
 
 ## 2. Define the following queries in SQL:
@@ -65,19 +65,19 @@ select name, job, salary from employee where job like 'Dipl%' or job like 'stewa
 (a) Determine employee Id, name and salary of all employees. Add an intermediate column new salary to the query result that shows the current salary increased by 15\%. The new salary must be returned as integer value.
 
 ```SQL
-select id, name, salary, (salary + (salary * 0.15)) as new_salary from employee;
+select id, name, salary, cast(salary + (salary * 0.15) as integer) as new_salary from employee;
 ```
 
 (b) Given your solution from task (a), add another intermediate column that shows the difference between the original salary and the new salary. The difference must also be returned as integer value.
 
 ```SQL
-select id, name, salary, (salary + (salary * 0.15)) as new_salary, (salary - (salary + (salary * 0.15)) as salary_difference from employee;
+select id, name, salary, (salary + (salary * 0.15)) as new_salary, ((salary + (salary * 0.15)) - salary) as salary_difference from employee;
 ```
 
 (c) For every plane, list its type, serial number and operating hours. Operating hours must be returned in a column called operating hours. The operating hours are computed by calculating the difference between today and the purchase date of the respective plane. Use a standard date function to calculate the difference and return your result as integer. Finally, sort your list by operating hours.
 
 ```SQL
-select type, serial_number, FLOOR(EXTRACT(EPOCH from age(purchase_date))/3600) as operating_hours from plane order by date_part('hour', INTERVAL age(purchase_date));
+select type, serial_number, FLOOR(EXTRACT(EPOCH from age(purchase_date))/3600) as operating_hours from plane order by operating_hours;
 ```
 
 (d) Create a query that returns following string for every employee: `< name > earns < salary > per month, but desires to earn < 3 * salary >`. Replace all placeholders with the respective data using SQL. The new column is called desired salary.
@@ -97,7 +97,7 @@ select initcap(type) as name, char_length(type) length from plane_type;
 (a) How many planes (not types) are stored in relation departure?
 
 ```SQL
-select count(*) from plane;
+select count(*) from (select distinct type, serial_number from departure) as unique_planes;
 ```
 
 (b) Determine the number of employees that have a doctor's degree (Dr. or PhD)!
@@ -109,7 +109,7 @@ select count(*) from employee where job in ('doctor', 'professor') group by job;
 (c) What is the average salary by job?
 
 ```SQL
-select job, avg(salary) from employee;
+select job, avg(salary) from employee group by job;
 ```
 
 (d) Return the total price and the number of bookings for all journeys in 1993 in relation booking.
@@ -121,13 +121,13 @@ select sum(price), count(*) from booking where flight_date between '1993-01-01' 
 (e) Determine the minimum salary for every job!
 
 ```SQL
-select job, MIN(salary) from employee group job;
+select job, MIN(salary) from employee group by job;
 ```
 
 (f) Retrieve the difference between the maximum and minimum salary of the all employees.
 
 ```SQL
-select MAX(salary) - MIN(salary) from employees;
+select MAX(salary) - MIN(salary) from employee;
 ```
 
 ## 4. You are new in the university IT department. Your task is to reformulate following SQL query as it is to slow currently:
@@ -143,7 +143,7 @@ Maybe, a reformulation will improve the query performance. In order to reformula
 
 (a) What is the result of this query?
 
-This query returns the exam IDs of exams with students that are not taking anyother exams.
+This query returns the exam IDs of exams that are taken by more than one student
 
 (b) You found two ways to reformulate the query. Reformulate the query
 
@@ -155,6 +155,10 @@ where y.student_id <> x.student_id;
 ```
 
 2. Without using tuple variables (to distinguish the use of the same relation), but by using aggregation functions.
+
+```SQL
+select exam_id from exams group by exam_id having count(distinct(student_id)) > 1;
+```
 
 ## Question 5. Given the following tables:
 
