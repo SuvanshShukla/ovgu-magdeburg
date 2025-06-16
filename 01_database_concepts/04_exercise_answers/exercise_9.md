@@ -29,7 +29,7 @@ select * from pilot where license not in ('I', 'II');
 (e) Determine the names of employees that have an A at the third position of their name.
 
 ```SQL 
-select name from employee where name like '__a%';
+select name from employee where name ilike '__a%';
 ```
 
 (f) Determine the names of employees that have the L twice in their name.
@@ -61,17 +61,18 @@ select id, name, salary, (salary + (salary * 0.15)) as new_salary, (salary - (sa
 (c) For every plane, list its type, serial number and operating hours. Operating hours must be returned in a column called operating hours. The operating hours are computed by calculating the difference between today and the purchase date of the respective plane. Use a standard date function to calculate the difference and return your result as integer. Finally, sort your list by operating hours.
 
 ```SQL
-select type, serial_number, 
+select type, serial_number, FLOOR(EXTRACT(EPOCH from age(purchase_date))/3600) as operating_hours from plane order by date_part('hour', INTERVAL age(purchase_date));
 ```
 
-(d) Create a query that returns following string for every employee: < name > earns < salary > per month, but desires to earn < 3\ast salary >. Replace all placeholders with the respective data using SQL. The new column is called desired salary.
+(d) Create a query that returns following string for every employee: `< name > earns < salary > per month, but desires to earn < 3 * salary >`. Replace all placeholders with the respective data using SQL. The new column is called desired salary.
 
 ```SQL
+select concat(name, ' earns ', salary, ' per month, but desires to earn ', salary * 3) desired_salary from employee;
 ```
 
 (e) List all plane types. Thereby, all first letters must be capitalized, the rest must be uncapitalized. Return the length of the type name in a second column. The columns are called name und length.
 
 ```SQL
+select initcap(type) as name, char_length(type) length from plane_type;
 ```
-
 
