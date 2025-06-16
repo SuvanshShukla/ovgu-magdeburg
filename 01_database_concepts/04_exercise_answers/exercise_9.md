@@ -129,13 +129,14 @@ select job, MIN(salary) from employee group job;
 ```SQL
 select MAX(salary) - MIN(salary) from employees;
 ```
+
 ## 4. You are new in the university IT department. Your task is to reformulate following SQL query as it is to slow currently:
 
 ```
-SELECT DISTINCT X.exam ID FROM exams X
-WHERE X.exam ID IN (
-SELECT Y.exam ID FROM exams Y
-WHERE Y.student ID <> X.student ID);
+SELECT DISTINCT X.exam_ID FROM exams X
+WHERE X.exam_ID IN (
+SELECT Y.exam_ID FROM exams Y
+WHERE Y.student_ID <> X.student_ID);
 ```
 
 Maybe, a reformulation will improve the query performance. In order to reformulate it, solve following tasks:
