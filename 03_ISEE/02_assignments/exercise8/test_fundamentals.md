@@ -1,4 +1,4 @@
-# ISEE Exercise 8 - Testig Basics
+# ISEE Exercise 8 - Testing Basics
 
 Written By: Suvansh Shukla (matriculation number: 256245)
 
@@ -18,7 +18,7 @@ This project is based on the V-model and the implementation is largely complete.
 ### Four Test Phases 
 
 1. **Unit Test**: used to determine the error state clearly. Each component is tested individually 
-2. **Integration Test**: used to find errors in the interfaces and interactions between the components. components are integrated into subsystems. This is performed by developers, testers, Integration teams.
+2. **Integration Test**: used to find errors in the interfaces and interactions between the components. Components are integrated into subsystems. This is performed by developers, testers, Integration teams.
 3. **System Test**: Used to determine if the system meets the requirements. This testing is done from the user's perspective, as most functions can only be used in a fully integrated system.
 4. **Acceptance Test**: This is testing is done to create trust in the product rather than finding errors. This includes the customer's view and opinion. This is the only testing phase that directly involves the customer and is carried out at the customer's premises in the new system environment.
 
@@ -36,7 +36,7 @@ I suggest using bottom-up integration testing for the project. I suggest this st
 
 Other strategies aren't as versatile and suitable because of the following reasons:
 
-- The Top-down strategy would require putting modules togther earlier in the testing stage, this can lead to more erros and conflicts. It may also require replacement of low level modules with dummies not to mention it would be more expensive.
+- The Top-down strategy would require putting modules together earlier in the testing stage, this can lead to more errors and conflicts. It may also require replacement of low level modules with dummies not to mention it would be more expensive.
 - Ad-hoc would require both dummies and drivers. It would also be harder to organize and track which modules require re-testing and which can proceed to the next stages. It may also lead to more re-working of modules at later stages.
 - Big bang wouldn't be appropriate as it would lead to too many errors especially at a very late stage of the project, this bringing about delays and would also be harder to debug (not being sure which module caused the errors).
 
