@@ -264,6 +264,11 @@ INSERT INTO organization (id, name, manager) VALUES
 
 (a) When and why is recursive SQL necessary?
 (b) Create an SQL query that returns all direct managers of Paul Meier!
+
+```SQL
+select o1.name from  organization o1 inner join organization o2 on o2.manager = o1.id where o2.name = 'Paul Meier';
+```
+
 (c) Create an SQL query that returns all direct and indirect managers of Paul Meier.
 
 
