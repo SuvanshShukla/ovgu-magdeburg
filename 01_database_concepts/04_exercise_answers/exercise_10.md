@@ -402,3 +402,24 @@ Relation R3 is:
 | Wine    |
 | Beer    |
 
+Division for R ÷ R1 is: 
+
+| Name  |
+| ----  |
+| Meier |
+| West  |
+
+Division for R ÷ R2 is: 
+
+| Name    | 
+| ----    |
+| Meier   |
+| Mueller |
+| Schmidt |
+
+Division for R ÷ R3 is: 
+
+| Name    |
+| ----    |
+| Schmidt |
+
