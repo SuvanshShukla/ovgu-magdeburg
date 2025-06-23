@@ -310,7 +310,15 @@ Join the tables using:
 
 (b) Theta-Join (⨝ Date>Date)
 
-
+| Date     | Orders     | Date     | Value |
+| ----     | ------     | ----     | ----- |
+| 02.09.03 | Furniture  | NULL     | NULL  |
+| 23.06.04 | Vegetables | 02.09.03 | 4000€ |
+| 01.12.05 | Pots       | 02.09.03 | 4000€ |
+| 01.12.05 | Pots       | 23.06.04 | 100€  |
+| 15.01.06 | Cutlery    | 02.09.03 | 4000€ |
+| 15.01.06 | Cutlery    | 23.06.04 | 100€  |
+| 15.01.06 | Cutlery    | 01.12.05 | 500€  |
 
 (c) Semi-Join (⋉)
 
