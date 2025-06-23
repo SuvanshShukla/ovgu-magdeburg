@@ -61,6 +61,96 @@ Line_item table
 |10|57|5|
 |10|67|3|
 
+---
+
+## Create and insert queries
+
+```SQL
+-- Customer Table
+CREATE TABLE Customer (
+    Cid INTEGER PRIMARY KEY,
+    Name TEXT
+);
+
+-- Dealer Table
+CREATE TABLE Dealer (
+    Did INTEGER PRIMARY KEY,
+    Name TEXT
+);
+
+-- Product Table
+CREATE TABLE Product (
+    Pid INTEGER PRIMARY KEY,
+    Label TEXT
+);
+
+-- Offers Table (many-to-many: Dealer ↔ Product)
+CREATE TABLE Offers (
+    Did INTEGER REFERENCES Dealer(Did),
+    Pid INTEGER REFERENCES Product(Pid),
+    PRIMARY KEY (Did, Pid)
+);
+
+-- Orders Table
+CREATE TABLE Orders (
+    Oid INTEGER PRIMARY KEY,
+    Did INTEGER REFERENCES Dealer(Did),
+    Date DATE,
+    Cid INTEGER REFERENCES Customer(Cid)
+);
+
+-- Line_item Table (many-to-many: Orders ↔ Product with Amount)
+CREATE TABLE Line_item (
+    Oid INTEGER REFERENCES Orders(Oid),
+    Pid INTEGER REFERENCES Product(Pid),
+    Amount INTEGER,
+    PRIMARY KEY (Oid, Pid)
+);
+
+INSERT INTO Customer (Cid, Name) VALUES
+(13, 'M.Mueller'),
+(17, 'A.Meier'),
+(23, 'I.Schulze');
+
+INSERT INTO Dealer (Did, Name) VALUES
+(5, 'G.Hals'),
+(7, 'P.Schmidt'),
+(11, 'E.Meier'),
+(13, 'E.Mueller');
+
+INSERT INTO Product (Pid, Label) VALUES
+(45, 'Power adapter'),
+(57, 'Cat5 cable'),
+(67, 'Mainboard');
+
+INSERT INTO Offers (Did, Pid) VALUES
+(5, 45),
+(5, 57),
+(7, 67),
+(7, 45),
+(11, 57),
+(5, 67),
+(11, 67);
+
+INSERT INTO Orders (Oid, Did, Date, Cid) VALUES
+(3, 7, '2002-12-01', 17),
+(5, 11, '2003-04-27', 23),
+(7, 5, '2003-05-13', 17),
+(10, 5, '2003-09-01', 13);
+
+INSERT INTO Line_item (Oid, Pid, Amount) VALUES
+(3, 45, 1),
+(3, 67, 5),
+(5, 67, 5),
+(7, 57, 3),
+(7, 67, 2),
+(10, 45, 2),
+(10, 57, 5),
+(10, 67, 3);
+```
+
+---
+
 ## Question 1. Express following queries in SQL!
 
 a. Get the names of all customers.
