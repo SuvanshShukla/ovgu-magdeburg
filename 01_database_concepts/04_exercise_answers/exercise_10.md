@@ -297,6 +297,12 @@ create view compsci_faculty_view as
 ```
 
 (b) The examination office can view all data.
+
+```SQL
+create view examination_office_view as 
+    select * from exams;
+```
+
 (c) The scholarship commission can only view average marks of every student.
 (d) The dean can only view data about exams of the last year for statistical purposes (i.e., the relationship to students and examiners must be removed).
 
