@@ -274,4 +274,12 @@ select o1.name from  organization o1 inner join organization o2 on o2.manager = 
 
 (c) Create an SQL query that returns all direct and indirect managers of Paul Meier.
 
+```SQL
+with RECURSIVE bosses as (
+select o1.name, o1.id from  organization o1 inner join organization o2 on o2.manager = o1.id where o2.name = 'Paul Meier'
+union all
+select e.name, e.id from organization e join bosses b on e.manager = b.id
+) select * from bosses;
+```
+
 
