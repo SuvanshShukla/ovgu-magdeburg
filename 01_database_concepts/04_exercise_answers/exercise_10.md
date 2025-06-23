@@ -107,6 +107,12 @@ where d.name like '%Meier' or c.name like '%Schulze';
 ## Question 2. Describe the following queries in SQL!
 
 (a) Get the label of all products that are ordered more than twice.
+
+```SQL
+select p.label from product p join line_item l on l.pid = p.pid 
+group by l.pid, p.label;
+```
+
 (b) Which customers (name) haven't ordered anything?
 (c) For all dealers (name), list the products (label) that they do not offer.
 (d) Output the products (label) sorted by total SalesPerProduct.
