@@ -263,6 +263,9 @@ INSERT INTO organization (id, name, manager) VALUES
 ```
 
 (a) When and why is recursive SQL necessary?
+
+Recursive SQL is necessary when we need to find data with self-referential properties. Like when finding the hierarchy of employees at a company
+
 (b) Create an SQL query that returns all direct managers of Paul Meier!
 
 ```SQL
