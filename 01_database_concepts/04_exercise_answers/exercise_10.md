@@ -360,3 +360,10 @@ Join the tables using:
 
 (c) Semi-Join (⋉)
 
+| Date     | Orders     | Date     | Value |
+| ----     | ------     | ----     | ----- |
+| 02.09.03 | Furniture  | NULL     | NULL  |
+| 23.06.04 | Vegetables | NULL     | NULL  |
+| 01.12.05 | Pots       | NULL     | NULL  |
+| 15.01.06 | Cutlery    | NULL     | NULL  |
+
