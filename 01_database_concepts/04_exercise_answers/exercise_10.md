@@ -121,5 +121,10 @@ select c.name from orders o left outer join customer c on c.cid = o.oid;
 
 (c) For all dealers (name), list the products (label) that they do not offer.
 (d) Output the products (label) sorted by total SalesPerProduct.
+
+```SQL
+select p.label, sum(amount) as sales from product p join line_item l on p.pid = l.pid group by label order by sales asc;
+```
+
 (e) Output the name of all dealers and their respective orders (if no order exists, fill these entries with NULL)!
 
