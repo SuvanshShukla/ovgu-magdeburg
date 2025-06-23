@@ -114,6 +114,11 @@ group by l.pid, p.label;
 ```
 
 (b) Which customers (name) haven't ordered anything?
+
+```SQL
+select c.name from orders o left outer join customer c on c.cid = o.oid;
+```
+
 (c) For all dealers (name), list the products (label) that they do not offer.
 (d) Output the products (label) sorted by total SalesPerProduct.
 (e) Output the name of all dealers and their respective orders (if no order exists, fill these entries with NULL)!
