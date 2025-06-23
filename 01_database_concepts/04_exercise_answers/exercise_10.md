@@ -218,3 +218,8 @@ select p.label, sum(amount) as sales from product p join line_item l on p.pid = 
 
 (e) Output the name of all dealers and their respective orders (if no order exists, fill these entries with NULL)!
 
+```SQL
+select d.name, o.* from dealer d left outer join orders o on d.did = o.did;
+```
+
+
