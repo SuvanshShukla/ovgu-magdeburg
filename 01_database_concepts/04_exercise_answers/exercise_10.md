@@ -242,7 +242,28 @@ select d.name, o.* from dealer d left outer join orders o on d.did = o.did;
 | 7  | Don Boss     | 2       | 
 | 8  | Rob Marketor | 5       |
 
+Create and insert queries for the above table:
+
+```SQL
+CREATE TABLE organization (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    manager INTEGER REFERENCES organization(id)  -- self-referential foreign key
+);
+
+INSERT INTO organization (id, name, manager) VALUES
+(1, 'Amy Teipist', 3),
+(2, 'Tom Owner', NULL),
+(3, 'Tim Managor', 7),
+(4, 'John Clerk', 3),
+(5, 'Juli Sal', 2),
+(6, 'Paul Meier', 3),
+(7, 'Don Boss', 2),
+(8, 'Rob Marketor', 5);
+```
+
 (a) When and why is recursive SQL necessary?
 (b) Create an SQL query that returns all direct managers of Paul Meier!
 (c) Create an SQL query that returns all direct and indirect managers of Paul Meier.
+
 
