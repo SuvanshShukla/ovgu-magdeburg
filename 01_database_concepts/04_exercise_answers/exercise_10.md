@@ -304,6 +304,13 @@ create view examination_office_view as
 ```
 
 (c) The scholarship commission can only view average marks of every student.
+
+```SQL
+create view scholarship_comm_view as 
+    select student, avg(mark) from exams 
+    group by student;
+```
+
 (d) The dean can only view data about exams of the last year for statistical purposes (i.e., the relationship to students and examiners must be removed).
 
 ## Question 6. Given the following tables: 
