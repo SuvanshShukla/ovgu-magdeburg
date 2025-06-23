@@ -2,11 +2,15 @@
 
 ## Tables
 
+Customer Table:
+
 |Cid|Name|
 |--|--|
 |13|M.Mueller|
 |17|A.Meier|
 |23|I.Schulze|
+
+Dealer table:
 
 |Did|Name|
 |---|---|
@@ -15,11 +19,15 @@
 |11|E.Meier|
 |13|E.Mueller|
 
+Product table;
+
 |Pid|Label|
 |--|--|
 |45|Power adapter|
 |57|Cat5 cable|
 |67|Mainboard|
+
+Offers table:
 
 |Did|Pid|
 |--|--|
@@ -31,12 +39,16 @@
 |5|67|
 |11|67|
 
+Orders table:
+
 |Oid|Did|Date|Cid|
 |--|--|--|--|
 |3|7|0.1.12.2002|17|
 |5|11|27.04.2003|23|
 |7|5|13.05.2003|17|
 |10|5|01.09.2003|13|
+
+Line_item table
 
 |Oid|Pid|Amount|
 |--|--|--|
