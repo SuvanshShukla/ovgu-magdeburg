@@ -227,4 +227,18 @@ select p.label, sum(amount) as sales from product p join line_item l on p.pid = 
 select d.name, o.* from dealer d left outer join orders o on d.did = o.did;
 ```
 
+## Question 3. Convert the SQL schema into an ER-schema.
+
+## Question 4. To solve this task, use recursive SQL as it is defined by Oracle (and lecture):
+
+| Id | Name         | Manager |
+| -- | ------------ | ------- |
+| 1  | Amy Teipist  | 3       |
+| 2  | Tom Owner    | NULL    |
+| 3  | Tim Managor  | 7       |
+| 4  | John Clerk   | 3       |
+| 5  | Juli Sal     | 2       |
+| 6  | Paul Meier   | 3       |
+| 7  | Don Boss     | 2       | 
+| 8  | Rob Marketor | 5       |
 
