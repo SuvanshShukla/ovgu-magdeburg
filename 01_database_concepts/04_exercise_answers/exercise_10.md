@@ -308,3 +308,9 @@ Join the tables using:
 | 01.12.05 | Pots       | 01.12.05 | 500€  |
 | 15.01.06 | Cutlery    | NULL     | NULL  |
 
+(b) Theta-Join (⨝ Date>Date)
+
+
+
+(c) Semi-Join (⋉)
+
