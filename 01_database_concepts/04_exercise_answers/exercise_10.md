@@ -210,6 +210,11 @@ select c.name from orders o left outer join customer c on c.cid = o.oid;
 ```
 
 (c) For all dealers (name), list the products (label) that they do not offer.
+
+```SQL
+
+```
+
 (d) Output the products (label) sorted by total SalesPerProduct.
 
 ```SQL
