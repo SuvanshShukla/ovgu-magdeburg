@@ -284,7 +284,7 @@ select e.name, e.id from organization e join bosses b on e.manager = b.id
 
 ## Question 5. Given following relation:
 
-exams(course_of_studies, course, student, examiner, date, mark)
+`exams(course_of_studies, course, student, examiner, date, mark)`
 
 Define the following views using SQL:
 
