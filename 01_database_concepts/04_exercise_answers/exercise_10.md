@@ -299,3 +299,12 @@ select e.name, e.id from organization e join bosses b on e.manager = b.id
 
 Join the tables using:
 
+(a) Equi-Join (⨝ Date=Date)
+
+| Date     | Orders     | Date     | Value |
+| ----     | ------     | ----     | ----- |
+| 02.09.03 | Furniture  | 02.09.03 | 4000€ |
+| 23.06.04 | Vegetables | 23.06.04 | 100€  |
+| 01.12.05 | Pots       | 01.12.05 | 500€  |
+| 15.01.06 | Cutlery    | NULL     | NULL  |
+
