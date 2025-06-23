@@ -282,4 +282,20 @@ select e.name, e.id from organization e join bosses b on e.manager = b.id
 ) select * from bosses;
 ```
 
+## Question 6. Given the following tables: 
+
+| Date     | Orders     |
+| ----     | ------     |
+| 02.09.03 | Furniture  |
+| 23.06.04 | Vegetables |
+| 01.12.05 | Pots       |
+| 15.01.06 | Cutlery    |
+
+| Date     | Value |
+| ----     | ----- |
+| 02.09.03 | 4000€ |
+| 23.06.04 | 100€  |
+| 01.12.05 | 500€  |
+
+Join the tables using:
 
