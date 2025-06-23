@@ -242,3 +242,7 @@ select d.name, o.* from dealer d left outer join orders o on d.did = o.did;
 | 7  | Don Boss     | 2       | 
 | 8  | Rob Marketor | 5       |
 
+(a) When and why is recursive SQL necessary?
+(b) Create an SQL query that returns all direct managers of Paul Meier!
+(c) Create an SQL query that returns all direct and indirect managers of Paul Meier.
+
