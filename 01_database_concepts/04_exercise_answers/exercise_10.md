@@ -367,3 +367,38 @@ Join the tables using:
 | 01.12.05 | Pots       | NULL     | NULL  |
 | 15.01.06 | Cutlery    | NULL     | NULL  |
 
+## Question 7. Calculate the folllowing division: R ÷ R1, R ÷ R2, R ÷ R3 using the following relations!
+
+Relation R is:
+
+| Name    | Product |
+| ----    | ------- |
+| Meier   | Tea     |
+| Meier   | Coffee  |
+| Meier   | Wine    |
+| Mueller | Wine    |
+| Schmidt | Beer    |
+| Schmidt | Wine    |
+| West    | Tea     |
+| West    | Coffee  |
+
+Relation R1 is: 
+
+| Product |
+| ------- |
+| Tea     |
+| Coffee  |
+
+Relation R2 is: 
+
+| Product |
+| ------- |
+| Wine    |
+
+Relation R3 is:
+
+| Product |
+| ------- |
+| Wine    |
+| Beer    |
+
