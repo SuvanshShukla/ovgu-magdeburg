@@ -313,6 +313,13 @@ create view scholarship_comm_view as
 
 (d) The dean can only view data about exams of the last year for statistical purposes (i.e., the relationship to students and examiners must be removed).
 
+```SQL
+create view dean_view as 
+    select course_of_studies, course, student, Max(date), mark
+    from exams 
+    where date extract(year from date) < extract(year from now())-1;
+```
+
 ## Question 6. Given the following tables: 
 
 | Date     | Orders     |
