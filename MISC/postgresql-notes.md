@@ -18,3 +18,18 @@ So:
 - PostgreSQL remembers this alias.
 - ORDER BY operating_hours is valid and will sort by the computed value of that expression.
 
+## Seeing what tables there are in your DB using SQL queries
+
+Just use the below query:
+
+```sql 
+SELECT
+    table_schema || '.' || table_name
+FROM
+    information_schema.tables
+WHERE
+    table_type = 'BASE TABLE'
+AND
+    table_schema NOT IN ('pg_catalog', 'information_schema');
+```
+
