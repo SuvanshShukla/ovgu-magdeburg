@@ -282,6 +282,17 @@ select e.name, e.id from organization e join bosses b on e.manager = b.id
 ) select * from bosses;
 ```
 
+## Question 5. Given following relation:
+
+exams(course_of_studies, course, student, examiner, date, mark)
+
+Define the following views using SQL:
+
+(a) The computer science faculty can only view data of students that are registered in computerscience.
+(b) The examination office can view all data.
+(c) The scholarship commission can only view average marks of every student.
+(d) The dean can only view data about exams of the last year for statistical purposes (i.e., the relationship to students and examiners must be removed).
+
 ## Question 6. Given the following tables: 
 
 | Date     | Orders     |
