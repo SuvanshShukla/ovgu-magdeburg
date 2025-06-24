@@ -328,9 +328,16 @@ create view scholarship_comm_view as
 
 ```SQL
 create view dean_view as 
-    select course_of_studies, course, student, Max(date), mark
-    from exams 
-    where date extract(year from date) < extract(year from now())-1;
+    select course_of_studies, course, student, Max(date), mark from exams where date = extract(year from date) < extract(year from now())-1;
+```
+
+the corrected query:
+
+```SQL
+CREATE VIEW dean_view AS 
+SELECT course_of_studies, course, date, mark 
+FROM exams 
+WHERE extract(year FROM date) = extract(year FROM now()) - 1;
 ```
 
 ## Question 6. Given the following tables: 
