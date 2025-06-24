@@ -382,7 +382,7 @@ Join the tables using:
 
 **NOTE: See how date and value columns were not added to the result!**
 
-## Question 7. Calculate the folllowing division: R ÷ R1, R ÷ R2, R ÷ R3 using the following relations!
+## Question 7. Calculate the following division: R ÷ R1, R ÷ R2, R ÷ R3 using the following relations!
 
 Relation R is:
 
