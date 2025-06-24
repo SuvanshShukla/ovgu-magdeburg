@@ -171,7 +171,7 @@ c. List all products that have not been sold on 13.05.2003.
 ```SQL
 select p.* from product p join line_item l on p.pid = l.pid 
 join orders o on o.oid = l.oid 
-where o.date != '13.05.2003';
+where o.date != '13-05-2003';
 ```
 
 The above query looks correct but there's a catch. This query may end up still returning all the products, and this may happen  
@@ -182,9 +182,9 @@ So the correct query should be like below:
 ```SQL
 select * from product where pid not in (
     select pid from line_item l inner join orders o on l.oid = o.oid
-    where o.date = '2003.05.13'
+    where o.date = '2003-05-13'
 );
-``
+```
 
 d. List all products that dealer Meier sold to customer Schulze.
 
