@@ -373,12 +373,14 @@ Join the tables using:
 
 (c) Semi-Join (⋉)
 
-| Date     | Orders     | Date     | Value |
-| ----     | ------     | ----     | ----- |
-| 02.09.03 | Furniture  | NULL     | NULL  |
-| 23.06.04 | Vegetables | NULL     | NULL  |
-| 01.12.05 | Pots       | NULL     | NULL  |
-| 15.01.06 | Cutlery    | NULL     | NULL  |
+| Date     | Orders     |
+| ----     | ------     |
+| 02.09.03 | Furniture  |
+| 23.06.04 | Vegetables |
+| 01.12.05 | Pots       |
+| 15.01.06 | Cutlery    |
+
+**NOTE: See how date and value columns were not added to the result!**
 
 ## Question 7. Calculate the folllowing division: R ÷ R1, R ÷ R2, R ÷ R3 using the following relations!
 
