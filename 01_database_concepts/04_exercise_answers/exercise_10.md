@@ -217,7 +217,7 @@ group by l.pid, p.label;
 (b) Which customers (name) haven't ordered anything?
 
 ```SQL
-select c.name from orders o left outer join customer c on c.cid = o.oid;
+select c.name from customer c where c.cid not in (select cid from orders);
 ```
 
 (c) For all dealers (name), list the products (label) that they do not offer.
