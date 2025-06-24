@@ -174,6 +174,18 @@ join orders o on o.oid = l.oid
 where o.date != '13.05.2003';
 ```
 
+The above query looks correct but there's a catch. This query may end up still returning all the products, and this may happen  
+when the same product was sold on 13.05.2003 and some other date. So even though you were expecting one product to be skipped, it would be included.    
+Basically if the same product was sold on 13.05.2003 and on 14.05.2003, would it still be correct to return that product?   
+So the correct query should be like below:
+
+```SQL
+select * from product where pid not in (
+    select pid from line_item l inner join orders o on l.oid = o.oid
+    where o.date = '2003.05.13'
+);
+``
+
 d. List all products that dealer Meier sold to customer Schulze.
 
 ```SQL
@@ -228,6 +240,8 @@ select d.name, o.* from dealer d left outer join orders o on d.did = o.did;
 ```
 
 ## Question 3. Convert the SQL schema into an ER-schema.
+
+
 
 ## Question 4. To solve this task, use recursive SQL as it is defined by Oracle (and lecture):
 
