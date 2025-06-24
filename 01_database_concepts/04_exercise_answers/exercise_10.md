@@ -162,8 +162,8 @@ select name from customer;
 b. Get all orders of customer Meier.
 
 ```SQL
-select * from customer join orders on oid = cid 
-where name like '%Meier';
+select o.* from customer c inner join orders o on o.cid = c.cid 
+where c.name ilike '%meier'; 
 ```
 
 c. List all products that have not been sold on 13.05.2003.
