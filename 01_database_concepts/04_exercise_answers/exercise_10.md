@@ -191,7 +191,7 @@ d. List all products that dealer Meier sold to customer Schulze.
 ```SQL
 select p.* from product p join line_item l on p.pid = l.pid 
 join orders o on o.oid = l.oid 
-join customer c on c.cid = o.oid 
+join customer c on c.cid = o.cid 
 join dealer d on d.did = o.did 
 where d.name like '%Meier' and c.name like '%Schulze';
 ```
