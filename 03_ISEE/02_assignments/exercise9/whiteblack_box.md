@@ -24,6 +24,8 @@ public static boolean isNarcissistic(int n) {
 
 ### Create the control flow graph of the function `isNarcissistic`.
 
+![Control Flow Graph for the function](./whiteblack_box.svg)
+
 ### What is the minimum number of test cases required to perform the coverage tests and ?
 
 ### State the logical and one specific test case as well as their executed path!
