@@ -26,6 +26,21 @@ public static boolean isNarcissistic(int n) {
 
 ![Control Flow Graph for the function](./whiteblack_box.svg)
 
-### What is the minimum number of test cases required to perform the coverage tests and ?
+### What is the minimum number of test cases required to perform the coverage tests `C0` and `C1` ?
+
+For `C0`-test, you would need at least 2 test cases.    
+For `C1`-test, you would need at least four test cases.     
+
+For `C1` the tests would be `while` - `true` & `false`, then `if` - `true` & `false`.
 
 ### State the logical and one specific test case as well as their executed path!
+
+The logical test case would be taking a number like 0.
+
+The test would flow like this:
+All variables would be initialized, then the code wouldn't enter the while loop because 0 is not greater than 0.
+Then the code would enter the if block on line 10 because result is equal to initial (since 0 is equal to 0).   
+Then finally we would return `true` and the execution of the test would end.
+
+Path = (1, 2-4, 5, 10, 11)
+
