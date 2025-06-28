@@ -65,6 +65,23 @@ greater than desired. This indicates a defect in the machine and should be check
 
 ### 1. Set up the criteria for the equivalence classes!
 
+The criteria for the equivalence classes are as follows:
+
+1. deviation <= 1%
+2. 1% < deviation <5%
+3. 5% <= deviation <= 75%
+4. 75% < deviation
+
 ### 2. Think of four equivalence classes that you should test. For each of these equivalence classes, give a possible input, a description and the desired result!
 
-### 3. What is a boundary value analysis? Which values are suit
+Four equivalence classes, considering equivalence criteria number 2, would be as follows:
+
+- valid: a deviation between 1% and 5%
+- invalid: a deviation greater than 5%
+- invalid: a deviation less than 1%
+- invalid: a deviation that is a non-numeric input
+- invalid: a deviation equal to 5%
+
+### 3. What is a boundary value analysis? Which values are suitable for carrying out a limit value analysis in the given scenario?
+
+
