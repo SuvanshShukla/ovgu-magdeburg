@@ -44,3 +44,27 @@ Then finally we would return `true` and the execution of the test would end.
 
 Path = (1, 2-4, 5, 10, 11)
 
+## Task - BlackBox test 
+
+You want to test the method `String qualityCheck(double weight)` with the black box test procedure. You use the following code for this:
+
+```java
+final static double TARGET_WEIGHT_IN_GRAMS = 100;
+public static String qualityCheck(double weight){
+	//The code of this method is unknown
+}
+```
+
+In a packaging system for cheese, it must be checked whether the correct amount of cheese ends up in each pack.
+The `qualityCheck` method is responsible for this. The target weight is represented by the final variable `TARGET_WEIGHT_IN_GRAMS`. 
+If the actual weight only deviates by 1%, the method outputs "perfect". If the deviation is more than 1% but less than 5%, 
+the pack must undergo a second manual check. The method outputs “manual check”. For all other deviations, the 
+weight is not tolerable and the method outputs “reject”. The only exception is if the measured weight is more than 75%
+greater than desired. This indicates a defect in the machine and should be checked. The method outputs “stop and check”.
+
+
+### 1. Set up the criteria for the equivalence classes!
+
+### 2. Think of four equivalence classes that you should test. For each of these equivalence classes, give a possible input, a description and the desired result!
+
+### 3. What is a boundary value analysis? Which values are suit
