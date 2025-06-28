@@ -1,5 +1,7 @@
 # ISEE Exercise 9 - Task
 
+Written By: Suvansh Shukla (matriculation number: 256245)
+
 ## Task - WhiteBox test
 
 A white box test is to be carried out for the following function.
@@ -84,4 +86,12 @@ Four equivalence classes, considering equivalence criteria number 2, would be as
 
 ### 3. What is a boundary value analysis? Which values are suitable for carrying out a limit value analysis in the given scenario?
 
+Boundary value analysis is a testing technique that focuses no testing the extreme values at the edges of input ranges. 
+The following values are suitable for carrying out a limit value analysis in the given scenario:
+
+- 100 grams 
+- 102 grams
+- 176 grams
+- 0 grams
+- 99 grams
 
