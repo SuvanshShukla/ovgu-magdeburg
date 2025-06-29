@@ -25,6 +25,9 @@ A new windscreen wiper system is to be implemented in future electric cars. In o
 | M     | Project completion             | 1 	    | L          |
 
 1. Draw a network diagram based on the processes! Label the critical path.
+
+![network diagram](./precedence_diagram.svg)
+
 2. Draw the corresponding Gantt diagram!
 3. What are the main differences between the network diagram and the Gantt diagram?
 
