@@ -11,3 +11,11 @@ Just use the below command:
 :!column -t -s '|' -o '|'
 ```
 
+## How to add an empty line above and below the line with your cursor
+
+Use the following key-maps (which were found here: [StackExchange answer by Eric Mathison](https://superuser.com/a/617687):
+
+`[<Space>` - adds a line above your cursor
+
+`]<Space>` - adds a line below your cursor
+
