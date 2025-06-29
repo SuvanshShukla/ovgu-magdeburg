@@ -34,6 +34,8 @@ A new windscreen wiper system is to be implemented in future electric cars. In o
 
 3. What are the main differences between the network diagram and the Gantt diagram?
 
+Taken from this note - ![difference.md](./difference.md)
+
 The primary difference between a network diagram and a Gantt chart is that, the Gantt chart integrates dates better than the network diagram.   
 The Gantt chart also has the unfortunate side-effect of not being able to display the dependencies properly.    
 The Gantt chart is also represented by bars on a calendar, while the network diagram uses blocks to denote processes.   
