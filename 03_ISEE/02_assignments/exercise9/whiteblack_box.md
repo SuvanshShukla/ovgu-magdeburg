@@ -26,7 +26,7 @@ public static boolean isNarcissistic(int n) {
 
 ### Create the control flow graph of the function `isNarcissistic`.
 
-![Control Flow Graph for the function](./whiteblack_box.svg)
+![Control Flow Graph for the function](./whitebox_graph.svg)
 
 ### What is the minimum number of test cases required to perform the coverage tests `C0` and `C1` ?
 
