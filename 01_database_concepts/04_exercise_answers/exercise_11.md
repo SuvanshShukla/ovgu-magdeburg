@@ -1,21 +1,69 @@
 # Database Concepts Exercise 11
+⨝ , Π, σ, 
 
 ## 1. Given the following example database from the appendix. Formulate following queries using relational algebra:
 
 (a) Query the names of employees, who work on all projects that John Smith is working on.
 
+```
+Π fname,lname σ fname="John",lname="Smith" (Employee ⨝ (ssn=essn) works_on ⨝ (pno=pnumber) project)
+```
 
 (b) Query name and address of all employees, who work for the Research department.
+
+```
+Π fname,lname,address σ dname="Research" (employee ⨝ (ssn=mgrssn) department)
+```
+
 (c) Query the project number of the project that is located in Stafford. Moreover, you should retrieve the number of the department that controls the project as well as as the responsible manager's name, address and birth day.
+
+```
+Π pnumber,dnum,fname,lname,address,bdate σ plocation="Stafford" (project ⨝ (dnum=dnumber) department ⨝ (dnumber=dno) employee)
+```
+
 (d) Query the names of employees, who work on all projects controlled by department 5.
+
+```
+Π fname,lname σ dnum=5 (project ⨝ (ssn=essn) works_on ⨝ (pno=pnumber) project)
+```
+
 (e) List all project numbers of projects that involve an employee (including managers) whose last name is Smith.
 
+```
+Π pnumber σ lname=smith (project ⨝ (ssn=essn) works_on ⨝ (pno=pnumber) project)
+```
+
 ## 2. Given the example database in the appendix, formulate the following queries in relational algebra:
+
 (a) Find all employees with two or more relatives!
+
+```
+Ύ dependent;count(essn)>=2 (employee ⨝ (ssn=essn) dependent)
+```
+
 (b) Find the names of all employees that have no relatives!
+
+```
+Π fname,lname Ύ dependent;count(essn)=0 (employee ⨝ (ssn=essn) dependent)
+```
+
 (c) Find the names of managers with at least one relative!
+
+```
+Π fname,lname Ύ dependent;count(essn)>=1 (employee ⟕ (ssn=mgrssn) department ⨝ (ssn=essn) dependent)
+```
+
 (d) Which employees work on more than two projects?
+
+```
+Ύ project,count(pnumber)>=1 (employee ⨝ (essn=ssn) works_on ⨝ (pno=pnumber) project)
+```
+
 (e) Find for every department (DName), the projects (PName) they are not working on!
+
+```
+
+```
 
 ## 3. Given following relational schema:
 
@@ -42,6 +90,7 @@ Excludes: (Excluder: string-> Adds_discount, Excluded: string-> Adds_discount)
 ```
 
 Formulate following queries using the tuple calculus:
+
 (a) Find all stations.
 (b) Find the labels of all discounts and additions.
 (c) Find all tickets that cost more than 100€.
