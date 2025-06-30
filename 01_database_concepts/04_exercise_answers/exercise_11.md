@@ -116,12 +116,12 @@ Formulate following queries using the tuple calculus:
 
 ## 5. Basic Terms (Views, Transactions, Trigger):
 
-(a) What is a view? What are views used for?
+**(a) What is a view? What are views used for?**
 
 A view is basically a saved query that allows you to perform queries on it. It allows you to restrict what data is visible to what kind of user.
 It enhances convenience and improves security.
 
-(b) Reiterate the term transaction and explain the ACID-principle!
+**(b) Reiterate the term transaction and explain the ACID-principle!**
 
 A transaction is a set of commands that are executed on a database in an ordered or unordered manner.   
 ACID is an acronym that denotes: atomicity, consistency, isolation and durability.  
@@ -135,7 +135,7 @@ Consistency: The database must remain in a valid state both before and after the
 Isolation: Concurrent transactions should not interfere with each other, this means that multiple transactions can be processed and that the database would remain in a valid state throughout. 
 Durability: Changes brought about by transactions should stay in the database and persist in it. They should be there even if there is a system failure.    
 
-(c) What is a trigger? Name important use cases and problems with triggers!
+**(c) What is a trigger? Name important use cases and problems with triggers!**
 
 A trigger is a statement or procedure that is executed automatically by the DBMS at the occurrence of a specific event.
 
