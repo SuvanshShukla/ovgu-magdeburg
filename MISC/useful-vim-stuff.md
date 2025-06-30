@@ -19,3 +19,11 @@ Use the following key-maps (which were found here: [StackExchange answer by Eric
 
 `]<Space>` - adds a line below your cursor
 
+## Convert Spaced words into snake case
+
+```
+:'<,'>s/\v<(\w+)\s+(\w+)>/\1_\2/g 
+```
+
+Careful! it uses the very magic flag!
+
