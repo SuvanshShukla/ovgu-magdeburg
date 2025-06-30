@@ -99,6 +99,11 @@ Formulate following queries using the tuple calculus:
 ```
 
 (d) Find all departure times of all connections that go from Munich to Augsburg before noon (12 o'clock).
+
+```
+{ w.departure | w ∈ connection ∧ w.starts_at='Munich' ∧ w.goes_to='Augsburg' ∧ w.departure<'12:00' }
+```
+
 (e) Find all trains that have a connection from Munich to Augsburg.
 (f) Find all discounts and additions that do not depend on others and do not exclude others.
 
