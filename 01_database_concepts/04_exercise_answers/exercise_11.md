@@ -114,6 +114,12 @@ Formulate following queries using the tuple calculus:
 
 ## 4. Formulate the queries from task 2 using the domain calculus.
 
+(e) Find for every department (DName), the projects (PName) they are not working on!
+
+```
+{ dname, pname | department(a,b,c,d) ∧ project(x,y,z,b) ∧ department(b) != project(b) } 
+```
+
 ## 5. Basic Terms (Views, Transactions, Trigger):
 
 **(a) What is a view? What are views used for?**
