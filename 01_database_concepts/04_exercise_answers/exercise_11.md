@@ -93,6 +93,11 @@ Formulate following queries using the tuple calculus:
 
 (b) Find the labels of all discounts and additions.
 (c) Find all tickets that cost more than 100€.
+
+```
+{ w | w ∈ ticket ∧ w.price>100 }
+```
+
 (d) Find all departure times of all connections that go from Munich to Augsburg before noon (12 o'clock).
 (e) Find all trains that have a connection from Munich to Augsburg.
 (f) Find all discounts and additions that do not depend on others and do not exclude others.
