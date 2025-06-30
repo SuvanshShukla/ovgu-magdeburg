@@ -73,18 +73,12 @@ Train: (Train_number: integer, Manufacturer: string)
 Local_train: (Train_number-> Train, Bikes_allowed: boolean)
 Distance_train: (Train_number-> Train, Dining_car: boolean, Label: string)
 Car: (Car_number: integer, Train_number-> Train, Position: integer)
-eat: (Car_number: integer-> Car, Seat_number: integer, Category: integer,
-Smoker: boolean, Window:boolean)
-Connection: (Arrival: time, Departure: time, Day: date, starts_at: string-> Station,
-goes_to: string-> Station, Train_number: integer-> Train)
+Seat: (Car_number: integer-> Car, Seat_number: integer, Category: integer, Smoker: boolean, Window:boolean)
+Connection: (Arrival: time, Departure: time, Day: date, starts_at: string-> Station, goes_to: string-> Station, Train_number: integer-> Train)
 Ticket: (Price: integer, Ticket_nubmer: integer)
-Reservation: (Ticket_number-> Ticket, (Arrival, Departure, Day, starts_at,
-goes_to, Train_number)-> Connection, (Car_number,
-Seat_number)-> Seat, Price: integer)
-Valid_for: ((Arrival, Departure, Date, starts_at, goes_to, Train_number)-> Connection,
-Ticket_number-> Ticket)
-Adds_discount: (Label: string, Unit: string, Amount: integer
-requires: string-> Adds_Discount)
+Reservation: (Ticket_number-> Ticket, (Arrival, Departure, Day, starts_at, goes_to, Train_number)-> Connection, (Car_number, Seat_number)-> Seat, Price: integer)
+Valid_for: ((Arrival, Departure, Date, starts_at, goes_to, Train_number)-> Connection, Ticket_number-> Ticket)
+Adds_discount: (Label: string, Unit: string, Amount: integer requires: string-> Adds_Discount)
 Imputation: (Ticket_number-> Ticket, Label-> Adds_discount)
 Excludes: (Excluder: string-> Adds_discount, Excluded: string-> Adds_discount)
 ```
