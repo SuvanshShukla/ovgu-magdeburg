@@ -115,7 +115,30 @@ Formulate following queries using the tuple calculus:
 ## 4. Formulate the queries from task 2 using the domain calculus.
 
 ## 5. Basic Terms (Views, Transactions, Trigger):
+
 (a) What is a view? What are views used for?
+
+A view is basically a saved query that allows you to perform queries on it. It allows you to restrict what data is visible to what kind of user.
+It enhances convenience and improves security.
+
 (b) Reiterate the term transaction and explain the ACID-principle!
+
+A transaction is a set of commands that are executed on a database in an ordered or unordered manner.   
+ACID is an acronym that denotes: atomicity, consistency, isolation and durability.  
+Atomicity means that every command must be complete and cannot be broken down further into smaller commands.    
+Consistency means that the data saved in the database should be same throughout and not be different.   
+Isolation means that operating or changing data somewhere in the database would not affect the data somewhere else. 
+Durability means that the data that has been saved should be retrievable and not easily lost.   
+
+Atomicity: Transactions cannot be broken down into smaller transactions and that they must be processed completely. 
+Consistency: The database must remain in a valid state both before and after the transaction is processed.  
+Isolation: Concurrent transactions should not interfere with each other, this means that multiple transactions can be processed and that the database would remain in a valid state throughout. 
+Durability: Changes brought about by transactions should stay in the database and persist in it. They should be there even if there is a system failure.    
+
 (c) What is a trigger? Name important use cases and problems with triggers!
 
+A trigger is a statement or procedure that is executed automatically by the DBMS at the occurrence of a specific event.
+
+An important use case of triggers would be to drop certain columns when a table is deleted.
+
+A problem with triggers is that they can only be written for insert or update events.
