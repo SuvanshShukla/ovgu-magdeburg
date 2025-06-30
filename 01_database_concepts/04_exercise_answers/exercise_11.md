@@ -92,6 +92,11 @@ Formulate following queries using the tuple calculus:
 ```
 
 (b) Find the labels of all discounts and additions.
+
+```
+
+```
+
 (c) Find all tickets that cost more than 100€.
 
 ```
@@ -112,7 +117,35 @@ Formulate following queries using the tuple calculus:
 
 (f) Find all discounts and additions that do not depend on others and do not exclude others.
 
+```
+
+```
+
 ## 4. Formulate the queries from task 2 using the domain calculus.
+
+(a) Find all employees with two or more relatives!
+
+```
+{ x | 
+```
+
+(b) Find the names of all employees that have no relatives!
+
+```
+
+```
+
+(c) Find the names of managers with at least one relative!
+
+```
+
+```
+
+(d) Which employees work on more than two projects?
+
+```
+
+```
 
 (e) Find for every department (DName), the projects (PName) they are not working on!
 
