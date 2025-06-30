@@ -62,7 +62,7 @@
 (e) Find for every department (DName), the projects (PName) they are not working on!
 
 ```
-
+(department ⨝  project) - (department ⨝ (dnumber=dnum) project)
 ```
 
 ## 3. Given following relational schema:
