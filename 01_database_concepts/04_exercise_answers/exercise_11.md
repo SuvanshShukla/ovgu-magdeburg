@@ -86,6 +86,11 @@ Excludes: (Excluder: string-> Adds_discount, Excluded: string-> Adds_discount)
 Formulate following queries using the tuple calculus:
 
 (a) Find all stations.
+
+```
+{ w | w ∈ station }
+```
+
 (b) Find the labels of all discounts and additions.
 (c) Find all tickets that cost more than 100€.
 (d) Find all departure times of all connections that go from Munich to Augsburg before noon (12 o'clock).
