@@ -40,3 +40,19 @@ requires: string-> Adds_Discount)
 Imputation: (Ticket_number-> Ticket, Label-> Adds_discount)
 Excludes: (Excluder: string-> Adds_discount, Excluded: string-> Adds_discount)
 ```
+
+Formulate following queries using the tuple calculus:
+(a) Find all stations.
+(b) Find the labels of all discounts and additions.
+(c) Find all tickets that cost more than 100€.
+(d) Find all departure times of all connections that go from Munich to Augsburg before noon (12 o'clock).
+(e) Find all trains that have a connection from Munich to Augsburg.
+(f) Find all discounts and additions that do not depend on others and do not exclude others.
+
+## 4. Formulate the queries from task 2 using the domain calculus.
+
+## 5. Basic Terms (Views, Transactions, Trigger):
+(a) What is a view? What are views used for?
+(b) Reiterate the term transaction and explain the ACID-principle!
+(c) What is a trigger? Name important use cases and problems with triggers!
+
