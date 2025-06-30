@@ -105,6 +105,11 @@ Formulate following queries using the tuple calculus:
 ```
 
 (e) Find all trains that have a connection from Munich to Augsburg.
+
+```
+{ u | u ∈ train ∧ w ∈ connection ∧ w.train_number=u.train_number ∧ w.starts_at='Munich' ∧ w.goes_to='Augsburg' }
+```
+
 (f) Find all discounts and additions that do not depend on others and do not exclude others.
 
 ## 4. Formulate the queries from task 2 using the domain calculus.
