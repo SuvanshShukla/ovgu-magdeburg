@@ -132,7 +132,7 @@ Formulate following queries using the tuple calculus:
 (b) Find the names of all employees that have no relatives!
 
 ```
-
+{ x | x ∈ employee ∧ u ∈ dependent ∧ u.essn = x.ssn ∧ u = ɸ }
 ```
 
 (c) Find the names of managers with at least one relative!
