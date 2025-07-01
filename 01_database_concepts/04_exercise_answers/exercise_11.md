@@ -180,4 +180,4 @@ A trigger is a statement or procedure that is executed automatically by the DBMS
 
 An important use case of triggers would be to drop certain columns when a table is deleted.
 
-A problem with triggers is that they can only be written for insert or update events.
+A problem with triggers is that they can be difficult to debug and may unintentionally increase complexity.
