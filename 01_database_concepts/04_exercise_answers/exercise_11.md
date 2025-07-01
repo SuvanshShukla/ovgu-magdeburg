@@ -118,7 +118,7 @@ Formulate following queries using the tuple calculus:
 (f) Find all discounts and additions that do not depend on others and do not exclude others.
 
 ```
-
+{ w | w ∈ adds_discount ∧ w ∈ excludes ∧ w.excluder = u.label ∧ u.requires = ɸ ∧ w.excluded = ɸ }
 ```
 
 ## 4. Formulate the queries from task 2 using the domain calculus.
