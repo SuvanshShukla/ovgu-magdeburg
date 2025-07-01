@@ -94,7 +94,7 @@ Formulate following queries using the tuple calculus:
 (b) Find the labels of all discounts and additions.
 
 ```
-
+{ u.label, v.label | u ∈ adds_discount ∧ v ∈ imputation }
 ```
 
 (c) Find all tickets that cost more than 100€.
