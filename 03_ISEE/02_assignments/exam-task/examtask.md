@@ -28,8 +28,8 @@ Task text/Description:
 > Your task is to write down at least 4 possible problems/issues you may face when trying to collect all the requirements from your co-workers.
 > Also mention if such a way of gathering requirements is a good or bad idea, and write briefly on why or why not.
 
-Points for this task: 2 
-Explanation for marking scheme: 1 point for the listed issues, 1 point on why/why not this method was good
+Points for this task: 2  
+Explanation for marking scheme: 1 point for the listed issues, 1 point on why/why not this method was good  
 
 Example solution:
 
