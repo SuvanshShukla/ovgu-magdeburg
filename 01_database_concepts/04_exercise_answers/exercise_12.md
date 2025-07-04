@@ -18,6 +18,8 @@ has an address (first and last name, postal code, city) and contact information
 has a customer number. Some customers do not have a policy yet, but every
 policy belongs to exactly one customer.
 
+![entity-relationship-diagram](./exercise12-images/dbc-exe-12-ques-1-erd.svg)
+
 ## Question 4
 
 Given the following example database:
