@@ -41,3 +41,9 @@ Quit out of psql shell
 ```bash
 \q 
 ```
+
+## Put in large multi-line queries in psql 
+
+Use the `\edit` command.
+
+On Windows it opens notepad, on linux it should open vi/vim/nvim
