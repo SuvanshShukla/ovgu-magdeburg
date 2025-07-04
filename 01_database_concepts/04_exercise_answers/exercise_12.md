@@ -189,16 +189,16 @@ Formulate each of the following queries in tuple as well as domain calculus:
 
 (a) The names of all customers.
 
-{x.name | x ∈ customer}
+{ x.name | x ∈ customer }
 
 (b) Orders from customer Meier.
 
-{x | x ∈ orders ∧ u ∈ customer ∧ x.cid = u.cid ∧ u.name='A.Meier'}
+{ x | x ∈ orders ∧ u ∈ customer ∧ x.cid = u.cid ∧ u.name='A.Meier' }
 
 (c) Which dealers offer Cat5 cables?
 
-{x | x ∈ dealer ∧ u ∈ offers ∧ x.did=u.did ∧ u.pid=57 }
+{ x | x ∈ dealer ∧ u ∈ offers ∧ x.did=u.did ∧ u.pid=57 }
 
 (d) Which customers (name) have not placed orders?
 
-{x.name | x ∈ customer ∧ u ∈ orders ∧ x.cid=u.cid ∧ u.cid=NULL}
+{ x.name | x ∈ customer ∧ u ∈ orders ∧ x.cid=u.cid ∧ u.cid=NULL }
