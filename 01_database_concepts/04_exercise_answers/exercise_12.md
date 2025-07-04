@@ -201,4 +201,4 @@ Formulate each of the following queries in tuple as well as domain calculus:
 
 (d) Which customers (name) have not placed orders?
 
-{x | x ∈ customer ∧ u ∈ orders ∧ x.cid=u.cid ∧ u.cid=NULL}
+{x.name | x ∈ customer ∧ u ∈ orders ∧ x.cid=u.cid ∧ u.cid=NULL}
