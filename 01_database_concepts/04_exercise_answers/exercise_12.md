@@ -183,3 +183,11 @@ Formulate the following queries in relational algebra:
 Π <sub>(cid, name)</sub> σ <sub>(pid='45')</sub> Ύ <sub>(product,count(pid)>1)</sub> (product ⨝ line_item ⨝ orders)
 
 (d) Find all dealers who offer a mainboard, but have not yet sold one.
+## Question 6
+
+Formulate each of the following queries in tuple as well as domain calculus:
+
+(a) The names of all customers.
+(b) Orders from customer Meier.
+(c) Which dealers offer Cat5 cables?
+(d) Which customers (name) have not placed orders?
