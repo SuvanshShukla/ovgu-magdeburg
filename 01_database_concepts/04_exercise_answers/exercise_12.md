@@ -172,7 +172,7 @@ Formulate the following queries in relational algebra:
 
 (a) Output all orders from customer M.Mueller.
 
-Π <sub>(oid,did,date,cid)</sub> σ<sub>(name='M.Mueller')</sub> (orders ⟕ customer)
+Π <sub>(oid,did,date,cid)</sub> σ<sub>(name='M.Mueller')</sub> (orders ⟕ <sub>(orders.cid=customer.cid)</sub> customer)
 
 (b) Find all items ordered on days other than 13.05.2003.
 
