@@ -176,7 +176,7 @@ Formulate the following queries in relational algebra:
 
 (b) Find all items ordered on days other than 13.05.2003.
 
-Π <sub>(pid,label)</sub> (product ⨝ line_item ⨝ orders) - Π <sub>(pid,label)</sub> σ<sub>(orders.date='13.05.2003)</sub> (product ⨝ line_item ⨝ orders)
+Π <sub>(pid,label)</sub> (product ⨝ line_item ⨝ orders) - Π <sub>(pid,label)</sub> σ<sub>(orders.date='13.05.2003')</sub> (product ⨝ line_item ⨝ orders)
 
 (c) Find all customers who have ordered more than one power supply.
 
