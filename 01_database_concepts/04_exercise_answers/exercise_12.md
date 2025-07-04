@@ -111,7 +111,15 @@ inner join products p on p.pid = l.Pid
 (c) Output pairs of customers that have bought at least one common Product.
 
 ```SQL
-
+with cust1 as ( 
+    select name, pid from customer c 
+    inner join orders o on o.cid = c.cid
+    inner join line_item l on l.oid = o.oid 
+) select distinct(a.name, b.name) from customer a 
+inner join orders ord on ord.cid = a.cid 
+inner join line_item l on l.oid = ord.oid
+inner join cust1 b on b.pid = l.pid
+where a.name != b.name;
 ```
 
 (d) Output dealer-IDs of those dealers that could have served/delivered all orders.
