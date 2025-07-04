@@ -20,6 +20,19 @@ policy belongs to exactly one customer.
 
 ![entity-relationship-diagram](./exercise12-images/dbc-exe-12-ques-1-erd.svg)
 
+## Question 2 
+
+Transfer the entity-relationship schemata from Task 1 into the relational schema!
+
+Relational Schema:
+
+```
+policy(<u>contract_no</u>, insurance_no, start_date, end_date)
+assignee(status, bank_account, amount, payment_date, insurance_subject, due_date)
+customer(<u>customer_no</u>, first_name, last_name, postal_code, city, email, phone)
+person()
+```
+
 ## Question 4
 
 Given the following example database:
