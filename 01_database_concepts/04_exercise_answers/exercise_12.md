@@ -25,7 +25,7 @@ Given the following example database:
 Table Customer:
 
 | Cid | Name       |
-| --- | ---------- |
+|-----|------------|
 | 13  | M. Mueller |
 | 17  | A. Meier   |
 | 23  | I. Schulze |
@@ -33,7 +33,7 @@ Table Customer:
 Table Dealer:
 
 | Did | Name       |
-| --  | --         |
+|-----|------------|
 | 5   | G. Hals    |
 | 7   | P. Schmidt |
 | 11  | E. Meier   |
@@ -42,7 +42,7 @@ Table Dealer:
 Table Product:
 
 | Pid | Label         |
-| --  | --            |
+|-----|---------------|
 | 45  | Power Adapter |
 | 57  | Cat5 Cable    |
 | 67  | Mainboard     |
@@ -50,7 +50,7 @@ Table Product:
 Offers table:
 
 |Did|Pid|
-|-- |-- |
+|---|---|
 |5  |45 |
 |5  |57 |
 |7  |67 |
@@ -62,7 +62,7 @@ Offers table:
 Orders table:
 
 |Oid|Did|Date       |Cid|
-|-- |-- |--         |-- |
+|---|---|-----------|---|
 |3  |7  |0.1.12.2002|17 |
 |5  |11 |27.04.2003 |23 |
 |7  |5  |13.05.2003 |17 |
@@ -71,7 +71,7 @@ Orders table:
 Line_item table
 
 |Oid|Pid|Amount|
-|-- |-- |--    |
+|---|---|------|
 |3  |45 |1     |
 |3  |67 |5     |
 |5  |67 |5     |
