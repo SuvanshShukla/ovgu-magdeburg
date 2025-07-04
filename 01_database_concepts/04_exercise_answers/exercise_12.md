@@ -180,5 +180,6 @@ Formulate the following queries in relational algebra:
 
 (c) Find all customers who have ordered more than one power supply.
 
+Π <sub>(cid, name)</sub> σ <sub>(pid='45')</sub> Ύ <sub>(product,count(pid)>1)</sub> (product ⨝ line_item ⨝ orders)
 
 (d) Find all dealers who offer a mainboard, but have not yet sold one.
