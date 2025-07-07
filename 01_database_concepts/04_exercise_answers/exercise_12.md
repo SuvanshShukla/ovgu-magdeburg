@@ -222,16 +222,25 @@ Formulate each of the following queries in tuple as well as domain calculus:
 
 (a) The names of all customers.
 
-{ x.name | x ∈ customer }
+{ x.name | x ∈ customer }       
+
+{ x | customer(x,y) }   
 
 (b) Orders from customer Meier.
 
-{ x | x ∈ orders ∧ u ∈ customer ∧ x.cid = u.cid ∧ u.name='A.Meier' }
+{ x | x ∈ orders ∧ u ∈ customer ∧ x.cid = u.cid ∧ u.name='A.Meier' }    
+
+{ w,x,y,z | orders(w,x,y,z) ∧ (customer(x,a) ∧ a='A.Meier') }    
 
 (c) Which dealers offer Cat5 cables?
 
-{ x | x ∈ dealer ∧ u ∈ offers ∧ x.did=u.did ∧ u.pid=57 }
+{ x | x ∈ dealer ∧ u ∈ offers ∧ x.did=u.did ∧ u.pid=57 }    
+
+{ x,y | dealer(x,y) ∧ (offers(x,a) ∧ (product(a,b) ∧ b='Cat5 Cable')) }     
 
 (d) Which customers (name) have not placed orders?
 
-{ x.name | x ∈ customer ∧ u ∈ orders ∧ x.cid=u.cid ∧ u.cid=NULL }
+{ x.name | x ∈ customer ∧ u ∈ orders ∧ x.cid=u.cid ∧ u.cid=NULL }       
+
+{y | customer(x,y) ∧ (orders(p,q,r,x) ∧ ∀p∀q∀r=NULL)}   
+
