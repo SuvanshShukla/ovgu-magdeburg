@@ -18,7 +18,7 @@ has an address (first and last name, postal code, city) and contact information
 has a customer number. Some customers do not have a policy yet, but every
 policy belongs to exactly one customer.
 
-![entity-relationship-diagram](./exercise12-images/dbc-exe-12-ques-1-erd.svg)
+![entity-relationship-diagram](./exercise12-images/DBC-exercise-12-ERD.svg)
 
 ## Question 2 
 
@@ -30,7 +30,6 @@ Relational Schema:
 policy(<u>contract_no</u>, insurance_no, start_date, end_date)
 assignee(status, bank_account, amount, payment_date, insurance_subject, due_date)
 customer(<u>customer_no</u>, first_name, last_name, postal_code, city, email, phone)
-person()
 ```
 
 ## Question 3 
