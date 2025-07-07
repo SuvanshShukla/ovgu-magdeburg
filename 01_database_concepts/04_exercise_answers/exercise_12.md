@@ -58,7 +58,7 @@ R(A,B), R(A,C,D,E)
 3<sup>rd</sup> Normal From:     
 R(A,B), R(A,C), R(C,D), R(D,E)
 
-BCNF Normal Form:
+BCNF Normal Form:   
 R(A), R(B), R(A,C), R(C,D), R(D,E)
 
 The schema in BCNF is not dependency preserving, as the functional dependency of `A -> B` and `B -> A` is lost.
