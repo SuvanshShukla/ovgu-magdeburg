@@ -49,10 +49,10 @@ Right: E
 Anything containing A and B will be a key.  
 No combination of any other elements (without A and/or B) will be able to be a key.   
 
-1<sup>st</sup> Normal Form: 
+1<sup>st</sup> Normal Form:  
 R(A,B,C,D,E)  
 
-2<sup>nd</sup> Normal Form: 
+2<sup>nd</sup> Normal Form:     
 R(A,B), R(A,C,D,E)
 
 3<sup>rd</sup> Normal From:     
