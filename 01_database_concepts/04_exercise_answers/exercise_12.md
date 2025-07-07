@@ -33,6 +33,36 @@ customer(<u>customer_no</u>, first_name, last_name, postal_code, city, email, ph
 person()
 ```
 
+## Question 3 
+
+Given the relation R(ABCDE) with the following functional dependencies: 
+
+` A → B, AB → C, A → C, B → A, C → D, D → E `
+
+Find systematically all keys and transform the relation step-wise into the BCNF.   
+Is the schema in BCNF dependency preserving?    
+
+Left:   
+Middle: A, B, C, D  
+Right: E  
+
+Anything containing A and B will be a key.  
+No combination of any other elements (without A and/or B) will be able to be a key.   
+
+1<sup>st</sup> Normal Form: 
+R(A,B,C,D,E)  
+
+2<sup>nd</sup> Normal Form: 
+R(A,B), R(A,C,D,E)
+
+3<sup>rd</sup> Normal From:     
+R(A,B), R(A,C), R(C,D), R(D,E)
+
+BCNF Normal Form:
+R(A), R(B), R(A,C), R(C,D), R(D,E)
+
+The schema in BCNF is not dependency preserving, as the functional dependency of `A -> B` and `B -> A` is lost.
+
 ## Question 4
 
 Given the following example database:
@@ -183,6 +213,9 @@ Formulate the following queries in relational algebra:
 Π <sub>(cid, name)</sub> σ <sub>(pid='45')</sub> Ύ <sub>(product,count(pid)>1)</sub> (product ⨝ line_item ⨝ orders)
 
 (d) Find all dealers who offer a mainboard, but have not yet sold one.
+
+Π <sub>(did, name)</sub> σ <sub>(pid='67')</sub> 
+
 ## Question 6
 
 Formulate each of the following queries in tuple as well as domain calculus:
