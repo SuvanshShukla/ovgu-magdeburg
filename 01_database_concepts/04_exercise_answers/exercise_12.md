@@ -191,7 +191,13 @@ where pid = (
 (f) Add an order from A.Meier containing all available articles once, from a dealer able to fulfill this order.
 
 ```SQL
+insert into line_item(oid, pid, amount) values
+(11, 45, 1),
+(11, 57, 1),
+(11, 67, 1);
 
+insert into orders(oid, did, date, cid) values 
+(11, 5, 07.09.2003, 17);
 ```
 
 ## Question 5 
