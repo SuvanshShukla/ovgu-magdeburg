@@ -200,7 +200,6 @@ insert into orders(oid, did, date, cid) values
 (11, 5, 07.09.2003, 17);
 ```
 
-
 ## Question 5 
 `⨝ , Π, σ, ⟕ , ∈, Ύ`
 
