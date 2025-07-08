@@ -249,3 +249,4 @@ Formulate each of the following queries in tuple as well as domain calculus:
 
 {y | customer(x,y) ∧ (orders(p,q,r,x) ∧ ∀p∀q∀r=NULL)}   
 
+
