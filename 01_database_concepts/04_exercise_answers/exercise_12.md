@@ -201,7 +201,6 @@ insert into orders(oid, did, date, cid) values
 ```
 
 ## Question 5 
-
 `⨝ , Π, σ, ⟕ , ∈, Ύ`
 
 Formulate the following queries in relational algebra:  
@@ -249,4 +248,9 @@ Formulate each of the following queries in tuple as well as domain calculus:
 { x.name | x ∈ customer ∧ u ∈ orders ∧ x.cid=u.cid ∧ u.cid=NULL }       
 
 {y | customer(x,y) ∧ (orders(p,q,r,x) ∧ ∀p∀q∀r=NULL)}   
+
+
+
+
+
 
