@@ -144,12 +144,12 @@ create table orders (
 
 ```SQL
 select c.name, p.label
-from customer c, orders o, linte_item l, products p;
-minus 
+from customer c, orders o, line_item l, product p
+except
 select c.name, p.label 
 from customer c inner join orders o on o.cid = c.cid 
 inner join Line_item l on l.oid = o.oid 
-inner join products p on p.pid = l.Pid
+inner join product p on p.pid = l.Pid;
 ```
 
 (c) Output pairs of customers that have bought at least one common Product.
