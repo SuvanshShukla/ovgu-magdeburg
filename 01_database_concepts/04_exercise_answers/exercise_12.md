@@ -131,10 +131,10 @@ Formulate the following SQL queries:
 
 ```SQL
 create table orders (
-    int oid primary key,
+    oid int primary key,
     date date,
-    int did,
-    int cid,
+    did int ,
+    id int,
     foreign key(cid) references customer(cid),
     foreign key(did) references dealer(did)
 );
