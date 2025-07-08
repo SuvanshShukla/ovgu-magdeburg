@@ -201,6 +201,7 @@ insert into orders(oid, did, date, cid) values
 ```
 
 ## Question 5 
+
 `⨝ , Π, σ, ⟕ , ∈, Ύ`
 
 Formulate the following queries in relational algebra:  
