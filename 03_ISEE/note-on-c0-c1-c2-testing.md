@@ -1,8 +1,8 @@
 # Somethings to note regarding C0, C1 & C2 testing
 
-> ![NOTE] 
-> All this is the result of a long discussion with Google's Gemini
-> [Link to conversation](https://g.co/gemini/share/49a5b7585103)
+> [!NOTE]   
+> All this is the result of a long discussion with Google's Gemini  
+> [Link to conversation](https://g.co/gemini/share/49a5b7585103)    
 
 ## How do you differentiate between C0 testing and C1 testing? If I try to test each individual instruction or line of code (as happens in C0), won't it also automatically cover each branch (as happens in C1)
 
