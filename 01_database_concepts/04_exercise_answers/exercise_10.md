@@ -387,9 +387,9 @@ Join the tables using:
 | 02.09.03 | Furniture  |
 | 23.06.04 | Vegetables |
 | 01.12.05 | Pots       |
-| 15.01.06 | Cutlery    |
 
-**NOTE: See how date and value columns were not added to the result!**
+**NOTE: See how date and value columns were not added to the result!**        
+Also this row `| 15.01.06 | Cutlery    |` wouldn't be included as `15.01.06` is not present in the value table    
 
 ## Question 7. Calculate the following division: R ÷ R1, R ÷ R2, R ÷ R3 using the following relations!
 
