@@ -223,7 +223,9 @@ select c.name from customer c where c.cid not in (select cid from orders);
 (c) For all dealers (name), list the products (label) that they do not offer.
 
 ```SQL
-
+select d.name, p.label from dealer d cross join offers o inner join product p on p.pid = o.pid
+except 
+select d.name, p.label from dealer d inner join offers o on o.did = d.did inner join product p on p.pid = o.pid;
 ```
 
 (d) Output the products (label) sorted by total SalesPerProduct.
