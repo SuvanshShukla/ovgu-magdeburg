@@ -152,6 +152,15 @@ inner join Line_item l on l.oid = o.oid
 inner join product p on p.pid = l.Pid;
 ```
 
+another query that worked for me was this one:    
+
+```SQL
+select c.name, p.label from customer c cross join product p
+except 
+select c.name, p.label from customer c inner join orders o on o.cid = c.cid inner join line_item l on l.oid = o.oid 
+inner join product p on p.pid = l.pid;
+```
+
 (c) Output pairs of customers that have bought at least one common Product.
 
 ```SQL
