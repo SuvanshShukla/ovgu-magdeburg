@@ -1,5 +1,8 @@
 # ICSE Exercise 0 - Assignment 1
 
+Author: Suvansh Shukla  
+Matriculation Number: 256245    
+
 ## A day in the life - Pseudo Code
 
 Algorithm: A day in life        
