@@ -6,11 +6,6 @@ Suvansh Shukla (Matriculation Number: 256245)
 
 ## Assignment 1.1
 
-Sure — here’s a clear, well-structured answer to your search engine research task.
-You can use it as a report, essay, or presentation notes.
-
----
-
 ### **a) Which search engine do you use and why?**
 
 I primarily use **Google** as my main search engine. It provides highly relevant results, a fast response time, and integrates smoothly with other Google services (such as Gmail, Maps, and YouTube). Its advanced algorithms and autocomplete suggestions make searching intuitive and efficient. Additionally, Google indexes a vast portion of the web, which increases the likelihood of finding what I need quickly.
