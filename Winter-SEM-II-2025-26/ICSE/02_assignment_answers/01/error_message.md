@@ -32,6 +32,17 @@ This new variable should also be placed above line 3 and not after it.
 
 ## Script 3
 
+After running the first script we get the following error message:
+
+```console
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\OVGU_Magdeburg\Winter-SEM-II-2025-26\ICSE\01_assignment_questions\01\assignment-4-scripts-a014-templates\script_3.py", line 1, in <module>
+    from Math import sqrt
+ModuleNotFoundError: No module named 'Math'
+```
+
+**FIX**: install the `Math` package or move your code to some place where this module is already present
+
 ## Script 4
 
 ## Script 5
