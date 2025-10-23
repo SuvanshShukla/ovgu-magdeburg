@@ -27,7 +27,8 @@ Traceback (most recent call last):
 NameError: name 'gravitational_acceleration' is not defined
 ```
 
-**FIX**: define a `gravitational_acceleration` variable with a valid value for earth's gravity like 9.8
+**FIX**: define a `gravitational_acceleration` variable with a valid value for earth's gravity like 9.8.  
+This new variable should also be placed above line 3 and not after it.
 
 ## Script 3
 
