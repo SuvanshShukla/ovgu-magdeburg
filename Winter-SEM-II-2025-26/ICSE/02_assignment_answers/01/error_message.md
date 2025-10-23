@@ -58,6 +58,33 @@ SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
 
 ## Script 5
 
+After running the first script we get the following error message:
+
+```console
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\OVGU_Magdeburg\Winter-SEM-II-2025-26\ICSE\01_assignment_questions\01\assignment-4-scripts-a014-templates\script_5.py", line 1, in <module>
+    print("Let's repeat this" * 3.)
+TypeError: can't multiply sequence by non-int of type 'float'
+```
+
+**FIX**: Simply remove `.` (the dot) after three to properly print the string three times.
+
 ## Script 6
 
+After running the first script we get the following error message:
+
+```console
+
+```
+
+**FIX**:
+
 ## Script 7
+
+After running the first script we get the following error message:
+
+```console
+
+```
+
+**FIX**:
