@@ -3,7 +3,7 @@ def is_prime(n: int) -> bool:
     if n == 0 or n == 1:
         return False
         
-    for i in range (2, n):
+    for i in range(2, n):
         if n % i == 0 and i < n:
             return False
     return True
@@ -16,6 +16,7 @@ def next_prime(n: int) -> int:
         n += 1
     return n
     raise NotImplementedError()
+
 
 if __name__ == "__main__":
     pass
