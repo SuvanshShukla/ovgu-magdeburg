@@ -87,7 +87,10 @@ IndentationError: unindent does not match any outer indentation level
 After running the first script we get the following error message:
 
 ```console
-
+  File "C:\Users\HP\Documents\OVGU_Magdeburg\Winter-SEM-II-2025-26\ICSE\01_assignment_questions\01\assignment-4-scripts-a014-templates\script_7.py", line 1
+    while input("What can I server you? ") != "Gin"
+                                                   ^
+SyntaxError: expected ':'
 ```
 
-**FIX**:
+**FIX**: Simply add the missing `:` (colon) at the end of line 1 (while statement).
