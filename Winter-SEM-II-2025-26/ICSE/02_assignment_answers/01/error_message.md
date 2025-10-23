@@ -45,6 +45,17 @@ ModuleNotFoundError: No module named 'Math'
 
 ## Script 4
 
+After running the first script we get the following error message:
+
+```console
+  File "C:\Users\HP\Documents\OVGU_Magdeburg\Winter-SEM-II-2025-26\ICSE\01_assignment_questions\01\assignment-4-scripts-a014-templates\script_4.py", line 1
+    print "Let's run some legacy code..."
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+```
+
+**FIX**: Simply add opening & closing parenthese around the string we want to print.
+
 ## Script 5
 
 ## Script 6
