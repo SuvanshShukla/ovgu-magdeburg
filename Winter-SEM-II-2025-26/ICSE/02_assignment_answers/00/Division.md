@@ -1,7 +1,7 @@
 # ICSE Exercise 0 - Assignment 3
 
 Author: Suvansh Shukla  
-Matriculation Number: 256245    
+Matriculation Number: 256245  
 
 ## Task 1
 
@@ -24,7 +24,6 @@ Division Algorithm:
     RETURN counter value
   END PROCESS
 
-
 Explanation: The algorithm ends for all values the moment the dividend is smaller than the divisor.
 
 Altered Division Algorithm (for getting Remainder):
@@ -41,4 +40,3 @@ Altered Division Algorithm (for getting Remainder):
     ENDWHILE
     RETURN remainder value
   END PROCESS
-

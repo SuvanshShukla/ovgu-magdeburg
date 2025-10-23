@@ -1,11 +1,11 @@
 # ICSE Exercise 0 - Assignment 2
 
 Author: Suvansh Shukla  
-Matriculation Number: 256245    
+Matriculation Number: 256245  
 
 ## Basic Terms Solution
 
-`Algorithm`: An algorithm is a set of predefined steps used to complete a task.    
+`Algorithm`: An algorithm is a set of predefined steps used to complete a task.  
 
 `Termination`: This is a state or condition that must be fulfilled to stop an ongoing algorithm.
 
@@ -32,4 +32,3 @@ Yes, the process is deterministic.
 ### 5. Is the result deterministic?
 
 Yes, the result is deterministic.
-
