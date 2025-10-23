@@ -5,6 +5,17 @@ Matriculation Number: 256245
 
 ## Script 1
 
+After running the first script we get the following error message:
+
+```console
+  File "C:\Users\HP\Documents\OVGU_Magdeburg\Winter-SEM-II-2025-26\ICSE\01_assignment_questions\01\assignment-4-scripts-a014-templates\script_1.py", line 1
+    print("This is a simple test"
+         ^
+SyntaxError: '(' was never closed
+```
+
+**FIX**: close the bracket of the print statment on line 1
+
 ## Script 2
 
 ## Script 3
