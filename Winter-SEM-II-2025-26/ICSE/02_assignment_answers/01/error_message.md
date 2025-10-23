@@ -74,10 +74,13 @@ TypeError: can't multiply sequence by non-int of type 'float'
 After running the first script we get the following error message:
 
 ```console
-
+  File "C:\Users\HP\Documents\OVGU_Magdeburg\Winter-SEM-II-2025-26\ICSE\01_assignment_questions\01\assignment-4-scripts-a014-templates\script_6.py", line 5
+    else:
+         ^
+IndentationError: unindent does not match any outer indentation level
 ```
 
-**FIX**:
+**FIX**: Simply reduce the indent of `else:` by two spaces to make it inline with the `if` statement.
 
 ## Script 7
 
