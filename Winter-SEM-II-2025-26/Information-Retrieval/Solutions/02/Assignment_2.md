@@ -64,7 +64,7 @@ Step 2: Normalization (Case Folding)
 
 ### 2. Zipf Distribution Diagram
 
-![02/Assignment_2_Zipf_DistributionCode_generated_image.png]
+![Zipf Distribution Image](Assignment_2_Zipf_DistributionCode_Generated_Image.png)
 
 The graph below displays the Zipf distribution for the provided text. The plot shows the **word rank** (horizontal axis, $r$) plotted against its **frequency** (vertical axis, $f$) on a **log-log scale**, which is the standard way to visualize Zipf's Law.
 
