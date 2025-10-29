@@ -118,3 +118,128 @@ An alternative representation for the text that is useful in IR, besides the raw
 - **Example (Partial Vector):**
     $$D = \langle \text{alice}: 4, \text{down}: 11, \text{marmalade}: 1, \text{rabbit}: 1, \text{the}: 15, \dots \rangle$$
 - **Purpose:** This "Bag-of-Words" (BoW) model simplifies the document to a collection of its word counts, entirely ignoring word order and grammatical structure. In IR, this vector is further processed (usually with TF-IDF weights) to create the final document vector used for calculating similarity to a query vector. The VSM is the foundation for calculating the **cosine similarity** to rank documents.
+
+---
+
+## 3. Porter Stemming
+
+The Porter stemming algorithm proceeds through five main steps (plus a pre-processing step) in sequence, where each step applies a set of rules. The key condition for most rules is the **measure ($m$)** of the stem, which is the count of $\langle C V \rangle$ sequences, where $C$ is a consonant sequence and $V$ is a vowel sequence.
+
+$$m = (\langle C \rangle (\langle V \rangle \langle C \rangle)^m \langle V \rangle)$$
+
+| Notation | Condition | Description |
+| :--- | :--- | :--- |
+| **$m > 0$** | Measure greater than zero | The stem must contain at least one $\langle V C \rangle$ sequence (i.e., at least one syllable). |
+| **$m > 1$** | Measure greater than one | The stem must contain at least two $\langle V C \rangle$ sequences. |
+
+### Derivations
+
+#### a) `foundation`
+
+1. **Initial Word:** `foundation`
+2. **Stem/Measure:** `foundation` ($m=2$: $\langle f \underline{ou} nd \underline{a} t \underline{io} n \rangle$)
+3. **Step 1b:** No change.
+4. **Step 2:** Suffix **`ation`** is found.
+    - Rule: $(m > 0)$ **`ation`** $\to$ **`ate`**
+    - Condition Check: $m(\text{found}) = 1$. Since $1 > 0$, the rule is applied.
+    - **Result:** `foundate`
+5. **Step 3:** Suffix **`ate`** is found.
+    - Rule: $(m > 0)$ **`ate`** $\to$ $\epsilon$ (null)
+    - Condition Check: $m(\text{found}) = 1$. Since $1 > 0$, the rule is applied.
+    - **Final Stem:** **`found`**
+
+---
+
+#### b) `proceedings`
+
+1. **Initial Word:** `proceedings`
+2. **Stem/Measure:** `proceedings` ($m=2$: $\langle pr \underline{o} c \underline{ee} d \underline{i} ngs \rangle$)
+3. **Step 1a:** Suffix **`s`** is found.
+    - Rule: $S S E S S \to S S$ (No. Word doesn't end in $S S E S S$)
+    - Rule: $I E S \to I$ (No. Word doesn't end in $I E S$)
+    - Rule: **`s`** $\to$ $\epsilon$ (null) (If the preceding characters contain a vowel)
+    - Condition Check: The preceding characters (`proceeding`) contain vowels.
+    - **Result:** `proceeding`
+4. **Stem/Measure:** `proceeding` ($m=2$: $\langle pr \underline{o} c \underline{ee} d \underline{i} ng \rangle$)
+5. **Step 1b:** Suffix **`eed`** is found.
+    - Rule: $(m > 0)$ **`eed`** $\to$ **`ee`**
+    - Condition Check: $m(\text{proceed}) = 1$. Since $1 > 0$, the rule is applied.
+    - **Result:** `proceeding` (Wait: The **`ing`** prevents this rule from matching `eed`).
+6. **Step 1b (Re-check):** The longest matching suffix is **`ing`**.
+    - Rule: $E E D \to E E$ (Not applicable as word ends in **`ing`** after Step 1a)
+    - Rule: $(\text{vowel in stem})$ **`ing`** $\to$ $\epsilon$ (null)
+    - Condition Check: The stem `proceed` has vowels. The rule is applied.
+    - **Result:** `proceed`
+7. **Step 1c:** No change.
+8. **Step 2:** Suffix **`eeding`** is not found (already removed `ing`).
+9. **Step 5a:** No change.
+    - **Final Stem:** **`proceed`**
+
+---
+
+#### c) `ability`
+
+1. **Initial Word:** `ability`
+2. **Stem/Measure:** `ability` ($m=2$: $\langle \underline{a} b \underline{i} l \underline{i} ty \rangle$)
+3. **Step 1b:** No change.
+4. **Step 1c:** Suffix **`y`** is found.
+    - Rule: $(\text{vowel in stem before } y)$ **`y`** $\to$ **`i`**
+    - Condition Check: Preceding characters (`abilit`) contain vowels.
+    - **Result:** `abiliti`
+5. **Stem/Measure:** `abiliti` ($m=2$: $\langle \underline{a} b \underline{i} l \underline{i} t \underline{i} \rangle$)
+6. **Step 2:** Suffix **`iti`** is found.
+    - Rule: $(m > 0)$ **`iti`** $\to$ **`ic`**
+    - Condition Check: $m(\text{abil}) = 1$. Since $1 > 0$, the rule is applied.
+    - **Result:** `abilic` (This word is not a rule in standard Porter, but **`ibility`** $\to$ **`ible`** is common in some implementations. Following standard Porter rules for **`iti`** leads to `ic`.)
+7. **Step 3:** Suffix **`ic`** is found.
+    - Rule: $(m > 0)$ **`ic`** $\to$ $\epsilon$ (null)
+    - Condition Check: $m(\text{abil}) = 1$. Since $1 > 0$, the rule is applied.
+    - **Final Stem:** **`abil`**
+    - *Note: In practice, stemming often results in **`abil`** or **`able`** depending on the specific implementation version.*
+
+---
+
+#### d) `generosity`
+
+1. **Initial Word:** `generosity`
+2. **Stem/Measure:** `generosity` ($m=3$: $\langle g \underline{e} n \underline{e} r \underline{o} s \underline{i} ty \rangle$)
+3. **Step 1b:** No change.
+4. **Step 1c:** Suffix **`y`** is found.
+    - Rule: $(\text{vowel in stem before } y)$ **`y`** $\to$ **`i`**
+    - Condition Check: Preceding characters (`generosit`) contain vowels.
+    - **Result:** `generositi`
+5. **Stem/Measure:** `generositi` ($m=3$: $\langle g \underline{e} n \underline{e} r \underline{o} s \underline{i} t \underline{i} \rangle$)
+6. **Step 2:** Suffix **`iti`** is found.
+    - Rule: $(m > 0)$ **`iti`** $\to$ **`ic`**
+    - Condition Check: $m(\text{generos}) = 2$. Since $2 > 0$, the rule is applied.
+    - **Result:** `generosic`
+7. **Step 3:** Suffix **`ic`** is found.
+    - Rule: $(m > 0)$ **`ic`** $\to$ $\epsilon$ (null)
+    - Condition Check: $m(\text{generos}) = 2$. Since $2 > 0$, the rule is applied.
+    - **Final Stem:** **`generos`**
+    - *Note: In practice, this is often stemmed to **`gener`** or **`generous`** in more modern algorithms. Porter is famous for its simple, aggressive stemming.*
+
+---
+
+### Discussion on the Quality of the Porter Stemming Algorithm
+
+The Porter Stemmer is a **classic and highly influential algorithm** in Information Retrieval, developed by Martin Porter in 1980.
+
+#### ✅ Strengths (Good Quality)
+
+1. **Simplicity and Speed:** It is rule-based, straightforward, and computationally fast. It does not require a dictionary lookup, making it excellent for large-scale, high-performance indexing systems.
+2. **Reproducibility:** The algorithm is completely deterministic. Given the same input, it will always produce the same output, which is crucial for building consistent IR indexes.
+3. **Language Neutrality (Relative):** While designed for English, the core logic of successive suffix stripping can be adapted to other languages more easily than dictionary-based approaches.
+
+#### ❌ Weaknesses (Limitations in Quality)
+
+1. **Aggressiveness (Overstemming):** The algorithm is often too aggressive, leading to **overstemming**, where words with different meanings are reduced to the same stem.
+    - *Example:* `universal`, `university`, and `universe` might all stem to **`univers`**. This can reduce precision by retrieving documents that are only tangentially related to the query.
+2. **Understemming:** Conversely, it can suffer from **understemming**, where words that should be conflated are not.
+    - *Example:* `European` and `Europe` might not stem to the same root, leading to reduced recall.
+3. **Non-linguistic Stems:** The resulting stems are often not actual, recognizable words (e.g., `generos`, `abilic`, `operat`). While this is acceptable in IR (the stem is just a unique identifier), it makes the process opaque and requires a dictionary for meaningful display.
+4. **English Focus:** It performs poorly on irregular morphology (e.g., plurals like `geese` $\to$ `goose`) and is strictly designed for English, requiring significant modification for other languages.
+
+#### **Conclusion on Quality**
+
+The Porter Stemmer's quality is **good for its time and for foundational IR systems** where simplicity and speed are prioritized. It successfully conflates many common morphological variants, improving **Recall** (finding more relevant documents). However, for applications requiring high **Precision** (avoiding irrelevant documents) or better linguistic accuracy, more modern and complex algorithms, like the **Krovetz Stemmer** or **lemmatization** (which uses a dictionary to find the true base form of a word), are generally preferred.
