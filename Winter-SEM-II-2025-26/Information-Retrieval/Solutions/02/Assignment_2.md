@@ -70,7 +70,7 @@ The graph below displays the Zipf distribution for the provided text. The plot s
 
 The almost linear nature of the data points on this log-log plot confirms the relationship described by **Zipf's Law**: the frequency of any word is inversely proportional to its rank in the frequency table. That is, $f \propto \frac{1}{r}$.
 
------
+---
 
 ### 2. Most/Less Important Words according to the Diagram
 
@@ -80,45 +80,41 @@ In the context of Information Retrieval (IR), the importance of a word is judged
 
 These are the words with **low frequency (high rank)**.
 
-  * **Examples:** 'likely', 'true', 'opportunity', 'distance', 'latitude', 'longitude', 'marmalade', 'cupboards', 'exciting', etc. (words with a frequency of 1 or 2).
-  * **Why Important:** They are **content-bearing** words that are highly specific to the subject matter of the document (Alice falling down the well). Since they appear rarely across the entire corpus, they have high **Inverse Document Frequency (IDF)**, making them excellent discriminators between documents. When a user queries "Alice Marmalade Latitude," these are the words that strongly suggest relevance.
+- **Examples:** 'likely', 'true', 'opportunity', 'distance', 'latitude', 'longitude', 'marmalade', 'cupboards', 'exciting', etc. (words with a frequency of 1 or 2).
+- **Why Important:** They are **content-bearing** words that are highly specific to the subject matter of the document (Alice falling down the well). Since they appear rarely across the entire corpus, they have high **Inverse Document Frequency (IDF)**, making them excellent discriminators between documents. When a user queries "Alice Marmalade Latitude," these are the words that strongly suggest relevance.
 
 #### The Less Important Words (Head of the Distribution)
 
 These are the words with **high frequency (low rank)**.
 
-  * **Examples:** 'to' (18), 'the' (15), 'she' (14), 'down' (11), 'was' (11), 'i' (9), 'it' (9), 'of' (9), 'and' (8), 'a' (6).
-  * **Why Less Important:** While frequent, they are primarily **structural** (stop words) or very common pronouns/prepositions. They occur across nearly all documents in a corpus, providing little to no discriminative value. For IR systems, these words are typically **removed (stop word removal)** because they occupy significant index space without helping to distinguish relevant documents from non-relevant ones.
+- **Examples:** 'to' (18), 'the' (15), 'she' (14), 'down' (11), 'was' (11), 'i' (9), 'it' (9), 'of' (9), 'and' (8), 'a' (6).
+- **Why Less Important:** While frequent, they are primarily **structural** (stop words) or very common pronouns/prepositions. They occur across nearly all documents in a corpus, providing little to no discriminative value. For IR systems, these words are typically **removed (stop word removal)** because they occupy significant index space without helping to distinguish relevant documents from non-relevant ones.
 
------
+---
 
-### 3\. Importance of Zipf Distribution for Information Retrieval
+### 3. Importance of Zipf Distribution for Information Retrieval
 
 Zipf's distribution is crucial for IR systems for three primary reasons:
 
-1.  **Index Optimization and Storage:** Zipf's Law shows that a tiny fraction of unique words (types) accounts for a large majority of the total word occurrences (tokens). This informs IR engineers on how to allocate storage:
+1. **Index Optimization and Storage:** Zipf's Law shows that a tiny fraction of unique words (types) accounts for a large majority of the total word occurrences (tokens). This informs IR engineers on how to allocate storage:
 
-      * **High-frequency words** require careful handling (e.g., compressed posting lists or removal) as they dominate the raw data size.
-      * **Low-frequency words** (the long tail) account for most of the unique vocabulary, meaning the vocabulary size will grow almost linearly with the text size. This guides the system's index data structure design.
+      - **High-frequency words** require careful handling (e.g., compressed posting lists or removal) as they dominate the raw data size.
+      - **Low-frequency words** (the long tail) account for most of the unique vocabulary, meaning the vocabulary size will grow almost linearly with the text size. This guides the system's index data structure design.
 
-2.  **Stopping (Stop Word Removal):** The distribution provides a theoretical justification for removing the high-frequency words at the "head" of the distribution (like 'the', 'a', 'is') as they contribute little to document relevance ranking but consume significant processing time and index space.
+2. **Stopping (Stop Word Removal):** The distribution provides a theoretical justification for removing the high-frequency words at the "head" of the distribution (like 'the', 'a', 'is') as they contribute little to document relevance ranking but consume significant processing time and index space.
 
-3.  **Term Weighting (e.g., TF-IDF):** The distribution is the mathematical basis for term weighting schemes like **TF-IDF (Term Frequency–Inverse Document Frequency)**. The model explicitly weights terms inversely to their collection frequency (a concept directly derived from the rank-frequency relationship of Zipf's Law) to ensure that rare, informative words are prioritized over common, non-informative words.
+3. **Term Weighting (e.g., TF-IDF):** The distribution is the mathematical basis for term weighting schemes like **TF-IDF (Term Frequency–Inverse Document Frequency)**. The model explicitly weights terms inversely to their collection frequency (a concept directly derived from the rank-frequency relationship of Zipf's Law) to ensure that rare, informative words are prioritized over common, non-informative words.
 
------
+---
 
-### 4\. Alternative Representations for the Above Text
+### 4. Alternative Representations for the Above Text
 
 An alternative representation for the text that is useful in IR, besides the raw word-frequency list used for the Zipf plot, is a **Vector Space Model (VSM)**.
 
 #### **Alternative Representation: Term-Frequency Vector (Bag-of-Words)**
 
-  * **Concept:** The document is represented as a **vector** in a high-dimensional space, where each unique word (term/type) in the vocabulary is a dimension.
-  * **Vector Components:** The value in each dimension is the **Term Frequency (TF)**, which is the count of how many times that word appears in the document.
-  * **Example (Partial Vector):**
+- **Concept:** The document is represented as a **vector** in a high-dimensional space, where each unique word (term/type) in the vocabulary is a dimension.
+- **Vector Components:** The value in each dimension is the **Term Frequency (TF)**, which is the count of how many times that word appears in the document.
+- **Example (Partial Vector):**
     $$D = \langle \text{alice}: 4, \text{down}: 11, \text{marmalade}: 1, \text{rabbit}: 1, \text{the}: 15, \dots \rangle$$
-  * **Purpose:** This "Bag-of-Words" (BoW) model simplifies the document to a collection of its word counts, entirely ignoring word order and grammatical structure. In IR, this vector is further processed (usually with TF-IDF weights) to create the final document vector used for calculating similarity to a query vector. The VSM is the foundation for calculating the **cosine similarity** to rank documents.
-
------
-
-Please share your **next assignment task**\!
+- **Purpose:** This "Bag-of-Words" (BoW) model simplifies the document to a collection of its word counts, entirely ignoring word order and grammatical structure. In IR, this vector is further processed (usually with TF-IDF weights) to create the final document vector used for calculating similarity to a query vector. The VSM is the foundation for calculating the **cosine similarity** to rank documents.
