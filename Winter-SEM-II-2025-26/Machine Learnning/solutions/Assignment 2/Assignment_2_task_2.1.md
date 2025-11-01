@@ -27,3 +27,8 @@ For classification we may apply 0-1 Loss Function because it is uniquely useful 
 For regression we apply the Sum-of-squared errors function because we have a set of input values that we can directly compare to a set of output values. This is
 different from using 0-1 Loss as it doesn't tell us positives or negatives, rather how far our predicted values were from the actual values.
 
+Other resources used:
+
+[The clever machine: Cutting Your Losses: Loss Functions & the Sum of Squared Errors Loss](https://dustinstansbury.github.io/theclevermachine/cutting-your-losses)
+
+[stack exchange: 0-1 Loss Function Explanation](https://stats.stackexchange.com/questions/284028/0-1-loss-function-explanation)
