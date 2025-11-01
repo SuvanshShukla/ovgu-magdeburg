@@ -32,3 +32,4 @@ Other resources used:
 [The clever machine: Cutting Your Losses: Loss Functions & the Sum of Squared Errors Loss](https://dustinstansbury.github.io/theclevermachine/cutting-your-losses)
 
 [stack exchange: 0-1 Loss Function Explanation](https://stats.stackexchange.com/questions/284028/0-1-loss-function-explanation)
+
