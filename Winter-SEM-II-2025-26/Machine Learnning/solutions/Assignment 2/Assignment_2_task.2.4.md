@@ -54,3 +54,11 @@ xychart-beta
     line [41, 44, 30, 28, 13, 29, 26, 9, 1, 3, 11]
 ```
 
+In the graph we can see that values start out high, then start to descend.  
+Then towards the end of the graph we see that error values are starting to climb again.  
+
+#### My interpretation
+
+- The SEE is chaning in a non-uniform manner (non-liner)
+- The lowest SSE is seen for instance 9 (global minimum), making it the best parameter
+
