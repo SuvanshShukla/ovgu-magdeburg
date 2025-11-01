@@ -21,7 +21,7 @@ A hypothesis space is the space where our model instance are represented, i.e. t
 
 ### Version Space
 
-Version space contains all the hypothesis that are consistent with the training data, i.e. the space where all possible predicted instances from our model may be represented.
+Version space contains all the hypothesis that are consistent with the training data.
 
 ### Target Variable
 
