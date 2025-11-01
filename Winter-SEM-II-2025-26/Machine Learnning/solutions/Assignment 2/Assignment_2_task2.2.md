@@ -31,3 +31,10 @@ A target variable is a variable that we are trying to predict using our machine 
 
 A function that helps derive variables to be as close to actual values is called the target function.
 
+### Ambiguous models
+
+In the given example of trying to separate two classes using a straight line, we may encounter ambiguity due to the following:
+
+- some instances that are unhealthy may be misclassified as healthy
+- some instances that are healthy may be misclassified as healthy
+- multiple models (lines) may be able to perform this class division/separation, thus making it harder to identify which model is actually correct
