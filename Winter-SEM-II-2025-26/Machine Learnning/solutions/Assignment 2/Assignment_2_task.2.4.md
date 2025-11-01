@@ -62,3 +62,10 @@ Then towards the end of the graph we see that error values are starting to climb
 - The SEE is chaning in a non-uniform manner (non-liner)
 - The lowest SSE is seen for instance 9 (global minimum), making it the best parameter
 
+### What can go wrong with regular gradient descent
+
+- We might end up in a series of similar values, thus getting stuck in a value that is not the global minimum
+- Learning rate can cause issues where we might start to shift between multiple minimum values and never reach the absolute minimum. Possibly overshoot and oscilate or get stuck in a flat region or converge too slowly
+- Noise and outliers may cause issues in convergence
+- there may be no guarantee that an absolute minimum is found
+
