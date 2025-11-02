@@ -46,6 +46,8 @@ $SSE_{11} = (1+2)^2+(4−3)^2+(3−3)^2+(7−6)^2=9+1+0+1=11$
 
 ### Plotting the points on a graph
 
+![[mermaid-diagram-2025-11-02-090054.png]]
+
 ```mermaid
 xychart-beta
     title "SSE Plot"
