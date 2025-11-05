@@ -61,6 +61,8 @@ def time_ternary_search_in_s(arr: List[int], item: int) -> float:
 
 if __name__ == "__main__":
     # TODO: Test your binary and ternary search implementation here...
+    assert binary_search(range(10), 5) == 5
+    assert ternary_search(range(1, 13), 6) == 5
 
     # These constants should be defined here, don't move them!
     # MAX_VALUE = 50_000_000
