@@ -16,7 +16,7 @@ def fib1(n: int) -> int:
     # For some reason number_recursive_calls += 1 doesn't work
     number_recursive_calls = number_recursive_calls + 1
     if n == 0:
-        return 0
+        return 1
     elif n == 1:
         return 1
     else:
@@ -25,44 +25,37 @@ def fib1(n: int) -> int:
 
 def fib2(n: int) -> int:
     """Calculates the `n`th fibonacci number iteratively."""
-    if n == 0:
-        return 0
-    elif n == 1:
-        return 1
-    else:
-        a = 0
-        b = 0
-        accumulator = 0
-        for i in range(n):
-            accumulator = 
-    return i
-
-
-def print_fibs():
-    for i in range(15):
-        print(fib1(i))
     global iteration
-    iteration = i
+    iteration += 1
+    if n <= 1:
+        return 1
+    a = 1
+    b = 1
+    for i in range(2, n + 1):
+        accumulator = a + b
+        a = b
+        b = accumulator
+    return b
 
 
 def testfibs():
-    # assert fib1(2) == 1
-    # assert fib1(3) == 2
-    # assert fib1(4) == 3
-    # assert fib1(5) == 5
-    # assert fib1(6) == 8
-    assert fib2(2) == 1
-    assert fib2(3) == 2
-    assert fib2(4) == 3
-    assert fib2(5) == 5
-    assert fib2(6) == 8
+    assert fib1(2) == 2
+    assert fib1(3) == 3
+    assert fib1(4) == 5
+    assert fib1(5) == 8
+    assert fib1(6) == 13
+
+    assert fib2(2) == 2
+    assert fib2(3) == 3
+    assert fib2(4) == 5
+    assert fib2(5) == 8
+    assert fib2(6) == 13
 
 
 if __name__ == "__main__":
     testfibs()
     print("ALL TESTS PASSED!")
     print("First 15 fibonacci numbers")
-    # print_fibs()
-    # print("23rd Fibonacci number: " + str(fib1(23)))
-    # print("No. of calls using recursion: " + str(number_recursive_calls))
+    print("23rd Fibonacci number: " + str(fib1(23)))
+    print("No. of calls using recursion: " + str(number_recursive_calls))
     print("No. of calls using iteration: " + str(iteration))
