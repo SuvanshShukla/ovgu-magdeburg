@@ -21,29 +21,22 @@ def binary_search_helper(a: List[int], item: int,
 
 
 def ternary_search(a: List[int], item: int) -> int | None:
-    offset = 0
-    arr = a
-    if len(arr) == 0:
-        return None
-    else:
-        while arr:
-            p = len(arr) // 3
-            q = (len(arr) * 2) // 3
-            if item == arr[p]:
-                offset = offset + p
-                return offset
-            elif item == arr[q]:
-                offset = offset + q
-                return offset
-            elif item < arr[p] < arr[q]:
-                offset = offset + (p - 1)
-                arr = arr[:p - 1]
-            elif item > arr[q] > arr[p]:
-                offset = offset + (q + 1)
-                arr = arr[q + 1:]
-            elif arr[p] < item < arr[q]:
-                offset = offset + (p + 1)
-                arr = arr[p + 1:q - 1]
+    left = 0
+    right = len(a) - 1
+    while left <= right:
+        p = left + (right - left) // 3
+        q = right - (right - left) // 3
+        if item == a[p]:
+            return p
+        elif item == a[q]:
+            return q
+        elif item < a[p]:
+            right = p - 1
+        elif item > a[q]:
+            left = q + 1
+        else:
+            left = p + 1
+            right = q - 1
     return None
 
 
@@ -61,10 +54,13 @@ def time_ternary_search_in_s(arr: List[int], item: int) -> float:
 
 if __name__ == "__main__":
     # TODO: Test your binary and ternary search implementation here...
-    assert binary_search(range(10), 5) == 5
-    assert ternary_search(range(1, 13), 6) == 5
+    a1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    a2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    assert binary_search(a1, 5) == 5
+    assert ternary_search(a2, 6) == 5
+    print("ALL TESTS PASSED.")
 
-    # These constants should be defined here, don't move them!
+    # These constantsshould be defined here, don't move them!
     MAX_VALUE = 50_000_000
     NUM_ITER = 100_000
     SEARCH_VALUES = [randint(0, MAX_VALUE - 1) for _ in range(NUM_ITER)]
@@ -85,5 +81,6 @@ if __name__ == "__main__":
     print(f"Average ternary search time: {time_ternary / NUM_ITER:.9f} s")
 
 """
-TODO: Task 3, compare the algorithms.
+TASK3: No ternary search would not be faster than binary search. Due
+to constantly having to find new pointers and moving them.
 """
