@@ -65,27 +65,24 @@ if __name__ == "__main__":
     assert ternary_search(range(1, 13), 6) == 5
 
     # These constants should be defined here, don't move them!
-    # MAX_VALUE = 50_000_000
-    # NUM_ITER = 100_000
-    # SEARCH_VALUES = [randint(0, MAX_VALUE - 1) for _ in range(NUM_ITER)]
-    # ARRAY = list(range(MAX_VALUE))
-    # print(f"Searching {NUM_ITER:_} random values in an array of size {MAX_VALUE:_}")
+    MAX_VALUE = 50_000_000
+    NUM_ITER = 100_000
+    SEARCH_VALUES = [randint(0, MAX_VALUE - 1) for _ in range(NUM_ITER)]
+    ARRAY = list(range(MAX_VALUE))
+    print(f"Searching {NUM_ITER:_} random values in an array of size {MAX_VALUE:_}")
 
-    # time_binary = 0.
-    # for value in SEARCH_VALUES:
-    #     time_binary += time_binary_search_in_s(ARRAY, value)
+    time_binary = 0.
+    for value in SEARCH_VALUES:
+        time_binary += time_binary_search_in_s(ARRAY, value)
 
-    # time_ternary = 0.
-    # for value in SEARCH_VALUES:
-    #     time_ternary += time_ternary_search_in_s(ARRAY, value)
+    time_ternary = 0.
+    for value in SEARCH_VALUES:
+        time_ternary += time_ternary_search_in_s(ARRAY, value)
 
-    # print(f"Total binary search time:    {time_binary:.9f} s")
-    # print(f"Total ternary search time:   {time_ternary:.9f} s")
-    # print(f"Average binary search time:  {time_binary / NUM_ITER:.9f} s")
-    # print(f"Average ternary search time: {time_ternary / NUM_ITER:.9f} s")
-    print(range(1, 13))
-    x = ternary_search(range(1, 13), 6)
-    print(x)
+    print(f"Total binary search time:    {time_binary:.9f} s")
+    print(f"Total ternary search time:   {time_ternary:.9f} s")
+    print(f"Average binary search time:  {time_binary / NUM_ITER:.9f} s")
+    print(f"Average ternary search time: {time_ternary / NUM_ITER:.9f} s")
 
 """
 TODO: Task 3, compare the algorithms.
