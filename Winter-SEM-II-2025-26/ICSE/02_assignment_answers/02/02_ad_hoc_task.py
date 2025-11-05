@@ -1,13 +1,15 @@
 def fizzbuzz(n: int) -> list[str]:
+    arr = []
     for i in range(1, n + 1):
         if i % 3 == 0 and i % 5 == 0:
-            print("FIZZBUZZ")
+            arr.append("FIZZBUZZ")
         elif i % 3 == 0:
-            print("FIZZ")
+            arr.append("FIZZ")
         elif i % 5 == 0:
-            print("BUZZ")
+            arr.append("BUZZ")
         else:
-            print(str(i))
+            arr.append(str(i))
+    return arr
 
 
 if __name__ == "__main__":
@@ -16,4 +18,4 @@ if __name__ == "__main__":
     while n <= 0:
         print("Please try again.")
         n = int(input())
-    fizzbuzz(n)
+    print(fizzbuzz(n))
