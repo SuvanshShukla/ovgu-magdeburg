@@ -4,12 +4,20 @@ import time
 
 
 def binary_search(a: List[int], item: int) -> int | None:
-    """Searches the list for item with binary search. Returns the position of item."""
-    raise NotImplementedError()  # TODO: Add implementation
+    binary_search_helper(a, item, 0, len(a) - 1)
 
 
-def binary_search_helper(a: List[int], item: int, low: int, high: int) -> int | None:
-    raise NotImplementedError()  # TODO: Add implementation
+def binary_search_helper(a: List[int], item: int,
+                         low: int, high: int) -> int | None:
+    if high < low:
+        return None
+    m = (high + low) // 2
+    if a[m] == item:
+        return m
+    elif a[m] < item:
+        return binary_search_helper(a, item, m + 1, high)
+    else:
+        return binary_search_helper(a, item, low, m - 1)
 
 
 def ternary_search(a: List[int], item: int) -> int | None:
