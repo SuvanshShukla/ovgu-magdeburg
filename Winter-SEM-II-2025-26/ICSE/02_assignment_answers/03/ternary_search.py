@@ -4,7 +4,7 @@ import time
 
 
 def binary_search(a: List[int], item: int) -> int | None:
-    binary_search_helper(a, item, 0, len(a) - 1)
+    return binary_search_helper(a, item, 0, len(a) - 1)
 
 
 def binary_search_helper(a: List[int], item: int,
