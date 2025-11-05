@@ -21,7 +21,6 @@ def binary_search_helper(a: List[int], item: int,
 
 
 def ternary_search(a: List[int], item: int) -> int | None:
-    """Searches the list for item with ternary search. Returns the position of item."""
     offset = 0
     arr = a
     if len(arr) == 0:
