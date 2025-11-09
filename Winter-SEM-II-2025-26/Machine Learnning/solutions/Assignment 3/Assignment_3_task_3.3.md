@@ -163,3 +163,6 @@ Therefore,
 P(yes|i2) = 0.96439
 P(no|i2) = 0.03561
 
+The difference observed here for i1 is that the confidence for no decreases but the overall prediction is still yes.
+For i2, we see that the prediction is still yes, but the zero probability for no goes away.
+
