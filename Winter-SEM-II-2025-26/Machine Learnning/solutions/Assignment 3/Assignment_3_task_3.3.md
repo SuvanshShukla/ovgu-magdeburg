@@ -44,13 +44,13 @@ P(wind=strong|no)=2/3≈0.6667
 
 For yes we have  
 
-P(yes|i1) = 0.7×P(sunny|yes)×P(cool|yes)×P(high|yes)×P(strong|yes)  
+P(yes|i1) = 0.7 X P(sunny|yes) X P(cool|yes) X P(high|yes) X P(strong|yes)  
 P(yes|i1) = 0.7 X 0.2857 X 0.4286 X 0.1429 X 0.4286  
 P(yes|i1) = 0.0052  
 
 For no we have
 
-P(no|i1) = 0.3×P(sunny|no)×P(cool|no)×P(high|no)×P(strong|no)
+P(no|i1) = 0.3 X P(sunny|no) X P(cool|no) X P(high|no) X P(strong|no)
 P(no|i1) = 0.3 X 0.333 X 0.333 X 0.666 X 0.666
 P(no|i1) = 0.0148
 
@@ -65,7 +65,7 @@ P(no|i1) = 0.0148/(0.0052+0.0248) = 0.7384
 
 For yes,
 
-P(yes|i2) = 0.7XP(overcast|yes)×P(mild|yes)×P(normal|yes)×P(weak|yes)
+P(yes|i2) = 0.7XP(overcast|yes) X P(mild|yes) X P(normal|yes) X P(weak|yes)
 P(yes|i2) = 0.7 X 0.4286 X 0.4286 X 0.8571 X 0.5714
 P(yes|i2) = 0.06297
 
