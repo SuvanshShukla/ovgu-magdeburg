@@ -29,18 +29,18 @@ We'll need to calculate the possibility for every feature according to both clas
 For Class = YES
 
 P(yes)=7/10=0,7  
-P(outlook=sunny|yes)=2/7≈0.2857  
-P(temperature=cool|yes)=3/7≈0.4286  
-P(humidity=high|yes)=1/7≈0.1429  
-P(wind=strong|yes)=3/7≈0.4286  
+P(outlook=sunny|yes)=2/7 = 0.2857  
+P(temperature=cool|yes)=3/7 = 0.4286  
+P(humidity=high|yes)=1/7 = 0.1429  
+P(wind=strong|yes)=3/7 = 0.4286  
 
 For Class = NO
 
 P(no)=3/10=0.3  
-P(outlook=sunny|no)=1/3≈0.3333  
-P(temperature=cool|no)=1/3≈0.3333  
-P(humidity=high|no)=2/3≈0.6667  
-P(wind=strong|no)=2/3≈0.6667  
+P(outlook=sunny|no)=1/3 = 0.3333  
+P(temperature=cool|no)=1/3 = 0.3333  
+P(humidity=high|no)=2/3 = 0.6667  
+P(wind=strong|no)=2/3 = 0.6667  
 
 For yes we have  
 
@@ -92,49 +92,49 @@ Using this we now calculate prior estimates (p) for all values.
 
 outlook:
 
-- P(overcast∣yes)=(3+1/3)/8=3.3333/8=0.4166667
-- P(sunny∣yes)=(2+1/3)/8=2.3333/8=0.2916667
-- P(rain|yes) = 0.2916667
+- P(overcast∣yes) = (3+1/3)/8 = 3.3333/8 = 0.4166667
+- P(sunny∣yes) = (2+1/3)/8 = 2.3333/8 = 0.2916667
+- P(rain|yes)  =  0.2916667
 
 temperature:
 
-- P(cool∣yes)=0.4166667
-- P(mild∣yes)=0.4166667
-- P(hot∣yes)=(1+1/3)/8=0.1666667
+- P(cool∣yes) = 0.4166667
+- P(mild∣yes) = 0.4166667
+- P(hot∣yes) = (1+1/3)/8 = 0.1666667
 
-humidity (p=1/2):
+humidity (p = 1/2):
 
-- P(normal∣yes)=(6+0.5)/8=6.5/8=0.8125
-- P(high∣yes)=1.5/8=0.1875
+- P(normal∣yes) = (6+0.5)/8 = 6.5/8 = 0.8125
+- P(high∣yes) = 1.5/8 = 0.1875
 
 wind:
 
-- P(weak∣yes)=4.5/8=0.5625
-- P(strong∣yes)=3.5/8=0.4375
+- P(weak∣yes) = 4.5/8 = 0.5625
+- P(strong∣yes) = 3.5/8 = 0.4375
 
-**Class = no (n = 3)**:
+**Class  =  no (n  =  3)**:
 
 outlook:
 
-- P(rain∣no)=(2+1/3)/4=2.3333/4=0.5833333
-- P(sunny∣no)=(1+1/3)/4=0.3333333
-- P(overcast∣no)=(0+1/3)/4=0.0833333
+- P(rain∣no) = (2+1/3)/4 = 2.3333/4 = 0.5833333
+- P(sunny∣no) = (1+1/3)/4 = 0.3333333
+- P(overcast∣no) = (0+1/3)/4 = 0.0833333
 
 temperature:
 
-- P(mild∣no)=0.5833333
-- P(cool∣no)=0.3333333
-- P(hot∣no)=0.0833333
+- P(mild∣no) = 0.5833333
+- P(cool∣no) = 0.3333333
+- P(hot∣no) = 0.0833333
 
 humidity:
 
-- P(high∣no)=(2+0.5)/4=0.625
-- P(normal∣no)=0.375
+- P(high∣no) = (2+0.5)/4 = 0.625
+- P(normal∣no) = 0.375
 
 wind:
 
-- P(strong∣no)=0.625
-- P(weak∣no)=0.375
+- P(strong∣no) = 0.625
+- P(weak∣no) = 0.375
 
 Now we can calculate the joint (unnormalized) scores and posteriors
 
