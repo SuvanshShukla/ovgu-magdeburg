@@ -54,4 +54,7 @@ The replacement is simple, it says to put whatever was selected `$1`, `$2`, or `
 
 You'll obviously need to play around more with this but this should help formatting text.  
 
+> [!Note]
+> You'll need to becareful of the regex differences between vim & vanilla regex.
+> See more in this note: [useful-vim-stuff.md](./useful-vim-stuff.md)
 
