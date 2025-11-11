@@ -27,3 +27,15 @@ Use the following key-maps (which were found here: [StackExchange answer by Eric
 
 Careful! it uses the very magic flag!
 
+## VIM regex is different from normal regex!!
+
+Here's a website that has all the specific differences: [vimregex.com](https://vimregex.com/)
+
+Here's a few useful ones:
+
+| Normal | VIM  | Description |
+| ------ | ---- | ----------- |
+| \d+    | \d\+ | Select more than one digit |
+| $0     | \0   | Replace with matched pattern, use \1, \2 for multiple matched patterns |
+| \n     | \r   | Line break or new line |
+
