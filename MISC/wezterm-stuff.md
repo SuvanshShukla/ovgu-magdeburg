@@ -10,3 +10,7 @@
 > ![TIP]
 > `CTRL+SHIFT+R` keyboard shortcut to force the configuration to be reloaded
 
+## Display keymaps
+
+`wezterm show-keys --lua`
+
