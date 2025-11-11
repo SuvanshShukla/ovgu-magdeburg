@@ -14,3 +14,11 @@
 
 `wezterm show-keys --lua`
 
+## Font related settings
+
+Use the following to change font:
+
+```lua
+config.font = wezterm.font '0xProto Nerd Font'
+```
+
