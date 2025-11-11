@@ -7,3 +7,6 @@
 > ![TIP]
 > The recommendation is to place your configuration file at $HOME/.wezterm.lua (%USERPROFILE%/.wezterm.lua on Windows) to get started.
 
+> ![TIP]
+> `CTRL+SHIFT+R` keyboard shortcut to force the configuration to be reloaded
+
