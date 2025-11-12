@@ -22,3 +22,5 @@ Use the following to change font:
 config.font = wezterm.font '0xProto Nerd Font'
 ```
 
+You'll need to have `0xProto Nerd Font` installed!
+
