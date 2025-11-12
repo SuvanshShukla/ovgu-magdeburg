@@ -11,6 +11,12 @@ number of times equivalent to the length of the list/array.
 This means an iteration of adjacent swaps happens for every
 element in the array/list.
 
+The improvement that was discussed was that the sorting
+algorithm still runs on the entire list if the list is
+already sorted. To prevent this we add a check to see if
+the elements were swapped or not, breaking out of the inner
+swap loop if the elements weren't swapped.
+
 """
 
 
@@ -18,9 +24,13 @@ def bubble_sort(array: list) -> None:
     """Sorts `array` with bubblesort inplace."""
     n = len(array)
     for i in range(n - 1):
+        swapped = False
         for j in range(0, n - 1):
             if array[j] > array[j + 1]:
                 array[j], array[j + 1] = array[j + 1], array[j]
+                swapped = True
+        if not swapped:
+            break
 
 
 if __name__ == "__main__":
