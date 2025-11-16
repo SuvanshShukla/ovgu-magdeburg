@@ -54,3 +54,7 @@ $Gain(Sky,Humidity) \equiv Entropy(Sky) - 0$
 
 Thus overall Gain = $Entropy(Sky)$ = 0.81125
 
+Though my solution tree lies in the version space, there are multiple possible trees that could also have been used for  
+solving this problem. For example a tree having Temperature as the root node would also have had the same Information Gain,  
+thus being another perfecly viable alternative solution.
+
