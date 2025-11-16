@@ -33,3 +33,22 @@ Now assuming that between Mr. Adam and Mrs. Merkel, Mr. Adam is a harsher judge 
 level worse than their natural classification. For example If John would have been classified as Neutral, Mr. Adam would classify  
 him as Bad instead.
 
+Here's what a supposed decision tree would look like:
+
+```mermaid
+flowchart TD
+ age -- <9-->noisiness
+ age -- '>=9' -->messiness
+ noisiness -- '>5' --> 1(treatment)
+ 1(treatment) -- Mean --> 6(bad)
+ 1(treatment) -- Not Mean --> 7(Good)
+ noisiness -- =5 --> 2(Neutral)
+ noisiness -- <5 --> 3(Good)
+ messiness -- Yes --> 4(Bad)
+ messiness -- No --> 5(Good)
+```
+
+The possible challenges here would include consideration of the bias of supervisors. Though the given tree doesn't require  
+the supervisor as a node, it is undeniable that children under Mr. Adam have received lower behavior classification.  
+Another possible problem could be trying to adjust too much for a given feature like age, seeing has how older children fared worse than younger children.  
+
