@@ -1,11 +1,12 @@
 import random
+from operator import attrgetter
 
 
 class University:
     def __init__(self, name: str, founding_year: int, country: str) -> None:
         self.name = name
-        # TODO: Add the missing properties
-        # ...
+        self.founding_year = founding_year
+        self.country = country
 
     def __repr__(self) -> str:
         return repr((self.name, self.founding_year, self.country))
@@ -14,9 +15,9 @@ class University:
 if __name__ == "__main__":
     tmp_list = list(range(1000))
     random.shuffle(tmp_list)
-    # TODO: Get familiar with pythons `sort` and `sorted`. Play around a bit
-    # with list `tmp_list` and print the results.
 
+    print(tmp_list.sort())
+    print(sorted([5, 3, -2, 7, 6, 9, 1, -8, 4, 10, 2, 1, -1, 8]))
 
     # Stores universities in the format (name, founding year, country)
     universities = [
@@ -31,16 +32,20 @@ if __name__ == "__main__":
         ("Indraprastha Institute of Information Technology", 2008, "India")
     ]
 
-    # TODO: Sort universities by age
+    # Sort universities by age
+    print(sorted(universities, key=lambda university: university[1]))
 
-    # TODO: Sort universities by name
-
-
+    # Sort universities by name
+    print(sorted(universities, key=lambda university: university[2]))
+    print(universities)
+    print('\n')
     # Stores the universities as `University` objects
-    university_objects = [University(name=u[0], founding_year=u[1], country=u[2]) for u in universities]
+    university_objects = [University(name=u[0], founding_year=u[1],
+                                     country=u[2]) for u in universities]
 
-    # TODO: Sort university_objects by age
+    # Sort university_objects by age
+    sorted(university_objects, key=attrgetter('founding_year'))
 
-    # TODO: Sort university_objects by name
-
-
+    # Sort university_objects by name
+    sorted(university_objects, key=attrgetter('name'))
+    print(university_objects)
