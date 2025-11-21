@@ -1,7 +1,28 @@
 """
-2.  # TODO
+2. Quick sort particularly its in-place version, sorts a list using the
+    divide and conquer approach. In this approach the main list is divided
+    into smaller lists based on whether they are greater or lesser than an
+    arbitrarily chosen pivot element. Two pointers are then chosen to iterate
+    over the list. The first pointer finds any element larger than the pivot
+    element on the left side of the list and the second pointer finds any
+    element smaller than or equal the pivot element on the right side of the
+    list. Once both such elements are found, they are swapped with each other.
+    This is done multiple times until the entire list is covered by both
+    pointers, then the pivot element is swapped to the front of the right side
+    of the list. The pointer demarcating the end of smaller elements and the
+    start of larger elements is then returned. This index is then used to
+    further split the list and the same swapping of larger & smaller elements
+    is done until either a single element or no elements remain in the list.
+    This smallest unit of the list is then returned and concatenated with
+    other such smaller elements until the entire list is recreated in a sorted
+    order.
 
-3.  # TODO
+3. The best case scenario for quick-sort is if the entire list already sorted
+    this would result in O(n) time-complexity as we would only iterate over the
+    list one time to partition it but see that no partiioning is actually
+    required. The worst case scenario for quick-sort is if the elements are
+    sorted but in reversed order, though this would be just like its average
+    case resulting in O(n**2) time-complexity.
 
 """
 
