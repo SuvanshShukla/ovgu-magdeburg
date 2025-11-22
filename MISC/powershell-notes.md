@@ -49,3 +49,5 @@ To find where the executable is located, simply use the `Get-Command` command.
 Get-Command fzf
 ```
 
+sometimes it is also aliased as `gcm` in powershell.
+
