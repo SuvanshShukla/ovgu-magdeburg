@@ -20,9 +20,9 @@ simply use the command below:
 notepad $PROFILE
 ```
 
-## Set up PsFZF
+## Set up PSFZF
 
-PsFzf is a wrapper around fzf for better compatability when using fzf with powershell.
+PSFzf is a wrapper around fzf for better compatability when using fzf with powershell.
 
 You can view the [Powershell Gallery](https://www.powershellgallery.com/packages/PSFzf/2.2.9) for downloading it.
 
