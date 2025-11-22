@@ -39,3 +39,19 @@ Here's a few useful ones:
 | $0     | \0   | Replace with matched pattern, use \1, \2 for multiple matched patterns |
 | \n     | \r   | Line break or new line |
 
+## Exchange vertical and horizontal splits
+
+use the following keyboard shortcut combos:
+
+For horizontal to vertical:
+
+```vim
+Ctrl + w L
+```
+
+For converting vertically split windows to horizontal:
+
+```vim
+Ctrl + w K
+```
+
