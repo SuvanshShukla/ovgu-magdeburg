@@ -38,3 +38,5 @@ But only if you get some error related to admin user.
 > [!NOTE]
 > You'll need to update your `$PROFILE` for the key-board shortcuts to work!
 
+Here's a [Medium link on how to install PSFzf](https://medium.com/@lakhanj569/fzf-for-windows-powershell-fa8f071ce64c)
+
