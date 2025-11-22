@@ -57,3 +57,45 @@ Then go to your vault folder on mobile, and enter the `.obsidian` folder. If you
 Then go to the settings in your obsidian android app and go to appearance. Scroll down to the bottom, and toggle & activate CSS snippets.
 After that your FAB button should be visible!
 
+## GitHub Supported callouts
+
+Here are all the different callouts supported by GitHub:
+
+```markdown
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+
+> [!TIP]
+> Helpful advice for doing things better or more easily.
+
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
+
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
+
+```
+
+[Link to GitHub documentation on this](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
+
+## Footnotes in markdown (GitHub supported)
+
+Here's how to add linking supported footnotes, click on this little footnote link and see where it goes![^1]
+
+```text
+Here is a simple footnote[^1].
+
+A footnote can also have multiple lines[^2].
+
+[^1]: My reference.
+[^2]: To add line breaks within a footnote, add 2 spaces to the end of a line.  
+This is a second line.
+```
+
+[^1]: Here's where it would link to
+
+[Link to GitHub documentation for footnotes](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#footnotes)
