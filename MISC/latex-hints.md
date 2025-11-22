@@ -4,6 +4,7 @@
 
 >[!IMPORTANT]
 > Remember to always start and end latex with `$` symbol in markdown
+
 ## Hat/cap symbol
 
 ```latex
