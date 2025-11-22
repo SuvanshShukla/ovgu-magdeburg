@@ -40,3 +40,12 @@ But only if you get some error related to admin user.
 
 Here's a [Medium link on how to install PSFzf](https://medium.com/@lakhanj569/fzf-for-windows-powershell-fa8f071ce64c)
 
+## Where is the source of a command located
+
+Sometimes I need to find where the main executable for a command is located.  
+To find where the executable is located, simply use the `Get-Command` command.  
+
+```powershell
+Get-Command fzf
+```
+
