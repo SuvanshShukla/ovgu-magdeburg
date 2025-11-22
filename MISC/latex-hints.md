@@ -51,4 +51,3 @@ $P(c) = M(n_1,n_2|p_1,p_2) := \begin{pmatrix} n_1 + n_2 \\ n_1,n_2 \end{pmatrix}
 **Note how `\\` is used to break lines!**
 
 [Overleaf matrix latex documentation Link](https://www.overleaf.com/learn/latex/Matrices#amsmath_matrix_environments)
-
