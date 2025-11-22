@@ -2,7 +2,7 @@
 
 [Link to render Latex online](https://quicklatex.com/)
 
->[!Reminder]
+>[!IMPORTANT]
 > Remember to always start and end latex with `$` symbol in markdown
 ## Hat/cap symbol
 
