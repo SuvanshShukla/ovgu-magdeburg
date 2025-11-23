@@ -114,3 +114,20 @@ Thus recursively generating the entire tree yeilds the following:
 | $R_{RLL}$ | −2.5<x≤−0.5 (i.e., x∈{−2,−1}) | 1.0                    | 0.2500  |
 | $R_{RLR}$ | −0.5<x≤2.5 (i.e., x∈{0,1,2})  | 1.0                    | 0.1667  |
 
+Here's what the tree would look like:
+
+                                   Root Node
+                                  (x <= -2.5)
+                                 /          \
+                                /            \
+                        R_L (Leaf)         R_R (Node)
+                       (y_avg = -7.75)    (x <= 2.5)
+                                         /          \
+                                        /            \
+                               R_RL (Node)         R_RR (Leaf)
+                              (x <= -0.5)         (y_avg = 9.75)
+                             /          \
+                            /            \
+                  R_RLL (Leaf)        R_RLR (Leaf)
+                  (y_avg = 1.0)       (y_avg = 1.0)
+
