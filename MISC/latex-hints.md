@@ -65,3 +65,15 @@ Here's how it looks like:
 
 $\left(\frac{N_i}{N}\right)$
 
+## Empty space between words in a math equation
+
+Simply end the word with `\`
+
+```latex
+$Gain\ Ratio = \frac{Information\ Gain}{Intrinsic\ Information}$
+```
+
+Here's what that would look like:
+
+$Gain\ Ratio = \frac{Information\ Gain}{Intrinsic\ Information}$
+
