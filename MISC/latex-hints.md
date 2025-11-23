@@ -52,3 +52,16 @@ $P(c) = M(n_1,n_2|p_1,p_2) := \begin{pmatrix} n_1 + n_2 \\ n_1,n_2 \end{pmatrix}
 **Note how `\\` is used to break lines!**
 
 [Overleaf matrix latex documentation Link](https://www.overleaf.com/learn/latex/Matrices#amsmath_matrix_environments)
+
+## Large brackets
+
+use `\left(` and `\right)`
+
+```latex
+$\left(\frac{N_i}{N}\right)$
+```
+
+Here's how it looks like:
+
+$\left(\frac{N_i}{N}\right)$
+
