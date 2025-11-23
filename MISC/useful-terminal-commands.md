@@ -26,3 +26,13 @@ Even after this it is possible that simply inputting a command won't work.
 In cases like this you may need to explicitly state it's extension.  
 So basically instead of `spotdl` use `spotdl.exe` and the command should work!
 
+## Create multiple files with ascending number names
+
+use touch but with a slightly unique way of writing the file name:
+
+```bash
+touch file_name_{1..5}.txt
+```
+
+This will create `file_name_1.txt`, `file_name_2.txt` etc...
+
