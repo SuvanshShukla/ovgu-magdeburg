@@ -116,18 +116,5 @@ Thus recursively generating the entire tree yeilds the following:
 
 Here's what the tree would look like:
 
-                                   Root Node
-                                  (x <= -2.5)
-                                 /          \
-                                /            \
-                        R_L (Leaf)         R_R (Node)
-                       (y_avg = -7.75)    (x <= 2.5)
-                                         /          \
-                                        /            \
-                               R_RL (Node)         R_RR (Leaf)
-                              (x <= -0.5)         (y_avg = 9.75)
-                             /          \
-                            /            \
-                  R_RLL (Leaf)        R_RLR (Leaf)
-                  (y_avg = 1.0)       (y_avg = 1.0)
+![Decision_Tree](./ML_assignment_5_task5.4_DecisionTree_2025-11-23-1719.png)
 
