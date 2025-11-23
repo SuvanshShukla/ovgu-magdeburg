@@ -116,5 +116,5 @@ Thus recursively generating the entire tree yeilds the following:
 
 Here's what the tree would look like:
 
-![Decision_Tree](./ML_assignment_5_task5.4_DecisionTree_2025-11-23-1719.png)
+![Decision_Tree](ML_assignment_5_task5.4_DecisionTree_2025-11-23-1719.png "Decision Tree")
 
