@@ -5,12 +5,6 @@ import sys
 
 
 def load_data(filename):
-    """
-    Loads data from a CSV file.
-    Expected format: Class, Attribute1, Attribute2, ...
-    Returns a list of rows, where each row is [Class, Attr1, Attr2, ...]
-    Attributes are converted to floats.
-    """
     data = []
     try:
         with open(filename, 'r') as f:
@@ -34,88 +28,74 @@ def calculate_mean(values):
 
 
 def calculate_variance(values, mean):
-    """
-    Calculates sample variance (denominator n - 1).
-    """
     if len(values) <= 1:
         return 0.0
     return sum([(x - mean)**2 for x in values]) / (len(values) - 1)
 
 
 def gaussian_probability(x, mean, variance):
-    """
-    Calculates the probability of x given mean and variance 
-    using the Gaussian Probability Density Function.
-    """
     # Avoid division by zero
     if variance == 0:
-        return 0 
+        return 0
     exponent = math.exp(-((x - mean)**2 / (2 * variance)))
     return (1 / (math.sqrt(2 * math.pi * variance))) * exponent
 
 
 def train(dataset):
-    """
-    Separates data by class and calculates statistics:
-    Mean, Variance, and Prior Probability for each class.
-    """
     separated = {}
     total_count = len(dataset)
-    
+
     # Separate by class
     for row in dataset:
         label = row[0]
         if label not in separated:
             separated[label] = []
         separated[label].append(row[1:])
-    
+
     model = {}
-    class_labels = sorted(separated.keys()) # Sort to ensure consistent output order (A, B)
-    
+    # Sort to ensure consistent output order (A, B)
+    class_labels = sorted(separated.keys())
+
     for label in class_labels:
         instances = separated[label]
         n_ci = len(instances)
-        
+
         # Calculate Prior p_c
         prior = n_ci / total_count
-        
+
         # Calculate Mean and Variance for each attribute
         # Transpose instances to get lists of values per attribute
         # zip(*instances) converts [[1,2], [3,4]] to [(1,3), (2,4)]
         attributes_cols = list(zip(*instances))
-        
+
         stats = []
         for col in attributes_cols:
             mu = calculate_mean(col)
             var = calculate_variance(col, mu)
             stats.append({'mean': mu, 'var': var})
-            
+
         model[label] = {
             'stats': stats,
             'prior': prior
         }
-        
+
     return model
 
 
 def predict(model, attributes):
-    """
-    Predicts the class for a given set of attributes.
-    Returns the class label with the highest posterior probability.
-    """
     best_label = None
     best_prob = -1
-    
+
     # P(C|X) proportional to P(X|C) * P(C)
     # We calculate P(X|C) * P(C)
-    
+
     for label, info in model.items():
         prior = info['prior']
         stats = info['stats']
-        
+
         # Start with the prior probability
         posterior = prior
-        
+
         # Multiply by the probability of each attribute value given the class
         # (Naive assumption: attributes are independent)
         for i in range(len(attributes)):
@@ -124,47 +104,48 @@ def predict(model, attributes):
             x = attributes[i]
             prob = gaussian_probability(x, mean, var)
             posterior *= prob
-            
+
         if best_label is None or posterior > best_prob:
             best_prob = posterior
             best_label = label
-            
+
     return best_label
 
 
 def main():
     parser = argparse.ArgumentParser(description='Naive Bayes Classifier')
-    parser.add_argument('--data', type=str, required=True, help='Name of the data set (e.g., Example)')
+    parser.add_argument('--data', type=str, required=True,
+                        help='Name of the data set (e.g., Example)')
     args = parser.parse_args()
-    
+
     base_name = args.data
     train_file = f"{base_name}_train.csv"
     test_file = f"{base_name}_test.csv"
-    
+
     # 1. Load Data
     train_data = load_data(train_file)
     test_data = load_data(test_file)
-    
+
     # 2. Train Model
     model = train(train_data)
-    
+
     # 3. Print Model Statistics (Rows 1 and 2)
     # Format: mu_1, var_1, mu_2, var_2, ..., prior
     sorted_classes = sorted(model.keys())
     for label in sorted_classes:
         stats = model[label]['stats']
         prior = model[label]['prior']
-        
+
         output_parts = []
         for stat in stats:
             output_parts.append(str(stat['mean']))
             output_parts.append(str(stat['var']))
         output_parts.append(str(prior))
-        
+
         print(",".join(output_parts))
-        
+
     # 4. Calculate Misclassifications
-    
+
     # On Training Data
     train_errors = 0
     for row in train_data:
@@ -173,7 +154,7 @@ def main():
         prediction = predict(model, features)
         if prediction != actual:
             train_errors += 1
-            
+
     # On Test Data
     test_errors = 0
     for row in test_data:
@@ -182,7 +163,7 @@ def main():
         prediction = predict(model, features)
         if prediction != actual:
             test_errors += 1
-            
+
     # 5. Print Error Counts (Rows 3 and 4)
     print(train_errors)
     print(test_errors)
