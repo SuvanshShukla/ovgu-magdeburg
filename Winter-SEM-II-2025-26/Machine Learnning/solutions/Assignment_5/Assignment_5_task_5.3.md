@@ -34,7 +34,6 @@ SSE can be used to compare what splits on a node would perform better and give b
 The Gini Index, commonly used to figure out how to split our decision also uses SSE. It is calculated  
 by subtracting the sum of squared probabilities of each class from one.
 
-
 $Gini Index = 1 - \sum_{i-1}^{n}(P_i)^2$
 
 The Chi-Square alrorithm used for finding out the statistical significance of differences between  
