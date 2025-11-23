@@ -118,3 +118,7 @@ Here's what the tree would look like:
 
 ![Decision_Tree](ML_assignment_5_task5.4_DecisionTree_2025-11-23-1719.png "Decision Tree")
 
+### (c)
+
+The tree is only somewhat good, as there aren't enough data values to actually be certain.
+
