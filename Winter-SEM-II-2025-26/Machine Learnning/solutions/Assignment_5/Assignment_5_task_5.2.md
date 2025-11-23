@@ -9,9 +9,9 @@ Matriculation No. 256245
 
 To calculate the gain ration we need information gain and intrinsic information (a.k.a Split Info).
 
-$Gain Ratio = \frac{Information Gain}{Intrinsic Information}$
+$Gain\ Ratio = \frac{Information\ Gain}{Intrinsic\ Information}$
 
-$Information Gain = Entropy(Parent) - \sum_{i}\frac{N_i}{N}.Entropy(Child_i)$
+$Information\ Gain = Entropy(Parent) - \sum_{i}\frac{N_i}{N}.Entropy(Child_i)$
 
-$Intrinsic Information = -\sum_{i}\frac{N_i}{N}.log_2\left(\frac{N_i}{N}\right)$
+$Intrinsic\ Information = -\sum_{i}\frac{N_i}{N}.log_2\left(\frac{N_i}{N}\right)$
 
