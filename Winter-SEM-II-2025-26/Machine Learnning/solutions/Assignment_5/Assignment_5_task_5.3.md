@@ -37,6 +37,13 @@ by subtracting the sum of squared probabilities of each class from one.
 
 $Gini Index = 1 - \sum_{i-1}^{n}(P_i)^2$
 
+The Chi-Square alrorithm used for finding out the statistical significance of differences between  
+sub-nodes and parent nodes also uses SSE. It is measured by the SSE of standardized differences  
+between observed and expected frequencies of a target variable.[^1]
+
 ### (c)
 
 
+---
+
+[^1]: https://wandb.ai/sauravmaheshkar/Decision-Tree/reports/Decision-Trees-A-Guide-with-Examples--VmlldzoxMDE5Nzkw
