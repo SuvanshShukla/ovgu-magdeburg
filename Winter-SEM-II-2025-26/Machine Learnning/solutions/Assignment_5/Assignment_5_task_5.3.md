@@ -43,6 +43,12 @@ between observed and expected frequencies of a target variable.[^1]
 
 ### (c)
 
+There are multiple stopping criteria for building trees, some of which are the following:
+
+1. When the decision trees reaches 100% purity, meaning all examples now belong to the same class
+2. When a pre-defined tree depth has been reached
+3. When the size of the data in the node is below a threshold
+4. When the error or information gain of objects in nodes have dropped below a threshold
 
 ---
 
