@@ -6,7 +6,7 @@
 
 Referencing: [VFDT paper](./exercises/5/VFDT.pdf)
 
-**anytime algorithm**: algo can be stopped anytime and return a valid result.[^1]
+**anytime algorithm**: algo can be stopped anytime and return a valid result.
 
 **constant memory**: doesn't store the entire data set only stores sufficient statistics.
 
@@ -25,7 +25,8 @@ Shortcomings of some online learning methods:
 - these will then be used to choose the appropriate attributes at that level
 - this will go on and on recursively
 
-Choosing how many samples are required at every node uses statistical result known as Hoeffding bound[^2].
+Choosing how many samples are required at every node uses statistical result known as Hoeffding bound[^1].
+
 This is basically what it does:
 
 - If we had infinite samples we'd use them all to figure out which attribute would give us the highest heuristic measure (e.g. informationgain or Gini index)
@@ -90,6 +91,6 @@ Ques: How do we decide what $n_e$ to use?
 
 ---
 
-[^2]: via [wikipedia](https://en.wikipedia.org/wiki/Hoeffding's_inequality), it basically says that there's an upper limit to how much
+[^1]: via [wikipedia](https://en.wikipedia.org/wiki/Hoeffding's_inequality), it basically says that there's an upper limit to how much
 the sum of independent bound variables can deviate from an expected value of their sum.
 
