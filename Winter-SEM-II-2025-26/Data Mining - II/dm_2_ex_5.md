@@ -43,6 +43,15 @@ Here's how you can think about it:
 > 
 > “Is the gap between the best and second-best large enough that uncertainty cannot change the ranking?”
 
+---
+
+### Incremental Support Vector Machine Construction
+
+- SVMs use hyper planes to separate data points
+- data points closer to the decision boundary between two classes receive non-zero weights
+- data points far away from the hyper plane don't participate in its specification and therefore receive zero weight
+- support vectors are the data points closest to the hyper plane that define class boundaries
+
 
 ---
 
