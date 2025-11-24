@@ -82,7 +82,11 @@ Then we check if this new data point is closer to the already established decisi
 boundary or it is as far away as the established margin. If any of these conditions are fullfilled, we keep the point otherwise discard it. This is done until we reach a set number of points, at which time the SVM is updated using the initial Support vectors and the newly collected points.
 
 Think of exceedin the margin as a line of text crossing over a boundary in a word document (to a place where text shouldn't be), this is a counter intuitive way of saying that new point is now closer than to the decision boundary/hyper plane than the established distance (margin)
+
 Ques: How do we decide what $n_e$ to use?
+
+4. **Exceeding-margin+Errors techniquel**: Again we already have an $SVM_t$, and we feed it new points. These points are checked to see if they exceed the margin defined by $SMV_t$, if they do they are kept. If they do not, the points are classified and if misclassified, they are kept. These points are collected until a certain number $n_e$, then the SVM is updated using the Support vectors from $SVM_t$ and the new $n_e$ data points to get $SVM_{t+1}$.
+
 ---
 
 [^2]: via [wikipedia](https://en.wikipedia.org/wiki/Hoeffding's_inequality), it basically says that there's an upper limit to how much
