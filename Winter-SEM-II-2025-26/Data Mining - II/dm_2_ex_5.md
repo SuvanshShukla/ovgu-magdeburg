@@ -52,6 +52,14 @@ Here's how you can think about it:
 - data points far away from the hyper plane don't participate in its specification and therefore receive zero weight
 - support vectors are the data points closest to the hyper plane that define class boundaries
 
+#### Incremental learning in SVMs
+
+- partition data set in batches that fit into meory
+- at each incremental step we already have a decision boundary (& weights) given by the support vectors we have encountered so far
+- we keep only these support vectors and discard the non-participating data points
+- now we only need to re-train on these new data points + the useful old ones
+- since the number of support vectors are few compared to the total number of data points, this provides us with a compact representation of the data set
+- This also means that the SVM generated using this incremental approach won't be too different from the one build with the complete data set
 
 ---
 
