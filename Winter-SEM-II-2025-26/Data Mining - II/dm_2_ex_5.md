@@ -51,6 +51,7 @@ Here's how you can think about it:
 - data points closer to the decision boundary between two classes receive non-zero weights
 - data points far away from the hyper plane don't participate in its specification and therefore receive zero weight
 - support vectors are the data points closest to the hyper plane that define class boundaries
+- the distance between the hyper plane and a support vectors is termed margin
 
 #### Incremental learning in SVMs
 
