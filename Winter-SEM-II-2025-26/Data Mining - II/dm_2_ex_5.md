@@ -61,6 +61,15 @@ Here's how you can think about it:
 - since the number of support vectors are few compared to the total number of data points, this provides us with a compact representation of the data set
 - This also means that the SVM generated using this incremental approach won't be too different from the one build with the complete data set
 
+There are four different techniques for updating the model once new data is introduced:
+
+1. **Error-driven technique**: The Error-driven technique, instead, keeps only the misclassified data. Given the model
+$SVMt$ at time t, new data are loaded into memory and classified using $SVM_t$. If the data is misclassified, it is
+kept, otherwise it is discarded. Once a given number $n_e$ of misclassified data is collected, the update of $SVM_t$ takes
+place: the support vectors of $SVM_t$, together with the $n_e$ misclassified points, are used as training data to obtain the
+new model $SVM_{t+1}$
+
+Ques: does that mean the support vectors from $SVM_t$ are kept until $SVM_t$ is updated?
 ---
 
 [^2]: via [wikipedia](https://en.wikipedia.org/wiki/Hoeffding's_inequality), it basically says that there's an upper limit to how much
