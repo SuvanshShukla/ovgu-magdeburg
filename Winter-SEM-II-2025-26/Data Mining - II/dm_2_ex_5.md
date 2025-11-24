@@ -48,6 +48,8 @@ Here's how you can think about it:
 
 ### Incremental Support Vector Machine Construction
 
+Referencing: [Incremental Support Vector Machine Construction](./exercises/5/Incremental_support_vector_machine_construction.pdf)
+
 - SVMs use hyper planes to separate data points
 - data points closer to the decision boundary between two classes receive non-zero weights
 - data points far away from the hyper plane don't participate in its specification and therefore receive zero weight
