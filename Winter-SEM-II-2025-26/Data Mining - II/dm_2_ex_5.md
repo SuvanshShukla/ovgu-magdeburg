@@ -70,6 +70,13 @@ place: the support vectors of $SVM_t$, together with the $n_e$ misclassified poi
 new model $SVM_{t+1}$
 
 Ques: does that mean the support vectors from $SVM_t$ are kept until $SVM_t$ is updated?
+
+2. **Fixed-partition technique**: Partition training data into batches of fixed size. When a new batch of data is loaded into memeory
+it is added to the current set of support vectors. This set is then used to train the new model. Support vectors from this are representation
+of the data seen so far and they are kept in memory.
+
+Ques: How long are they kept in memory? indefinately? or until they have no more weightage on the decision boundary?
+
 ---
 
 [^2]: via [wikipedia](https://en.wikipedia.org/wiki/Hoeffding's_inequality), it basically says that there's an upper limit to how much
