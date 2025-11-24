@@ -77,6 +77,11 @@ of the data seen so far and they are kept in memory.
 
 Ques: How long are they kept in memory? indefinately? or until they have no more weightage on the decision boundary?
 
+3. **Exceeding-margin technique**: We already have an SVM at time t, we encounter new data points. These new data points are loaded into memory
+Then we check if this new data point is closer to the already established decision boundary, on the wrong side of the pre-established decision
+boundary or it is as far away as the established margin. If any of these conditions are fullfilled, we keep the point otherwise discard it. This is done until we reach a set number of points, at which time the SVM is updated using the initial Support vectors and the newly collected points.
+
+Ques: How do we decide what $n_e$ to use?
 ---
 
 [^2]: via [wikipedia](https://en.wikipedia.org/wiki/Hoeffding's_inequality), it basically says that there's an upper limit to how much
