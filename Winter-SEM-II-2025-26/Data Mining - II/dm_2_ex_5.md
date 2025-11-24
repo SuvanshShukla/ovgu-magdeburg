@@ -32,7 +32,17 @@ This is basically what it does:
 - But we don't so we use a subset of examples that we have encountered so far to calculate the heuristic measure
 - This means we basically have to maximize the value of the heuristic measure by finding the best attribute to use as input, i.e. which attribute would give us the highest information gain or Gini index or whatever
 - Now we can't be sure which attributes to choose so we take two that give us the highest heuristic measure scores
-- This is where Hoeffding bound comes in, it says that if the difference between the heuristic measures between best attribute and second best attribute is greater than the Hoeffding bound, then it says it is likely that the best attribute is indeed the best.
+- This is where Hoeffding bound (ε) comes in, it says that if the difference between the heuristic measures between best attribute and second best attribute is greater than the Hoeffding bound, then it says it is likely that the best attribute is indeed the best.
+
+Here's how you can think about it:
+
+> ε is not compared directly to IG or any other heuristic measure.
+> ε is a bound on uncertainty, not a “score.”
+> 
+> The comparison is:
+> 
+> “Is the gap between the best and second-best large enough that uncertainty cannot change the ranking?”
+
 
 ---
 
