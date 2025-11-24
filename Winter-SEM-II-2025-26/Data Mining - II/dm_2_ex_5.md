@@ -81,6 +81,7 @@ Ques: How long are they kept in memory? indefinately? or until they have no more
 Then we check if this new data point is closer to the already established decision boundary, on the wrong side of the pre-established decision
 boundary or it is as far away as the established margin. If any of these conditions are fullfilled, we keep the point otherwise discard it. This is done until we reach a set number of points, at which time the SVM is updated using the initial Support vectors and the newly collected points.
 
+Think of exceedin the margin as a line of text crossing over a boundary in a word document (to a place where text shouldn't be), this is a counter intuitive way of saying that new point is now closer than to the decision boundary/hyper plane than the established distance (margin)
 Ques: How do we decide what $n_e$ to use?
 ---
 
