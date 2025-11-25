@@ -121,21 +121,21 @@ new model $SVM_{t+1}$
 
 Ques: does that mean the support vectors from $SVM_t$ are kept until $SVM_t$ is updated?
 
-2. **Fixed-partition technique**: Partition training data into batches of fixed size. When a new batch of data is loaded into memeory
+2. **Fixed-partition technique**: Partition training data into batches of fixed size. When a new batch of data is loaded into memory
 it is added to the current set of support vectors. This set is then used to train the new model. Support vectors from this are representation
 of the data seen so far and they are kept in memory.
 
-Ques: How long are they kept in memory? indefinately? or until they have no more weightage on the decision boundary?
+Ques: How long are they kept in memory? indefinitely? or until they have no more weightage on the decision boundary?
 
 3. **Exceeding-margin technique**: We already have an SVM at time t, we encounter new data points. These new data points are loaded into memory
 Then we check if this new data point is closer to the already established decision boundary, on the wrong side of the pre-established decision
 boundary or it is as far away as the established margin. If any of these conditions are fullfilled, we keep the point otherwise discard it. This is done until we reach a set number of points, at which time the SVM is updated using the initial Support vectors and the newly collected points.
 
-Think of exceedin the margin as a line of text crossing over a boundary in a word document (to a place where text shouldn't be), this is a counter intuitive way of saying that new point is now closer than to the decision boundary/hyper plane than the established distance (margin)
+Think of exceeding the margin as a line of text crossing over a boundary in a word document (to a place where text shouldn't be), this is a counter intuitive way of saying that new point is now closer than to the decision boundary/hyper plane than the established distance (margin)
 
 Ques: How do we decide what $n_e$ to use?
 
-4. **Exceeding-margin+Errors techniquel**: Again we already have an $SVM_t$, and we feed it new points. These points are checked to see if they exceed the margin defined by $SMV_t$, if they do they are kept. If they do not, the points are classified and if misclassified, they are kept. These points are collected until a certain number $n_e$, then the SVM is updated using the Support vectors from $SVM_t$ and the new $n_e$ data points to get $SVM_{t+1}$.
+4. **Exceeding-margin+Errors technique**: Again we already have an $SVM_t$, and we feed it new points. These points are checked to see if they exceed the margin defined by $SMV_t$, if they do they are kept. If they do not, the points are classified and if misclassified, they are kept. These points are collected until a certain number $n_e$, then the SVM is updated using the Support vectors from $SVM_t$ and the new $n_e$ data points to get $SVM_{t+1}$.
 
 Ques: Why aren't older $SVM_1^t$ or $SVM_2^t$ deleted? why isn't $SVM_w^t$ kept and updated until newer and newer $SVM_w^t$ are introduced pushing it out the window?
 
