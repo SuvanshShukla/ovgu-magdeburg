@@ -100,6 +100,10 @@ This is a second line.
 
 [Link to GitHub documentation for footnotes](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#footnotes)
 
+> [!WARNING]
+> The footnote text would render to the bottom of the document, no matter how long
+> or how much other content is beneath where you actually wrote the footnote body.
+
 ## Internal Links in obsidian
 
 Source: [Links in Obsidian](https://help.obsidian.md/links)
