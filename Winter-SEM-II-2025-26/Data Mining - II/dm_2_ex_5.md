@@ -115,3 +115,30 @@ Ques: Why aren't older $SVM_1^t$ or $SVM_2^t$ deleted? why isn't $SVM_w^t$ kept 
 [^1]: via [wikipedia](https://en.wikipedia.org/wiki/Hoeffding's_inequality), it basically says that there's an upper limit to how much
 the sum of independent bound variables can deviate from an expected value of their sum.
 
+[^2]: The original line from the paper: "Let $\bar{G}_1(X_{\phi})$ be the $\bar{G}$ obtained by predicting the most frequent class in S."
+This tells us to "Compute the heuristic value (e.g., information gain) of making no split at all, and instead always predicting the majority class at this leaf."Here’s why:
+
+- The algorithm compares the best splitting attribute to the “do nothing” option.
+
+- The “do nothing” option is:
+    **always predict the most frequent class at this leaf**
+    (this is like a leaf that doesn't split).
+
+So $\bar{G}_1(X_{\phi})$ is the “score” of staying a leaf.
+
+This is pretty important to understand because we only want the tree to grow if there is any advantage to splitting the node
+The algorithm wants to avoid growing the tree unless doing so gives a real benefit.
+
+So at every leaf, it compares:
+
+Best splitting attribute → gives score $\bar{G}_1(X_{a})$
+
+Not splitting at all → gives score $\bar{G}_1(X_{\phi})$
+
+If splitting does NOT improve the heuristic more than the Hoeffding bound allows, then:
+
+- splitting might not truly be better
+- so the leaf is left unsplit
+
+This avoids premature splits caused by limited data.
+
