@@ -61,7 +61,7 @@ Here's how you can think about it:
 
 Note: The tree can give correct predictions even if it is stopped mid-stream
 
-##### Why set heuristic measure to predict majority class by default?
+#### Why set heuristic measure to predict majority class by default?
 
 The original line from the paper: "Let $\bar{G}_1(X_{\phi})$ be the $\bar{G}$ obtained by predicting the most frequent class in S."
 This tells us to "Compute the heuristic value (e.g., information gain) of making no split at all, and instead always predicting the majority class at this leaf."Here’s why:
