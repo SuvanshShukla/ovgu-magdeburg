@@ -141,6 +141,12 @@ Ques: Why aren't older $SVM_1^t$ or $SVM_2^t$ deleted? why isn't $SVM_w^t$ kept 
 
 ---
 
+## CVFDT Algorithm
+
+Referencing: [CVFDT paper](./exercises/5/CVFDT.pdf)
+
+1. 
+
 [^1]: via [wikipedia](https://en.wikipedia.org/wiki/Hoeffding's_inequality), it basically says that there's an upper limit to how much
 the sum of independent bound variables can deviate from an expected value of their sum.
  
