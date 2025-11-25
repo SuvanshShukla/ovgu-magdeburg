@@ -99,3 +99,25 @@ This is a second line.
 [^1]: Here's where it would link to
 
 [Link to GitHub documentation for footnotes](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#footnotes)
+
+## Internal Links in obsidian
+
+Source: [Links in Obsidian](https://help.obsidian.md/links)
+
+- Wikilink: `[[Three laws of motion]]` or `[[Three laws of motion.md]]`
+- Markdown: `[Three laws of motion](Three%20laws%20of%20motion)` or `[Three laws of motion](Three%20laws%20of%20motion.md)`
+
+To link to a heading internally in Markdown suppported format you need to replace spaces with `%20`.Otherwise just use the Wikilink format.
+
+This is the proper way of [URL encoding](https://en.wikipedia.org/wiki/Percent-encoding).
+
+So something like this:
+
+```markdown
+
+refer to some section: [link](#some%20section)
+
+### some section
+some random text for example
+```
+
