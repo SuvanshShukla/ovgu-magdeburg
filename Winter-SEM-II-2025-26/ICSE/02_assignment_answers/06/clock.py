@@ -3,15 +3,10 @@ class Clock:
     minutes: int = 0
 
     def __init__(self, hours: int, minutes: int):
-        if hours > 24:
-            self.hours = hours % 24
-        else:
-            self.hours = hours
+        total_min = (hours * 60) + minutes
 
-        if minutes > 60:
-            self.minutes = minutes % 60
-        else:
-            self.minutes = minutes
+        self.hours = (total_min // 60) % 24
+        self.minutes = total_min % 60
 
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, Clock):
