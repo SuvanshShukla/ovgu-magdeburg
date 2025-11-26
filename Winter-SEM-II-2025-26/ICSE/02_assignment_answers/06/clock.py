@@ -25,9 +25,7 @@ class Clock:
                      self.minutes + other.minutes)
 
     def add_minutes(self, minutes: int) -> "Clock":
-        total_min = (self.hours * 60) + minutes
-        self.hours = (total_min // 60) % 24
-        self.minutes = total_min % 60
+        return Clock(self.hours, self.minutes + minutes)
 
     def __str__(self) -> str:
         if self.minutes < 10:
@@ -43,12 +41,9 @@ if __name__ == "__main__":
     clock_2 = Clock(23, 00)
     clock_3 = Clock(23, 00)
     clock_4 = Clock(23, 00)
-    clock_5 = Clock(23, 00)
+    clock_5 = Clock(00, 00)
     assert clock_1 == clock_2
     assert (clock_3 + clock_4) == Clock(22, 00)
-    clock_5.add_minutes(122)
-    assert clock_5 == Clock(1, 2)
+    assert clock_5.add_minutes(2) == Clock(0, 2)
     assert str(Clock(1, 30)) == "1:30"
     pass
-
-# TODO: Remove all lines, that contain "# TODO:"...
