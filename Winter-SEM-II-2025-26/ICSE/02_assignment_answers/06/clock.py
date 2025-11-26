@@ -45,6 +45,9 @@ class Clock:
 
         return self
 
+    def __str__(self) -> str:
+        return f"{self.hours}:{self.minutes}"
+
 
 if __name__ == "__main__":
     clock = Clock(23, 00)
@@ -52,6 +55,7 @@ if __name__ == "__main__":
     assert clock.__eq__(other_clock) is True
     assert clock.__add__(other_clock).__eq__(46, 00) is True
     assert clock.add_minutes(62) == Clock(1, 2)
+    assert Clock(1, 30).__str__ == "1:30"
     pass
 
 # TODO: Remove all lines, that contain "# TODO:"...
