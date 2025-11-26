@@ -17,7 +17,8 @@ and never getting things things right.
 a noisy U-shaped curve may be covered by a model that can make a U-shaped curve but it's wideness may vary (being narrow to being nearly flat). This
 model too would fail to capture the ground truth, overfitting  to noise.
 
-**Bias-Variance-Tradeoff**: Bias and variance have a unique relationship. When the complexity of a model increases it is able to fit the training data
-better and thus see a reduction in error. However, if the model complexity increases its variance also increases. Thus if we try to reduce the bias of
-a model we may inadvertantly increase its variance and when we try to increase a model's variance we may inadvertantly decrease its bias.
+**Bias-Variance-Tradeoff**: Ideally we want our model to be able to easily recognize regularities in training data but still generalize on unseen data.
+Bias and variance have a unique relationship. When the complexity of a model increases it is able to fit the training data better and thus see a reduction
+in error. However, if the model complexity increases its variance also increases. Thus if we try to reduce the bias of a model we may inadvertantly increase
+its variance and when we try to increase a model's variance we may inadvertantly decrease its bias.
 
