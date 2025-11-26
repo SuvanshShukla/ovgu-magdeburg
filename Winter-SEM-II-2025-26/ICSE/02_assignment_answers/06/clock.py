@@ -23,7 +23,27 @@ class Clock:
         else:
             return False
 
-    # TODO: Add implementation
+    def __add__(self, other: "Clock") -> "Clock":
+        if self == other:
+            self.hours = (self.hours + other.hours) % 24
+            total_min = self.minutes + other.minutes
+            self.minutes = total_min % 60
+
+            if total_min > 60:
+                self.hours += total_min // 60
+
+            return self
+        else:
+            return NotImplemented
+
+    def add_minutes(self, minutes: int) -> "Clock":
+        self.minutes += minutes
+
+        if self.minutes > 60:
+            self.hours += minutes // 60
+            self.minutes = self.minutes % 60
+
+        return self
 
 
 if __name__ == "__main__":
