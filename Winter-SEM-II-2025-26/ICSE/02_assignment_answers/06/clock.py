@@ -25,13 +25,9 @@ class Clock:
                      self.minutes + other.minutes)
 
     def add_minutes(self, minutes: int) -> "Clock":
-        self.minutes += minutes
-
-        if self.minutes > 60:
-            self.hours += minutes // 60
-            self.minutes = self.minutes % 60
-
-        return self
+        total_min = (self.hours * 60) + minutes
+        self.hours = (total_min // 60) % 24
+        self.minutes = total_min % 60
 
     def __str__(self) -> str:
         return f"{self.hours}:{self.minutes}"
