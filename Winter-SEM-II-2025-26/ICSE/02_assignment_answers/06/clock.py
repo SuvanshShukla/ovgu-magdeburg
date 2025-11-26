@@ -30,7 +30,12 @@ class Clock:
         self.minutes = total_min % 60
 
     def __str__(self) -> str:
-        return f"{self.hours}:{self.minutes}"
+        if self.minutes < 10:
+            min = f"0{self.minutes}"
+        else:
+            min = f"{self.minutes}"
+        str = f"{self.hours}:{min}"
+        return str
 
 
 if __name__ == "__main__":
