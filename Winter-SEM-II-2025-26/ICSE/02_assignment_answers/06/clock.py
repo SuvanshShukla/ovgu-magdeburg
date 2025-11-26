@@ -47,6 +47,11 @@ class Clock:
 
 
 if __name__ == "__main__":
+    clock = Clock(23, 00)
+    other_clock = Clock(23, 00)
+    assert clock.__eq__(other_clock) is True
+    assert clock.__add__(other_clock).__eq__(46, 00) is True
+    assert clock.add_minutes(62) == Clock(1, 2)
     pass
 
 # TODO: Remove all lines, that contain "# TODO:"...
