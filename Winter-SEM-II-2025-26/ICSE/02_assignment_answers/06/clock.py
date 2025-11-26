@@ -15,10 +15,13 @@ class Clock:
 
     def __eq__(self, other: object) -> bool:
         # if self and other are of different, incompatible types, they are not equal
-        if not isinstance(other, Clock):  
+        if not isinstance(other, Clock):
             return NotImplemented
 
-        # TODO: Compare self and other
+        if other.hours == self.hours and other.minutes == self.minutes:
+            return True
+        else:
+            return False
 
     # TODO: Add implementation
 
