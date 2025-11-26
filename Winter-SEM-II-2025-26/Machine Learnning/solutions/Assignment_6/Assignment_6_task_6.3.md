@@ -22,3 +22,21 @@ Bias and variance have a unique relationship. When the complexity of a model inc
 in error. However, if the model complexity increases its variance also increases. Thus if we try to reduce the bias of a model we may inadvertantly increase
 its variance and when we try to increase a model's variance we may inadvertantly decrease its bias.
 
+### Part B
+
+To estimate the bias a model has, we start out by taking different subsets of our original dataset. Then we train the model multiple times once on each subset
+and calculate an average of our predicting function. This average is then compared with the average of the true function by calculating their Mean Square Error.
+The final result of the MSE will be the bias present in out model.
+
+It is mathematically represented like this:
+
+$Bias(x) = E\Big[\hat{y}(x)\Big] - y(x)$
+
+To estimate the variance a model may have, we again split out dataset into subsets and train our model on each of them. Then we take the average of all of these
+individual predictions. Finally we subtract this average from each individual prediction made by the model to find out how far the average is from any one prediction
+made by the model. This tells us that a prediction at a certain moment was this far from the average prediction, hence highlighting how much it "varied".
+
+Variance is mathematically represented like this:
+
+$Variance(x) = E\Big[(\hat{y}(x)-E\Big[\hat{y}(x)\Big])^2\Big]$
+
