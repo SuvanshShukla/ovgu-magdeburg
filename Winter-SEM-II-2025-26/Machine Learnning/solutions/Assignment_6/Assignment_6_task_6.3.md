@@ -40,3 +40,17 @@ Variance is mathematically represented like this:
 
 $Variance(x) = E\Big[(\hat{y}(x)-E\Big[\hat{y}(x)\Big])^2\Big]$
 
+### Part C
+
+Example 1: Comparison of football player statistics
+
+- a model with a low degree of bias may misjudge certain days when the player plays well or worse than usual
+- however the same model with a high degree of variance would be more accurate in capturing a player's overall performance over a period of time
+- thus making it a better model for historical data trends
+
+Example 2: Prediction of stock price.
+
+- model with a high degree of bias may not always predict the price appreciation of a commodity to a high precision but it can accurately show a trend
+- the same model with a low degree of variance may not have the enhanced precision but it would also have less deviation from unexpected market conditions
+- thus making this model better for forecasting long-term prices
+
