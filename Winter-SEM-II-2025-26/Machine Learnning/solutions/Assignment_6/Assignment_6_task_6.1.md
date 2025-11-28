@@ -78,10 +78,12 @@ $$
 
 All of these measure help in selecting a good classifier in the following ways:
 
-1. They help us determine how accurate the model is under certain scenarios where accurate identification of false positives or true negatives are crucial, e.g. in medical tests
+1. They help us determine how accurate the model is under certain scenarios where accurate identification of false positives or true negatives are crucial, e.g. in medical tests[^2]
 2. They allow us to align models to the areas where they are best suited, e.g. predicting false positives or negatives
 3. They give us a more nuanced look at how a model predicts other measures and gives us a balanced idea of what a model's true performance is
 
 ---
 
 [^1]: https://en.wikipedia.org/wiki/Confusion_matrix
+[^2]: In a dataset where 95% of cases are Negative (e.g., non-diseased), a classifier that always predicts Negative would achieve 95% Accuracy. This model is useless for the task (finding the disease), but its accuracy is high.
+
