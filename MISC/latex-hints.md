@@ -65,6 +65,8 @@ Here's how it looks like:
 
 $\left(\frac{N_i}{N}\right)$
 
+You can make them even bigger by using `\Big{` or `\Bigg`
+
 ## Empty space between words in a math equation
 
 Simply end the word with `\`
