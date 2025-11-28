@@ -34,6 +34,21 @@ $$
 Accuracy = \frac{TP+TN}{P+N}
 $$
 
+### Precision
+
+Precision is derived by dividing the number of true positives by the total number of predicted positives (true and false both).
+
+$$
+Precision = \frac{TP}{TP+FP}
+$$
+
+### Recall
+
+Recall measures how good the model is at predicting positives. It is the number of true positives divided by the sum of true positives and true negatives.
+
+$$
+Recall = \frac{TP}{TP+FN}
+$$
 ---
 
 [^1]: https://en.wikipedia.org/wiki/Confusion_matrix
