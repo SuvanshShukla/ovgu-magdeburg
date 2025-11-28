@@ -61,7 +61,7 @@ $$
 ### Miss rate, False Negatives Rate or Type II error
 
 This measures when a model fails to predict a positive instances even though it is actually positive.  
-Miss rate is derived by dividig the number of false negatives by the sum of true positives and false negatives.
+Miss rate is derived by dividing the number of false negatives by the sum of true positives and false negatives.
 
 $$
 Miss\ Rate = \frac{FN}{TP+FN}
