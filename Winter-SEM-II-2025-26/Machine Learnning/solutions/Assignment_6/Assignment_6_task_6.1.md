@@ -76,6 +76,12 @@ $$
 Fall-out = \frac{FP}{FP+TN}
 $$
 
+All of these measure help in selecting a good classifier in the following ways:
+
+1. They help us determine how accurate the model is under certain scenarios where accurate identification of false positives or true negatives are crucial, e.g. in medical tests
+2. They allow us to align models to the areas where they are best suited, e.g. predicting false positives or negatives
+3. They give us a more nuanced look at how a model predicts other measures and gives us a balanced idea of what a model's true performance is
+
 ---
 
 [^1]: https://en.wikipedia.org/wiki/Confusion_matrix
