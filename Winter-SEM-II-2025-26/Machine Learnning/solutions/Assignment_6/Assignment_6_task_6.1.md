@@ -49,6 +49,22 @@ Recall measures how good the model is at predicting positives. It is the number 
 $$
 Recall = \frac{TP}{TP+FN}
 $$
+
+### Specificity
+
+Specificity measure the ability of a model to correctly identify negative instances. It is the number of true negatives divided by the sum of true negatives and false positives.
+
+$$
+Specificity = \frac{TN}{TN+FN}
+$$
+
+### Miss rate, False Negatives Rate or Type II error
+
+Miss rate is derived by dividig the number of false negatives by the sum of true positives and false negatives.
+
+$$
+Miss\ Rate = \frac{FN}{TP+FN}
+$$
 ---
 
 [^1]: https://en.wikipedia.org/wiki/Confusion_matrix
