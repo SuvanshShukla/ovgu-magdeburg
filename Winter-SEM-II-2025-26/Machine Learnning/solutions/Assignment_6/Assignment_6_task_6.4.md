@@ -16,3 +16,11 @@ testing, this second cycle of training is would be done on the entire dataset. T
 3. The models trained on cross-validation are intermediates and not quite ready for production. This is because keeping all things equal, a model trained on more data will have better performance.
 
 Though this does mean that even if we train the model on all the data after fixing hyperparameters, this tuning would have been done for 70% of the data rather than all of it, and there is no guarantee that the hyperparameters selected for 70% of the data will be equally effective for 100% of the data, this is why we still have "data wastage".
+
+K-fold cross-validation is a type of cross-validation where we divide our entire dataset into 'k' disjointed subsets. The size of each subset can be arbitrary (but is usually kep equal). The model is then trained on all except
+one of these subsets. The final remaining subset is used for testing. This cycle of training the model is done multiple times changing the hidden subset eveytime. Finally the error of testing each version of the model is 
+averaged to produce the generalization error of the model. The model with the lowest generalization error is
+chosen.
+
+Leave-one-out cross-validation is yet another type of cross-validation, where due to scarcity of training data
+we train the model on all but one sample of the data, choosing a different sample to exclude everytime. 
