@@ -66,6 +66,16 @@ Miss rate is derived by dividig the number of false negatives by the sum of true
 $$
 Miss\ Rate = \frac{FN}{TP+FN}
 $$
+
+### Fall-out, False Positive Rate or Type I error
+
+This measures when a model incorrectly predicts a positive instance but the actual instance is negative.  
+This is derived by dividing the false positives by the sum of false positives and true negatives.
+
+$$
+Fall-out = \frac{FP}{FP+TN}
+$$
+
 ---
 
 [^1]: https://en.wikipedia.org/wiki/Confusion_matrix
