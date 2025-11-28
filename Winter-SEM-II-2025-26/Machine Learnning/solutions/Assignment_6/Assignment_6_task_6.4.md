@@ -33,3 +33,9 @@ The reason we use such training methods is for the following:
 
 All of these reasons result in a more stable, robust and less biased estimate of performance.
 
+Cross-validation also helps us detect bias and variance in models. If a model consistently shows an poor performance and high average error across all k-folds, then we can conclude that the model has high bias and may never
+really be able to capture the target function.
+
+Similarly, if the model inconsistent performance on the k-folds or has it's best performance and worst performance
+are very far apart then the model has high variance and may be too unreliable for capturing the target function.
+
