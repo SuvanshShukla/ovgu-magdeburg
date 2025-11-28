@@ -24,3 +24,12 @@ chosen.
 
 Leave-one-out cross-validation is yet another type of cross-validation, where due to scarcity of training data
 we train the model on all but one sample of the data, choosing a different sample to exclude everytime. 
+
+The reason we use such training methods is for the following:
+
+1. Maximize use of training data
+2. Reduction in model variance. This is possible in some cases, where the training data missed some minority samples, or had too many outliers skewing the model's performance.
+3. Helps us pick more accurate hyperparameters. Since we're able to use more data to train intermediate models we are also able to finalize better hyperparameters for use in the final production model.
+
+All of these reasons result in a more stable, robust and less biased estimate of performance.
+
