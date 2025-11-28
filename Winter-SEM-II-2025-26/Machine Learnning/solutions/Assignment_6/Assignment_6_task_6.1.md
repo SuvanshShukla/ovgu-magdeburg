@@ -25,3 +25,15 @@ Where the rows indicate actual classes and the column indicate predicted classes
 - FN: False Negative
 - FP: False Positive
 - TN: True Negative
+
+### Accuracy
+
+Accuracy is derived from the confusion matrix by dividing the total number of positives & negatives by the no. of correct predictions, i.e. the sum of true positives and true negatives.
+
+$$
+Accuracy = \frac{TP+TN}{P+N}
+$$
+
+---
+
+[^1]: https://en.wikipedia.org/wiki/Confusion_matrix
