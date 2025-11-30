@@ -30,3 +30,8 @@ Calculating the accuracy for both Models:
 $Accuracy(A) = \frac{TP+TN}{P+N} = \frac{4+14}{2+1+3+14} = 0.9$
 $Accuracy(B) = \frac{TP+TN}{P+N} = \frac{4+12}{4+3+1+12} = 0.8$
 
+Calculating the precision for both Models:
+
+$Precision(A) = \frac{TP}{TP+FP} = \frac{2}{2+1} = 0.666$
+$Precision(B) = \frac{TP}{TP+FP} = \frac{4}{4+3} = 0.571$
+
