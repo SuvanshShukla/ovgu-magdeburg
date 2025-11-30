@@ -28,7 +28,7 @@ Where the rows indicate actual classes and the column indicate predicted classes
 
 ### Accuracy
 
-Accuracy shows how many predictions the model got right out of all predictions, it is derived from the confusion matrix by dividing the total number of positives & negatives by the no. of correct predictions, i.e. the sum of true positives and true negatives.
+Accuracy shows how many predictions the model got right out of all predictions[^2], it is derived from the confusion matrix by dividing the total number of positives & negatives by the no. of correct predictions, i.e. the sum of true positives and true negatives.
 
 $$
 Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
@@ -36,7 +36,7 @@ $$
 
 ### Precision
 
-Precision is derived by dividing the number of true positives by the total number of predicted positives (true and false both).
+Precision tell us how many of the "positive" predictions were actually correct[^2], it is derived by dividing the number of true positives by the total number of predicted positives (true and false both).
 
 $$
 Precision = \frac{TP}{TP+FP}
@@ -78,12 +78,13 @@ $$
 
 All of these measure help in selecting a good classifier in the following ways:
 
-1. They help us determine how accurate the model is under certain scenarios where accurate identification of false positives or true negatives are crucial, e.g. in medical tests[^2]
+1. They help us determine how accurate the model is under certain scenarios where accurate identification of false positives or true negatives are crucial, e.g. in medical tests[^3]
 2. They allow us to align models to the areas where they are best suited, e.g. predicting false positives or negatives
 3. They give us a more nuanced look at how a model predicts other measures and gives us a balanced idea of what a model's true performance is
 
 ---
 
 [^1]: https://en.wikipedia.org/wiki/Confusion_matrix
-[^2]: In a dataset where 95% of cases are Negative (e.g., non-diseased), a classifier that always predicts Negative would achieve 95% Accuracy. This model is useless for the task (finding the disease), but its accuracy is high.
+[^2]: https://www.geeksforgeeks.org/machine-learning/confusion-matrix-machine-learning/
+[^3]: In a dataset where 95% of cases are Negative (e.g., non-diseased), a classifier that always predicts Negative would achieve 95% Accuracy. This model is useless for the task (finding the disease), but its accuracy is high.
 
