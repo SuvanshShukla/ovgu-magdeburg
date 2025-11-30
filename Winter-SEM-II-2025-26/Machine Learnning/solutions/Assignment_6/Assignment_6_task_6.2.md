@@ -95,7 +95,7 @@ Calculating the Weighted Precision:
 
 $Precision_{weighted} = \Bigg(Precision_A \times \frac{N_A}{N_{total}}\Bigg)+\Bigg(Precision_B \times \frac{N_B}{N_{total}}\Bigg) + \Bigg(Precision_C \times \frac{N_C}{N_{total}}\Bigg)$
 
-$Precision_{weighted} = \Bigg{0.7058 \times \frac{19}{55}\Bigg) + \Bigg(0.7777 \times \frac{18}{55}\Bigg) + \Bigg(0.5500 \times \frac{20}{55}\Bigg)$
+$Precision_{weighted} = \Bigg(0.7058 \times \frac{19}{55}\Bigg) + \Bigg(0.7777 \times \frac{18}{55}\Bigg) + \Bigg(0.5500 \times \frac{20}{55}\Bigg)$
 
 $Precision_{weighted} = 0.6983$
 
@@ -103,7 +103,7 @@ Calculating the Weighted Recall:
 
 $Recall_{weighted} = \Bigg(Recall_A \times \frac{N_A}{N_{total}}\Bigg)+\Bigg(Recall_B \times \frac{N_B}{N_{total}}\Bigg) + \Bigg(Recall_C \times \frac{N_C}{N_{total}}\Bigg)$
 
-$Recall_{weighted} = \Bigg{0.6315 \times \frac{19}{55}\Bigg) + \Bigg(0.6666 \times \frac{18}{55}\Bigg) + \Bigg(0.7333 \times \frac{20}{55}\Bigg)$
+$Recall_{weighted} = \Bigg(0.6315 \times \frac{19}{55}\Bigg) + \Bigg(0.6666 \times \frac{18}{55}\Bigg) + \Bigg(0.7333 \times \frac{20}{55}\Bigg)$
 
 $Recall_{weighted} = 0.7029$
 
