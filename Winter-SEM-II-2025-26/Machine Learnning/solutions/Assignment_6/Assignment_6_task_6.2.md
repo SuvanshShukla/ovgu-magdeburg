@@ -45,3 +45,9 @@ Calculating the F1-measure for both Models:
 $F1-Score(A) = \frac{2.Precision.Recall}{Precision+Recall} = \frac{2X0.666X0.4}{0.666+0.4} = 0.4998$
 $F1-Score(B) = \frac{2.Precision.Recall}{Precision+Recall} = \frac{2X0.571X0.8}{0.571+0.8} = 0.6663$
 
+**Scenario 1**: If predicting both True and False classes are equally imporant then Model (B) is the better choice.
+
+**Scenario 2**: If we want to minimize the number of False Positives predicted then Model (A) is better.
+
+**Scenario 3**: If we want to maximize the identification of True Positives then Model (B) is better.
+
