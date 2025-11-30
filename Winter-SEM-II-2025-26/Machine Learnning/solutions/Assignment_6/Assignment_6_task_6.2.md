@@ -61,4 +61,16 @@ The modified confusion matrix, with the actual classes in rows and predicted cla
 | B | 2  | 14 | 5  |
 | C | 3  | 1  | 11 |
 
+To calculate the precision and recall for this multi-class classifier we would need to calculate each class's individual precision and recall.
 
+One thing to note is that the True Positives and False Negatives would also change, to something like this:
+
+|   | A  | B  | C  |
+| - | -- | -- | -- |
+| A | TP | FN | FN |
+| B | FN | TP | FN |
+| C | FN | FN | TP |
+
+$Precision(A) = \frac{TP}{TP+FN+FN} = \frac{12}{12+2+3} =$
+$Precision(B) = \frac{TP}{TP+FN+FN} = \frac{14}{14+3+1} =$
+$Precision(C) = \frac{TP}{TP+FN+FN} = \frac{11}{11+4+5} =$
