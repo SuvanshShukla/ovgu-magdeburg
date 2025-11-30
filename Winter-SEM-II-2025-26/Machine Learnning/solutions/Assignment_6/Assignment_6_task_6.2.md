@@ -51,3 +51,14 @@ $F1-Score(B) = \frac{2.Precision.Recall}{Precision+Recall} = \frac{2X0.571X0.8}{
 
 **Scenario 3**: If we want to maximize the identification of True Positives then Model (B) is better.
 
+### Part (B)
+
+The modified confusion matrix, with the actual classes in rows and predicted classes in columns looks like this:
+
+|   | A  | B  | C  |
+| - | -- | -- | -- |
+| A | 12 | 3  | 4  |
+| B | 2  | 14 | 5  |
+| C | 3  | 1  | 11 |
+
+
