@@ -55,11 +55,11 @@ $F1-Score(B) = \frac{2.Precision.Recall}{Precision+Recall} = \frac{2X0.571X0.8}{
 
 The modified confusion matrix, with the actual classes in rows and predicted classes in columns looks like this:
 
-|   | A  | B  | C  |
-| - | -- | -- | -- |
-| A | 12 | 3  | 4  |
-| B | 2  | 14 | 5  |
-| C | 3  | 1  | 11 |
+|     | A   | B   | C   |
+| --- | --- | --- | --- |
+| A   | 12  | 3   | 4   |
+| B   | 2   | 14  | 5   |
+| C   | 3   | 1   | 11  |
 
 To calculate the precision and recall for this multi-class classifier we would need to calculate each class's individual precision and recall.
 
