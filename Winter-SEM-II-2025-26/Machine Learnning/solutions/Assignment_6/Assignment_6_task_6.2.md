@@ -35,3 +35,8 @@ Calculating the precision for both Models:
 $Precision(A) = \frac{TP}{TP+FP} = \frac{2}{2+1} = 0.666$
 $Precision(B) = \frac{TP}{TP+FP} = \frac{4}{4+3} = 0.571$
 
+Calculating the recall for both Models:
+
+$Recall(A) = \frac{TP}{TP+FN} = \frac{2}{2+3} = 0.4$
+$Recall(B) = \frac{TP}{TP+FN} = \frac{4}{4+1} = 0.8$
+
