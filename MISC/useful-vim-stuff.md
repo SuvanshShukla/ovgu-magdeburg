@@ -78,3 +78,5 @@ vim.api.nvim_create_autocmd("FileType", {
 
 Useful Link on this [How to use vim's spell check feature](https://itsfoss.gitlab.io/post/how-to-use-spell-check-feature-in-vim-text-editor/).
 
+You can also use `z=` for getting a menu for corrections! Choose the number corresponding to the word and the correction will be made for you!
+
