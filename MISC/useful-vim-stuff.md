@@ -55,3 +55,7 @@ For converting vertically split windows to horizontal:
 Ctrl + w K
 ```
 
+## Increment or decrement number in Normal
+
+Use `Ctrl+A` to increase the number by 1 and `Ctrl+X` to decrease the number by 1.
+
