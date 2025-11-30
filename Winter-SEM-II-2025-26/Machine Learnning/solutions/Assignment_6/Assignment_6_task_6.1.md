@@ -28,7 +28,7 @@ Where the rows indicate actual classes and the column indicate predicted classes
 
 ### Accuracy
 
-Accuracy is derived from the confusion matrix by dividing the total number of positives & negatives by the no. of correct predictions, i.e. the sum of true positives and true negatives.
+Accuracy shows how many predictions the model got right out of all predictions, it is derived from the confusion matrix by dividing the total number of positives & negatives by the no. of correct predictions, i.e. the sum of true positives and true negatives.
 
 $$
 Accuracy = \frac{TP+TN}{TP+TN+FP+FN}
