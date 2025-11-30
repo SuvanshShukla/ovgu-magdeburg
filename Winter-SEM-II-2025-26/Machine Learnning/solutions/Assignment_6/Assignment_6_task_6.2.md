@@ -71,6 +71,15 @@ One thing to note is that the True Positives and False Negatives would also chan
 | B | FN | TP | FN |
 | C | FN | FN | TP |
 
-$Precision(A) = \frac{TP}{TP+FN+FN} = \frac{12}{12+2+3} =$
-$Precision(B) = \frac{TP}{TP+FN+FN} = \frac{14}{14+3+1} =$
-$Precision(C) = \frac{TP}{TP+FN+FN} = \frac{11}{11+4+5} =$
+Calculating class-wise precision:
+
+$Precision(A) = \frac{TP}{TP+FP+FP} = \frac{12}{12+2+3} = 0.7058$
+$Precision(B) = \frac{TP}{TP+FP+FP} = \frac{14}{14+3+1} = 0.7777$
+$Precision(C) = \frac{TP}{TP+FP+FP} = \frac{11}{11+4+5} = 0.5500$
+
+Calculating class-wise recall:
+
+$Recall(A) = \frac{TP}{TP+FN+FN} = \frac{12}{12+3+4} = 0.6315$
+$Recall(B) = \frac{TP}{TP+FN+FN} = \frac{14}{14+2+5} = 0.6666$
+$Recall(C) = \frac{TP}{TP+FN+FN} = \frac{11}{11+3+1} = 0.7333$
+
