@@ -59,3 +59,22 @@ Ctrl + w K
 
 Use `Ctrl+A` to increase the number by 1 and `Ctrl+X` to decrease the number by 1.
 
+## In-built spell check
+
+Vim has an inbuilt spell check feature, that you can manually activate by `:set spell`.
+
+Or you can set it to activate for only certain file types (e.g. markdown) by using: `autocmd FileType markdown setlocal spell`.
+
+Or you can add the following snippet to your `init.lua` file for auto-associating it with a certain file-type:
+
+```lua
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function()
+        vim.opt_local.spell = true
+    end,
+})
+```
+
+Useful Link on this [How to use vim's spell check feature](https://itsfoss.gitlab.io/post/how-to-use-spell-check-feature-in-vim-text-editor/).
+
