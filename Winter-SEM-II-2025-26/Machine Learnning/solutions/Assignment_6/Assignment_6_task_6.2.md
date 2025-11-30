@@ -25,3 +25,8 @@ Confusion Matrix for Model B:
 | True  |  4(TP) |  1(FN)  |
 | False |  3(FP) |  12(TN) |
 
+Calculating the accuracy for both Models:
+
+$Accuracy(A) = \frac{TP+TN}{P+N} = \frac{4+14}{2+1+3+14} = 0.9$
+$Accuracy(B) = \frac{TP+TN}{P+N} = \frac{4+12}{4+3+1+12} = 0.8$
+
