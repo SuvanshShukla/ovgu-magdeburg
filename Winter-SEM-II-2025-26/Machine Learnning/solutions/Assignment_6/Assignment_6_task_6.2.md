@@ -40,3 +40,8 @@ Calculating the recall for both Models:
 $Recall(A) = \frac{TP}{TP+FN} = \frac{2}{2+3} = 0.4$
 $Recall(B) = \frac{TP}{TP+FN} = \frac{4}{4+1} = 0.8$
 
+Calculating the F1-measure for both Models:
+
+$F1-Score(A) = \frac{2.Precision.Recall}{Precision+Recall} = \frac{2X0.666X0.4}{0.666+0.4} = 0.4998$
+$F1-Score(B) = \frac{2.Precision.Recall}{Precision+Recall} = \frac{2X0.571X0.8}{0.571+0.8} = 0.6663$
+
