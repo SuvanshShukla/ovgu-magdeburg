@@ -83,3 +83,11 @@ $Recall(A) = \frac{TP}{TP+FN+FN} = \frac{12}{12+3+4} = 0.6315$
 $Recall(B) = \frac{TP}{TP+FN+FN} = \frac{14}{14+2+5} = 0.6666$
 $Recall(C) = \frac{TP}{TP+FN+FN} = \frac{11}{11+3+1} = 0.7333$
 
+Calculating Macro Average Precision:
+
+$Precision_{macro} = \frac{Precision_A+Precision_B+Precision_C}{N} = \frac{0.7058+0.7777+0.5500}{3} = 0.6778$
+
+Calculating Macro Average Recall:
+
+$Recall_{macro} = \frac{Recall_A+Recall_B+Recall_C}{N} = \frac{0.6315+0.6666+0.7333}{3} =0.6771$
+
