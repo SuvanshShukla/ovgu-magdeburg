@@ -49,3 +49,13 @@ $$
 - then we divide it by the total number of disagreements
 - the sign function helps us preserve the direction information, i.e. if it is +ve it means A is better and if it is -ve it means B is better
 
+## Kappa and Kappa+
+
+- the Kappa statistic helps measure how much better our classifier is compared to a random classifier, accounting for class imbalance
+- Kappa+ statistic is an improvement on the Kappa statistic. It helps differentiate between different types of errors as well.
+- Since Kappa only tells us how much better our model is compared to random, we don't know if gives us fewer false negatives or false positives, as Kappa only compares how many both got right.
+- This differentiation between performance in predicting false negatives/positives, helps us when there is a certain cost associated with making such errors.
+- This additional discrepancy provided by Kappa+ also helps us when we want to minimize one type of error in particular (e.g. no. of false positives in a test for cancer)
+- Kappa+ Therefore uses a different baseline classifier that always predicts the most recently observed label
+- Kappa and Kappa+ are not adequate as a sole performance measures because they fail in differentiation when their value falls to 0, i.e. both classifiers have performance equivalent to random classifier (in Kappa) or baseline model (for Kappa+)
+
