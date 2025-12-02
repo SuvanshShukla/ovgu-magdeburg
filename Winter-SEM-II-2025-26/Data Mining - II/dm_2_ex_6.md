@@ -58,4 +58,7 @@ $$
 - This additional discrepancy provided by Kappa+ also helps us when we want to minimize one type of error in particular (e.g. no. of false positives in a test for cancer)
 - Kappa+ Therefore uses a different baseline classifier that always predicts the most recently observed label
 - Kappa and Kappa+ are not adequate as a sole performance measures because they fail in differentiation when their value falls to 0, i.e. both classifiers have performance equivalent to random classifier (in Kappa) or baseline model (for Kappa+)
-
+- they are also not adequate as they would not useful in case of concept drift
+- they also fail to show us the "bigger picture" that is, if the classifier was more accurate in the beginning and has started to degrade or if it failed a bunch of times in the middle of the stream (but did well in the beginning and end)
+- these statistics would also fail if true labels for instances never arrive (this happens a lot in streams)
+- kappa statistics also don't tell us if classifiers are more efficient, take less time for predictions, adapt better to drift or require more memory
