@@ -15,3 +15,7 @@ $$
 \exists X : p_{t_{0}} (X,y) \neq p_{t_{1}} (X,y)
 $$
 
+There are two types of drift:
+
+1. Real concept drift: Refers to changes in the data distribution, with or without changes in the true labels.
+2. Virtual concept drift: Refers to changes in the distribution of incoming data without affecting the predictive decision.
