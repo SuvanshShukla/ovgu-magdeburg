@@ -62,3 +62,4 @@ $$
 - they also fail to show us the "bigger picture" that is, if the classifier was more accurate in the beginning and has started to degrade or if it failed a bunch of times in the middle of the stream (but did well in the beginning and end)
 - these statistics would also fail if true labels for instances never arrive (this happens a lot in streams)
 - kappa statistics also don't tell us if classifiers are more efficient, take less time for predictions, adapt better to drift or require more memory
+
