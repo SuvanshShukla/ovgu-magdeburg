@@ -19,3 +19,11 @@ There are two types of drift:
 
 1. Real concept drift: Refers to changes in the data distribution, with or without changes in the true labels.
 2. Virtual concept drift: Refers to changes in the distribution of incoming data without affecting the predictive decision.
+
+There are many different patterns of change, like the following:
+
+1. Sudden and abrupt
+2. incremental
+3. gradual
+4. Recurring concepts
+5. outlier (not concept drift)
