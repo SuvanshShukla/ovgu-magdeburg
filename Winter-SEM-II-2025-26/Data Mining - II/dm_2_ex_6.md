@@ -27,3 +27,25 @@ There are many different patterns of change, like the following:
 3. gradual
 4. Recurring concepts
 5. outlier (not concept drift)
+
+## McNemar Test
+
+- McNemar test is a statistical test used to compare two or more classifiers.
+- The McNemar test always starts out by assuming the NULL hypothesis, i.e. the models are performing the same.
+- Therefore we use the McNemar test to see if there is any statistical difference between their performance.
+- The McNemar test focuses more on comparing models rather than their independent accuracy.
+- This test follows the $\chi^2$ (chi-square) distribution
+
+The formula for McNemar's test is like this:
+
+$$
+M = \frac{sign(a-b)\times(a-b)^2}{a+b}
+$$
+
+- This formula helps us compare two classifiers and the instances which they disagree on.
+- here a is the no. of instances that classifier A gets correct but classifier B gets wrong
+- and b is the no. of instances that classifier B gets correct but classifier A gets wrong
+- we subtract the disagreements between the predictions of both classifiers and square it (to make it +ve and amplify large differences)
+- then we divide it by the total number of disagreements
+- the sign function helps us preserve the direction information, i.e. if it is +ve it means A is better and if it is -ve it means B is better
+
