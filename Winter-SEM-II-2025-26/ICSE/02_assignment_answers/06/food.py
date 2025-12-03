@@ -23,7 +23,7 @@ class Food:
             return NotImplemented
         cal1 = self.calories()
         cal2 = other.calories()
-        if cal1 > cal2:
+        if cal1 >= cal2:
             return False
         else:
             return True
