@@ -8,17 +8,31 @@ class RandomQueue(Queue):
         self.queue = []
         self.size = 0
 
+    def enqueue(self, item):
+        self.queue = [item] + self.queue
+        self.size += 1
+
     def dequeue(self) -> Optional[Any]:
-        """Remove and return one random item from the queue (or `None` if the queue is empty)."""
-        if self.is_empty:
+        if self.is_empty():
             return None
-        raise NotImplementedError()
+        else:
+            item = self.queue[0]
+            self.queue[1:]
+            self.size -= 1
+            return item
 
     def sample(self) -> Optional[Any]:
-        """Returns a random element from the queue (or `None` if the queue is empty)."""
-        if self.is_empty:
+        if self.is_empty():
             return None
-        raise NotImplementedError()  # TODO: Implement the method `sample`.
+        else:
+            item = self.queue[0]
+            return item
+
+    def is_empty(self):
+        if self.size <= 0:
+            return True
+        else:
+            return False
 
 
 if __name__ == "__main__":
