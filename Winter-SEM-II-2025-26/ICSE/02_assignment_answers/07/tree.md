@@ -45,6 +45,7 @@ A balanced search tree is a tree that has bound on the difference between the he
 
 ## Insertion
 
+```text
            11
          /    \ 
         /      \
@@ -56,4 +57,5 @@ A balanced search tree is a tree that has bound on the difference between the he
  / \   / \     / \     /
 1   4 6  10   /   \   16
             12    14
-  
+```
+
