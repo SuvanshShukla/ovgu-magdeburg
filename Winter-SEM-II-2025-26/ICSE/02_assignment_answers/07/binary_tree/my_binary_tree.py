@@ -31,4 +31,10 @@ class MyBinaryTree(BinaryTree):
 
 
 if __name__ == "__main__":
+    left_left_tree = MyBinaryTree(0)
+    left_tree = MyBinaryTree(1, left_left_tree)
+    right_tree = MyBinaryTree(3)
+    tree = MyBinaryTree(2, left_tree, right_tree)
+    print(tree.height())
+    assert tree.height() == 2
     pass
