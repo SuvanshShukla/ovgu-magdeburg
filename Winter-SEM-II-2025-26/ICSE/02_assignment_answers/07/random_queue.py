@@ -1,5 +1,5 @@
 from typing import Any, Optional
-
+import random
 from icse_queue import Queue
 
 
@@ -25,7 +25,8 @@ class RandomQueue(Queue):
         if self.is_empty():
             return None
         else:
-            item = self.queue[0]
+            r = random.randint(0, self.size - 1)
+            item = self.queue[r]
             return item
 
     def is_empty(self):
