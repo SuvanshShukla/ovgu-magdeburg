@@ -16,9 +16,12 @@ class RandomQueue(Queue):
         if self.is_empty():
             return None
         else:
-            item = self.queue[0]
-            self.queue[1:]
+            r = random.randint(0, self.size - 1)
+            item = self.queue[r]
+            left = self.queue[0:r]
+            right = self.queue[r + 1:]
             self.size -= 1
+            self.queue = left + right
             return item
 
     def sample(self) -> Optional[Any]:
