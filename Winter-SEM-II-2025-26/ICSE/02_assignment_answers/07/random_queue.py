@@ -4,7 +4,9 @@ from icse_queue import Queue
 
 
 class RandomQueue(Queue):
-    # TODO: Implement the missing methods.
+    def __init__(self):
+        self.queue = []
+        self.size = 0
 
     def dequeue(self) -> Optional[Any]:
         """Remove and return one random item from the queue (or `None` if the queue is empty)."""
