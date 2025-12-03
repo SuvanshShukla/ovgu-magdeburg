@@ -121,4 +121,3 @@ if __name__ == "__main__":
     assert oj2.get_weight() == (1.038 * 1)
     print("ALL TESTS PASSED!")
     pass
-
