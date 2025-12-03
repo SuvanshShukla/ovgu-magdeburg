@@ -36,4 +36,14 @@ class RandomQueue(Queue):
 
 
 if __name__ == "__main__":
+    r1 = RandomQueue()
+    assert r1.is_empty()
+    r1.enqueue(1)
+    assert r1.sample() == 1
+    i = r1.dequeue()
+    assert i == 1
+    r1.enqueue(10)
+    r1.enqueue(11)
+    r1.sample() == 10
+    print('ALL TEST CASES PASSED.')
     pass
