@@ -4,7 +4,18 @@ from binary_tree import BinaryTree
 class MyBinaryTree(BinaryTree):
     def height(self) -> int:
         """Returns the height of this tree."""
-        raise NotImplementedError()  # TODO: Add implementation
+        count = 0
+        end = False
+        while end is not True:
+            if self.get_left() is not None:
+                self = self.get_left()
+                count += 1
+            elif self.get_right() is not None:
+                self = self.get_right()
+                count += 1
+            else:
+                end = True
+        return count
 
     def max_sum(self) -> int:
         """Returns the maximum sum of the left and right sub-tree."""
