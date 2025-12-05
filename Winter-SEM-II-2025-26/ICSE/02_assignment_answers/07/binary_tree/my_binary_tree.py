@@ -25,7 +25,26 @@ class MyBinaryTree(BinaryTree):
 
     def max_sum(self) -> int:
         """Returns the maximum sum of the left and right sub-tree."""
-        raise NotImplementedError()  # TODO: Add implementation
+        if self is None:
+            return 0
+
+        stack = []
+        stack.append(self)
+        left_sum = 0
+        right_sum = 0
+
+        while len(stack) > 0:
+            size = len(stack)
+            while size > 0:
+                node = stack.pop()
+                if node.get_left() is not None:
+                    stack.append(node.get_left())
+                    left_sum += node.get_left().get_item()
+                if node.get_right() is not None:
+                    stack.append(node.get_right())
+                    right_sum += node.get_right().get_item()
+                size -= 1
+        return max(left_sum, right_sum)
 
     def max_path(self) -> int:
         """Returns the value of the biggest path from self to a leaf."""
@@ -43,4 +62,6 @@ if __name__ == "__main__":
     tree = MyBinaryTree(2, left_tree, right_tree)
     print(tree.height())
     assert tree.height() == 2
+    print(tree.max_sum())
+    assert tree.max_sum() == 3
     pass
