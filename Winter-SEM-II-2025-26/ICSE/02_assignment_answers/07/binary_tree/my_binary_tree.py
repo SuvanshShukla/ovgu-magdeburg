@@ -48,7 +48,19 @@ class MyBinaryTree(BinaryTree):
 
     def max_path(self) -> int:
         """Returns the value of the biggest path from self to a leaf."""
-        raise NotImplementedError()  # TODO: Add implementation
+        if self is None:
+            return 0
+
+        left_max = 0
+        right_max = 0
+
+        if self.get_left() is not None:
+            left_max += max(0, self.get_left().max_path())
+
+        if self.get_right() is not None:
+            right_max += max(0, self.get_right().max_path())
+
+        return self.get_item() + max(left_max, right_max)
 
     def max_width(self) -> int:
         """Returns the value of the biggest level."""
@@ -64,4 +76,6 @@ if __name__ == "__main__":
     assert tree.height() == 2
     print(tree.max_sum())
     assert tree.max_sum() == 3
+    print(tree.max_path())
+    assert tree.max_path() == 5
     pass
