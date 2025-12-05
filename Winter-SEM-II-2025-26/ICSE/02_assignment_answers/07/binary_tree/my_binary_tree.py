@@ -4,18 +4,24 @@ from binary_tree import BinaryTree
 class MyBinaryTree(BinaryTree):
     def height(self) -> int:
         """Returns the height of this tree."""
-        count = 0
-        end = False
-        while end is not True:
-            if self.get_left() is not None:
-                self = self.get_left()
-                count += 1
-            elif self.get_right() is not None:
-                self = self.get_right()
-                count += 1
-            else:
-                end = True
-        return count
+        if self is None:
+            return -1
+
+        stack = []
+        stack.append(self)
+        height = -1
+
+        while len(stack) > 0:
+            size = len(stack)
+            height += 1
+            while size > 0:
+                node = stack.pop()
+                if node.get_left() is not None:
+                    stack.append(node.get_left())
+                if node.get_right() is not None:
+                    stack.append(node.get_right())
+                size -= 1
+        return height
 
     def max_sum(self) -> int:
         """Returns the maximum sum of the left and right sub-tree."""
