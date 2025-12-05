@@ -1,4 +1,6 @@
 from binary_tree import BinaryTree
+import math
+import collections
 
 
 class MyBinaryTree(BinaryTree):
@@ -64,7 +66,27 @@ class MyBinaryTree(BinaryTree):
 
     def max_width(self) -> int:
         """Returns the value of the biggest level."""
-        raise NotImplementedError()  # TODO: Add implementation
+        if self is None:
+            return 0
+
+        queue = collections.deque([self])
+
+        max_with_count = 0
+
+        while queue:
+            level_size = len(queue)
+            max_with_count = max(max_with_count, level_size)
+
+            for i in range(level_size):
+                node = queue.popleft()
+
+                if node.get_left():
+                    queue.append(node.get_left())
+
+                if node.get_right():
+                    queue.append(node.get_right())
+
+        return max_with_count
 
 
 if __name__ == "__main__":
