@@ -79,4 +79,7 @@ leading to very slow learning for those units
 
 ---
 
-[^1]: https://www.datacamp.com/blog/rectified-linear-unit-relu
+[^1]: https://botpenguin.com/glossary/softmax-function
+[^2]: https://www.geeksforgeeks.org/deep-learning/the-role-of-softmax-in-neural-networks-detailed-explanation-and-applications/
+[^3]: https://www.datacamp.com/blog/rectified-linear-unit-relu
+
