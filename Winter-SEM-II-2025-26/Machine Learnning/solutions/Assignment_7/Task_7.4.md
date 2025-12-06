@@ -22,21 +22,21 @@ $$
 
 Where $C$ is the number of classes.
 
-| advantages | disadvantages |
-| ---------- | ------------- |
-|            |               |
+The advantages of Softmax function are[^1]:
 
-### ReLU (Rectified Linear Unit) Function
+- highlights the largest values and suppresses values which are significantly below the maximum value
+- converts a vector of real numbers into a probability distribution (range between 0 and 1) which allows for direct interpretation
+- suitable for multi-class problems
+- works well with gradient descent
+- enhances model generalizations, makes model confident about most probable predictions and reduces confidence in in correct predictions
 
-The ReLU is one of the most popular and widely used activation functions. This function provides non-linearity to the model for better
-computation performance.[^1]
+The disadvantages of Softmax function are[^2]:
 
-The ReLU activation function has the form:
-
-$$
-f(x) = max(0, x)
-$$
-
+- Overconfidence: Tends to produce extremely confident predictions even for uncertain inputs.
+- Sensitivity to Outliers: Small variations in logits can cause large shifts in probability outputs.
+- Softmax Bottleneck: Limited ability to model complex relationships between output classes.
+- Poor Calibration: Predicted probabilities often do not align with true likelihoods.
+- Gradient Saturation: Can cause vanishing gradients when one class probability dominates others.
 The ReLU function outputs the maximum between its input and zero. For positive inputs, the output is equal to the input. For strictly
 negative outputs, the output of the function is equal to zero.
 
