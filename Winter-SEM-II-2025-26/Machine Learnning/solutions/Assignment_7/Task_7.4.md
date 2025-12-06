@@ -53,6 +53,30 @@ that the neuron will never activate on any data point again
 - the opposite is also possible: the exploding gradients problem occurs when the gradients get increasingly large, leading to huge parameter
 updates and divergent training
 
+### Leaky ReLU
+
+Leaky ReLU has the form:
+
+$$
+f(x) = \begin{cases} x & \text{if } x > 0 \\ \alpha x & \text{if } x \le 0 \end{cases}
+$$
+
+This was made specifically to address the "dying ReLU" problem. To solve this problem Leaky ReLU uses a multiplying factor for negative
+inputs. This results in a function that will not be zero but will instead have a small negative slope.
+
+The advantages of Leaky ReLU are:
+
+- solves the dying ReLU problem
+- computationally efficient
+- preserves features information
+
+The disadvantages of Leaky ReLU:
+
+- (minor) added computation, owing to multiplication
+- have an extra parameter that requires tuning (slope)
+- does not guarantee learning: the small gradient $\alpha$ might not be large enough to be effective still 
+leading to very slow learning for those units
+
 ---
 
 [^1]: https://www.datacamp.com/blog/rectified-linear-unit-relu
