@@ -28,6 +28,7 @@ Is rendered as: $A_{ij}^{ij}$
 | Sigma      | \sigma |
 | Sum simbol | \sum   |
 | mew symbol | \mu    |
+| partial derivative symbol | \partial |
 
 ## Example of using $\sum$
 
