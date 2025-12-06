@@ -41,7 +41,7 @@ The disadvantages of Softmax function are[^2]:
 ### ReLU (Rectified Linear Unit) Function
 
 The ReLU is one of the most popular and widely used activation functions. This function provides non-linearity to the model for better
-computation performance.[^2]
+computation performance.[^3]
 
 The ReLU activation function has the form:
 
