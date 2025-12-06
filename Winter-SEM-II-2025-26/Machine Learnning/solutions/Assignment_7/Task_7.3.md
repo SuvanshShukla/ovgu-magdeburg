@@ -14,6 +14,15 @@ Information flows in these nodes from one direction to another across these laye
 one or more hidden layers handling processing and output layer. Each of these nodes across layers are further connected
 to each other through a weighted connection. Each node (or neuron) also has a bias value.
 
+The formula for the net input to a neuron in the next layer is the sum of the weighted outputs from the previous layer
+plus its bias. So something like this:
+
+$$
+z_j = \Big( \sum_{i}w_{ij}a_i \Big) + b_j
+$$
+
+The output of the neuron is this net input passed through an activation function ($\sigma$): $a_j = \sigma(z_j)$
+
 ### PART B
 
 A neural network classifies data by segregating them into discrete sections or areas. The output layer of the neural network
@@ -63,6 +72,8 @@ Neurons should not all be initialized to the same values for all weights:
 1. to prevent neural networks from getting stuck in local minimas, this is to prevent such an occurrence
 2. if all neurons start at the same weights then all neurons
 will follow the same gradient and will always end up doing the same thing as one another[^1].
+
+More on point 2, is to break symmetry. If all weights are the same, all neurons in the same hidden layer will compute the exact same output, receive the exact same gradient during Backpropagation, and thus update their weights identically. The network would effectively have only one hidden neuron per layer.
 
 We need non-linearity in neural networks because: "without a non-linear activation function in the network, a neural network, no matter how many layers it had, would behave just like a single-layer perceptron, because summing these layers would give you just another linear function"[^2]
 
