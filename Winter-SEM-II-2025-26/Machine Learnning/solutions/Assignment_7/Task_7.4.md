@@ -37,6 +37,18 @@ The disadvantages of Softmax function are[^2]:
 - Softmax Bottleneck: Limited ability to model complex relationships between output classes.
 - Poor Calibration: Predicted probabilities often do not align with true likelihoods.
 - Gradient Saturation: Can cause vanishing gradients when one class probability dominates others.
+
+### ReLU (Rectified Linear Unit) Function
+
+The ReLU is one of the most popular and widely used activation functions. This function provides non-linearity to the model for better
+computation performance.[^2]
+
+The ReLU activation function has the form:
+
+$$
+f(x) = max(0, x)
+$$
+
 The ReLU function outputs the maximum between its input and zero. For positive inputs, the output is equal to the input. For strictly
 negative outputs, the output of the function is equal to zero.
 
