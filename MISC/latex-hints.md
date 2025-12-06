@@ -80,3 +80,19 @@ Here's what that would look like:
 
 $Gain\ Ratio = \frac{Information\ Gain}{Intrinsic\ Information}$
 
+## Writing cases
+
+Useful when you want to write outcomes for something like a step-function.
+
+Here's how you would do something like that:
+
+```latex
+f(x) = \begin{cases} x & \text{if } x > 0 \\ \alpha x & \text{if } x \le 0 \end{cases}
+```
+
+It looks like this rendered:
+
+$$
+f(x) = \begin{cases} x & \text{if } x > 0 \\ \alpha x & \text{if } x \le 0 \end{cases}
+$$
+
