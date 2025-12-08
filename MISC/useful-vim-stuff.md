@@ -80,3 +80,12 @@ Useful Link on this [How to use vim's spell check feature](https://itsfoss.gitla
 
 You can also use `z=` for getting a menu for corrections! Choose the number corresponding to the word and the correction will be made for you!
 
+## Using non-latex symbols in VIM/nvim
+
+An interesting thing about symbols in VIM/NVIM is that you can enter them as "digraphs".  
+To know more about these "digraphs" use the `:digraph` command to view a list.  
+Then use this combo to enter the symbol you want: `Ctrl+k` `{char sequence 1} {char sequence 2}`.  
+
+For example, I to enter ∆ I did - `Ctrl+k` followed by it's code `DE`. Careful! It is case sensitive.
+
+More on writing latex here: [[hints-for-latex-syntax]]
