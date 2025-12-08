@@ -29,6 +29,12 @@ Is rendered as: $A_{ij}^{ij}$
 | Sum simbol | \sum   |
 | mew symbol | \mu    |
 | partial derivative symbol | \partial |
+| for all    | \forall |
+| infinity   | \infty |
+| logical And | \wedge |
+| logical Or | \vee |
+| exists     | \exists |
+| element of/ in | \in |
 
 ## Example of using $\sum$
 
