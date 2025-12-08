@@ -23,6 +23,13 @@ Is rendered as: $A_{ij}^{ij}$
 
 ## Symbols
 
+An interesting thing about symbols in VIM/NVIM is that you can enter them as "digraphs".  
+To know more about these "digraphs" use the `:digraph` command to view a list.  
+Then use this combo to enter the symbol you want: `Ctrl+k` `{char sequence 1} {char sequence 2}`.  
+
+For example, I to enter ∆ I did - `Ctrl+k` followed by it's code `DE`. Careful! It is case sensitive.
+Checkout vim related commands here: [[useful-vimnvim-commands#Using non-latex symbols in VIM/nvim]]
+
 | Symobl     | syntax |
 | ---------- | ------ |
 | Sigma      | \sigma |
