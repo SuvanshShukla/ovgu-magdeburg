@@ -89,3 +89,19 @@ Then use this combo to enter the symbol you want: `Ctrl+k` `{char sequence 1} {c
 For example, I to enter ∆ I did - `Ctrl+k` followed by it's code `DE`. Careful! It is case sensitive.
 
 More on writing latex here: [[hints-for-latex-syntax]]
+
+## Remap LazyGit escape keymap
+
+The normal key used to cancel a command or exit out of a dialog box in LazyGit is `Esc`.  
+But this causes the LazyGit dialog box to conflict with nvim when I use LazyGit in nvim as a plugin.  
+To prevent this I remapped the escape/return keybinding with `<C-c>`, i.e. `Ctrl + c`.  
+To do this simply go to wherever you have your `config.yml` for LazyGit and paste the following:
+
+```yml
+keybinding:  
+  universal:  
+    return: <c-c>  # Use Ctrl+C instead of Esc for cancel/return
+```
+
+Closing and reopening LazyGit should now allow you to cancel/return using `Ctrl + c`.
+
