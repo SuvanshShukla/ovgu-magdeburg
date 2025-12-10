@@ -23,42 +23,88 @@ A red-black tree has the following properties[^1]:
 
 ### 2
 
-Using Φ as NULL.
+Assuming that every leaf node has Black NULL nodes as children.
 
 Inserting 6:
 
 ```text
    6B
-  /  \
- Φ    Φ
 ```
 
 Inserting 7:
 
+```text
    6B
-  /  \
- Φ    7R
-     /  \
-    Φ    Φ
+    \
+    7R
+```
 
 Inserting 3:
 
+```text
        6B
-      /   \ 
-    3R     7R
-   /  \   /  \
-  Φ    Φ  Φ    Φ
+      /  \ 
+     3R  7R
+```
 
 Inserting 4:
 
+```text
        6B
-      /   \ 
-    3R     7R
-   /  \   /  \
-  Φ   4R  Φ   Φ
-     /  \
-    Φ    Φ
+      /  \ 
+     3R   7R
+      \
+      4R
+```
 
+Now we see that there is a violation b/w 3R and its child 4R. (Red cannot have a Red parent).
+Since the parent of 4, i.e. 3 has a Red sibling, we color 3 and 7 both to Black.
+
+```text
+       6B
+      /  \ 
+     3B  7B
+      \   
+      4R 
+```
+
+Inserting 2:
+
+```text
+       6B
+      /  \ 
+    3B    7B
+   / \  
+  2R 4R
+```
+ 
+Inserting 1:
+
+```text
+       6B
+      /  \ 
+    3B    7B
+   / \  
+  2R 4R
+ /
+1R 
+```
+
+Here we see that a Red leaf node cannot have a Red parent node, so we need to rebalance the tree.
+We notice that 1's uncle 4 is Red, so we can just color it black and recolor the grandparent of 1
+to Red as well.
+
+```text
+       6B
+      /  \ 
+    3R    7B
+   / \  
+  2B 4B
+ /
+1R 
+```
+
+This is what the final tree looks like.
 
 ---
 
