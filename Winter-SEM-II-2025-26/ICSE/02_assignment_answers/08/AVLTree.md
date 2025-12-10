@@ -79,6 +79,30 @@ to 2, meaning we need to rebalance the tree.
     7    19
    / \
   5  14
- /
-10 
+     / 
+    10 
+
+To rebalance the tree we would need to promote 14 to the root of the tree, place 17 as its right child with 19 on the
+right of 17. Then on the left hand-side we would keep 10 as the left child of 14 with 5 as its left child and 7 as the
+right child of 5. This would bring the height difference back to 1.
+
+      14
+     /  \
+    10  17
+    /     \
+   5      19 
+    \
+     7
+
+Finally we get 18 as an element. Since 18 is larger than 14 & 17 but less than 19 we place it on the left of 19.
+
+      14
+     /  \
+    10  17
+    /     \
+   5      19 
+    \    / 
+     7  18
+
+Since the tree is balanced, i.e. the height difference on the left and right hand-side is 0, we simply stop here.
 
