@@ -21,7 +21,7 @@ A red-black tree has the following properties[^1]:
 4. Black Property: Every path from a node to its descendant null nodes (leaves) has the same number of black nodes.
 5. Leaf Property: All leaves (NIL nodes) are black.
 
-### 2
+### 2 & 3
 
 Assuming that every leaf node has Black NULL nodes as children.
 
