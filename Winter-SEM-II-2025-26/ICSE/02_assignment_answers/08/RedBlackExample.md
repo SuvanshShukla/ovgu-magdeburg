@@ -182,6 +182,37 @@ There are multiple differences here. We see that in the AVL tree, our root node 
 While in the Red-Black tree our root node is 6. There are no colors for any of the nodes
 in the AVL tree, while colors are present for each node in the Red-Black tree.
 
+### 5
+
+A Red-Black tree can indeed be converted into a 2-3-4 tree. The following (sub)structures
+are equivalent to each other:
+
+A black node with two red children is equivalent to a 3 node with 4 children.
+A red node with two black children is equivalent to a single node with two single node children
+
+### 6
+
+I will convert the following Red-Black tree into a 2-3-4 tree.
+
+```text
+       6B
+      /  \ 
+    3R    7B
+   / \  
+  2B 4B
+ /
+1R 
+```
+
+This is what the converted tree would look like:
+
+```text
+        6
+       / \
+  2|3|4   7
+ /
+1
+```
 
 ---
 
