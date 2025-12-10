@@ -105,3 +105,11 @@ keybinding:
 
 Closing and reopening LazyGit should now allow you to cancel/return using `Ctrl + c`.
 
+## Temporarily minimizing NVIM and bringing it back up
+
+Apparently there is a useful key combo `Ctrl + z` that minimizes NVIM, but doesn't close it!  
+
+It brings you back to your terminal and then once you're done with your terminal stuff you can bring it back into focus!
+
+To bring it back into focus simply type `fg` in your terminal and it'll open up exactly as you left it!
+
