@@ -188,3 +188,12 @@ full. This means that we need to completely readjust the tree.
 This is the final tree. We note that this has a height of 3, while the previous tree
 had a height of 2.
 
+### 3
+
+The bottom-up approach requires us to move the middle element upwards to a higher level 
+in the tree, meanwhile the top-down approach has the elements try to insert into the current
+level and if space is not available then move all the other elements down to a separate level.
+
+I used bottom-up approach in creating the tree and I don't believe there would be any difference
+in the resulting tree regardless of which approach was used.
+
