@@ -106,6 +106,71 @@ to Red as well.
 
 This is what the final tree looks like.
 
+### 4
+
+Creating an AVL Tree.
+
+Inserting 6:
+
+```text
+6
+```
+
+Inserting 7:
+
+6
+ \
+  7
+
+Inserting 3:
+
+  6
+ / \
+3   7
+
+Inserting 4:
+
+  6
+ / \
+3   7
+ \
+  4
+
+Inserting 2:
+
+    6
+   / \
+  3   7
+ / \
+2   4
+
+Inserting 1:
+
+      6
+     / \
+    3   7
+   / \
+  2   4
+ /
+1
+
+Here we see that there is an imbalance, because the difference in height
+between left and right hand-sides is 2. So we need to rebalance the tree.
+To rebalance the tree we make 4 the root node and re-adjust the left and right sub-trees.
+
+      4
+     / \
+    3   6
+   /     \
+  2       7
+ /
+1
+
+There are multiple differences here. We see that in the AVL tree, our root node is 4.
+While in the Red-Black tree our root node is 6. There are no colors for any of the nodes
+in the AVL tree, while colors are present for each node in the Red-Black tree.
+
+
 ---
 
 [^1]: https://www.geeksforgeeks.org/dsa/introduction-to-red-black-tree/
