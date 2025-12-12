@@ -51,3 +51,6 @@ Get-Command fzf
 
 sometimes it is also aliased as `gcm` in powershell.
 
+## Where are `winget` packages installed?
+
+They are kept here: `%LOCALAPPDATA%\Microsoft\WinGet\Packages`
