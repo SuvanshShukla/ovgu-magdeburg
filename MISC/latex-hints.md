@@ -42,6 +42,8 @@ Checkout vim related commands here: [[useful-vimnvim-commands#Using non-latex sy
 | logical Or | \vee |
 | exists     | \exists |
 | element of/ in | \in |
+| square root over terms | \sqrt{abc} |
+| bar over variable | \bar{abc} |
 
 ## Example of using $\sum$
 
