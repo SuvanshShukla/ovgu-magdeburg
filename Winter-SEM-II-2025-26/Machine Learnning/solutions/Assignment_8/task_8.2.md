@@ -91,7 +91,7 @@ distribution from the Softmax function and the true probability distribution of 
 Categorical Cross-Entropy Loss Function:
 
 $$
-L(y,\hat{y}) = - \sum_{i=1}^{C} y_i log(\hat{y_1})
+L(y,\hat{y}) = - \sum_{i=1}^{C} y_i log(\hat{y_i})
 $$
 
 Where,
