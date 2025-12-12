@@ -99,3 +99,6 @@ Where,
 - $y_i$ is the true label for class $i$
 - $\hat{y_i}$ is the predicted probability for class $i$ from the Softmax function
 
+The combination of Softmax and CCE function is also good due to it's mathematical
+stability and efficiency.
+
