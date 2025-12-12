@@ -37,3 +37,28 @@ $$
 Err = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
 $$
 
+### Sigmoid Function
+
+The sigmoid function enables smoother decision boundaries and also probabilistic
+outputs. The sigmoid function can map inputs to a continuous range of values.
+These range between 0 and 1. This is particularly useful for classification tasks
+where outputs represent probabilities.
+
+Sigmoid Function:
+
+$$
+g(z) = \frac{1}{1+e^{-z}}
+$$
+
+The loss function used when our output layer has a sigmoid function is Binary Cross-Entropy Loss.
+This is also known as Log loss. The BCE helps measure the dissimilarity between the predicted
+probability and the true binary label of the instance.
+
+Binary Cross-Entropy Loss Function:
+
+$$
+L(y,\hat{y}) = -[ylog(\hat{y}) + (1-y)log(1-\hat{y})]
+$$
+
+Where, $y$ is the true label and $\hat{y}$ is the predicted probability from the sigmoid function.
+
