@@ -9,18 +9,133 @@ Matriculation No. 256245
 
 Here's a table with the with the input values:
 
-| a | b | t |
-| - | - | - |
-| 1 | 0 | 1 |
-| 0 | 1 | 0 |
+|           | a | b | t |
+| --------- | - | - | - |
+| Example 1 | 1 | 0 | 1 |
+| Example 2 | 0 | 1 | 0 |
 
 given is that all weights are initialized with 0.1 and the
 learning rate $\eta$ is 0.3
 
-Forumula of a Sigmoid function:
+Formula for input to the hidden layer (here it is Sigmoid function):
 
 $$
-g(z) = \frac{1}{1+e^{-z}}
+z_m = w_{a,m}.a + w_{b,m}.b + w_{1,m}.1
+$$
+
+Formula for output of a Sigmoid function:
+
+$$
+o_m = g(z_m) = \frac{1}{1+e^{-z}}
 $$
 
 where, $z$ is the input value and e is Euler's number ($\approx 2.718$)
+
+### Calculation of netowrk output for Example 1
+
+Calculation of the processed input to the hidden unit using the formula:
+
+$$
+o_1 = 0.1(1) + 0.1(0) + 0.1(1) = 0.2
+$$
+
+Calculating the output of the hidden unit:
+
+$$
+\frac{1}{1 + (2.718^{-0.2})} = 0.5498
+$$
+
+This obtained output $o_1$ is used to calculate the input for the output Sigmoid unit.
+
+To calculate the input for the output Sigmoid unit we use the input function formula again:
+
+$$
+z_n = w_{m,n}.o_m + w_{1,n}.1
+\\
+z_n = (0.1)(0.5498) + 0.1(1) \approx 0.15498
+$$
+
+Total final output by the entire network (hidden Sigmoid + output Sigmoid):
+
+$$
+o_n = g(z_n) = \frac{1}{1 + e^{-0.15498}} \approx 0.5387
+$$
+
+### Calculation of Backpropagation for Example 1
+
+---
+
+Binary Cross-Entropy Loss Function:
+
+$$
+L(y,\hat{y}) = -[ylog(\hat{y}) + (1-y)log(1-\hat{y})]
+$$
+
+Where,
+
+- $y$: true value
+- $\hat{y}$: predicted value
+
+Inputting the values for calculation:
+
+$$
+L(1,0.5498) = [1.log(0.5498) + (1-1)log(1-0.5498)]
+\\
+L(1,0.5498) = log(0.5498) = -0.2597
+$$
+
+Weight updat using the learning rule:
+
+$$
+w_i = w_i + \eta \sum (t_i - o_i)x_i
+$$
+
+So values for weights are:
+
+| weight | initial value | change in value $(\triangle w)$ |
+| ------ | ------------- | --------------- |
+|   0    |      0.1      | $(1-(-0.259)).1= 1.259$ |
+|   1    |      0.1      | $(1-(-0.259)).1= 1.259$ |
+|   2    |      0.1      | $(1-(-0.259)).0= 0$ |
+
+### Example 2
+
+Using the same output function:
+
+$$
+o = w_a.a + w_b.b + w_1.1
+\\
+o_2 = 0.1(0) + 0.1(1) + 0.1(1) = 0.2
+$$
+
+Inputting into activation function to get the same error as the first example:
+
+$$
+\frac{1}{1 + (2.718^{-0.2})} = 0.5498
+$$
+
+Binary Cross-Entropy Loss Function:
+
+$$
+L(y,\hat{y}) = -[ylog(\hat{y}) + (1-y)log(1-\hat{y})]
+\\
+L(0,0.5498) = [0.log(0.5498) + (1-0)log(1-0.5498)]
+\\
+L(0,0.5498) = log(1-0.5498) = log(0.4502) = -0.3465
+$$
+
+So values for weights are:
+
+| weight | initial value | change in value $(\triangle w)$ |
+| ------ | ------------- | --------------- |
+|   0    |      0.1      | $(1-(-0.3465)).1= 1.3465$ |
+|   1    |      0.1      | $(1-(-0.3465)).1= 1.3465$ |
+|   2    |      0.1      | $(1-(-0.3465).0)= 0$ |
+
+### Final weight updated values
+
+| weight | initial value | weight updates  |
+| ------ | ------------- | --------------- |
+|   0    |      0.1      | $0.1 + (0.3) * (1.3465 + 1.259) = 0.58165$ |
+|   1    |      0.1      | $0.1 + (0.3) * (1.3465 + 1.259) = 0.58165$ |
+|   2    |      0.1      | $0.1 + (0.3) * (0 + 0)=0.1$ |
