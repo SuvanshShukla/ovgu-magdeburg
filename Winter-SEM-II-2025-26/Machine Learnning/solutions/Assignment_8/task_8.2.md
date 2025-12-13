@@ -73,9 +73,8 @@ This combination of sigmoid function and BCE is particularly effective because:
 
 ### Softmax Function
 
-
 The Softmax activation function, is designed for multi-class classification and
-converts the raw output scores into a vector of probabilities that sum to 1. 
+converts the raw output scores into a vector of probabilities that sum to 1.
 The class with the highest probability is the network's prediction.
 
 Softmax Function:
@@ -95,10 +94,10 @@ L(y,\hat{y}) = - \sum_{i=1}^{C} y_i log(\hat{y_i})
 $$
 
 Where,
+
 - C is the total number of classes
 - $y_i$ is the true label for class $i$
 - $\hat{y_i}$ is the predicted probability for class $i$ from the Softmax function
 
 The combination of Softmax and CCE function is also good due to it's mathematical
 stability and efficiency.
-
