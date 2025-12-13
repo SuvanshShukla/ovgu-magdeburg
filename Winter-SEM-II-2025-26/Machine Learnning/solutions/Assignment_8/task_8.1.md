@@ -17,7 +17,9 @@ The training rule, used to update weights uses this gradient like this:
 
 $$
 \triangle \vec{w}  = -\eta \nabla E[\vec w]
-\\
+$$
+
+$$
 \triangle w_i = -\eta \frac{\partial E}{\partial w_i}
 $$
 
@@ -49,14 +51,17 @@ First we try to find the value of $\frac{\partial E}{\partial o_d}$, where we kn
 
 $$
 \frac{\partial E}{\partial o_d} = \frac{\partial}{\partial o_d} \Big[ \frac{1}{2} (t_d - o_d)^2 \Big]
-\\
-\\
+$$
+
+$$
 \frac{\partial E}{\partial o_d} =  \frac{1}{2} . 2(t_d - o_d) . \frac{\partial}{\partial o_d} (t_d - o_d)
-\\
-\\
+$$
+
+$$
 \frac{\partial E}{\partial o_d} = (t_d - o_d) . (-1)
-\\
-\\
+$$
+
+$$
 \frac{\partial E}{\partial o_d} = (o_d - t_d)
 $$
 
@@ -66,7 +71,9 @@ Now we need to calculate the partial derivative to find the value of $\frac{\par
 
 $$
 \frac{\partial o_d}{\partial w_i} = \frac{\partial}{\partial w_i} \Bigg[ w_o + \sum_{j=1}^{n} w_j (x_{j,d} + x_{j,d}^2) \Bigg]
-\\
+$$
+
+$$
 \frac{\partial o_d}{\partial w_i} = x_{j,d} + x_{j,d}^2
 $$
 
@@ -80,7 +87,7 @@ $$
 
 ### Final Gradient Descent
 
-After all of this the final gradient $$ descent becomes:
+After all of this the final gradient descent becomes:
 
 $$
 \frac{\partial E}{\partial w_i} = \sum \frac{\partial E}{\partial o_d} \frac{\partial o_d}{\partial w_i}
