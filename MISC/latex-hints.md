@@ -110,4 +110,3 @@ It looks like this rendered:
 $$
 f(x) = \begin{cases} x & \text{if } x > 0 \\ \alpha x & \text{if } x \le 0 \end{cases}
 $$
-
