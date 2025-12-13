@@ -62,4 +62,3 @@ to a minimum.
 
 Another possible approach is to use adaptive optimizers which automatically handle
 the learning rate adjustment for each parameter individually.
-
