@@ -44,6 +44,8 @@ Checkout vim related commands here: [[useful-vimnvim-commands#Using non-latex sy
 | element of/ in | \in | $\in C$ |
 | square root over terms | \sqrt{abc} | $\sqrt{abc}$ |
 | bar over variable | \bar{x} | $\bar{x}$ |
+| upside down triangle | \nabla | $\nabla E$ |
+| vector over letter | \vec{w} | $\vec{w}$ |
 
 ## Example of using $\sum$
 
