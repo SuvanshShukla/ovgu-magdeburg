@@ -61,8 +61,77 @@ $$
 o_n = g(z_n) = \frac{1}{1 + e^{-0.15498}} \approx 0.5387
 $$
 
-### Calculation of Backpropagation for Example 1
+### Calculation of Backpropagation Error for Example 1
 
+We have the net output of the network (consisting of hidden sigmoid and output sigmoid), we compare this to the target value and calculate the error. Then we back-propagate the adjustment.
+
+Using the Binary Cross-Entropy (BCE) Loss Function:
+
+$$
+L(y,\hat{y}) = -[ylog(\hat{y}) + (1-y)log(1-\hat{y})]
+$$
+
+Where,
+
+- $y$: true value
+- $\hat{y}$: predicted value
+
+We cannot simply plug values in this fomula and calculate the error. We need to get the derivative of the loss function w.r.t the net input of the output sigmoid unit, i.e. $\frac{\partial L}{\partial z_n}$, this is also known as error signal $\delta_n$.
+
+In our case of using a sigmoid output unit and BSE loss function, it becomes:
+
+$$
+\delta_n = \frac{\partial L}{\partial z_n} = \hat{y} - y = o_n - t
+\\
+\delta_n = o_n - t = 0.5387 - 1 = -0.4613
+$$
+
+### Calculation of Weight change for Example 1
+
+Now that we have an error, we can use it to update our weights. This requires calculating the change in weights for both examples then using their sum for the calculation of the total update for each weight. There are two weight change formulae, one for output unit and one for hidden unit.
+
+Change rule for output unit:
+
+$$
+\triangle w_{j,n} = \eta . \delta_n . o_j
+$$
+
+Change rule for hidden unit:
+
+$$
+\triangle w_{i,m} = \eta . \delta_m . x_i
+$$
+
+where, $\delta_m$ is the backward propagated error from the output unit. This is calculated like so:
+
+$$
+\delta_m = o_m(1 - o_m).w_{m,n}.\delta_n
+$$
+
+We start by calculating the change for the weights of the output unit
+
+$$
+\triangle w_{1,n} = (0.3) . (-0.4613) . (1) = -0.1384
+\\
+\triangle w_{m,n} = (0.3) . (-0.4613) . (0.5498) = -0.0761
+$$
+
+Then we calculate the propagated error for use in calculating change in weights of the hidden unit
+
+$$
+\delta_m = (0.5498)(1−0.5498)⋅(0.1)⋅(−0.4613) = −0.0114
+$$
+
+Calculating the change of weights for the hidden unit:
+$$
+\triangle w_{a,m} = \eta . \delta_m . a = (0.3)⋅(−0.0114)⋅(1) = −0.0034
+\\
+\triangle w_{b,m} = \eta . \delta_m . b = (0.3)⋅(−0.0114)⋅(0) = 0
+\\
+\triangle w_{1,m} = \eta . \delta_m . 1 = (0.3)⋅(−0.0114)⋅(1) = −0.0034
+$$
+
+---
 ---
 
 Binary Cross-Entropy Loss Function:
