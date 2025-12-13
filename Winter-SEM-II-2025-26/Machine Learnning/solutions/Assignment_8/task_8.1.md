@@ -20,3 +20,15 @@ $$
 \\
 \triangle w_i = -\eta \frac{\partial E}{\partial w_i}
 $$
+
+The given error function is the SSE Error function:
+
+$$
+\frac{1}{2} \sum_{d \in D} (t_d - o_d)^2
+$$
+
+The output function is:
+
+$$
+o = w_0 + w_1x_1 + w_1x_1^2 + ... + w_nx_n + w_nx_n^2
+$$
