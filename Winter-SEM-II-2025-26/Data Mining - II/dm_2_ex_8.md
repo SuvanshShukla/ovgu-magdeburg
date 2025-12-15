@@ -8,11 +8,9 @@ refute or confirm specific assumptions made about the data.
 A null hypothesis is a hypothesis that assumes there to be no significant difference, no significant effect, or no significant relationship
 between two objects being tested.
 
-A significance level refers to how statistically significant both classifiers are from each other. It is used to determine
-if classifiers are more diverse enough so as not to have performance different from each other by random chance.
+A significance level helps us set a threshold to determine if we should accept or reject the null hypothesis. In other word, it helps us determine how strong the evidence is that the null hypothesis is true based on the evidence if the hypothesis also happens to be true in reality.
 
-The Chi-square test is such a statistical test that helps us determine that two classifiers follow a Chi-square distribution
-which demonstrates that they are statistically different enough that it can be attributed to more than random chance.
+The Chi-square test is such a statistical test that helps us determine if there is a significant association between two categorical variables, i.e. if they are independent in influencing the test statistic.
 
 ## 2 Test Statistic
 
