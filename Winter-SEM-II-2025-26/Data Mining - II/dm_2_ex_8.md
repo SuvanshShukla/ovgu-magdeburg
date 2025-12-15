@@ -32,3 +32,11 @@ the labelled dataset. This is done until we hit convergence.
 Co-training: Here we have two independent classifiers, each delivers predicted labels for which they are most confident. But these classifiers don't work as an ensemble, rather they exchange data. If one classifier is very confident in the prediction it has made for an unlabeled instance, it takes over the label & tells the second one to train on it. One of the constraints here is that the views of both classifiers must see the same data & they shouldn't deviate a lot in behavior. For example, they shouldn't disagree too much.
 
 Learn by disagreement: There is a possibility that we may have more than 2 learners, in which case we train them to learn by disagreement. We try to enforce diversity among learners by giving each learner a different view of the data or simulate multiple views. Then have them each make a prediction on unlabelled instances. Then we take the predicted labels they diagree on & propagate the label of the most confident classifier to the rest of the classifers and train them on it.
+
+## 5 Compare test-then-train, prequential evaluation and periodic holdout
+
+test-then-train: each labeled instance is first used for testing, then for training. Each prediction affects future predictions.
+
+prequential evaluation: test-then-train on a sliding window or with a fading factor. The impact of past predictions is gradually forgotten.
+
+periodic holdout evaluation: some labeled instances are reserved for testing only, e.g. by using one batch for training and the next for testing. The holdout instances are 'wasted', i.e. not used for training.
