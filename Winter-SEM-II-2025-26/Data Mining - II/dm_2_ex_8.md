@@ -40,3 +40,11 @@ test-then-train: each labeled instance is first used for testing, then for train
 prequential evaluation: test-then-train on a sliding window or with a fading factor. The impact of past predictions is gradually forgotten.
 
 periodic holdout evaluation: some labeled instances are reserved for testing only, e.g. by using one batch for training and the next for testing. The holdout instances are 'wasted', i.e. not used for training.
+
+---
+
+| **Statistic**   | **Primary Comparison Target**       | **When to Use It (Key Distinctions)**                                                                                                                                                                 | **Underlying Distribution** |
+| --------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| **Z-statistic** | **One or two means/proportions.**   | 1. **Large Sample Size** ($n \ge 30$). **AND** 2. **Population Standard Deviation ($\sigma$) is KNOWN.**                                                                                              | Standard Normal ($Z$)       |
+| **t-statistic** | **One or two means.**               | 1. **Small Sample Size** ($n < 30$). **OR** 2. **Population Standard Deviation ($\sigma$) is UNKNOWN** (which is most common).                                                                        | Student's $t$ ($t$)         |
+| **F-statistic** | **Variances** (ratio of variances). | Used for **ANOVA** (Analysis of Variance) to compare the **means of three or more groups**. It does this by comparing the **variance between** the group means to the **variance within** the groups. | Snedecor's $F$ ($F$)        |
