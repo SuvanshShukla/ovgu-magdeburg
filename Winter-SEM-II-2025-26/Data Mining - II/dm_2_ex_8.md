@@ -14,12 +14,16 @@ The Chi-square test is such a statistical test that helps us determine if there 
 
 ## 2 Test Statistic
 
-A test statistic is a number calculated from sample data that helps us deteremine if the null hypothesis that we have assumed is valid or not.
-It helps us understand if the classifiers are diverse enough to say that they are truly independent and have a statistically significant difference.
+A test statistic is a number calculated from sample data that helps us determine if the null hypothesis that we have assumed is valid or not.
+It is usually a single summarized numerical value that can be used to perform the hypothesis test.
 
-Examples of test statistics are: Kappa, and Kappa+
+Examples of test statistics are:
 
-### 4 Three categories of semi supervised learning
+- Chi-square statistic (testing for independence b/w two categorical values)
+- z-statistic/t-statistic (comparing the means of two populations)
+- F-statistic (comparing variances of three or more groups)
+
+## 4 Three categories of semi supervised learning
 
 Self training: We have a set of labelled and unlabelled istances in our dataset. We try to label an unlabelled instance with a classifier
 that is trained on a subset of labelled data. Then we see its confidence, if the confidence is higher than a threshold we put the sample into 
