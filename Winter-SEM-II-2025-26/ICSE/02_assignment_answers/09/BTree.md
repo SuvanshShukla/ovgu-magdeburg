@@ -19,115 +19,149 @@ Maximum no. of children = $2(m) = 2(2) = 4$
 
 Inserting 3, 7, 5:
 
+```text
 3|7|5
+```
 
 Inserting 15 requires us to adjust levels:
 
+```text
       7
      / \
   3|5   15
+```
 
 Inserting 17:
 
+```text
       7
      / \
   3|5   15|17
+```
 
 Inserting 9:
 
+```text
       7
      / \
   3|5   9|15|17
+```
 
 Inserting 13, requires adjustment of levels again:
 
+```text
       7|15
      / \  \
     /   \  \
   3|5  9|13 17
+```
 
 Inserting 21:
 
+```text
       7|15
      / \  \
     /   \  \
   3|5  9|13 17|21
+```
 
 Inserting 11:
 
+```text
       7|15
      / \   \
     /   \   \
    /     \   \
   /       \   \
  3|5   9|11|13 17|21
+```
 
 Inserting 19:
 
+```text
       7|15
      / \   \
     /   \   \
    /     \   \
   /       \   \
  3|5   9|11|13 17|19|21
+```
 
 Inserting 23 requires adjustment:
 
+```text
       7|15|19
      / \   \  \
     /   \   \  \
    /     \   \  \
   /       \   \  \
  3|5   9|11|13 17 21|23
+```
 
 ### 3 Inserting same values in different order
 
 Inserting 3, 5, 7:
 
+```text
 3|5|7
+```
 
 Inserting 9:
+
+```text
    5
  /   \
 3    7|9
+```
 
 Inserting 11:
 
+```text
    5
  /   \
 3    7|9|11
+```
 
 Inserting 13, requires adjustment:
 
+```text
    5|9
  /  |  \
 3   7   11|13
 
 Inserting 15:
 
+```text
    5|9
  /  |  \
 3   7   11|13|15
+```
 
 Inserting 17 requires adjustment:
 
+```text
    5|9|13
  /  |  |  \
 3   7  11  15|17
+```
 
 Inserting 19:
 
+```text
    5|9|13
  /  |  |  \
 3   7  11  15|17|19
+```
 
 Inserting 21 requires adjustment at two levels:
 
+```text
      9
     /  \
    5    13|17
  /  |  |  |  \
 3   7  11 15  19|21
+```
 
 ### Differences
 
