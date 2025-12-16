@@ -128,6 +128,7 @@ Inserting 13, requires adjustment:
    5|9
  /  |  \
 3   7   11|13
+```
 
 Inserting 15:
 
