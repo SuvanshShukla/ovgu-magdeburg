@@ -114,6 +114,18 @@ Inserting 19, we place it between 17 & 21.
 3     7|11|13  17|19|21
 ```
 
+**correct final tree**:
+
+```text
+          9
+         /  \
+       /      \
+      5      15
+     / \    /   \
+    /   \  /     \
+   3     7 11|13 17|19|21
+```
+
 ### 2 PART 2 (same elements in different order)
 
 Elements & order -> 3,5,7,9,11,13,15,17,19,21
