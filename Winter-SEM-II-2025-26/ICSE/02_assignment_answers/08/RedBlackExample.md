@@ -190,6 +190,16 @@ are equivalent to each other:
 A black node with two red children is equivalent to a 3 node with 4 children.
 A red node with two black children is equivalent to a single node with two single node children
 
+Conversion rules discussed in exercise class:
+
+1. A black node with no red children will be a one node tree: 2
+2. A black node with one red child will be three node tree like: 2|4
+3. A black node with two red children will be a four node: 2|4|5
+4. A red node with two black children will be included in the above three rules
+
+> [!WARN]
+> You will get a question for insertion and colouring
+
 ### 6
 
 I will convert the following Red-Black tree into a 2-3-4 tree.
