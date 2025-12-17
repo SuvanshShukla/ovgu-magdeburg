@@ -9,8 +9,10 @@ Matriculation No. 256245
 
 ### 1
 
-A 2-3-4 Tree is a tree data structure where each node may have up to 2 or 3 or 4 data items in node of the tree.  
+A 2-3-4 Tree is a tree data structure where each node may have up to 2 or 3 or 4 ~~~data items in node of~~ children in the tree.  
+
 The 2-3-4 tree is self-balancing tree under the broader categorization of B-trees.
+
 Each child node of a 2-3-4 Tree may have 2 to 4 children. Another property of 2-3-4 trees is that all of their nodes
 are always at the same level helping to ensure balance.
 
@@ -196,4 +198,3 @@ level and if space is not available then move all the other elements down to a s
 
 I used bottom-up approach in creating the tree and I don't believe there would be any difference
 in the resulting tree regardless of which approach was used.
-
