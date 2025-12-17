@@ -110,6 +110,14 @@ right child of 5. This would bring the height difference back to 1.
      7
 ```
 
+```text
+      14
+     /  \
+    7    17
+   / \    \
+  5   10   19 
+```
+
 Finally we get 18 as an element. Since 18 is larger than 14 & 17 but less than 19 we place it on the left of 19.
 
 ```text
@@ -122,5 +130,29 @@ Finally we get 18 as an element. Since 18 is larger than 14 & 17 but less than 1
      7  18
 ```
 
+The tree above is incorrect!!!!
+
+```text
+      14
+     /  \
+    7    17
+   / \    \
+  5   10   19 
+          /
+         18
+```
+
 Since the tree is balanced, i.e. the height difference on the left and right hand-side is 0, we simply stop here.
 
+```text
+      14
+     /  \
+    7     18
+   / \    / \
+  5  10  17  19 
+```
+
+## Notes
+
+- we calculate height balance for every node that is closest to the newly inserted leaf node
+- the second trees are correct
