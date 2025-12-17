@@ -62,6 +62,8 @@ Inserting 9, we see that 9>5 but there is no more space in the 7/15/17 node,
 so we move the middle element of the node upwards, i.e. 15 joins 5. This also means
 that 7 will be in the middle of 5 & 15.
 
+**You forgot to add 9 in the diagram!!!**
+
 ```text
   5|15
  / \  \
