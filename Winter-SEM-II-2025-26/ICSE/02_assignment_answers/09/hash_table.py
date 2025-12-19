@@ -13,7 +13,19 @@ class HashLinQuadDouble:
         self.table = [0 for _ in range(n)]
 
     def add_lin(self, obj: int) -> int:
-        raise NotImplementedError()  # TODO
+        size = len(self.table)
+        index = obj % size
+        count = 0
+
+        while count <= size:
+            if self.table[index] == 0 and obj is not None:
+                self.table[index] = obj
+                break
+            else:
+                index = (index + 1) % size
+                count += 1
+
+        return count
 
     def add_quad(self, obj: int) -> int:
         raise NotImplementedError()  # TODO
