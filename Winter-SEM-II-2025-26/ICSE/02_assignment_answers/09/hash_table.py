@@ -33,4 +33,17 @@ class HashLinQuadDouble:
 
 
 if __name__ == "__main__":
-    pass  # TODO: Compare the insertion functions
+    # Initialize list with capacity of 1249
+    hash1 = HashLinQuadDouble(1249)
+    hash2 = HashLinQuadDouble(1249)
+    hash3 = HashLinQuadDouble(1249)
+
+    # Generating array of 1000 +ve elements
+    rlist = []
+    for i in range(1000):
+        random_int = random.randint(1, 1000)
+        rlist.append(random_int)
+
+    col_count_1 = 0
+    for j in rlist:
+        col_count_1 += hash1.add_lin(j)
