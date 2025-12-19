@@ -7,6 +7,14 @@ def h2(x: int) -> int:
     return x << 5
 
 
+class Node:
+
+    def __init__(self, key, value):
+        self.key = key
+        self.value = value
+        self.next = None
+
+
 class HashLinQuadDouble:
     def __init__(self, n: int) -> None:
         # Zero indicates an empty slot
