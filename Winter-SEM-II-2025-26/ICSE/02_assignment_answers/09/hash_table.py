@@ -62,7 +62,13 @@ if __name__ == "__main__":
 
     print("adding random ints to hashtable")
     col_count_1 = 0
+    col_count_2 = 0
+    col_count_3 = 0
     for j in rlist:
         col_count_1 += hash1.add_lin(j)
+        col_count_2 += hash2.add_quad(j)
+        col_count_3 += hash3.add_double_hashing(j)
 
     print("Collision count using linear probe: ", col_count_1)
+    print("Collision count using quadratic probe: ", col_count_2)
+    print("Collision count using double hasing probe: ", col_count_3)
