@@ -34,16 +34,21 @@ class HashLinQuadDouble:
 
 if __name__ == "__main__":
     # Initialize list with capacity of 1249
+    print("Creating hash tables")
     hash1 = HashLinQuadDouble(1249)
     hash2 = HashLinQuadDouble(1249)
     hash3 = HashLinQuadDouble(1249)
 
     # Generating array of 1000 +ve elements
+    print("creating random int list")
     rlist = []
     for i in range(1000):
         random_int = random.randint(1, 1000)
         rlist.append(random_int)
 
+    print("adding random ints to hashtable")
     col_count_1 = 0
     for j in rlist:
         col_count_1 += hash1.add_lin(j)
+
+    print("Collision count using linear probe: ", col_count_1)
