@@ -7,20 +7,10 @@ def h2(x: int) -> int:
     return x << 5
 
 
-class Node:
-
-    def __init__(self, key, value):
-        self.key = key
-        self.value = value
-        self.next = None
-
-
 class HashLinQuadDouble:
     def __init__(self, n: int) -> None:
         # Zero indicates an empty slot
         self.table = [0 for _ in range(n)]
-        self.capacity = n
-        self.size = 0
 
     def add_lin(self, obj: int) -> int:
         raise NotImplementedError()  # TODO
