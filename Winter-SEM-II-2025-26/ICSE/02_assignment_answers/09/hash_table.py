@@ -1,3 +1,4 @@
+import random
 from random import seed
 
 seed(0)
