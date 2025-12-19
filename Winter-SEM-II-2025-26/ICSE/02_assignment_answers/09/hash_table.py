@@ -43,7 +43,24 @@ class HashLinQuadDouble:
         return count
 
     def add_double_hashing(self, obj: int) -> int:
-        raise NotImplementedError()  # TODO
+        size = len(self.table)
+        index = obj % size
+        count = 0
+
+        step = h2(obj) % size
+
+        if step == 0:
+            step = 1
+
+        while count <= size:
+            if self.table[index] == 0 and obj is not None:
+                self.table[index] = obj
+                break
+            else:
+                index = (index + step) % size
+                count += 1
+
+        return count
 
 
 if __name__ == "__main__":
