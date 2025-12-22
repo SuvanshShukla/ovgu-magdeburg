@@ -6,3 +6,7 @@ Matriculation No. 256245
 ---
 
 ## Assignment 9 Task 2
+
+### Part A
+
+
