@@ -25,6 +25,17 @@ Backpropagation through time requires a concept called "unrolling". Unrolling is
 
 The "Vanishing Gradient" problem still exists here, unfortunately. Because the weights are still updated by multiplication (just across timesteps now) when flowing backwards, they are still susceptible to diminishing to very small values. This means that early timesteps don't get any meaningful adjustment. Similarly, due to multiplication the adjustment values may increase exponentially causing the "Exploding Gradient" problem as well.[^1]
 
+### Part D
+
+LSTMs or Long-Short Term Memory helps solve the problem of "Vanishing Gradient" by introducing three gates: "input gate", "forget gate" and "output gate".
+
+- Forget Gate: decides which information to forget from the previous hidden state and the current input. It uses a Sigmoid activation function.
+- Input Gate: decides which new details should be added to the cell state. It has two activation functions, a sigmoid function that selects values to update the cell and a tanh activation function that produces new candidate values for the cell state.
+- Output Gate: defines what data should be presented as the LSTM cell's current output. It processes the updated cell state and the present hidden state to produce the output.
+
+Though this helps address the "Vanishing Gradient" problem, it does not meaningfully solve the "Exploding Gradient" problem.[^2]
+
 ---
 
 [^1]: https://mbrenndoerfer.com/writing/backpropagation-through-time-rnn-training-algorithm
+[^2]: https://www.baeldung.com/cs/lstm-vanishing-gradient-prevention
