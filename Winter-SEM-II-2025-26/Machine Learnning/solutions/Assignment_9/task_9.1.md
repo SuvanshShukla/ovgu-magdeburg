@@ -35,6 +35,13 @@ LSTMs or Long-Short Term Memory helps solve the problem of "Vanishing Gradient" 
 
 Though this helps address the "Vanishing Gradient" problem, it does not meaningfully solve the "Exploding Gradient" problem.[^2]
 
+### Part E
+
+- Classifiers that work on non-sequential data fail on sequential datasets because they assume that data points have no correlation with each other across time. This is not always the case.
+- Neural networks maybe modified to handle and process sequential data by saving past states across time and using them to calculate the output for the next input.
+- Backpropagation in recurrent neural networks involves "unrolling" through time to allow the hidden state to propagate past information to the future for use.
+- Recurrent Neural Networks are still susceptible to "Vanishing" and "Exploding" Gradient problems, though Vanishing Gradient problem may be addressed by LSTMs, that use gates for selective data propagation and retention.
+
 ---
 
 [^1]: https://mbrenndoerfer.com/writing/backpropagation-through-time-rnn-training-algorithm
