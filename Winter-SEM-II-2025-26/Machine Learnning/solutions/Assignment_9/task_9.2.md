@@ -24,7 +24,7 @@ The following are some alternatives to majority voting for classification in KNN
 
 ### Part C
 
-We can modify a KNN classifier that was using majority voting to classify categorical values to a regressor by using weights. In this scenario we would calculate the distances of the k-nearest neighbours to the instance we are trying to classify then we would take the average of all the distances. In case we use weights we may take a weighted average and then this would be the predicted value of the instance to be used in regression.
+We can modify a KNN classifier that was using majority voting to classify categorical values to a regressor by using weights. In this scenario we would calculate the distances of the k-nearest neighbours to the instance we are trying to classify then we would take the average of all the distances. In case we use weights we may take a weighted average and then this would be the predicted value of the instance to be used in regression. Basically, KNN without normalization is unit-sensitive, not importance-sensitive.
 
 ### Part D
 
