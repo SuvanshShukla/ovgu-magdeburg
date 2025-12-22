@@ -21,6 +21,7 @@ The following are some alternatives to majority voting for classification in KNN
 2. Time based emphasis: here each neighbour is given weights depending on how recently it was added to the dataset, so we give more recent instances greater weights than older instances when trying to classify an instance.
 
 <!-- question: what about tie-braking? is it a viable option to increase k for one case to break a tie? -->
+<!-- question: what about tie-breaking? is it a viable option to increase k for one case to break a tie? -->
 
 ### Part C
 
