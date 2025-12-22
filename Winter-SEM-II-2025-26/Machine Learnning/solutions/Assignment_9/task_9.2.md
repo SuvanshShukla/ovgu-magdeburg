@@ -29,3 +29,12 @@ We can modify a KNN classifier that was using majority voting to classify catego
 ### Part D
 
 It is important to normalize attribute values when using the KNN algorithm to avoid attributes with large scales to dominate the distance calculations. This basically means that if an attribute can take on very large linear values, then if we calculate its distance using Euclidean distance, its square will no doubt have a larger effect on the final distance. Such dominance will cause the KNN algorithm to behave as if the other attributes have no significance in determining the similarity thus having no influence in the final classification. To avoid this we need to normalize attributes with large scales so that KNN can appropriately account for other attributes as well.
+
+### Part E
+
+KNN can be easily used to impute or determine missing values in a data set by:
+
+- calculate distances between instance with missing values and the rest of the dataset using available attributes
+- select the k-nearest neighbours that have values for the missing attribute
+- use majority voting in case of categorical values or weighted mean for numerical values to predict the missing value of the attribute
+- weights can be assigned based on proximity of the neighbour to the instance in question, i.e. closer means greater weight, farther means lower weight
