@@ -71,44 +71,44 @@ $$
 
 So, the X column values would change to:
 
-| Letter | X  | $X_{norm}$ | Y | Z | Class |
-| ------ | -  | ---------- | - | - | ----- |
-| A      | 1  | 0          | 1 | 1 | 1     |
-| B      | 9  | 0.4210     | 1 | 2 | 1     |
-| C      | 4  | 0.1578     | 2 | 1 | 1     |
-| D      | 6  | 0.2613     | 5 | 4 | 2     |
-| E      | 3  | 0.1052     | 4 | 3 | 2     |
-| F      | 1  | 0          | 4 | 4 | 2     |
-| P      | 20 | 1          | 4 | 4 | ?     |
+| Letter | X  | $X_{norm}$ | Y | $Y_{norm}$ | Z | $Z_{norm}$ | Class |
+| ------ | -  | ---------- | - | -          | - | -          | ----- |
+| A      | 1  | 0          | 1 | 0          | 1 | 0          | 1     |
+| B      | 9  | 0.4210     | 1 | 0          | 2 | 0.3333     | 1     |
+| C      | 4  | 0.1578     | 2 | 0.25       | 1 | 0          | 1     |
+| D      | 6  | 0.2613     | 5 | 1.00       | 4 | 1          | 2     |
+| E      | 3  | 0.1052     | 4 | 0.75       | 3 | 0.6666     | 2     |
+| F      | 1  | 0          | 4 | 0.75       | 4 | 1          | 2     |
+| P      | 20 | 1          | 4 | 0.75       | 4 | 1          | ?     |
 
 Re-calculating all distances:
 
 $$
-d(P,A) = \sqrt{(X_P - X_A)^2 + (Y_P - Y_A)^2 + (Z_P - Z_A)^2} = 20.4450
+d(P,A) = \sqrt{(X_P - X_A)^2 + (Y_P - Y_A)^2 + (Z_P - Z_A)^2} = 1.6007
 $$
 $$
-d(P,B) = \sqrt{(X_P - X_B)^2 + (Y_P - Y_B)^2 + (Z_P - Z_B)^2} = 19.9082
+d(P,B) = \sqrt{(X_P - X_B)^2 + (Y_P - Y_B)^2 + (Z_P - Z_B)^2} = 1.1585
 $$
 $$
-d(P,C) = \sqrt{(X_P - X_C)^2 + (Y_P - Y_C)^2 + (Z_P - Z_C)^2} = 20.1671
+d(P,C) = \sqrt{(X_P - X_C)^2 + (Y_P - Y_C)^2 + (Z_P - Z_C)^2} = 1.3997
 $$
 $$
-d(P,D) = \sqrt{(X_P - X_D)^2 + (Y_P - Y_D)^2 + (Z_P - Z_D)^2} = 19.7640
+d(P,D) = \sqrt{(X_P - X_D)^2 + (Y_P - Y_D)^2 + (Z_P - Z_D)^2} = 0.7798
 $$
 $$
-d(P,E) = \sqrt{(X_P - X_E)^2 + (Y_P - Y_E)^2 + (Z_P - Z_E)^2} = 19.9199
+d(P,E) = \sqrt{(X_P - X_E)^2 + (Y_P - Y_E)^2 + (Z_P - Z_E)^2} = 0.9548
 $$
 $$
-d(P,F) = \sqrt{(X_P - X_F)^2 + (Y_P - Y_F)^2 + (Z_P - Z_F)^2} = 20.0000
+d(P,F) = \sqrt{(X_P - X_F)^2 + (Y_P - Y_F)^2 + (Z_P - Z_F)^2} = 1.0000
 $$
 
 The nearest point to P is still B, and all the points in order of closeness are:
 
-D, B, E, F, C, A
+D, E, F, B, C, A
 
 Assuming K=1, since D is the nearest neighbour in this case, P would be assigned class 2.
 
-Assuming K=3, since D and E are class 2, while only B is class 1. P would be assigned class 2.
+Assuming K=3, since D, E & F are all class 2, and none are class 1. P would be assigned class 2.
 
 Assuming K=5, B & C are class 1, while D, E & F are all class 2. P would be assigned class 2.
 
