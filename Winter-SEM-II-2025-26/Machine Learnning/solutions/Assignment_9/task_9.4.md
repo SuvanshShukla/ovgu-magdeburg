@@ -105,3 +105,11 @@ $$
 The nearest point to P is still B, and all the points in order of closeness are:
 
 D, B, E, F, C, A
+
+Assuming K=1, since D is the nearest neighbour in this case, P would be assigned class 2.
+
+Assuming K=3, since D and E are class 2, while only B is class 1. P would be assigned class 2.
+
+Assuming K=5, B & C are class 1, while D, E & F are all class 2. P would be assigned class 2.
+
+After Normalization, we can see that point is far more likely to be predicted to have class 2 than class 1.
