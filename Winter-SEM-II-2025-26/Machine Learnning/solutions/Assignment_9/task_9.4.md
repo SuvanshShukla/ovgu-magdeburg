@@ -102,7 +102,7 @@ $$
 d(P,F) = \sqrt{(X_P - X_F)^2 + (Y_P - Y_F)^2 + (Z_P - Z_F)^2} = 1.0000
 $$
 
-The nearest point to P is still B, and all the points in order of closeness are:
+The nearest point to P is D, and all the points in order of closeness are:
 
 D, E, F, B, C, A
 
