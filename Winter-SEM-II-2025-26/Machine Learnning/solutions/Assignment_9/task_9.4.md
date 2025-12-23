@@ -81,3 +81,27 @@ So, the X column values would change to:
 | F      | 1  | 0          | 4 | 4 | 2     |
 | P      | 20 | 1          | 4 | 4 | ?     |
 
+Re-calculating all distances:
+
+$$
+d(P,A) = \sqrt{(X_P - X_A)^2 + (Y_P - Y_A)^2 + (Z_P - Z_A)^2} = 20.4450
+$$
+$$
+d(P,B) = \sqrt{(X_P - X_B)^2 + (Y_P - Y_B)^2 + (Z_P - Z_B)^2} = 19.9082
+$$
+$$
+d(P,C) = \sqrt{(X_P - X_C)^2 + (Y_P - Y_C)^2 + (Z_P - Z_C)^2} = 20.1671
+$$
+$$
+d(P,D) = \sqrt{(X_P - X_D)^2 + (Y_P - Y_D)^2 + (Z_P - Z_D)^2} = 19.7640
+$$
+$$
+d(P,E) = \sqrt{(X_P - X_E)^2 + (Y_P - Y_E)^2 + (Z_P - Z_E)^2} = 19.9199
+$$
+$$
+d(P,F) = \sqrt{(X_P - X_F)^2 + (Y_P - Y_F)^2 + (Z_P - Z_F)^2} = 20.0000
+$$
+
+The nearest point to P is still B, and all the points in order of closeness are:
+
+D, B, E, F, C, A
