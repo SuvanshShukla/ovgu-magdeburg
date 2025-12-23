@@ -113,3 +113,14 @@ Assuming K=3, since D, E & F are all class 2, and none are class 1. P would be a
 Assuming K=5, B & C are class 1, while D, E & F are all class 2. P would be assigned class 2.
 
 After Normalization, we can see that point is far more likely to be predicted to have class 2 than class 1.
+
+### Part B
+
+In this scenario, we are supposed to do leave-one-out-crossvalidation to predict class labels for each instance. We start out by initializing all weights to 1. All weight adjustments are in increment/decrements of 0.5. This crossvalidation strategy is done for a total of 7 times (equal to the number of instances), with one final iteration for giving the final prediction of point P, using the finalized weights from the past 7 iterations.
+
+**Note**: I will use normalized values for distance calculations and weighted Euclidean distance.
+
+Calculating all attribute-wise distances for iteration 1, i.e. predicting class for point A:
+
+| X distances (A) | Y distances (B) | Z distances (C) | total $\sqrt{A^2 + B^2 + C^2}$ |
+| --------------- | --------------- | --------------- | ------------------------------ |
