@@ -113,3 +113,10 @@ It brings you back to your terminal and then once you're done with your terminal
 
 To bring it back into focus simply type `fg` in your terminal and it'll open up exactly as you left it!
 
+## Sorting numbers in VIM
+
+Vim has a useful feature to directly sort numbers just by selecting them and running a command.
+
+To sort integer numbers use this command - `:sort n`
+
+To sort decimals/floating point numbers - `:sort f`
