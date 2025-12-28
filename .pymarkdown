@@ -1,7 +1,7 @@
 {
   "plugins": {
     "MD013": {
-      "enabled": true,
+      "enabled": false,
       "line_length": 100
     }
   }
