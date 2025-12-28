@@ -112,3 +112,13 @@ It looks like this rendered:
 $$
 f(x) = \begin{cases} x & \text{if } x > 0 \\ \alpha x & \text{if } x \le 0 \end{cases}
 $$
+
+## Mathematical notation for predefined sets
+
+Use `\Mathbb{}` for predefined mathematical set notation.
+
+```latex
+$\mathbb{Z}$
+```
+
+This is what it should look like, integer set: $\mathbb{Z}$
