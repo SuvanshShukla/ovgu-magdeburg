@@ -42,11 +42,10 @@ class MaxHeap:
         return to_return
 
     def sink(self, n: int) -> None:
-        while 2 * n + 1 < len(self) - 1:
+        while 2 * n + 1 < len(self):
             child = 2 * n + 1
-            if child < len(self) - 1:
-                if self.contents[child] < self.contents[child + 1]:
-                    child = child + 1
+            if (child + 1 < len(self) and self.contents[child] < self.contents[child + 1]):
+                child = child + 1
             if self.contents[n] >= self.contents[child]:
                 break
             self.contents[n], self.contents[child] = self.contents[child], self.contents[n]
