@@ -31,8 +31,13 @@ class MaxHeap:
             parent = (n - 1) // 2
 
     def remove(self) -> T:
+        if len(self) == 0:
+            raise IndexError("Trying to remove from empty heap")
+        if len(self) == 1:
+            return self.contents.pop()
+
         to_return: T = self.contents[0]
-        self.contents[0] = self.contents[-1]
+        self.contents[0] = self.contents.pop()
         self.sink(0)
         return to_return
 
