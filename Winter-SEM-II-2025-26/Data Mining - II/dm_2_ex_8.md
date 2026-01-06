@@ -3,7 +3,7 @@
 ## 1 Hypothesis tests
 
 Hypothesis tests is a form of testing done to use statistics to make a conclusion
-on a population of data inorder to refute or confirm specific assumptions made
+on a population of data in order to refute or confirm specific assumptions made
 about the data.
 
 A null hypothesis is a hypothesis that assumes there to be no significant
