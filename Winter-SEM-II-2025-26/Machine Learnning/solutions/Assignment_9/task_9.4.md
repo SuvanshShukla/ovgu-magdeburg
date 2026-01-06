@@ -124,3 +124,4 @@ Calculating all attribute-wise distances for iteration 1, i.e. predicting class 
 
 | X distances (A) | Y distances (B) | Z distances (C) | total $\sqrt{A^2 + B^2 + C^2}$ |
 | --------------- | --------------- | --------------- | ------------------------------ |
+|
