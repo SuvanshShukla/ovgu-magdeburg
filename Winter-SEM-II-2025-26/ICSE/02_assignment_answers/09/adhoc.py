@@ -28,8 +28,47 @@ class BinaryTree:
 
     def is_balanced(self) -> bool:
         """This is the function we have to implement"""
-        pass
+        # if self.get_right() is not None and self.get_left() is not None:
+        #     if (self.get_left().height() - self.get_right().height() > 2
+        #             or self.get_left().height() - self.get_right().height() < -2):
+        #         return False
+        # else:
+        #     return True
+        left = self.get_left()
+        right = self.get_right()
+
+        left_height = None
+        right_height = None
+
+        if left is not None:
+            left_height = left.height()
+        else:
+            left_height = 0
+
+        if right is not None:
+            right_height = right.height()
+        else:
+            right_height = 0
+
+        if abs(left_height - right_height) <= 1:
+            return True
+        else:
+            return False
+
+        if left and not left.is_balanced():
+            return False
+
+        if right and not right.is_balanced():
+            return False
 
     def inorder_next(self) -> BinaryTree | None:
         """This is the second function we have to implement"""
-        pass
+        # if self.get_right() is None and self.get_parent() is not None:
+        #     return self.get_parent()
+        # if self.get_right() is not None:
+        #     return self.get_right()
+        # if current node has right child then go to the right child's left-most node then return it
+        # if the current node doesn't have a right child you to to its parent
+        # first ancestor where current node is in the left subtree
+        # that ancestor is the successor
+        # no ancestor return None
