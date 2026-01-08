@@ -19,6 +19,8 @@ Feed-Forward Neural Networks process data in two ways: batch-wise or stochastica
 
 Recurrent Neural Networks are able to retain things in memory and use it when processing succeeding data. So when a Recurrent neural network tries to process "fruit" it remembers that "the" came before it. This allows the recurrent neural network to capture the information inside the order of occurrence of instances.
 
+<!-- What data/property/characteristic of the past instance does it remember exactly? Can we see how the past data is stored? or is it obscured from us? Does it keep adding things to memory infinately or is there a limit? I'm trying to picture how exactly it saves past data. -->
+
 ### Part C
 
 Backpropagation through time requires a concept called "unrolling". Unrolling is equivalent to creating a copy of the RNN for each timestep, treating the recurrent network as a very deep feed-forward network where each "layer" corresponds to a timestep. An interesting thing to note is that unlike the feed-forward networks the weights for each input is the same and it is just the hidden state that is propagated to through to the next iteration, carrying information from the past to the future.
