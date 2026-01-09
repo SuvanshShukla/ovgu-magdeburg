@@ -43,7 +43,10 @@ def number_of_leading_zeros(block: Block) -> int:
 
 
 def verify(block: Block, x: int) -> bool:
-    return NotImplementedError()  # TODO
+    if number_of_leading_zeros(block) == x:
+        return True
+    else:
+        return False
 
 
 def proof_of_work(block: Block, x: int) -> None:
