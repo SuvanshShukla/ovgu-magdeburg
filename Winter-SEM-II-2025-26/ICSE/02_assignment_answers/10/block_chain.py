@@ -50,7 +50,9 @@ def verify(block: Block, x: int) -> bool:
 
 
 def proof_of_work(block: Block, x: int) -> None:
-    return NotImplementedError()  # TODO
+    zero_count = number_of_leading_zeros(block)
+    if zero_count == x:
+        block.proofOfWork = zero_count
 
 
 if __name__ == "__main__":
