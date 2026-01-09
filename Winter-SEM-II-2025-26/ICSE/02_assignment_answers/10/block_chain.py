@@ -21,10 +21,12 @@ class Block:
         self.proofOfWork = 0
 
     def hash(self) -> bytes:
-        return NotImplementedError()  # TODO
+        return hashlib.sha256(self.message + self.proofOfWork
+                              + self.previousHashCode)
 
     def __str__(self) -> str:
-        return NotImplementedError()  # TODO
+        return str(self.message) + '\n' + str(self.previousHashCode)
+        + '\n' + str(self.proofOfWork)
 
 
 def number_of_leading_zeros(block: Block) -> int:
