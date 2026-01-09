@@ -49,9 +49,8 @@ def verify(block: Block, x: int) -> bool:
 
 
 def proof_of_work(block: Block, x: int) -> None:
-    zero_count = number_of_leading_zeros(block)
-    if zero_count == x:
-        block.proofOfWork = zero_count
+    while number_of_leading_zeros(block) < x:
+        block.proofOfWork += 1
 
 
 if __name__ == "__main__":
