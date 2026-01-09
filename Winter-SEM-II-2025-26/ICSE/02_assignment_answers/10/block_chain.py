@@ -21,8 +21,7 @@ class Block:
         self.proofOfWork = 0
 
     def hash(self) -> bytes:
-        encoded_str = (self.message + str(self.proofOfWork)
-                       + str(self.previousHashCode)).encode()
+        encoded_str = (self.message + str(self.proofOfWork) + str(self.previousHashCode)).encode()
         return hashlib.sha256(encoded_str).digest()
 
     def __str__(self) -> str:
