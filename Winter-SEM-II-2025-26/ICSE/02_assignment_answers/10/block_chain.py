@@ -32,7 +32,14 @@ class Block:
 
 
 def number_of_leading_zeros(block: Block) -> int:
-    return NotImplementedError()  # TODO
+    hash_bits = bytes_to_bits(block.hash())
+    zero_count = 0
+    for bit in hash_bits:
+        if bit == '0':
+            zero_count += 1
+        if bit != '0':
+            break
+    return zero_count
 
 
 def verify(block: Block, x: int) -> bool:
