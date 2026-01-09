@@ -26,8 +26,9 @@ class Block:
         return hashlib.sha256(encoded_str).digest()
 
     def __str__(self) -> str:
-        return str(self.message) + '\n' + str(self.previousHashCode)
-        + '\n' + str(self.proofOfWork)
+        return ("Message: " + str(self.message) + '\n'
+                "Previous HashCode: " + str(self.previousHashCode) + '\n'
+                "Proof Of Work: " + str(self.proofOfWork) + '\n')
 
 
 def number_of_leading_zeros(block: Block) -> int:
