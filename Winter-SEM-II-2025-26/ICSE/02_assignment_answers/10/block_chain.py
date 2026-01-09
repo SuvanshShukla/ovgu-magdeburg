@@ -42,7 +42,7 @@ def number_of_leading_zeros(block: Block) -> int:
 
 
 def verify(block: Block, x: int) -> bool:
-    if number_of_leading_zeros(block) == x:
+    if number_of_leading_zeros(block) >= x:
         return True
     else:
         return False
