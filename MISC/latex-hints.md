@@ -122,3 +122,20 @@ $\mathbb{Z}$
 ```
 
 This is what it should look like, integer set: $\mathbb{Z}$
+
+## Place characters under other characters (not Subscript)
+
+To place a character under another character and not in it's Subscript, you use `\underset`.
+
+Syntax:
+
+```latex
+\underset{x}{argmax}
+```
+
+Here's how it looks rendered:
+
+$$
+\underset{x}{argmax}
+$$
+
