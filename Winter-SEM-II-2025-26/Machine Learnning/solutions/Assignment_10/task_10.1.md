@@ -39,7 +39,12 @@ Where, $y^∗ = argmax_y P(y|x;\theta)$ is the most likely class labeling.
 
 ## Part C
 
+The following are some of the differences between such an active learner and
+an algorithm like IB2:
 
+- Requires a measure like Entropy or Confidence
+- Requires an oracle that can answer queries or provide labels
+- Handles noisy data better by selectively querying only the most informative examples for labeling
 
 ---
 
