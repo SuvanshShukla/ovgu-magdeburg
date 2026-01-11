@@ -138,3 +138,66 @@ New Centroid for {AB,EFD}: (6.50, 6.88)
 | C           | 7.7952      | 0.00   |
 
 Finally we just merge C into {A,B,E,F,D} giving us: {A, B, E, F, D, C}
+
+### Part C Cluster Distance
+
+In cluster distance we calculate the average distance of the cluster to all other clusters/points.
+
+This means if we merge A & B, we calculate the average of $\frac{d(A,C) + d(B,C)}{2}$.
+
+This is repeated for all points C, D, E, F.
+
+Starting with the normal distance matrix:
+
+|   |    A |   B  |   C  |   D  |   E  |    F |
+| --|------|------|------|------|------|------|
+| A | 0.00 |      |      |      |      |      |
+| B | 1.41 | 0.00 |      |      |      |      |
+| C | 6.00 | 5.10 | 0.00 |      |      |      |
+| D | 6.26 | 6.80 |11.88 | 0.00 |      |      |
+| E | 5.39 | 5.00 | 9.43 | 4.03 | 0.00 |      |
+| F | 4.12 | 3.61 | 8.06 | 4.61 | 1.41 | 0.00 |
+
+We merge A & B and update the matrix using the average method.
+
+So the new matrix is:
+
+|       | {C}    | {D}     | {E}    | {F}    | {A,B}  |
+| ----- | -------| ------- | ------ | ------ | ------ |
+| {C}   | 0.0000 |         |        |        |        |
+| {D}   | 11.8849| 0.0000  |        |        |        |
+| {E}   | 9.4340 | 4.0311  | 0.0000 |        |        |
+| {F}   | 8.0623 | 4.6098  | 1.4142 | 0.0000 |        |
+| {A,B} | 5.5495 | 6.5329  | 5.1926 | 3.8643 | 0.0000 |
+
+Now we see that the smallest distance is 1.4142 between E & F.
+
+We merge them and update the matrix by calculating the average distances between points and clusters.
+
+|       | {C}     | {D}     | {A,B}  | {E,F}  |
+| ----- | ------- | ------- | ------ | ------ |
+| {C}   | 0.0000  |         |        |        |
+| {D}   | 11.8849 | 0.0000  |        |        |
+| {A,B} | 5.5495  | 6.5329  | 0.0000 |        |
+| {E,F} | 8.7481  | 4.3205  | 4.5285 | 0.0000 |
+
+The smallest distance now is 4.3205 between D & {E,F}. So we merge them.
+
+Then calculate average distances and update the matrix.
+
+|         | {C}    | {A,B}  | {D,E,F} |
+| ------- | ------ | ------ | ------- |
+| {C}     | 0.0000 |        |         |
+| {A,B}   | 5.5495 | 0.0000 |         |
+| {D,E,F} | 9.7937 | 5.1966 | 0.0000  |
+
+This Finally gives us the smallest distance of 5.1966 between {A,B} and {D,E,F}.
+
+So we merge them and update the matrix.
+
+|             | {C}    | {A,B,D,E,F} |
+| ----------- | ------ | ----------- |
+| {C}         | 0.0000 |             |
+| {A,B,D,E,F} | 8.0960 | 0.0000      |
+
+And finally we merge C & {A, B, D, E, F}.
