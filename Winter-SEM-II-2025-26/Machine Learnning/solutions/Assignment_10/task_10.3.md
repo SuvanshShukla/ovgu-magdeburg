@@ -98,3 +98,96 @@ $C'''_2 (x, y) = \frac{(5,2) + (5,1)}{2} = \frac{(10,3)}{2} = (5, 1.5)$
 At this point we see that the points making up the clusters didn't move and neither did the centroids.
 
 This means that the clusters are final and the points are correctly assigned.
+
+### Part B
+
+#### Iter 1
+
+Centroids: $C_1(2.75,3)$ and $C_2(3.25,0)$
+Points: $A(1, 2), B(3, 2), C(5, 2), D(1, 1) and E(5, 1)$
+
+Distance of $C_1$ to A, B, C, D & E:
+
+$$D(C_1, A) = \sqrt{(1 - 2.75)^2 + (2 - 3)^2} = 2.0156$$
+$$D(C_1, B) = \sqrt{(3 - 2.75)^2 + (2 - 3)^2} = 1.0308$$
+$$D(C_1, C) = \sqrt{(5 - 2.75)^2 + (2 - 3)^2} = 2.4622$$
+$$D(C_1, D) = \sqrt{(1 - 2.75)^2 + (1 - 3)^2} = 2.6575$$
+$$D(C_1, E) = \sqrt{(5 - 2.75)^2 + (1 - 3)^2} = 3.0104$$
+
+Distance of $C_2$ to A, B, C, D & E:
+
+$$D(C_1, A) = \sqrt{(1 - 3.25)^2 + (2 - 0)^2} = 3.0104$$
+$$D(C_1, B) = \sqrt{(3 - 3.25)^2 + (2 - 0)^2} = 2.0156$$
+$$D(C_1, C) = \sqrt{(5 - 3.25)^2 + (2 - 0)^2} = 2.6575$$
+$$D(C_1, D) = \sqrt{(1 - 3.25)^2 + (1 - 0)^2} = 2.4622$$
+$$D(C_1, E) = \sqrt{(5 - 3.25)^2 + (1 - 0)^2} = 2.0156$$
+
+Assigning the points to clusters:
+
+- Cluster 1: A, B, C, E
+- Cluster 2: D
+
+Updating centroids:
+
+$C'_1 (x,y) = \frac{(1,2) + (3,2) + (5,2) + (5,1)}{4} = \frac{(14,7)}{4} = (3.5, 1.75)$
+$C'_2 (x,y) = \frac{(1,1)}{1} = (1,1)$
+
+#### Iter 2
+
+Distance of $C'_1$ to A, B, C, D & E:
+
+$$D(C_1, A) = \sqrt{(1 - 3.5)^2 + (2 - 1.75)^2} = 2.5125$$
+$$D(C_1, B) = \sqrt{(3 - 3.5)^2 + (2 - 1.75)^2} = 0.5590$$
+$$D(C_1, C) = \sqrt{(5 - 3.5)^2 + (2 - 1.75)^2} = 1.5207$$
+$$D(C_1, D) = \sqrt{(1 - 3.5)^2 + (1 - 1.75)^2} = 2.6101$$
+$$D(C_1, E) = \sqrt{(5 - 3.5)^2 + (1 - 1.75)^2} = 1.6771$$
+
+Distance of $C'_2$ to A, B, C, D & E:
+
+$$D(C_1, A) = \sqrt{(1 - 1)^2 + (2 - 1)^2} = 1.0000$$
+$$D(C_1, B) = \sqrt{(3 - 1)^2 + (2 - 1)^2} = 2.2361$$
+$$D(C_1, C) = \sqrt{(5 - 1)^2 + (2 - 1)^2} = 4.1231$$
+$$D(C_1, D) = \sqrt{(1 - 1)^2 + (1 - 1)^2} = 0.0000$$
+$$D(C_1, E) = \sqrt{(5 - 1)^2 + (1 - 1)^2} = 4.0000$$
+
+Assigning the points to clusters:
+
+- Cluster 1: B, C, E
+- Cluster 2: A, D
+
+Updating centroids:
+
+$C''_1 (x,y) = \frac{(3,2) + (5,2) + (5,1)}{3} = \frac{(13, 5)}{3} = (4.3333, 1.6666)$
+$C''_2 (x,y) = \frac{(1,2) + (1,1)}{2} = \frac{(2, 3)}{2} = (1, 1.5)$
+
+#### Iter 3
+
+Distance of $C''_1$ to A, B, C, D & E:
+
+$$D(C_1, A) = \sqrt{(1 - 4.3333)^2 + (2 - 1.6666)^2} = 3.3499$$
+$$D(C_1, B) = \sqrt{(3 - 4.3333)^2 + (2 - 1.6666)^2} = 1.3744$$
+$$D(C_1, C) = \sqrt{(5 - 4.3333)^2 + (2 - 1.6666)^2} = 0.7454$$
+$$D(C_1, D) = \sqrt{(1 - 4.3333)^2 + (1 - 1.6666)^2} = 3.3993$$
+$$D(C_1, E) = \sqrt{(5 - 4.3333)^2 + (1 - 1.6666)^2} = 0.9428$$
+
+Distance of $C''_2$ to A, B, C, D & E:
+
+$$D(C_1, A) = \sqrt{(1 - 1)^2 + (2 - 1.5)^2} = 0.5000$$
+$$D(C_1, B) = \sqrt{(3 - 1)^2 + (2 - 1.5)^2} = 2.0616$$
+$$D(C_1, C) = \sqrt{(5 - 1)^2 + (2 - 1.5)^2} = 4.0311$$
+$$D(C_1, D) = \sqrt{(1 - 1)^2 + (1 - 1.5)^2} = 0.5000$$
+$$D(C_1, E) = \sqrt{(5 - 1)^2 + (1 - 1.5)^2} = 4.0311$$
+
+Assigning the points to clusters:
+
+- Cluster 1: B, C, E
+- Cluster 2: A, D
+
+Updating centroids:
+
+$C'''_1 (x,y) = \frac{(3,2) + (5,2) + (5,1)}{3} = \frac{(13, 5)}{3} = (4.3333, 1.6666)$
+$C'''_2 (x,y) = \frac{(1,2) + (1,1)}{2} = \frac{(2, 3)}{2} = (1, 1.5)$
+
+At this point we see that the points making up the clusters didn't move and neither did the centroids.
+
+This means that the clusters are final and the points are correctly assigned.
