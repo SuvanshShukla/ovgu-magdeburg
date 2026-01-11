@@ -54,4 +54,6 @@ The Augmented Dicky Fuller test is a statistical test that can be used to determ
 
 ### Part (B)
 
+Stationarity is important in a time series, because if a time series is not stationary then it makes forecasting a time series' future much more difficult and it invalidates many standard time-serise models.
 
+A non-stationary time series can be converted into a stationary time series by using "differencing". Other transformations, such as logarithmic scaling or seasonal differencing, may also be used to stabilize variance or remove seasonality.
