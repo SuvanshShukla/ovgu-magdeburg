@@ -48,7 +48,7 @@ Where,
 
 ### Part (A)
 
-Stationarity is when the statistical characteristics of the data distribution doesn't change, like if the mean, variance etc. don't change then the data is stationary. If mean, variance & other statistical data do change then there is no Stationarity.
+Stationarity is when the statistical characteristics of the data distribution doesn't change, like if the mean, variance etc. don't change over time then the data is stationary. If mean, variance & other statistical data do change then there is no Stationarity. Stationarity allows patterns learned from the past to remain valid in the future.
 
 The Augmented Dicky Fuller test is a statistical test that can be used to determine if a time series is stationary. The null hypothesis for this test states that the time series is stationary by default. If the p-value < 0.05 then we reject the null hypothesis and infer that the time series is stationary.
 
