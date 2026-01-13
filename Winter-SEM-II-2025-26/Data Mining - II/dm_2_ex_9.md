@@ -81,7 +81,6 @@ Previous 3 values for calculating MA(3):
 | 1953-11 |   11  | 13.62159241 |
 | 1953-12 |   12  | 7.040296112 |
 
-
 $$MA(3) = \frac{3.194324806 + 29.93074538 + 13.62159241}{3} = 15.58222087$$
 
 Previous 6 values for calculating MA(6):
@@ -94,7 +93,6 @@ Previous 6 values for calculating MA(6):
 | 1953-10 |   1   | 29.93074538 |
 | 1953-11 |   1   | 13.62159241 |
 | 1953-12 |   1   | 7.040296112 |
-
 
 $$MA(6) = \frac{3.007575027 + 2.242249795 + 4.825766594 + 3.194324806 + 29.93074538 + 13.62159241}{6} = 9.470375669$$
 
@@ -118,4 +116,8 @@ Other values of Moving Average:
 - MA(18) = 8.718867214
 - MA(21) = 9.643545254
 
+**Disadvantages of MA(r)**:
 
+- Does not cater for trend and seasonality
+- Choice of r must be informed! Large r is good for time series that have much noise and random fluctuations. Small r is good for drifting time series.
+- All r observations are allotted the same weight.
