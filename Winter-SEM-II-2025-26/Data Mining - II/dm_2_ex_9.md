@@ -70,3 +70,52 @@ A non-stationary time series can be converted into a stationary time series by u
 ![Excel data converted into a chart](./excel_data_charted.png)
 
 For both parts I think no, neither of them can be attributed to a marketing leaad leaving or being hired.
+
+## Q4
+
+Previous 3 values for calculating MA(3):
+
+| Date    | Month | Values      |
+| ------- | ----- | ----------- |
+| 1953-10 |   10  | 29.93074538 |
+| 1953-11 |   11  | 13.62159241 |
+| 1953-12 |   12  | 7.040296112 |
+
+
+$$MA(3) = \frac{3.194324806 + 29.93074538 + 13.62159241}{3} = 15.58222087$$
+
+Previous 6 values for calculating MA(6):
+
+| Date    | Month | Values      |
+| ------- | ----- | ----------- |
+| 1953-07 |   7   | 2.242249795 |
+| 1953-08 |   8   | 4.825766594 |
+| 1953-09 |   9   | 3.194324806 |
+| 1953-10 |   1   | 29.93074538 |
+| 1953-11 |   1   | 13.62159241 |
+| 1953-12 |   1   | 7.040296112 |
+
+
+$$MA(6) = \frac{3.007575027 + 2.242249795 + 4.825766594 + 3.194324806 + 29.93074538 + 13.62159241}{6} = 9.470375669$$
+
+We have two predicted values of 1953-12, we will calculate the absolute error agains both of them:
+
+$$Absolute\ Error = ∣Actual − Predicted∣$$
+
+Against the first prediction MA(3):
+
+$$Absolute\ Error = ∣7.040296112 − 16.8642113∣ = 8.541924758$$
+
+Agains the second prediction MA(6):
+
+$$Absolute\ Error = ∣7.040296112 − 10.14249585| = 3.102199738$$
+
+Other values of Moving Average:
+
+- MA(9) = 10.77418972
+- MA(12) = 9.225157042
+- MA(15) = 8.841092785
+- MA(18) = 8.718867214
+- MA(21) = 9.643545254
+
+
