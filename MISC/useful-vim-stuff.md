@@ -1,5 +1,21 @@
 # Useful VIM/NVIM commands
 
+<!--toc:start-->
+- [Useful VIM/NVIM commands](#useful-vimnvim-commands)
+  - [How to properly indent a markdown table](#how-to-properly-indent-a-markdown-table)
+  - [How to add an empty line above and below the line with your cursor](#how-to-add-an-empty-line-above-and-below-the-line-with-your-cursor)
+  - [Convert Spaced words into snake case](#convert-spaced-words-into-snake-case)
+  - [VIM regex is different from normal regex!!](#vim-regex-is-different-from-normal-regex)
+  - [Exchange vertical and horizontal splits](#exchange-vertical-and-horizontal-splits)
+  - [Increment or decrement number in Normal](#increment-or-decrement-number-in-normal)
+  - [In-built spell check](#in-built-spell-check)
+  - [Using non-latex symbols in VIM/nvim](#using-non-latex-symbols-in-vimnvim)
+  - [Remap LazyGit escape keymap](#remap-lazygit-escape-keymap)
+  - [Temporarily minimizing NVIM and bringing it back up](#temporarily-minimizing-nvim-and-bringing-it-back-up)
+  - [Sorting numbers in VIM](#sorting-numbers-in-vim)
+  - [How to run the current file in buffer using python](#how-to-run-the-current-file-in-buffer-using-python)
+<!--toc:end-->
+
 Here I post useful vim/nvim commands that I have found.
 
 ## How to properly indent a markdown table
