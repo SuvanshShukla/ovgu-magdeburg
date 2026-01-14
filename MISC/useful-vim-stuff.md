@@ -136,3 +136,13 @@ Vim has a useful feature to directly sort numbers just by selecting them and run
 To sort integer numbers use this command - `:sort n`
 
 To sort decimals/floating point numbers - `:sort f`
+
+## How to run the current file in buffer using python
+
+Many times I have a python file open in a buffer that I'd like to simply run, but I don't want to have to write the entire file path (weather that's from the content root or relative to the open directory). So there is a shortcut to run the file or mention it in any command. Simply use the `%` symbol!!
+
+Here's how to run the currently in focus python file opened in the currently focused buffer:
+
+```nvim
+:!python %
+```
