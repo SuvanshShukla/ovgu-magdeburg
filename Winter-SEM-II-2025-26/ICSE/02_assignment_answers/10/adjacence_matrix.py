@@ -73,3 +73,19 @@ if __name__ == "__main__":
     assert out_degree(1, outer) == 2
     assert adjacent(1, outer) == [1, 2]
     assert has_triangle(outer)
+
+"""
+Another way to do the adjacency function is by taking two nodes that have an edge between them
+say j and k, then you consider all edges that have a connection j to k and k to i.
+Note that the triangle wouldn't exist if edges were i -> j then j -> k then k -> j or anything other than k -> i.
+
+def has_triangle(m: list[List[int]]) -> bool:
+    n = len(m)
+    for i in range(n):
+        for j in range(n):
+            if m[i][j] == 1:
+                for k in range(n):
+                    if m[j][k] == 1 and m[k][i] == 1:
+                        return True
+    return False
+"""
