@@ -21,6 +21,12 @@ A red-black tree has the following properties[^1]:
 4. Black Property: Every path from a node to its descendant null nodes (leaves) has the same number of black nodes.
 5. Leaf Property: All leaves (NIL nodes) are black.
 
+**Insertion rule**:
+
+If the inserted node is the root of the tree: Color it black
+
+else: Color it red
+
 ### 2 & 3
 
 Assuming that every leaf node has Black NULL nodes as children.
@@ -77,7 +83,7 @@ Inserting 2:
    / \  
   2R 4R
 ```
- 
+
 Inserting 1:
 
 ```text
@@ -105,6 +111,18 @@ to Red as well.
 ```
 
 This is what the final tree looks like.
+
+**Correct final tree**:
+
+```text
+       6B
+      /  \
+     3R  7B
+    / \
+  2B   4B
+ /
+1R 
+```
 
 ### 4
 
