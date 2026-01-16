@@ -31,9 +31,9 @@ $$
 
 **Confidence**: represents how sure the model is about it's prediction.
 
-```latex
+$$
 x^*_{LC} = \underset{x}{argmin}P(y^*|x;\theta)
-```
+$$
 
 Where, $y^∗ = argmax_y P(y|x;\theta)$ is the most likely class labeling.
 
