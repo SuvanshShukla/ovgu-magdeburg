@@ -52,7 +52,7 @@ $$
 u_{\alpha 1} = \frac{1}{1.4482} = 0.6904
 $$
 
-  Similarly, calculating the $u_{\alpha i}$ and $u_{\beta i}$ for all instances would be:
+Similarly, calculating the $u_{\alpha i}$ and $u_{\beta i}$ for all instances would be:
 
 $u_{\alpha 1} = 0.6904$
 $u_{\alpha 2} = 0.79268$
@@ -105,4 +105,18 @@ TOTAL OBJECTIVE FUNCTION (J): 8.547259
 ### Iteration 2
 
 Calculating all new distances:
+
+$$D(v_\alpha, A) = \sqrt{(1 - 2.6422)^2 + (2 - 1.8185)^2} = 1.6522$$
+$$D(v_\alpha, B) = \sqrt{(3 - 2.6422)^2 + (2 - 1.8185)^2} = 0.4012$$
+$$D(v_\alpha, C) = \sqrt{(5 - 2.6422)^2 + (2 - 1.8185)^2} = 2.3648$$
+$$D(v_\alpha, D) = \sqrt{(1 - 2.6422)^2 + (1 - 1.8185)^2} = 1.8349$$
+$$D(v_\alpha, E) = \sqrt{(5 - 2.6422)^2 + (1 - 1.8185)^2} = 2.4958$$
+
+$$D(v_\beta, A) = \sqrt{(1 - 3.5449)^2 + (2 - 1.3149)^2} = 2.6355$$
+$$D(v_\beta, B) = \sqrt{(3 - 3.5449)^2 + (2 - 1.3149)^2} = 0.8754$$
+$$D(v_\beta, C) = \sqrt{(5 - 3.5449)^2 + (2 - 1.3149)^2} = 1.6083$$
+$$D(v_\beta, D) = \sqrt{(1 - 3.5449)^2 + (1 - 1.3149)^2} = 2.5643$$
+$$D(v_\beta, E) = \sqrt{(5 - 3.5449)^2 + (1 - 1.3149)^2} = 1.4888$$
+
+Calculating membership degrees:
 
