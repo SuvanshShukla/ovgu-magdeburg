@@ -163,8 +163,8 @@ $$D(v_\beta, E) = \sqrt{(5 - 3.5449)^2 + (1 - 1.3149)^2} = 0.8229$$
 
 Calculating membership degrees:
 
-u_Alpha: ()
-u_Beta: ()
+u_Alpha: (0.892869, 0.709246, 0.082093, 0.862313, 0.071856)
+u_Beta: (0.107131, 0.290754, 0.917907, 0.137687, 0.928144)
 
 So the matrix looks like this:
 
