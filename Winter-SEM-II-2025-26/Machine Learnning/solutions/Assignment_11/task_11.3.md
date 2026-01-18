@@ -84,3 +84,17 @@ Now we merge AACT & AACC, which gives us the same distance matrix as last time:
 
 Now we just merge the two clusters to complete the HAC.
 
+### Complete linkage
+
+We start off with the distance matrix:
+
+|      | AACT | GAGG | GAGA | AACC |
+|------|------|------|------|------|
+| AACT | 0    |      |      |      |
+| GAGG | 3    | 0    |      |      |
+| GAGA | 3    | 1    | 0    |      |
+| AACC | 1    | 3    | 3    | 0    |
+
+Here too we see the same exact sequence merging GAGG & GAGA followed by AACC & AACT. 
+
+Ending by merging these two together.
