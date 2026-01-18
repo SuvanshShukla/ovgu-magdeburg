@@ -55,6 +55,10 @@ $\sum_{n=1}^{\infty} 2^{-n} = 1$
 
 That is equivalent to: $\sum_{n=1}^{\infty} 2^{-n} = 1$
 
+You can further improve the upper and lower bounds of the summation by using `\limits`. Like below:
+
+$\sum\limits_{i=1}^{N}$
+
 ## Matrix
 
 You use the `\begin{pmatrix}` & `\end{pmatrix}` markup. Like this:
