@@ -8,6 +8,7 @@ Matriculation No. 256245
 ## Assignment 11 Task 1
 
 Given:
+
 - 5 Points: A(1, 2), B(3, 2), C(5, 2), D(1, 1) and E(5, 1)
 - 2 Centroids: C1(2.75, 3) and C2(3.25, 0)
 - m=2
