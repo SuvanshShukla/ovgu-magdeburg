@@ -105,3 +105,20 @@ Assigning points to clusters:
 Cluster 1: A, B, D
 
 Cluster 2: C, E
+
+Comparing classes of Centroids and points:
+
+- A (Class 1) vs Centroid 1 (Class 1): +ve
+- B (Class 1) vs Centroid 1 (Class 1): +ve
+- C (Class 1) vs Centroid 2 (Class 2): -ve
+- D (Class 2) vs Centroid 1 (Class 1): -ve
+- E (Class 2) vs Centroid 2 (Class 1): +ve
+
+Calculating new vectors using these signs:
+
+- $v_A$ = +((1,2) - (0.6,0.4)) = +(0.4,1.6)
+- $v_B$ = +((3,2) - (0.6,0.4)) = +(2.4,1.6)
+- $v_C$ = +((5,2) - (5,5.2)) = -(0,-3.8)
+- $v_D$ = -((1,1) - (0.6,0.4)) = -(0.4,0.6)
+- $v_E$ = -((5,1) - (5,5.2)) = +(0,-4.2)
+
