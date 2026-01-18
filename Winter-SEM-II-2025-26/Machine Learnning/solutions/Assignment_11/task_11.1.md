@@ -52,7 +52,7 @@ $$
 u_{\alpha 1} = \frac{1}{1.4482} = 0.6904
 $$
 
-  fSimilarly, calculating the $u_{\alpha i}$ and $u_{\beta i}$ for all instances would be:
+  Similarly, calculating the $u_{\alpha i}$ and $u_{\beta i}$ for all instances would be:
 
 $u_{\alpha 1} = 0.6904$
 $u_{\alpha 2} = 0.79268$
@@ -98,3 +98,11 @@ Contribution of Cluster 0 to J: 4.3360
 Contribution of Cluster 1 to J: 4.2112
 
 TOTAL OBJECTIVE FUNCTION (J): 8.547259
+
+>![NOTE]
+> We are supposed to keep iterating until the objective function J becomes stables (or doesn't show any significant reduction)
+
+### Iteration 2
+
+Calculating all new distances:
+
