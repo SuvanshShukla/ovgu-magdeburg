@@ -178,8 +178,8 @@ $$
 
 Now we need to calculate the new cluster centroids:
 
-Cluster Alpha (x, y): ()
-Cluster Beta  (x, y): ()
+Cluster Alpha (x, y): (1.5126, 1.6358)
+Cluster Beta  (x, y): (4.8401, 1.5160)
 
 Now we calculate the target function J:
 
