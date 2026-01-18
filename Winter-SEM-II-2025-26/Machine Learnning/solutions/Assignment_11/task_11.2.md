@@ -30,3 +30,19 @@ This is the equation for learning vector quantization:
 $$
 \vec{r}^{(new)} = \vec{r}^{(old)} + \eta \sum_{winner(\vec{p})=\vec{r}^{(old)}} (\vec{p} - \vec{r}^{(old)})
 $$
+Distances of all points to first centroid:
+
+$$D(C_1, A) = \sqrt{(1 - 1)^2 + (2 - 0)^2} = 2.0000$$
+$$D(C_1, B) = \sqrt{(3 - 1)^2 + (2 - 0)^2} = 2.8284$$
+$$D(C_1, C) = \sqrt{(5 - 1)^2 + (2 - 0)^2} = 4.4721$$
+$$D(C_1, D) = \sqrt{(1 - 1)^2 + (1 - 0)^2} = 1.0000$$
+$$D(C_1, E) = \sqrt{(5 - 1)^2 + (1 - 0)^2} = 4.1231$$
+
+Distances of all points to second centroid:
+
+$$D(C_1, A) = \sqrt{(1 - 5)^2 + (2 - 6)^2} = 5.6569$$
+$$D(C_1, B) = \sqrt{(3 - 5)^2 + (2 - 6)^2} = 4.4721$$
+$$D(C_1, C) = \sqrt{(5 - 5)^2 + (2 - 6)^2} = 4.0000$$
+$$D(C_1, D) = \sqrt{(1 - 5)^2 + (1 - 6)^2} = 6.4031$$
+$$D(C_1, E) = \sqrt{(5 - 5)^2 + (1 - 6)^2} = 5.0000$$
+
