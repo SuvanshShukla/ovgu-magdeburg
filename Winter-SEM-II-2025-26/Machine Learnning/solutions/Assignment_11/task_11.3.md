@@ -5,7 +5,7 @@ Matriculation No. 256245
 
 ---
 
-## Assignment 11 Task 3 
+## Assignment 11 Task 3
 
 Given:
 
@@ -53,3 +53,34 @@ Now we merge AACC and AACT, this leads to an updated distance matrix:
 | (GAGA, GAGG) | 3    | 0            |
 
 Now we just merge (AACT, AACC) & (GAGA, GAGG) for getting the final HAC.
+
+### Average Linkage
+
+We start off with the same distance matrix:
+
+|      | AACT | GAGG | GAGA | AACC |
+|------|------|------|------|------|
+| AACT | 0    |      |      |      |
+| GAGG | 3    | 0    |      |      |
+| GAGA | 3    | 1    | 0    |      |
+| AACC | 1    | 3    | 3    | 0    |
+
+Since we see the same sequence here again, i.e. 1 is the minimum distance for (GAGA, GAGG) and (AACC, AACT)
+
+So we merge GAGG and GAGA first again giving us the same distance matrix as before
+
+|              | AACT | (GAGG, GAGA) | AACC |
+|--------------|------|--------------|------|
+| AACT         | 0    |              |      |
+| (GAGA, GAGG) | 3    | 0            |      |
+| AACC         | 1    | 3            | 0    |
+
+Now we merge AACT & AACC, which gives us the same distance matrix as last time:
+
+|              | AACT | (GAGG, GAGA) |
+|--------------|------|--------------|
+| (AACT, AACC) | 0    |              |
+| (GAGA, GAGG) | 3    | 0            |
+
+Now we just merge the two clusters to complete the HAC.
+
