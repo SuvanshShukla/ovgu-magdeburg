@@ -30,6 +30,7 @@ This is the equation for learning vector quantization:
 $$
 \vec{r}^{(new)} = \vec{r}^{(old)} + \eta \sum_{winner(\vec{p})=\vec{r}^{(old)}} (\vec{p} - \vec{r}^{(old)})
 $$
+
 Distances of all points to first centroid:
 
 $$D(C_1, A) = \sqrt{(1 - 1)^2 + (2 - 0)^2} = 2.0000$$
@@ -68,3 +69,14 @@ Calculating new vectors using these signs:
 - $v_D$ = -((1,1) - (1,0)) = -(0,1)
 - $v_E$ = -((5,1) - (1,0)) = -(4,0)
 
+Performing batch update to get new Centroids:
+
+$C'_1 = (1,0) + 0.2 * ((0,2) + (2,2) - (0,1) - (4,0))$
+$C'_1 = (1,0) + 0.2 * (0+2-0-4, 2+2-2-0)$
+$C'_1 = (1,0) + 0.2 * (-2,2)$
+$C'_1 = (1,0) + (-0.4, 0.4)$
+$C'_1 = (0.6, 0.4)$
+
+$C'_2 = (5,6) + 0.2 * (-(0,4))$
+$C'_2 = (5,6) + (0, -0.8)$
+$C'_2 = (5,5.2)$
