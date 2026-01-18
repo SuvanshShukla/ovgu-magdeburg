@@ -96,6 +96,10 @@ Useful Link on this [How to use vim's spell check feature](https://itsfoss.gitla
 
 You can also use `z=` for getting a menu for corrections! Choose the number corresponding to the word and the correction will be made for you!
 
+You can add words to Nvim's internal dictionary by placing your cursor on top of the word (in normal mode) and using this command: `zG`.
+
+Here's more on what `zG` does: [NVIM DOCS LINK](https://neovim.io/doc/user/spell.html#:~:text=Like%20%22zg%22%20but%20add%20the%20word%20to%20the%20internal%20word%20list)
+
 ## Using non-latex symbols in VIM/nvim
 
 An interesting thing about symbols in VIM/NVIM is that you can enter them as "digraphs".  
