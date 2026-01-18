@@ -145,3 +145,44 @@ Contribution of Cluster 1 to J: 2.9691
 
 TOTAL OBJECTIVE FUNCTION (J): 6.458073
 
+### Iteration 3
+
+Calculating all new distances:
+
+$$D(v_\alpha, A) = \sqrt{(1 - 2.6422)^2 + (2 - 1.8185)^2} = 1.1656$$
+$$D(v_\alpha, B) = \sqrt{(3 - 2.6422)^2 + (2 - 1.8185)^2} = 0.9129$$
+$$D(v_\alpha, C) = \sqrt{(5 - 2.6422)^2 + (2 - 1.8185)^2} = 2.8824$$
+$$D(v_\alpha, D) = \sqrt{(1 - 2.6422)^2 + (1 - 1.8185)^2} = 1.3407$$
+$$D(v_\alpha, E) = \sqrt{(5 - 2.6422)^2 + (1 - 1.8185)^2} = 2.9575$$
+
+$$D(v_\beta, A) = \sqrt{(1 - 3.5449)^2 + (2 - 1.3149)^2} = 3.3650$$
+$$D(v_\beta, B) = \sqrt{(3 - 3.5449)^2 + (2 - 1.3149)^2} = 1.4258$$
+$$D(v_\beta, C) = \sqrt{(5 - 3.5449)^2 + (2 - 1.3149)^2} = 0.8620$$
+$$D(v_\beta, D) = \sqrt{(1 - 3.5449)^2 + (1 - 1.3149)^2} = 3.3552$$
+$$D(v_\beta, E) = \sqrt{(5 - 3.5449)^2 + (1 - 1.3149)^2} = 0.8229$$
+
+Calculating membership degrees:
+
+u_Alpha: ()
+u_Beta: ()
+
+So the matrix looks like this:
+
+$$
+U =
+    \begin{pmatrix}
+    \end{pmatrix}
+$$
+
+Now we need to calculate the new cluster centroids:
+
+Cluster Alpha (x, y): ()
+Cluster Beta  (x, y): ()
+
+Now we calculate the target function J:
+
+Contribution of Cluster 0 to J: 
+Contribution of Cluster 1 to J: 
+
+TOTAL OBJECTIVE FUNCTION (J): 
+
