@@ -99,7 +99,7 @@ Contribution of Cluster 1 to J: 4.2112
 
 TOTAL OBJECTIVE FUNCTION (J): 8.547259
 
->![NOTE]
+>[!NOTE]
 > We are supposed to keep iterating until the objective function J becomes stables (or doesn't show any significant reduction)
 
 ### Iteration 2
