@@ -94,3 +94,7 @@ $$
 J_m (U,V) = \sum\limits_{i=1}^{N} \sum\limits_{\alpha=1}^{c} u_{\alpha i}^m d_{i \alpha}^2 = \sum\limits_{i=1}^{N} \sum\limits_{\alpha=1}^{c} u_{\alpha i}^m || x_i - v_\alpha ||^2
 $$
 
+Contribution of Cluster 0 to J: 4.3360
+Contribution of Cluster 1 to J: 4.2112
+
+TOTAL OBJECTIVE FUNCTION (J): 8.547259
