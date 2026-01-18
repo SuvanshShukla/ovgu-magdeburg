@@ -31,6 +31,8 @@ $$
 \vec{r}^{(new)} = \vec{r}^{(old)} + \eta \sum_{winner(\vec{p})=\vec{r}^{(old)}} (\vec{p} - \vec{r}^{(old)})
 $$
 
+#### First Iteration
+
 Distances of all points to first centroid:
 
 $$D(C_1, A) = \sqrt{(1 - 1)^2 + (2 - 0)^2} = 2.0000$$
@@ -80,3 +82,5 @@ $C'_1 = (0.6, 0.4)$
 $C'_2 = (5,6) + 0.2 * (-(0,4))$
 $C'_2 = (5,6) + (0, -0.8)$
 $C'_2 = (5,5.2)$
+
+#### Second Iteration
