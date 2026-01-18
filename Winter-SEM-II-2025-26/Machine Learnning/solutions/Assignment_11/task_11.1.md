@@ -188,3 +188,4 @@ Contribution of Cluster 1 to J: 1.7246
 
 TOTAL OBJECTIVE FUNCTION (J): 4.664546
 
+<!-- So does this mean that we're supposed to put each point wherever its membership value is highest? -->
