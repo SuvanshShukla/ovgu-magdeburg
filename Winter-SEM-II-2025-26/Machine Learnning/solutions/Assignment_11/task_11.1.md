@@ -52,7 +52,7 @@ $$
 u_{\alpha 1} = \frac{1}{1.4482} = 0.6904
 $$
 
-Similarly, calculating the $u_{\alpha i}$ and $u_{\beta i}$ for all instances would be:
+  fSimilarly, calculating the $u_{\alpha i}$ and $u_{\beta i}$ for all instances would be:
 
 $u_{\alpha 1} = 0.6904$
 $u_{\alpha 2} = 0.79268$
@@ -75,3 +75,22 @@ U =
     0.309588 & 0.207417 & 0.461909 & 0.538091 & 0.690469 \
    \end{pmatrix}
 $$
+
+calculating new centroids:
+
+$$
+v_\alpha = \frac{\sum_{i=1}^{N} u_{\alpha i}^m . x_i}{\sum_{i=1}^{N} u_{\alpha i}^m}
+$$
+$$
+v_\beta = \frac{\sum_{i=1}^{N} u_{\beta i}^m . x_i}{\sum_{i=1}^{N} u_{\beta i}^m}
+$$
+
+Cluster Alpha $v_\alpha$ (x, y): (2.6422, 1.8185)
+Cluster Beta  $v_\beta$ (x, y): (3.5449, 1.3149)
+
+Calculating the value of the target function:
+
+$$
+J_m (U,V) = \sum\limits_{i=1}^{N} \sum\limits_{\alpha=1}^{c} u_{\alpha i}^m d_{i \alpha}^2 = \sum\limits_{i=1}^{N} \sum\limits_{\alpha=1}^{c} u_{\alpha i}^m || x_i - v_\alpha ||^2
+$$
+
