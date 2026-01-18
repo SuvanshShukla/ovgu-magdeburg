@@ -183,8 +183,8 @@ Cluster Beta  (x, y): (4.8401, 1.5160)
 
 Now we calculate the target function J:
 
-Contribution of Cluster 0 to J: 
-Contribution of Cluster 1 to J: 
+Contribution of Cluster 0 to J: 2.9399
+Contribution of Cluster 1 to J: 1.7246
 
-TOTAL OBJECTIVE FUNCTION (J): 
+TOTAL OBJECTIVE FUNCTION (J): 4.664546
 
