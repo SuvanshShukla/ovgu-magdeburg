@@ -100,3 +100,8 @@ $$D(C_1, C) = \sqrt{(5 - 5)^2 + (2 - 5.2)^2} = 3.2000$$
 $$D(C_1, D) = \sqrt{(1 - 5)^2 + (1 - 5.2)^2} = 5.8000$$
 $$D(C_1, E) = \sqrt{(5 - 5)^2 + (1 - 5.2)^2} = 4.2000$$
 
+Assigning points to clusters:
+
+Cluster 1: A, B, D
+
+Cluster 2: C, E
