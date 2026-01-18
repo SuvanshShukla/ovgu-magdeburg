@@ -6,3 +6,7 @@ Matriculation No. 256245
 ---
 
 ## Assignment 11 Task 4 
+
+### Copehenetic Correlation
+
+### Parsimony Score
