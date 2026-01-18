@@ -60,3 +60,11 @@ Comparing classes of centroid and points:
 - D (Class 2) vs Centroid 1 (Class 1): -ve
 - E (Class 2) vs Centroid 1 (Class 1): -ve
 
+Calculating new vectors using these signs:
+
+- $v_A$ = +((1,2) - (1,0)) = +(0,2)
+- $v_B$ = +((3,2) - (1,0)) = +(2,2)
+- $v_C$ = +((5,2) - (5,6)) = -(0,4)
+- $v_D$ = -((1,1) - (1,0)) = -(0,1)
+- $v_E$ = -((5,1) - (1,0)) = -(4,0)
+
