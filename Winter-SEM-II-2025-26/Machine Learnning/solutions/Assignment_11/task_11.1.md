@@ -132,3 +132,16 @@ U =
     0.282128 & 0.173583 & 0.683744 & 0.338633 & 0.737551
     \end{pmatrix}
 $$
+
+Now we need to calculate the new cluster centroids:
+
+Cluster Alpha (x, y): (2.1313, 1.7194)
+Cluster Beta  (x, y): (4.3225, 1.4671)
+
+Now we calculate the target function J:
+
+Contribution of Cluster 0 to J: 3.4889
+Contribution of Cluster 1 to J: 2.9691
+
+TOTAL OBJECTIVE FUNCTION (J): 6.458073
+
