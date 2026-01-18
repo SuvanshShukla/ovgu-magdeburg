@@ -46,3 +46,17 @@ $$D(C_1, C) = \sqrt{(5 - 5)^2 + (2 - 6)^2} = 4.0000$$
 $$D(C_1, D) = \sqrt{(1 - 5)^2 + (1 - 6)^2} = 6.4031$$
 $$D(C_1, E) = \sqrt{(5 - 5)^2 + (1 - 6)^2} = 5.0000$$
 
+Assigning points to clusters:
+
+Cluster 1: A, B, D, E
+
+Cluster 2: C
+
+Comparing classes of centroid and points:
+
+- A (Class 1) vs Centroid 1 (Class 1): +ve
+- B (Class 1) vs Centroid 1 (Class 1): +ve
+- C (Class 1) vs Centroid 2 (Class 2): -ve
+- D (Class 2) vs Centroid 1 (Class 1): -ve
+- E (Class 2) vs Centroid 1 (Class 1): -ve
+
