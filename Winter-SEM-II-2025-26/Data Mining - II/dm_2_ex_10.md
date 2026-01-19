@@ -60,3 +60,28 @@ A situation where Holt-Winters model is preferred over Holt's method is when the
 
 Holt-Winters model can incorporate seasonality in both multiplicative and additive ways.
 
+## Question 5
+
+### Part A
+
+In ARIMA:
+
+- p: captures autocorrelation
+- q: captures the error
+- d: captures the trend
+
+### Part B
+
+Seasonal ARIMA model uses differencing at a lag equal to the number of seasons to remove additive seasonal effecs.
+
+The seasonal ARIMA model includes autoregressive and moving average terms at a lag s.
+
+### Part C
+
+The notation: `SARIMA(p,d,q)(P,D,Q)s`, has two different parts.
+
+`(p,d,q)`: which represents the Non-seasonal part of the model.
+
+`(P,D,Q)s`: which represents the seasonal part of the model.
+
+Note: `s`: The number of periods per season (e.g., s=12 for monthly data, s=4 for quarterly data)
