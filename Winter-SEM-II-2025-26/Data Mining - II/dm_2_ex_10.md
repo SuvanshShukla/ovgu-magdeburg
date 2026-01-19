@@ -32,6 +32,15 @@ Disadvantages:
 
 ## Question 2
 
+| Month | Jan | Feb | Mar | Apr |
+|-------|-----|-----|-----|-----|
+|Demand | 20  | 22  | 21  | 23  |
+
+Given:
+
+- Initial forecast F1 = 20
+- Smoothing parameter α = 0.4
+
 ## Question 3
 
 ### Part A
