@@ -48,4 +48,15 @@ The two components modeled by Holt's Exponential Smoothing are: Trend and Level
 - Trend: $$T_t = \beta (L_t - L_{t-1}) + (1-\beta) T_{t-1}$$
 - Forecast: $$ \widehat{z_{t+h}} = L_t + hT_t$$
 
+## Question 4
+
+### Part A
+
+Holt-Winters model has the additional component of $\gamma$ or seasonality.
+
+### Part B/C
+
+A situation where Holt-Winters model is preferred over Holt's method is when the time series in question has seasonality.
+
+Holt-Winters model can incorporate seasonality in both multiplicative and additive ways.
 
