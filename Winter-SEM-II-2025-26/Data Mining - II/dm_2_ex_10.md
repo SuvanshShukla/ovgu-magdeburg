@@ -41,6 +41,12 @@ Given:
 - Initial forecast F1 = 20
 - Smoothing parameter α = 0.4
 
+### Part A
+
+### Part B
+
+SES is appropriate for time series without trends.
+
 ## Question 3
 
 ### Part A
