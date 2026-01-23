@@ -65,3 +65,5 @@ if __name__ == "__main__":
 
     print(breath_first_search(g, v_1))
     assert breath_first_search(g, v_1) == [v_1, v_3, v_6, v_8, v_7, v_4, v_5, v_2]
+
+# One question of traversal will definitely come in the exam!
