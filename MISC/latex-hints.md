@@ -49,6 +49,7 @@ Checkout vim related commands here: [[useful-vimnvim-commands#Using non-latex sy
 | bar over variable | \bar{x} | $\bar{x}$ |
 | upside down triangle | \nabla | $\nabla E$ |
 | vector over letter | \vec{w} | $\vec{w}$ |
+| less than equal to or greater than equal to | \le or \ge | $a \le b \ge c$ |
 
 ## Example of using $\sum$
 
