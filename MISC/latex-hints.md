@@ -143,3 +143,13 @@ $$
 \underset{x}{argmax}
 $$
 
+## Writing binomial pairs
+
+To write expressions like out of n items make 2 pairs, or all 2 pairs in n items, use `\binom`.
+
+```latex
+\binom{n}{2}
+```
+
+Here's how it renders:
+$$\binom{n}{k}$$
