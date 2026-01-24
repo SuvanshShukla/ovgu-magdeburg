@@ -63,3 +63,33 @@ $$D(C_1, B) = \sqrt{(4 - 4.33)^2 + (4 - 2.67)^2} = 1.3703$$
 $$D(C_1, C) = \sqrt{(5 - 4.33)^2 + (3 - 2.67)^2} = 0.7469$$
 
 So q = 1.0530 + 1.3300 + 1.9465 + 1.7023 + 1.3703 + 0.7469 = 8.149 for clustering B
+
+### Part C
+
+Formula for Rand's index:
+
+$$
+R = \frac{a + B}{\binom{n}{2}}
+$$
+
+Total number of pairs is calculated as: $$\frac{1}{2}n(n-1)$$
+
+For Clustering A we have 2 items in the first cluster and 4 items in the second cluster.
+
+For Clustering B we have 3 items in the first cluster and 3 items in the second cluster.
+
+We count the number of agreement-pairs in both clusterings: (A,B), (D,E), (D,F), (E,F)
+
+Value of a = 4
+
+We count the number of disagreement-pairs in both clusterings: (A,D), (A,E), (A,F), (B,D), (B,E), (B,F)
+
+Value of b = 6
+
+Total number of pairs = 15
+
+Rand index = 10/15 = 0.6667
+
+Note how we do not count disagreement-pairs (C,D), (C,E), (C,F) because these pairs are only present in Clustering B
+
+And agreement-pairs (A,C), (B,C) are only present in Clustering A.
