@@ -4,6 +4,12 @@
 
 [Link to how to customize SumatraPDF keyboard shortcuts](https://www.sumatrapdfreader.org/docs/Customizing-keyboard-shortcuts)
 
+The SumatraPDF config file is stored here:
+
+```text
+C:\Users\HP\AppData\Local\SumatraPDF\SumatraPDF-settings.txt
+```
+
 Here's the snippet I have to customize next & prev tabs:
 
 Quick way to open `SumatraPDF-settings.txt` file:
