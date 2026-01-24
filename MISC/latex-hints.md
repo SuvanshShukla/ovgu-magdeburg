@@ -1,9 +1,12 @@
 # Hints for Latex Syntax
 
-[Link to render Latex online](https://quicklatex.com/)
-
 >[!IMPORTANT]
 > Remember to always start and end latex with `$` symbol in markdown
+
+## Useful Links
+
+- [Link to render Latex online](https://quicklatex.com/)
+- Quick reference Latex cheatsheet: [quickref latex](https://quickref.me/latex.html)
 
 ## Hat/cap symbol
 
