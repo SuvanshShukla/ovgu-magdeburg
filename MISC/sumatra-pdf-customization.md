@@ -17,13 +17,21 @@ Quick way to open `SumatraPDF-settings.txt` file:
 
 ```txt
 Shortcuts [
-	[
+    [
 		Cmd = CmdNextTab
 		Key = Alt + s
 	]
 	[
 		Cmd = CmdPrevTab
 		Key = Alt + a
+	]
+	[
+		Cmd = CmdScrollUpHalfPage
+		Key = e
+	]
+	[
+		Cmd = CmdScrollDownHalfPage
+		key = d
 	]
 ]
 ```
