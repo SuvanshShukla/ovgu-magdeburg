@@ -82,3 +82,7 @@ $$S_1(down) = 0 + (0.8*8.4) = 6.72$$
 $$S_1(right) = 0 + (0.8*6.4) = 5.12$$
 $$S_3(up) = 0 + (0.8*6.72) = 5.376$$
 $$S_2(left) = 0 + (0.8*6.72) = 5.376$$
+
+### Part B
+
+Perhaps taking the episodic reward function would bring about the changes that are required.
