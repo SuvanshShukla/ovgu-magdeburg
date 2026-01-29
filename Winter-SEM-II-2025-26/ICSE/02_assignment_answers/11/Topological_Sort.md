@@ -22,3 +22,10 @@ Currently the graph for Rock-Paper-Scissors-Lizard-Spock, doesn't have any sourc
 The least number of edge that would require removal so that we can apply the topological sorting algorithm is **5**.
 
 This enables us to have at least one source and one sink.
+
+The correct answer here is three.
+
+Label each of the vertices as `v1, v2, v3....`
+Then find which vertices they are included in that result in cycles.
+This will result in each vertices being included in a 3 node cycle.
+Then you just remove 3 edges that kill all the cycles.
