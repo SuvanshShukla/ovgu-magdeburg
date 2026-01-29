@@ -13,6 +13,8 @@ We evaluate cluster in two major ways. Internal and External evaluation methods.
 
 External cluster evaluation methods are used when priori information about the dataset is know, whereas Internal evaluation methods don't require such priori information. Most real world problems do not have priori information in the dataset, hence they use Internal evaluation methods.
 
+<!-- What would I compare my clustering against in a real world scenario? -->
+
 ### Part B
 
 Given:
