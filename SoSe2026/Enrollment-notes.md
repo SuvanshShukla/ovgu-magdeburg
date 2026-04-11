@@ -3,11 +3,11 @@ These are some courses I can enroll in:
 
 ## Advanced Database Models
 
-https://elearning.ovgu.de/enrol/index.php?id=18941
+https://elearning.ovgu.de/course/view.php?id=21023
 
 - [x] Lecture (LSF)
 - [x] Exercise (LSF)
-- [ ] Elearning
+- [x] Elearning
 
 ## Visual Analytics
 
