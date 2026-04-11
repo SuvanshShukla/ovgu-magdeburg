@@ -23,7 +23,7 @@ https://elearning.ovgu.de/enrol/index.php?id=20376
 
 - [x] Lecture (LSF)
 - [x] Exercise (LSF)
-- [ ] Elearning
+- [x] Elearning
 
 ## Recommender systems
 
@@ -53,5 +53,5 @@ enrollment key: **IDLSS26**
 https://elearning.ovgu.de/enrol/index.php?id=20443
 
 - [x] Lecture (LSF)
-- [ ] Exercise (LSF)
-- [ ] Elearning
+- [x] Exercise (LSF)
+- [x] Elearning
