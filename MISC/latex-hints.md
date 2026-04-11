@@ -51,6 +51,7 @@ Checkout vim related commands here: [[useful-vimnvim-commands#Using non-latex sy
 | vector over letter | \vec{w} | $\vec{w}$ |
 | less than equal to or greater than equal to | \le or \ge | $a \le b \ge c$ |
 | Curly braces     | \lbrace or \rbrace | $\lbrace a + b \rbrace$ |
+| Hat or cap     | \hat  | $\hat{r}$ |
 
 ## Example of using $\sum$
 
