@@ -97,7 +97,7 @@ Since the ratings for 'The Notebook', 'The Sixth Sense' and 'The Vow' have been 
 
 The movie that the system would recommend would be: "The Notebook".
 
-### part (d)
+### 3 part (d)
 
 $$
 \begin{align}
@@ -110,4 +110,9 @@ Rating\ for\ u_{15}:  3.5 \\
 \end{align}
 $$
 
-### part (e)
+### 3 part (e)
+
+
+## Question 4
+
+### 4 part (a)
