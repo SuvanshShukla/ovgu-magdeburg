@@ -69,6 +69,10 @@ $$
 
 The drawback of this approach is that this method doesn't account for similarity of the movies or users.
 
+
+> [!note]
+> For both informed guess 1 and informed guess 2, each missing rating will get the same calculated mean value (both user and item).
+
 ## Question 3
 
 ### 3 part (a)
