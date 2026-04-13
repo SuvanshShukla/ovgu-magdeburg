@@ -122,3 +122,14 @@ It is hard to say which is better because each of them are correct by their own 
 
 ### 4 part (a)
 
+This evaluation approach is called "K-folds Cross-validation" or "Leave-one-out Cross-validation".
+
+$$
+\begin{align}
+\hat{r}_{u_2, Braveheart} = 4.0 \\
+\hat{r}_{u_1, 12\ Monkeys} = 3.0 \\
+\hat{r}_{u_2, The\ Notebook} = 2.0 \\
+\hat{r}_{u_2, Titanic} = 3.0 \\
+\hat{r}_{u_2, Fight\ Club} = 3.33\\
+\end{align}
+$$
