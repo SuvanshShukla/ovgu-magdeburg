@@ -63,3 +63,17 @@ print('Rating for u12: ', calc_mean(u12))
 print('Rating for u13: ', calc_mean(u13))
 print('Rating for u14: ', calc_mean(u14))
 print('Rating for u15: ', calc_mean(u15))
+
+a = [3, 2, 5]
+b = [2, 1, 3, 2, 4]
+c = [3, 4, 3]
+# d = []
+# e = []
+# f = []
+
+print('Rating for a: ', calc_mean(a))
+print('Rating for b: ', calc_mean(b))
+print('Rating for c: ', calc_mean(c))
+# print('Rating for d: ', calc_mean(d))
+# print('Rating for e: ', calc_mean(e))
+# print('Rating for f: ', calc_mean(f))
