@@ -77,3 +77,27 @@ print('Rating for c: ', calc_mean(c))
 # print('Rating for d: ', calc_mean(d))
 # print('Rating for e: ', calc_mean(e))
 # print('Rating for f: ', calc_mean(f))
+
+test1 = [5, 4, 3]
+test2 = [3, 5, 1]
+test3 = [2, 2]
+test4 = [1, 4, 4]
+test5 = [4, 4, 2]
+
+print('Informed Guess for 12 monkeys: ', calc_mean(test1))
+print('Informed Guess for Braveheart: ', calc_mean(test2))
+print('Informed Guess for Titanic: ', calc_mean(test3))
+print('Informed Guess for Fight Club: ', calc_mean(test4))
+print('Informed Guess for The Notebook: ', calc_mean(test5))
+
+actuala = [5, 4, 3]
+actualb = [2, 3, 4]
+preda = [4, 5, 2]
+predb = [3, 2, 5]
+
+print('avg for actual A Rating: ', calc_mean(actuala))
+print('avg for actual B Rating: ', calc_mean(actualb))
+print('avg for predicted A Rating: ', calc_mean(preda))
+print('avg for predicted B Rating: ', calc_mean(predb))
+
+print('ans 5 (a): ', ((4 - 3.66) + abs(3 - 3.333))/2)
