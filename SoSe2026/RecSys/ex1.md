@@ -112,7 +112,9 @@ $$
 
 ### 3 part (e)
 
+It is hard to say which is better because each of them are correct by their own calculations.
 
 ## Question 4
 
 ### 4 part (a)
+
