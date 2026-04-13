@@ -133,3 +133,31 @@ $$
 \hat{r}_{u_2, Fight\ Club} = 3.33\\
 \end{align}
 $$
+
+## Question 5
+
+### 5 part (a)
+
+Average (actual) rating for Movie A: 4.0
+Average (actual) rating for Movie B: 3.0
+
+Average (predicted) rating for Movie A: 3.66
+Average (predicted) rating for Movie B: 3.33
+
+### 5 part (b)
+
+$$
+Mean\ Absolute\ Error\ = \frac{(Error\ in\ prediction\ of\ A) + (Error\  in\ prediction\ of\ B)}{2}
+$$
+
+$$
+Mean\ Absolute\ Error = \frac{(|4 - 3.66| + |3 - 3.333|)}{2} = 0.3365
+$$
+
+### 5 part (c)
+
+The system is predicting that Movie A is better.
+
+### 5 part (d)
+
+Average rating alone is not enough to recommend the best item to every user, because it generalizes too much and doesn't account for the user's rating of similar movies.
