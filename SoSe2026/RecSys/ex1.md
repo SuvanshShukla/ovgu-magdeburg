@@ -161,3 +161,5 @@ The system is predicting that Movie A is better.
 ### 5 part (d)
 
 Average rating alone is not enough to recommend the best item to every user, because it generalizes too much and doesn't account for the user's rating of similar movies.
+
+Other shortcomings are the shortcomings of this statistic. Mean is affected by outliers and extreme values. The mean also isn't as accurate for fewer data points, especially when there were only three ratings for 2 movies.
