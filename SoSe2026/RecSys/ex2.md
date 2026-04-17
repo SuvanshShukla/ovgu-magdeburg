@@ -164,4 +164,38 @@ This is because 12 Monkeys is highly rated by all users (other than u4) and the 
 >[!QUESTION]
 > What would be a logical/formal way to answer this? Like if it was asked in the exam what would I write as the answer?
 
+## Question 4
 
+Size of neighbourhood = 2
+
+Pair-wise cosine similarity values are:
+
+- for u4 & u1:  0.6205427141408237
+- for u4 & u2:  0.7418318309487705
+- for u4 & u3:  0.22522130823072542
+
+This means the 2 nearest neighbours of are: u1 and u2.
+
+Using them for calculating the recommended ratings:
+
+Movie: 12 Monkeys
+
+$$
+\begin{align}
+\hat{r_{12\ Monkeys, u_4}} = \frac{(5*0.62)+(2*0.74)}{0.62+0.74} \\
+\hat{r_{12\ Monkeys, u_4}} = \frac{4.58}{1.36} \\
+\hat{r_{12\ Monkeys, u_4}} = 3.36
+\end{align}
+$$
+
+Movie: The Notebook
+
+$$
+\begin{align}
+\hat{r_{The\ Notebook, u_4}} = \frac{(1*0.62)+(4*0.74)}{0.62+0.74} \\
+\hat{r_{The\ Notebook, u_4}} = \frac{3.58}{1.36} \\
+\hat{r_{The\ Notebook, u_4}} = 2.63
+\end{align}
+$$
+
+The top-two recommendations are 12 Monkeys & The Notebook
