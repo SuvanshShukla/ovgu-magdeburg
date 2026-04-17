@@ -16,11 +16,11 @@ def pearson(x, y):
     prod_sum = sum(p[0] * p[1] for p in valid_pairs)
 
     nom = (n * prod_sum - sum_x * sum_y)
-    
+
     # Calculate variance parts for denominator
     var_x = n * ss_x - sum_x**2
     var_y = n * ss_y - sum_y**2
-    
+
     denom = (var_x * var_y)**0.5
 
     if denom == 0:
