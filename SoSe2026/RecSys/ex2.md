@@ -216,60 +216,28 @@ Pair-wise cosine similarity values for item-based collaborative filtering are:
 - for The Notebook & Titanic:  0.4969293465978882
 - for The Notebook & Fight Club:  0.6670633740309423
 
-This means the 2 nearest neighbours for 12 Monkeys is The Notebook & Fight Club
+This means the 2 nearest neighbours for 12 Monkeys is The Notebook & Fight Club, but since u4 hasn't rated The Notebook the two nearest neighbours are Fight Club and Braveheart
 
-And the 2 nearest neighbours for The Notebook is 12 Monkeys & Fight Club
+Similarly, the 2 nearest neighbours for The Notebook is Fight Club & Titanic.
 
-Using these neighbours for calculating recommended ratings for 12 Monkeys:
-
-Rating for movie based on The Notebook
-
-$$
-\begin{align}
-\hat{r_{12\ Monkeys, The Notebook}} = \frac{(5*0.62)+(2*0.74)}{0.62+0.74} \\
-\hat{r_{12\ Monkeys, The Notebook}} = \frac{4.58}{1.36} \\
-\hat{r_{12\ Monkeys, The Notebook}} = 3.36
-\end{align}
-$$
+Using these neighbours for calculating recommended ratings for u4, 12 Monkeys:
 
 Rating for movie based on Fight Club
 
 $$
 \begin{align}
-\hat{r_{12\ Monkeys, The\ Notebook}} = \frac{(5*0.62)+(2*0.74)}{0.62+0.74} \\
-\hat{r_{12\ Monkeys, The\ Notebook}} = \frac{4.58}{1.36} \\
-\hat{r_{12\ Monkeys, The\ Notebook}} = 3.36
+\hat{r_{12\ Monkeys, u_4}} = \frac{(5*0.71)+(1*0.65)}{0.71+0.65} \\
+\hat{r_{12\ Monkeys, u_4}} = \frac{4.20}{1.36} \\
+\hat{r_{12\ Monkeys, u_4}} = 3.08
 \end{align}
 $$
 
-Using these neighbours for calculating recommended ratings for The Notebook:
+Using these neighbours for calculating recommended ratings for u4, The Notebook:
 
 $$
 \begin{align}
-\hat{r_{The\ Notebook, Fight Club}} = \frac{(1*0.62)+(4*0.74)}{0.62+0.74} \\
-\hat{r_{The\ Notebook, Fight Club}} = \frac{3.58}{1.36} \\
-\hat{r_{The\ Notebook, Fight Club}} = 2.63
-\end{align}
-$$
-
-The top-two recommendations are 12 Monkeys & The Notebook
-
-Rating for movie based on 12 Monkeys
-
-$$
-\begin{align}
-\hat{r_{The Notebook, 12\ Monkeys}} = \frac{(5*0.62)+(2*0.74)}{0.62+0.74} \\
-\hat{r_{The Notebook, 12\ Monkeys}} = \frac{4.58}{1.36} \\
-\hat{r_{The Notebook, 12\ Monkeys}} = 3.36
-\end{align}
-$$
-
-Rating for movie based on Fight Club
-
-$$
-\begin{align}
-\hat{r_{The Notebook, Fight Club}} = \frac{(5*0.62)+(2*0.74)}{0.62+0.74} \\
-\hat{r_{The Notebook, Fight Club}} = \frac{4.58}{1.36} \\
-\hat{r_{The Notebook, Fight Club}} = 3.36
+\hat{r_{The\ Notebook, u_4}} = \frac{(5*0.66)+(3*0.49)}{0.66+0.49} \\
+\hat{r_{The\ Notebook, u_4}} = \frac{4.77}{1.15} \\
+\hat{r_{The\ Notebook, u_4}} = 4.14
 \end{align}
 $$
