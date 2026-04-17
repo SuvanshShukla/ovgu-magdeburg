@@ -1,28 +1,30 @@
 # Cosine similarity function Link: https://www.geeksforgeeks.org/dbms/cosine-similarity/
 
 def cosine(x, y):
-    mag_x = 0
-    mag_y = 0
-    dot = 0
-
     if len(x) != len(y):
         raise Exception('Vector lengths are different!')
 
-    for i in x:
-        if i is not None:
-            mag_x += (i**2)
-        mag_x = mag_x**0.5
-
-    for i in y:
-        if i is not None:
-            mag_y += (i**2)
-        mag_y = mag_y**0.5
+    dot = 0
+    sum_sq_x = 0
+    sum_sq_y = 0
 
     for i in range(len(x)):
-        if x[i] is not None and y[i] is not None:
-            dot += x[i]*y[i]
+        # Treat None as 0 for the calculation
+        val_x = x[i] if x[i] is not None else 0
+        val_y = y[i] if y[i] is not None else 0
 
-    return dot/(mag_x + mag_y)
+        dot += val_x * val_y
+        sum_sq_x += val_x**2
+        sum_sq_y += val_y**2
+
+    mag_x = sum_sq_x**0.5
+    mag_y = sum_sq_y**0.5
+
+    # Prevent division by zero if a vector is all None/Zeros
+    if mag_x == 0 or mag_y == 0:
+        return 0
+
+    return dot / (mag_x * mag_y)
 
 
 alpha = [5, 5, 1, 3, 3]
