@@ -44,3 +44,12 @@ print('for beta & u1: ', cosine(beta, u1))
 print('for beta & u2: ', cosine(beta, u2))
 print('for beta & u3: ', cosine(beta, u3))
 print('for beta & u4: ', cosine(beta, u4))
+
+print('---------------Ques 2------------------')
+
+u1 = [1, 1, None, 1, 1]
+u2 = [5, 5, None, 5, 5]
+u3 = [1, 1, None, 1, 5]
+
+print('for u1 & u2: ', cosine(u1, u2))
+print('for u1 & u3: ', cosine(u1, u3))
