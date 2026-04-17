@@ -53,3 +53,16 @@ u3 = [1, 1, None, 1, 5]
 
 print('for u1 & u2: ', cosine(u1, u2))
 print('for u1 & u3: ', cosine(u1, u3))
+
+print('---------------Ques 3------------------')
+
+u1 = [5, None, 1, 3, None]
+u2 = [4, 2, 2, 4, 3]
+u3 = [3, 2, None, 2, 1]
+u4 = [None, 1, 3, None, None]
+
+print('for u4 & u1: ', cosine(u4, u1))
+print('for u4 & u2: ', cosine(u4, u2))
+print('for u4 & u3: ', cosine(u4, u3))
+
+print('Min of all: ', min(cosine(u4, u1), cosine(u4, u2), cosine(u4, u3)))
