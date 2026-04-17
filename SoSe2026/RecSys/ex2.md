@@ -27,6 +27,7 @@ cosine(\theta) = \frac{A\cdot{B}}{||A||\cdot||B||}
 $$
 
 where,
+
 - A.B is the dot product of vectors
 - ||A|| & ||B|| are magnitudes
 
@@ -47,6 +48,7 @@ r = \frac{n(\sum{xy})- (\sum{x})(\sum{y})}{\sqrt{[n\sum{x^2}-(\sum{x})^2][n\sum{
 $$
 
 where,
+
 - n is no. of elements in one vector (both vectors should have same length)
 
 for alpha & u1:  0.9045340337332909
@@ -68,9 +70,9 @@ Calculated cosine similarity values are:
 for u1 & u2:  1.0
 for u1 & u3:  0.7559289460184544
 
-The main drawback of this feature seems to be: 
+The main drawback of this feature seems to be:
 
-### 2(b) 
+### 2(b)
 
 Calculated Pearson correlation similarity values are:
 
@@ -86,7 +88,7 @@ Calculated Euclidean distance values are:
 for u1 & u2:  3.605551275463989
 for u1 & u3:  2.23606797749979
 
-Observations are: 
+Observations are:
 
 The common drawback among all these similarity measures are:
 
@@ -107,7 +109,6 @@ $$
 \hat{r_{iu}} = \frac{\sum_{z \in NN(u,k),r_{iz} \neq NULL}{r_{iz}.sim(u,z)}}{\sum_{z \in NN(u,k),r_{iz} \neq NULL}{sim(u,z)}}
 $$
 
-So for 
 Now we estimate ratings for the previously unrated movies.
 
 Movie: 12 Monkeys
