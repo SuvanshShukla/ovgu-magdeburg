@@ -46,3 +46,12 @@ print('for beta & u1: ', pearson(beta, u1))
 print('for beta & u2: ', pearson(beta, u2))
 print('for beta & u3: ', pearson(beta, u3))
 print('for beta & u4: ', pearson(beta, u4))
+
+print('---------------Ques 2------------------')
+
+u1 = [1, 2, None, 1, 2]
+u2 = [4, 5, None, 4, 5]
+u3 = [1, 2, None, 2, 2]
+
+print('for u1 & u2: ', pearson(u1, u2))
+print('for u1 & u3: ', pearson(u1, u3))
