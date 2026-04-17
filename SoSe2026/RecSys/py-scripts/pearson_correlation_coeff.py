@@ -2,29 +2,31 @@ def pearson(x, y):
     if len(x) != len(y):
         raise Exception('Vector lengths are different.')
 
-    sum_x = 0
-    sum_y = 0
-    ss_x = 0
-    ss_y = 0
+    # Filter out pairs where either is None
+    valid_pairs = [(x[i], y[i]) for i in range(len(x)) if x[i] is not None and y[i] is not None]
+    n = len(valid_pairs)
 
-    prod_sum = 0
+    if n == 0:
+        return 0
 
-    for i in range(len(x)):
-        val_x = x[i] if x[i] is not None else 0
-        val_y = y[i] if y[i] is not None else 0
+    sum_x = sum(p[0] for p in valid_pairs)
+    sum_y = sum(p[1] for p in valid_pairs)
+    ss_x = sum(p[0]**2 for p in valid_pairs)
+    ss_y = sum(p[1]**2 for p in valid_pairs)
+    prod_sum = sum(p[0] * p[1] for p in valid_pairs)
 
-        sum_x += val_x
-        sum_y += val_y
+    nom = (n * prod_sum - sum_x * sum_y)
+    
+    # Calculate variance parts for denominator
+    var_x = n * ss_x - sum_x**2
+    var_y = n * ss_y - sum_y**2
+    
+    denom = (var_x * var_y)**0.5
 
-        ss_x += val_x**2
-        ss_y += val_y**2
+    if denom == 0:
+        return 0  # Handles cases with zero variance
 
-        prod_sum += val_x * val_y
-
-    nom = (len(x)*prod_sum - sum_x*sum_y)
-    denom = ((len(x)*ss_x-sum_x**2)*(len(x)*ss_y-sum_y**2))**0.5
-
-    return nom/denom
+    return nom / denom
 
 
 alpha = [5, 5, 1, 3, 3]
