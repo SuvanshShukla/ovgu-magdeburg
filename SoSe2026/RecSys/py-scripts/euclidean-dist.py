@@ -23,3 +23,12 @@ print('for beta & u1: ', euclidean_dist(beta, u1))
 print('for beta & u2: ', euclidean_dist(beta, u2))
 print('for beta & u3: ', euclidean_dist(beta, u3))
 print('for beta & u4: ', euclidean_dist(beta, u4))
+
+print('---------------Ques 2------------------')
+
+u1 = [1, 3, 5, 1, 4]
+u2 = [4, 3, 5, 1, 2]
+u3 = [3, None, None, None, 3]
+
+print('for u1 & u2: ', euclidean_dist(u1, u2))
+print('for u1 & u3: ', euclidean_dist(u1, u3))
