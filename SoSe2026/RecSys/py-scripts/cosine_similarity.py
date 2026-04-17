@@ -66,3 +66,32 @@ print('for u4 & u2: ', cosine(u4, u2))
 print('for u4 & u3: ', cosine(u4, u3))
 
 print('Min of all: ', min(cosine(u4, u1), cosine(u4, u2), cosine(u4, u3)))
+
+print('---------------Ques 4------------------')
+
+u1 = [5, 5, None, 1, 1]
+u2 = [2, 5, 2, 2, 4]
+u3 = [3, None, 3, 1, 2]
+u4 = [None, 5, 1, 4, None]
+
+print('for u4 & u1: ', cosine(u4, u1))
+print('for u4 & u2: ', cosine(u4, u2))
+print('for u4 & u3: ', cosine(u4, u3))
+
+print('---------------Ques 5------------------')
+
+monkeys = [5, 4, 3, None]
+braveheart = [None, 2, 2, 1]
+titanic = [1, 2, None, 3]
+fight_club = [3, 4, 2, 5]
+the_notebook = [5, 3, 1, None]
+
+print('for 12 Monkeys & braveheart: ', cosine(monkeys, braveheart))
+print('for 12 Monkeys & titanic: ', cosine(monkeys, titanic))
+print('for 12 Monkeys & fight_club: ', cosine(monkeys, fight_club))
+print('for 12 Monkeys & The Notebook: ', cosine(monkeys, the_notebook))
+
+print('for The Notebook & 12 Monkeys: ', cosine(the_notebook, monkeys))
+print('for The Notebook & braveheart: ', cosine(the_notebook, braveheart))
+print('for The Notebook & titanic: ', cosine(the_notebook, titanic))
+print('for The Notebook & fight_club: ', cosine(the_notebook, fight_club))
