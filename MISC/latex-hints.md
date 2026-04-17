@@ -33,25 +33,26 @@ Then use this combo to enter the symbol you want: `Ctrl+k` `{char sequence 1} {c
 For example, I to enter ∆ I did - `Ctrl+k` followed by it's code `DE`. Careful! It is case sensitive.
 Checkout vim related commands here: [[useful-vimnvim-commands#Using non-latex symbols in VIM/nvim]]
 
-| Symobl     | syntax | Output |
-| ---------- | ------ | ------ |
-| Sigma      | \sigma | $\sigma$ |
-| Sum simbol | \sum   | $\sum$ |
-| mew symbol | \mu    | $\mu$ |
-| partial derivative symbol | \partial | $\partial x$ |
-| for all    | \forall | $\forall x$ |
-| infinity   | \infty | $\infty$ |
-| logical And | \wedge | $\wedge$ |
-| logical Or | \vee | $\vee$ |
-| exists     | \exists | $\exists$ |
-| element of/ in | \in | $\in C$ |
-| square root over terms | \sqrt{abc} | $\sqrt{abc}$ |
-| bar over variable | \bar{x} | $\bar{x}$ |
-| upside down triangle | \nabla | $\nabla E$ |
-| vector over letter | \vec{w} | $\vec{w}$ |
-| less than equal to or greater than equal to | \le or \ge | $a \le b \ge c$ |
-| Curly braces     | \lbrace or \rbrace | $\lbrace a + b \rbrace$ |
-| Hat or cap     | \hat  | $\hat{r}$ |
+| Symobl                                      | syntax             | Output                  |
+| ------------------------------------------- | ------------------ | ----------------------- |
+| Sigma                                       | \sigma             | $\sigma$                |
+| Sum simbol                                  | \sum               | $\sum$                  |
+| mew symbol                                  | \mu                | $\mu$                   |
+| partial derivative symbol                   | \partial           | $\partial x$            |
+| for all                                     | \forall            | $\forall x$             |
+| infinity                                    | \infty             | $\infty$                |
+| logical And                                 | \wedge             | $\wedge$                |
+| logical Or                                  | \vee               | $\vee$                  |
+| exists                                      | \exists            | $\exists$               |
+| element of/ in                              | \in                | $\in C$                 |
+| square root over terms                      | \sqrt{abc}         | $\sqrt{abc}$            |
+| bar over variable                           | \bar{x}            | $\bar{x}$               |
+| upside down triangle                        | \nabla             | $\nabla E$              |
+| vector over letter                          | \vec{w}            | $\vec{w}$               |
+| less than equal to or greater than equal to | \le or \ge         | $a \le b \ge c$         |
+| Curly braces                                | \lbrace or \rbrace | $\lbrace a + b \rbrace$ |
+| Hat or arrow above variable                 | \hat               | $\hat{r}$               |
+| Intersection                                | \cap               | $A \cap B$              |
 
 ## Example of using $\sum$
 
