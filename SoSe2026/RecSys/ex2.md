@@ -70,7 +70,7 @@ Calculated cosine similarity values are:
 for u1 & u2:  1.0
 for u1 & u3:  0.7559289460184544
 
-The main drawback of this feature seems to be:
+The main drawback of this feature seems to be: it does not account for differences in rating scales.
 
 ### 2(b)
 
@@ -79,7 +79,7 @@ Calculated Pearson correlation similarity values are:
 for u1 & u2:  1.0
 for u1 & u3:  0.5773502691896258
 
-The main drawback of this feature seems to be:
+The main drawback of this feature seems to be: that Pearson correlation only measures the linear relationship and penalizes a non-linear yet monotonic relationship.
 
 ### 2(c)
 
@@ -90,7 +90,7 @@ for u1 & u3:  2.23606797749979
 
 Observations are:
 
-The common drawback among all these similarity measures are:
+The common drawback among all these similarity measures are: scaling issues
 
 ## Question 3
 
@@ -126,7 +126,7 @@ Movie: Fight Club
 $$
 \begin{align}
 \hat{r_{Fight\ Club, u_4}} = \frac{(3*0.16)+(4*0.36)}{0.16+0.36} \\
-\hat{r_{Fight\ Club, u_4}} = \frac{1.92}{0.52}
+\hat{r_{Fight\ Club, u_4}} = \frac{1.92}{0.52} \\
 \hat{r_{Fight\ Club, u_4}} = 3.692
 \end{align}
 $$
@@ -139,3 +139,29 @@ $$
 \hat{r_{The\ Notebook, u_4}} = 3.0
 \end{align}
 $$
+
+The top two recommendations are: **12 Monkeys & Fight Club**
+
+### 3(b)
+
+To take into account the users' biases/idiosyncrasies during the estimation we would use this formula:
+
+$$
+sim(u,z) = \frac{\sum_{y\in Y_u \cap Y_z}{(r_{yu}-\bar{r_u})(r_{yz}-\bar{r_z})}}
+{\sqrt{\sum_{y \in Y_u \cap Y_z}{(r_{yu}-\bar{r_u})^2}}
+\sqrt{\sum_{y \in Y_u \cap Y_z}{(r_{yz}-\bar{r_z})^2}}}
+$$
+
+where,
+
+$$
+\bar{r_u} = \frac{\sum_{Y_u \cap Y_z}{r_{yu}}}{|Y_u \cap Y_z|}
+$$
+
+I would say that top 2 recommendations stay the same, even when we account for user idiosyncrasies.
+This is because 12 Monkeys is highly rated by all users (other than u4) and the runner up would still be Fight Club.
+
+>[!QUESTION]
+> What would be a logical/formal way to answer this? Like if it was asked in the exam what would I write as the answer?
+
+
