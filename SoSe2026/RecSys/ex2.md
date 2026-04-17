@@ -61,6 +61,8 @@ for beta & u4:  0
 
 ## Question 2
 
+### 2 (a)
+
 Calculated cosine similarity values are:
 
 for u1 & u2:  1.0
@@ -68,7 +70,22 @@ for u1 & u3:  0.7559289460184544
 
 The main drawback of this feature seems to be: 
 
-## Question 3
+### 2(b) 
 
 Calculated Pearson correlation similarity values are:
 
+for u1 & u2:  1.0
+for u1 & u3:  0.5773502691896258
+
+The main drawback of this feature seems to be:
+
+### 2(c)
+
+Calculated Euclidean distance values are:
+
+for u1 & u2:  3.605551275463989
+for u1 & u3:  2.23606797749979
+
+Observations are: 
+
+The common drawback among all these similarity measures are:
