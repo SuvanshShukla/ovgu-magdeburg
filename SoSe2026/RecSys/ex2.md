@@ -88,7 +88,7 @@ Calculated Euclidean distance values are:
 for u1 & u2:  3.605551275463989
 for u1 & u3:  2.23606797749979
 
-Observations are:
+Observations are: The similarity between u1 & u2 was the highest regardless of the similarity function used.
 
 The common drawback among all these similarity measures are: scaling issues
 
