@@ -59,3 +59,16 @@ for beta & u2:  0
 for beta & u3:  0
 for beta & u4:  0
 
+## Question 2
+
+Calculated cosine similarity values are:
+
+for u1 & u2:  1.0
+for u1 & u3:  0.7559289460184544
+
+The main drawback of this feature seems to be: 
+
+## Question 3
+
+Calculated Pearson correlation similarity values are:
+
