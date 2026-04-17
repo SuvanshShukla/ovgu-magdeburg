@@ -199,3 +199,77 @@ $$
 $$
 
 The top-two recommendations are 12 Monkeys & The Notebook
+
+## Question 5
+
+Size of the neighbourhood: 2
+
+Pair-wise cosine similarity values for item-based collaborative filtering are:
+
+- for 12 Monkeys & Braveheart:  0.6599663291074443
+- for 12 Monkeys & Titanic:  0.4913538149119954
+- for 12 Monkeys & Fight Club:  0.7120653320005385
+- for 12 Monkeys & The Notebook:  0.9561828874675149
+
+- for The Notebook & 12 Monkeys:  0.9561828874675149
+- for The Notebook & Braveheart:  0.4507489358552088
+- for The Notebook & Titanic:  0.4969293465978882
+- for The Notebook & Fight Club:  0.6670633740309423
+
+This means the 2 nearest neighbours for 12 Monkeys is The Notebook & Fight Club
+
+And the 2 nearest neighbours for The Notebook is 12 Monkeys & Fight Club
+
+Using these neighbours for calculating recommended ratings for 12 Monkeys:
+
+Rating for movie based on The Notebook
+
+$$
+\begin{align}
+\hat{r_{12\ Monkeys, The Notebook}} = \frac{(5*0.62)+(2*0.74)}{0.62+0.74} \\
+\hat{r_{12\ Monkeys, The Notebook}} = \frac{4.58}{1.36} \\
+\hat{r_{12\ Monkeys, The Notebook}} = 3.36
+\end{align}
+$$
+
+Rating for movie based on Fight Club
+
+$$
+\begin{align}
+\hat{r_{12\ Monkeys, The\ Notebook}} = \frac{(5*0.62)+(2*0.74)}{0.62+0.74} \\
+\hat{r_{12\ Monkeys, The\ Notebook}} = \frac{4.58}{1.36} \\
+\hat{r_{12\ Monkeys, The\ Notebook}} = 3.36
+\end{align}
+$$
+
+Using these neighbours for calculating recommended ratings for The Notebook:
+
+$$
+\begin{align}
+\hat{r_{The\ Notebook, Fight Club}} = \frac{(1*0.62)+(4*0.74)}{0.62+0.74} \\
+\hat{r_{The\ Notebook, Fight Club}} = \frac{3.58}{1.36} \\
+\hat{r_{The\ Notebook, Fight Club}} = 2.63
+\end{align}
+$$
+
+The top-two recommendations are 12 Monkeys & The Notebook
+
+Rating for movie based on 12 Monkeys
+
+$$
+\begin{align}
+\hat{r_{The Notebook, 12\ Monkeys}} = \frac{(5*0.62)+(2*0.74)}{0.62+0.74} \\
+\hat{r_{The Notebook, 12\ Monkeys}} = \frac{4.58}{1.36} \\
+\hat{r_{The Notebook, 12\ Monkeys}} = 3.36
+\end{align}
+$$
+
+Rating for movie based on Fight Club
+
+$$
+\begin{align}
+\hat{r_{The Notebook, Fight Club}} = \frac{(5*0.62)+(2*0.74)}{0.62+0.74} \\
+\hat{r_{The Notebook, Fight Club}} = \frac{4.58}{1.36} \\
+\hat{r_{The Notebook, Fight Club}} = 3.36
+\end{align}
+$$
