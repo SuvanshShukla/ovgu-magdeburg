@@ -89,3 +89,22 @@ for u1 & u3:  2.23606797749979
 Observations are: 
 
 The common drawback among all these similarity measures are:
+
+## Question 3
+
+### 3(a)
+
+Cosine similarity values for all pairs:
+
+- for u4 & u1:  0.16035674514745463
+- for u4 & u2:  0.3614031611621005
+- for u4 & u3:  0.14907119849998599
+- Min of all:  0.14907119849998599 (meaning u3 is least similar)
+
+Now we would calculate the ratings for movies not yet rated by u4 (so 12 Monkeys, Fight Club, The Notebook)
+
+$$
+\hat{r_{iu}} = \frac{\sum_{z \in NN(u,k),r_{iz} \neq NULL}{r_{iz}.sim(u,z)}}{\sum_{z \in NN(u,k),r_{iz} \neq NULL}{sim(u,z)}}
+$$
+
+So for 
