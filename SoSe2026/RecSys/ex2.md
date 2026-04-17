@@ -108,3 +108,33 @@ $$
 $$
 
 So for 
+Now we estimate ratings for the previously unrated movies.
+
+Movie: 12 Monkeys
+
+$$
+\begin{align}
+\hat{r_{12\ Monkeys, u_4}} = \frac{(5*0.16)+(4*0.36)}{0.16+0.36} \\
+\hat{r_{12\ Monkeys, u_4}} = \frac{2.24}{0.52} \\
+\hat{r_{12\ Monkeys, u_4}} = 4.307
+\end{align}
+$$
+
+Movie: Fight Club
+
+$$
+\begin{align}
+\hat{r_{Fight\ Club, u_4}} = \frac{(3*0.16)+(4*0.36)}{0.16+0.36} \\
+\hat{r_{Fight\ Club, u_4}} = \frac{1.92}{0.52}
+\hat{r_{Fight\ Club, u_4}} = 3.692
+\end{align}
+$$
+
+Movie: The Notebook
+
+$$
+\begin{align}
+\hat{r_{The\ Notebook, u_4}} = \frac{(3*0.36)}{0.36} \\
+\hat{r_{The\ Notebook, u_4}} = 3.0
+\end{align}
+$$
