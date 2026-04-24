@@ -17,4 +17,80 @@ The different terms used in the statement relate to basic terms introduced in th
 
 ## Question 2
 
+Conceptual Design: ![er-diagram](./ADBM-Ex1-Q2-ER.drawio.png)
+
+Logical Design (using RM):
+
+```text
+CD(title, label, year)
+track(duration, title)
+artist(name, country, year_of_birth)
+band(name, country, members)
+```
+
+Data definition (using SQL):
+
+```SQL
+CREATE TABLE cd(
+    title VARCHAR(256) PRIMARY KEY,
+    label VARCHAR(200),
+    year INT
+);
+
+CREATE TABLE track(
+    title VARCHAR(200) PRIMARY KEY,
+    duration INT
+);
+
+CREATE TABLE artist(
+    name VARCHAR(200) PRIMARY KEY,
+    country VARCHAR(100),
+    year_of_birth INT
+);
+
+CREATE TABLE band(
+    name VARCHAR(200) PRIMARY KEY,
+    country VARCHAR(100),
+    members VARCHAR(256)
+);
+```
+
+Physical Design (using SQL):
+
+```SQL
+CREATE TABLE artist (
+    name VARCHAR(200) PRIMARY KEY,
+    country VARCHAR(100),
+    year_of_birth INT
+);
+
+CREATE TABLE band (
+    name VARCHAR(200) PRIMARY KEY,
+    country VARCHAR(100),
+    members VARCHAR(256)
+);
+
+CREATE TABLE cd (
+    title VARCHAR(256) PRIMARY KEY,
+    label VARCHAR(200),
+    year INT,
+    artist_name VARCHAR(200),
+    band_name VARCHAR(200),
+    FOREIGN KEY (artist_name) REFERENCES artist(name),
+    FOREIGN KEY (band_name) REFERENCES band(name),
+    
+    CONSTRAINT chk_performer CHECK (
+        (artist_name IS NOT NULL AND band_name IS NULL) OR 
+        (artist_name IS NULL AND band_name IS NOT NULL)
+    )
+);
+
+CREATE TABLE track (
+    song_title VARCHAR(200),
+    cd_title VARCHAR(256),
+    duration INT,
+    PRIMARY KEY (song_title, cd_title),
+    FOREIGN KEY (cd_title) REFERENCES cd(title) ON DELETE CASCADE
+);
+```
 
