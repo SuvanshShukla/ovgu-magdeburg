@@ -94,3 +94,75 @@ CREATE TABLE track (
 );
 ```
 
+Using other models or languages would change the ER diagram dramatically. Especially in the case of No-SQL, there would be no need to such an ER diagram.
+
+The data structures may use inheritance according to my design, a `band` would inherit properties from `artist`. Other things such as a `cd` would contain a `List` of `tracks`, thereby emulating `one-to-many` mapping. Hibernate (via it's annotations) would be used to denote the mappings.
+
+The code for the java implementation would look something like this:
+
+```Java
+import jakarta.persistence.*;
+import java.io.Serializable;
+
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class Performer {
+    @Id
+    private String name;
+
+    private String country;
+
+    // Getters and Setters
+}
+
+@Entity
+public class Artist extends Performer {
+    private Integer yearOfBirth;
+}
+
+@Entity
+public class Band extends Performer {
+    private String members; // Stored as a string per your requirements
+}
+
+@Entity
+public class CD {
+    @Id
+    private String title;
+
+    private String label;
+    private Integer year;
+
+    @ManyToOne
+    @JoinColumn(name = "performer_name")
+    private Performer performer;
+
+    @OneToMany(mappedBy = "cd", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Track> tracks = new ArrayList<>();
+
+    // Getters and Setters
+}
+
+
+// Helper class for the Composite Key
+class TrackId implements Serializable {
+    private String songTitle;
+    private String cd; // Must match the field name in Track class
+}
+
+@Entity
+@IdClass(TrackId.class)
+public class Track {
+    @Id
+    private String songTitle;
+
+    @Id
+    @ManyToOne
+    @JoinColumn(name = "cd_title")
+    private CD cd;
+
+    private Integer duration;
+
+    // Getters and Setters
+}
+```
