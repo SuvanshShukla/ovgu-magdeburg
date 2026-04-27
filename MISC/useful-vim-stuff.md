@@ -150,3 +150,7 @@ Here's how to run the currently in focus python file opened in the currently foc
 ```nvim
 :!python %
 ```
+
+## Re-use last substitution
+
+You write a complex substitution and want to reuse it, just hit the `&` key in normal mode
