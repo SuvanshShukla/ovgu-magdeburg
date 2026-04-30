@@ -36,3 +36,7 @@ Attends(matrNr, id, semeseter, grade)
 
 The following possible integrity constraints can be expressed for them:
 
+- if a Student attends a lecture then his `matrNr` should be present in both `Student` and `Attends` tables
+- every `Lecture` should have at least one Student attending
+- `matrNr` for every `Student` must be unique
+- id for every `Lecture` must be unique
