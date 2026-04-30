@@ -17,7 +17,14 @@ Immatriculation Number: 256245
 
 ### Advantages of logical data independence
 
+- application is unaffected by changes to the schema
+- adding new columns or tables doesn't break the system
+
 ### Advantages of physical data independence
+
+- changing storage location doesn't break the system
+- changing storage platform doesn't break the system
+- distributing the data doesn't affect the system (too much)
 
 ## Question 3
 
