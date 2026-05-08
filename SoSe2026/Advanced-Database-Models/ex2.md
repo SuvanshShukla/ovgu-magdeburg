@@ -1,5 +1,4 @@
-
-# Advanced Database Models Exercise 1
+# Advanced Database Models Exercise 2
 
 Author: Suvansh Shukla
 Immatriculation Number: 256245
