@@ -20,7 +20,7 @@ Yes, `subject` is redundant.
 |    3NF      |  ❌      | Because the schema is not in 2NF |
 
 > [!Question]
-> If `subject` duplicate values for different `threadID` then does it mean that 2NF is not satisfied?
+> If `subject` has duplicate values for different `threadID` then does it mean that 2NF is not satisfied?
 
 ## Question 2
 
@@ -55,6 +55,7 @@ Yes, `subject` is redundant.
 
 ```relational_algebra
 π(threadID, subject, userID, nickname) σ(groupname='kiddies')(thread ⨝ (threadID = threadID) ⨝  membership ⨝ (groupID = groupID) group)```
+```
 
 ### Q2 6
 
@@ -68,6 +69,8 @@ Yes, `subject` is redundant.
 π(userID, nickname, name, interests) σ(messageID=NULL)(message ⨝ (userID=userID) user))
 ```
 
+OR possibly,
+
 ```relational_algebra
 π(userID)(user) \ π(userID)(message)
 ```
@@ -78,4 +81,4 @@ Yes, `subject` is redundant.
 ### Q2 8
 
 ```relational_algebra
-
+```
