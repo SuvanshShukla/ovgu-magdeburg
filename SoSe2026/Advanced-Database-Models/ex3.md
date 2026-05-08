@@ -19,6 +19,9 @@ Yes, `subject` is redundant.
 |    2NF      |  ❌      | Because in `subject` in `thread` table can be same for multiple `threadID` values, therefore not dependent on the PK |
 |    3NF      |  ❌      | Because the schema is not in 2NF |
 
+> [!Question]
+> If `subject` duplicate values for different `threadID` then does it mean that 2NF is not satisfied?
+
 ## Question 2
 
 ### Q2 1
