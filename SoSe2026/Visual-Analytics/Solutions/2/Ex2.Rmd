@@ -1,0 +1,136 @@
+---
+title: "Exercise Sheet 2"
+fontsize: 11pt
+header-includes: \usepackage[german]{babel}
+output:
+  html_document: default
+  pdf_document:
+    highlight: tango
+fig_caption: yes
+---
+
+# Exercise 2 Visual Analytics
+
+
+
+```{r}
+# Load libraries (they need to be installed on the first run via install.packages)
+# You do not need to use these libraries, though
+library(RSQLite)
+library(stringr)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(forcats)
+library(lubridate)
+
+# connect to database
+con <- dbConnect(SQLite(), dbname = "EuropeanSoccer.sqlite")
+
+# table queries
+match <- as_tibble(dbGetQuery(con,"SELECT * FROM Match"))
+league <- as_tibble(dbGetQuery(con,"SELECT * FROM League"))
+```
+
+1. The first leagues of Spain, England, Germany and Italy are considered the four most attractive football leagues in Europe. In which of the four leagues were the most or the fewest goals scored per game on average? 
+
+```{r}
+task1_sql <- dbGetQuery(con, "
+    SELECT L.name, COUNT(M.match_api_id) as match_count
+    FROM League L
+    LEFT JOIN Match M ON L.id = M.league_id
+    GROUP BY L.name
+    ORDER BY match_count DESC
+")
+print(task1_sql)
+```
+
+2. In this task, we refer again to the four most attractive European leagues from Task 1. Compare the average and the standard deviation of goals scored per match between the four most attractive European leagues on one side and the remaining leagues on the other side.
+
+```{r}
+scores_top_4 <- dbGetQuery(con, "select (home_team_goal + away_team_goal) as total_goals 
+from match where league_id in (1729, 4769, 21518, 10257)")
+
+scores_others <- dbGetQuery(con, "select (home_team_goal + away_team_goal) as total_goals 
+from match where league_id not in (1729, 4769, 21518, 10257)")
+
+avg_top_4 <- mean(scores_top_4$total_goals)
+sd_top_4  <- sd(scores_top_4$total_goals)
+
+avg_others <- mean(scores_others$total_goals)
+sd_others <- sd(scores_others$total_goals)
+
+print(avg_top_4)
+print(sd_top_4)
+print(avg_others)
+print(sd_others)
+```
+
+3. Is there really a home advantage? Use a box plot to show the number of goals scored by home and away teams.
+
+```{r}
+raw_goals <- dbGetQuery(con, "select home_team_goal, away_team_goal from match")
+
+plot_data <- raw_goals %>%
+  pivot_longer(cols = everything(), 
+               names_to = "Location", 
+               values_to = "Goals") %>%
+  mutate(Location = if_else(Location == "home_team_goal", "Home", "Away"))
+
+ggplot(plot_data, aes(x = Location, y = Goals, fill = Location)) +
+  geom_boxplot(alpha = 0.7) +
+  labs(title = "Graph",
+       y = "Number of Goals") +
+  theme_minimal()
+```
+
+4. _"All soccer players are fair-weather players!"_ Check the assertion with a line chart: Do on average more goals fall per game in the summer months than in the rest of the year?
+
+
+```{r}
+goals_and_dates <- dbGetQuery(con, "select home_team_goal, away_team_goal, date 
+from match")
+
+monthly_avg <- goals_and_dates %>%
+  mutate(date = as_date(date), month_number = month(date),
+         total_goals = home_team_goal + away_team_goal) %>%
+  group_by(month_number) %>%
+  summarise(avg_goals=mean(total_goals, na.rm = TRUE))
+
+ggplot(monthly_avg, aes(x = month_number, y = avg_goals)) +
+  geom_line(color = "green", size = 1) +
+  geom_point(color = "red") +
+  scale_x_continuous(breaks = 1:12, labels = month.abb) + # Set X-axis to Month names
+  labs(
+    title = "Fair-Weather Players? Average Goals per Month",
+    x = "Month",
+    y = "Average Goals per Match"
+  ) +
+  theme_minimal()
+```
+
+5. Use an estimated density function curve AND a QQ-Plot to check whether the `home_team_possession` variable is (approximately) normally distributed.
+
+```{r}
+ggplot(match, aes(x = home_team_possession)) +
+  geom_density(fill = "steelblue", alpha = 0.4) +
+  stat_function(fun = dnorm, 
+                args = list(mean = mean(match$home_team_possession, na.rm = TRUE), 
+                            sd = sd(match$home_team_possession, na.rm = TRUE)), 
+                color = "red", size = 1) +
+  labs(title = "Task 5: Density Plot of Home Team Possession",
+       x = "Home Team Possession",
+       y = "Density") +
+  theme_minimal()
+
+ggplot(match, aes(sample = home_team_possession)) +
+  stat_qq() +
+  stat_qq_line(color = "red") +
+  labs(title = "Task 5: QQ-Plot of Home Team Possession",
+       x = "Theoretical Quantiles",
+       y = "Sample Quantiles") +
+  theme_minimal()
+
+# data seems normal because the QQ points follow the diagonal line
+```
+
