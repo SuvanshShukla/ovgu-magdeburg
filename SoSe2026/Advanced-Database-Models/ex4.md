@@ -22,7 +22,7 @@ Immatriculation Number: 256245
 ### Q2 (a)
 
 ```RM
-artist(ID, name)
+artist(ID, name, influenced_by, influences)
 singer(s_id, artist_id, sex)
 song_writer(sw_id, artist_id, genre)
 singer_song_writer(s_id, sw_id)
