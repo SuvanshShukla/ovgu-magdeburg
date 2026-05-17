@@ -19,4 +19,12 @@ Immatriculation Number: 256245
 
 ## Question 2 Conceptual Design to Logical Design
 
+### Q2 (a)
 
+```RM
+artist(ID, name)
+singer(s_id, artist_id, sex)
+song_writer(sw_id, artist_id, genre)
+singer_song_writer(s_id, sw_id)
+songs(id, title, duration, s_id, sw_id)
+```
