@@ -27,3 +27,11 @@ np.arange(3,7)
 np.arange(3,7,2)
 ```
 
+## What we want to do
+
+1. Establish a baseline (what you already have)
+2. Add Adam → measure
+3. Add LR scheduler → measure
+4. Add augmentation → measure
+5. Add Dropout/BatchNorm → measure
+
