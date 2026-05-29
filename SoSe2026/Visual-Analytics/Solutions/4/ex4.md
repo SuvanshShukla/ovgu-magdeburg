@@ -30,3 +30,5 @@ The two visual methods to determine an appropriate cluster numbers are:
 [^1]: https://scikit-learn.org/stable/modules/clustering.html#dbscan
 [^2]: https://en.wikipedia.org/wiki/DBSCAN#:~:text=Complexity,-%5Bedit
 [^3]: https://en.wikipedia.org/wiki/Hierarchical_clustering#:~:text=Complexity,-%5Bedit
+[^4]: https://en.wikipedia.org/wiki/Elbow_method_(clustering)
+[^5]: https://thecluelessdatascientist.com/2024/03/27/how-many-clusters/#:~:text=Silhouette%20Score
