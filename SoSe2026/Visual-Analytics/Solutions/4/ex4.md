@@ -35,6 +35,18 @@ RIS is a subspace ranking algorithm that uses a quality criterion to rate the in
 
 SURFING is a subspace ranking algorithm that does not rely on a global density threshold. It computes the interstingness of a subspace based on the distribution of the k-nearest neighbors of all data points in the corresponding projection. An efficient, bottom-up subspace expansion heuristics ensures that less interesting subspaces are not generated for examination.[^7]
 
+## Question 4
+
+### ClustNails
+
+The system takes multi-dimensional data as input, clusters the objects using a user-selected subspace clustering algorithm, and displays the clustering result
+in a multi-view user interface.[^8]
+
+### SubVis
+
+SubVIS enables the user to compare individual clusters that are detected by any subspace clustering algorithm. To this end, SubVIS analyzes every 
+subspace cluster independent of its association to a specific clustering structure or algorithm.[^9]
+
 ---
 
 [^1]: https://scikit-learn.org/stable/modules/clustering.html#dbscan
@@ -44,3 +56,5 @@ SURFING is a subspace ranking algorithm that does not rely on a global density t
 [^5]: https://thecluelessdatascientist.com/2024/03/27/how-many-clusters/#:~:text=Silhouette%20Score
 [^6]: https://www2.dbs.ifi.lmu.de/cms/Clustering_High-dimensional_Data.html#:~:text=RIS%20%28Ranking%20Interesting%20Subspaces
 [^7]: https://www2.dbs.ifi.lmu.de/cms/Clustering_High-dimensional_Data.html#:~:text=SURFING%20%28SUbspaces%20Relevant%20For%20clusterING
+[^8]: https://bib.dbvis.de/uploadedFiles/TSTClustnailsprintedVersionp419428.pdf
+[^9]: https://visvar.github.io/assets/pdf/hund2016brain.pdf
