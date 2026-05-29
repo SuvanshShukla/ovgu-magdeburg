@@ -49,7 +49,7 @@ subspace cluster independent of its association to a specific clustering structu
 
 ## Question 5
 
-The three measures to evaluate the quality of clustering are:
+The three measures to evaluate the quality of clustering are[^10]:
 
 - Dimension Non-Redundancy. A useful subspace clustering algorithm emphasizes distinctive dimension/membership characteristics and avoids subspace clusters
 with highly similar subsets of dimensions.
@@ -67,3 +67,4 @@ with highly similar subsets of dimensions.
 [^7]: https://www2.dbs.ifi.lmu.de/cms/Clustering_High-dimensional_Data.html#:~:text=SURFING%20%28SUbspaces%20Relevant%20For%20clusterING
 [^8]: https://bib.dbvis.de/uploadedFiles/TSTClustnailsprintedVersionp419428.pdf
 [^9]: https://visvar.github.io/assets/pdf/hund2016brain.pdf
+[^10]: https://bib.dbvis.de/uploadedFiles/VisualQualityAssessment.pdf
