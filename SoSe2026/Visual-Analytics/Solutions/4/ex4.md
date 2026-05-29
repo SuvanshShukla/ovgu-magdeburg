@@ -64,6 +64,14 @@ Three clustering visualization techniques are[^11]:
 2. Heat Maps: These are excellent for displaying the density or intensity of variables, allowing quick identification of high-concentration areas. A heat map of website traffic can show the most frequented sections.
 3. Tree Maps: Useful for hierarchical data, tree maps can illustrate proportions within datasets, such as market share distribution among competitors.
 
+## Question 7
+
+Three outlier detection techniques are:
+
+1. ODAR (Outlier Detection Approach via cluster Recognition): ODAR maps a dataset of arbitrary dimensionality into a two-dimensional feature space, where normal objects and outliers are divided into two clusters. In this way, any clustering algorithm can detect outliers by identifying the clusters in ODAR space with its own cluster identification ability.[^12]
+2. Use outlier clustering algorithms like DBSCAN. They usually peel off outliers from identified clusters, or assign every point to a cluster and so all points that are a part of an "abnormal" cluster are designated outliers.
+3. Use Nearest Neighbours (density-based approach): where isolated and faraway instances are designated as outliers.
+
 ---
 
 [^1]: https://scikit-learn.org/stable/modules/clustering.html#dbscan
@@ -77,3 +85,4 @@ Three clustering visualization techniques are[^11]:
 [^9]: https://visvar.github.io/assets/pdf/hund2016brain.pdf
 [^10]: https://bib.dbvis.de/uploadedFiles/VisualQualityAssessment.pdf
 [^11]: https://fastercapital.com/content/Visualization-Techniques--Visual-Clustering---The-Art-of-Grouping--Visual-Clustering-Techniques.html#:~:text=4%2E%20Choosing%20the%20Right%20Visualization%20Method
+[^12]: https://arxiv.org/html/2412.05669v1
