@@ -20,6 +20,11 @@ Matriculation Number: 256245
 
 ## Question 2
 
+The two visual methods to determine an appropriate cluster numbers are:
+
+1. Elbow method: This involves running the clustering algorithm multiple number of times and plotting the `number of clusters` in x-axis and `SSE` in y-axis. Then choosing an appropriate (usually the least) number of clusters vs the SSE for that clustering.[^4]
+2. Silhouette Score: quantifies how well each data point fits into its assigned cluster compared to other clusters. The optimal number of clusters maximises the average silhouette score across all data points.
+
 ---
 
 [^1]: https://scikit-learn.org/stable/modules/clustering.html#dbscan
