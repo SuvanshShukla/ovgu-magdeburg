@@ -47,6 +47,15 @@ in a multi-view user interface.[^8]
 SubVIS enables the user to compare individual clusters that are detected by any subspace clustering algorithm. To this end, SubVIS analyzes every 
 subspace cluster independent of its association to a specific clustering structure or algorithm.[^9]
 
+## Question 5
+
+The three measures to evaluate the quality of clustering are:
+
+- Dimension Non-Redundancy. A useful subspace clustering algorithm emphasizes distinctive dimension/membership characteristics and avoids subspace clusters
+with highly similar subsets of dimensions.
+- Object coverage as the proportion of objects and dimension coverage as the proportion of dimensions of the datasets which are part of at least one subspace cluster.
+- Cluster Compactness: Objects belonging to a cluster need to be similar in all dimensions of their respective subspace. Non-compact clusters represent dependencies between the cluster members which are not very strong.
+
 ---
 
 [^1]: https://scikit-learn.org/stable/modules/clustering.html#dbscan
