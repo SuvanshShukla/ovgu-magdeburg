@@ -31,6 +31,10 @@ The two visual methods to determine an appropriate cluster numbers are:
 
 RIS is a subspace ranking algorithm that uses a quality criterion to rate the interestingness of subspaces. This criterion is based on the monotonicity of core points which are the central concept of the density-based clustering notion of DBSCAN. An Apriori-like subspace generation method (similar to SUBCLU) is used to compute all relevant subspaces and rank them by interestingness. The clusters can be computed in the generated subspaces using any clustering method of choice. [^6]
 
+### SURFING (SUbspaces Relevant For clusterING)
+
+SURFING is a subspace ranking algorithm that does not rely on a global density threshold. It computes the interstingness of a subspace based on the distribution of the k-nearest neighbors of all data points in the corresponding projection. An efficient, bottom-up subspace expansion heuristics ensures that less interesting subspaces are not generated for examination.[^7]
+
 ---
 
 [^1]: https://scikit-learn.org/stable/modules/clustering.html#dbscan
@@ -39,3 +43,4 @@ RIS is a subspace ranking algorithm that uses a quality criterion to rate the in
 [^4]: https://en.wikipedia.org/wiki/Elbow_method_(clustering)
 [^5]: https://thecluelessdatascientist.com/2024/03/27/how-many-clusters/#:~:text=Silhouette%20Score
 [^6]: https://www2.dbs.ifi.lmu.de/cms/Clustering_High-dimensional_Data.html#:~:text=RIS%20%28Ranking%20Interesting%20Subspaces
+[^7]: https://www2.dbs.ifi.lmu.de/cms/Clustering_High-dimensional_Data.html#:~:text=SURFING%20%28SUbspaces%20Relevant%20For%20clusterING
