@@ -25,6 +25,12 @@ The two visual methods to determine an appropriate cluster numbers are:
 1. Elbow method: This involves running the clustering algorithm multiple number of times and plotting the `number of clusters` in x-axis and `SSE` in y-axis. Then choosing an appropriate (usually the least) number of clusters vs the SSE for that clustering.[^4]
 2. Silhouette Score: quantifies how well each data point fits into its assigned cluster compared to other clusters. The optimal number of clusters maximises the average silhouette score across all data points.
 
+## Question 3
+
+### RIS (Ranking Interesting Subspaces)
+
+RIS is a subspace ranking algorithm that uses a quality criterion to rate the interestingness of subspaces. This criterion is based on the monotonicity of core points which are the central concept of the density-based clustering notion of DBSCAN. An Apriori-like subspace generation method (similar to SUBCLU) is used to compute all relevant subspaces and rank them by interestingness. The clusters can be computed in the generated subspaces using any clustering method of choice. [^6]
+
 ---
 
 [^1]: https://scikit-learn.org/stable/modules/clustering.html#dbscan
@@ -32,3 +38,4 @@ The two visual methods to determine an appropriate cluster numbers are:
 [^3]: https://en.wikipedia.org/wiki/Hierarchical_clustering#:~:text=Complexity,-%5Bedit
 [^4]: https://en.wikipedia.org/wiki/Elbow_method_(clustering)
 [^5]: https://thecluelessdatascientist.com/2024/03/27/how-many-clusters/#:~:text=Silhouette%20Score
+[^6]: https://www2.dbs.ifi.lmu.de/cms/Clustering_High-dimensional_Data.html#:~:text=RIS%20%28Ranking%20Interesting%20Subspaces
