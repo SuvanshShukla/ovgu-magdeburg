@@ -56,6 +56,14 @@ with highly similar subsets of dimensions.
 - Object coverage as the proportion of objects and dimension coverage as the proportion of dimensions of the datasets which are part of at least one subspace cluster.
 - Cluster Compactness: Objects belonging to a cluster need to be similar in all dimensions of their respective subspace. Non-compact clusters represent dependencies between the cluster members which are not very strong.
 
+## Question 6
+
+Three clustering visualization techniques are[^11]:
+
+1. Scatter Plots: Ideal for showcasing the distribution and relationship between two variables. For instance, plotting customer income against expenditure can reveal clusters of spending habits.
+2. Heat Maps: These are excellent for displaying the density or intensity of variables, allowing quick identification of high-concentration areas. A heat map of website traffic can show the most frequented sections.
+3. Tree Maps: Useful for hierarchical data, tree maps can illustrate proportions within datasets, such as market share distribution among competitors.
+
 ---
 
 [^1]: https://scikit-learn.org/stable/modules/clustering.html#dbscan
@@ -68,3 +76,4 @@ with highly similar subsets of dimensions.
 [^8]: https://bib.dbvis.de/uploadedFiles/TSTClustnailsprintedVersionp419428.pdf
 [^9]: https://visvar.github.io/assets/pdf/hund2016brain.pdf
 [^10]: https://bib.dbvis.de/uploadedFiles/VisualQualityAssessment.pdf
+[^11]: https://fastercapital.com/content/Visualization-Techniques--Visual-Clustering---The-Art-of-Grouping--Visual-Clustering-Techniques.html#:~:text=4%2E%20Choosing%20the%20Right%20Visualization%20Method
