@@ -53,7 +53,7 @@ class ResidualBlockTBD(nn.Module):
 
     def forward(self,
                 inputs: torch.Tensor) -> torch.Tensor:
-        return self.activation(self.norm(self.conv2(self.conv1(inputs))))
+        return self.activation(self.norm(self.conv2(self.norm(self.conv1(inputs)))))
 
 
 class ResNetLevelTBD(nn.Module):
