@@ -46,10 +46,12 @@ class ResidualBlockTBD(nn.Module):
         super().__init__()
         self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size, stride,
                               bias=False, padding="same", padding_mode=padding_mode)
-        self.conv2 = nn.Conv2d(in_channels, out_channels, kernel_size, stride=1,
+        self.norm1 = nn.BatchNorm2d(out_channels)
+        self.activation1 = activation()
+        self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size, stride=1,
                               bias=False, padding="same", padding_mode=padding_mode)
-        self.norm = nn.BatchNorm2d(out_channels)
-        self.activation = activation()
+        self.norm2 = nn.BatchNorm2d(out_channels)
+        self.activation2 = activation()
 
     def forward(self,
                 inputs: torch.Tensor) -> torch.Tensor:
