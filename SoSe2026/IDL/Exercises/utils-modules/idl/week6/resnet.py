@@ -46,7 +46,7 @@ class ResidualBlockTBD(nn.Module):
         super().__init__()
         self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size, stride,
                               bias=False, padding="same", padding_mode=padding_mode)
-        self.conv2 = nn.Conv2d(in_channels, out_channels, kernel_size, stride,
+        self.conv2 = nn.Conv2d(in_channels, out_channels, kernel_size, stride=1,
                               bias=False, padding="same", padding_mode=padding_mode)
         self.norm = nn.BatchNorm2d(out_channels)
         self.activation = activation()
