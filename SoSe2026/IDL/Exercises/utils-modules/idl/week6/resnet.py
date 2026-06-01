@@ -130,7 +130,7 @@ class ResNetTBD(nn.Module):
         for _ in range(n_levels):
             self.body.append(ResNetLevelTBD(layers_per_level // 2, previous_filters, current_filters,
                                             kernel_size,
-                                            stride if _ == 0 else 1,
+                                            stride if _ != 0 else 1,
                                             activation, **kwargs))
             previous_filters = current_filters
             current_filters *= 2
