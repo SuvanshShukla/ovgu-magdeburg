@@ -159,4 +159,6 @@ class ResNetTBD(nn.Module):
 
     def forward(self,
                 inputs: torch.Tensor) -> torch.Tensor:
-        return self.head(self.body(self.conv(inputs)))
+        output = self.activation(self.norm(self.conv(inputs)))
+        output = self.body(output)
+        return self.head(output)
