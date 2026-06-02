@@ -60,10 +60,13 @@ class ResidualBlockTBD(nn.Module):
             )
         else:
             self.shortcut = nn.Identity()
+
     def forward(self,
                 inputs: torch.Tensor) -> torch.Tensor:
-        layer1 = self.activation1(self.norm1(self.conv1(inputs)))
-        return self.activation2(self.norm2(self.conv2(layer1)))
+        out = self.activation1(self.norm1(self.conv1(inputs)))
+        out = self.norm2(self.conv2(out))
+        out += self.shortcut(inputs)
+        return self.activation2(out)
 
 
 class ResNetLevelTBD(nn.Module):
