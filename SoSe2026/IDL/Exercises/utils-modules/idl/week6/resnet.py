@@ -44,15 +44,26 @@ class ResidualBlockTBD(nn.Module):
             padding_mode: What kind of padding to use at the edges; see Conv2d docs.
         """
         super().__init__()
+        bottleneck_channels = out_channels // 4
         padding = kernel_size // 2
-        self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size, stride,
-                              bias=False, padding=padding padding_mode=padding_mode)
-        self.norm1 = nn.BatchNorm2d(out_channels)
+
+        # Layer 1
+        self.conv1 = nn.Conv2d(in_channels, bottleneck_channels, kernel_size, stride,
+                              bias=False, padding=0, padding_mode=padding_mode)
+        self.norm1 = nn.BatchNorm2d(bottleneck_channels)
         self.activation1 = activation()
-        self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size, stride=1,
+
+        # Layer 2
+        self.conv2 = nn.Conv2d(bottleneck_channels, bottleneck_channels, kernel_size, stride=1,
                               bias=False, padding=padding padding_mode=padding_mode)
-        self.norm2 = nn.BatchNorm2d(out_channels)
+        self.norm2 = nn.BatchNorm2d(bottleneck_channels)
         self.activation2 = activation()
+        
+        # Layer 3
+        self.conv3 = nn.Conv2d(bottleneck_channels, out_channels, kernel_size=1, stride=1, 
+                               bias=False, padding=padding, padding_mode=padding_mode)
+        self.norm3 = nn.BatchNorm2d(out_channels)
+        self.activation3 = activation()
 
         if stride != 1 or in_channels != out_channels:
             self.shortcut = nn.Sequential(
