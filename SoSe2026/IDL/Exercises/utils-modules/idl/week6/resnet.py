@@ -135,10 +135,13 @@ class ResNetTBD(nn.Module):
             kwargs: Further arguments to ConvLayer, e.g. padding_mode.
         """
         super().__init__()
-        self.conv = nn.Conv2d(in_channels, base_channels, kernel_size, padding=1)
+        self.conv = nn.Conv2d(in_channels, base_channels, kernel_size=3, padding=1, bias=False)
+        self.norm = nn.BatchNorm2d(base_channels)
+        self.activation = activation()
+
         self.body = nn.Sequential()
         current_filters = base_channels
-        previous_filters = in_channels
+        previous_filters = base_channels
         
         for _ in range(n_levels):
             self.body.append(ResNetLevelTBD(layers_per_level // 2, previous_filters, current_filters,
