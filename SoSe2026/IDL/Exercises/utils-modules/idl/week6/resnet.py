@@ -53,6 +53,13 @@ class ResidualBlockTBD(nn.Module):
         self.norm2 = nn.BatchNorm2d(out_channels)
         self.activation2 = activation()
 
+        if stride != 1 or in_channels != out_channels:
+            self.shortcut = nn.Sequential(
+                nn.Conv2d(in_channels, out_channels, kernel_size=1, stride=stride, bias=False),
+                nn.BatchNorm2d(out_channels)
+            )
+        else:
+            self.shortcut = nn.Identity()
     def forward(self,
                 inputs: torch.Tensor) -> torch.Tensor:
         layer1 = self.activation1(self.norm1(self.conv1(inputs)))
