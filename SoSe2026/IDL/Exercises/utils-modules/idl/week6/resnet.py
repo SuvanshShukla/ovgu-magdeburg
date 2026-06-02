@@ -44,12 +44,13 @@ class ResidualBlockTBD(nn.Module):
             padding_mode: What kind of padding to use at the edges; see Conv2d docs.
         """
         super().__init__()
+        padding = kernel_size // 2
         self.conv1 = nn.Conv2d(in_channels, out_channels, kernel_size, stride,
-                              bias=False, padding="same", padding_mode=padding_mode)
+                              bias=False, padding=padding padding_mode=padding_mode)
         self.norm1 = nn.BatchNorm2d(out_channels)
         self.activation1 = activation()
         self.conv2 = nn.Conv2d(out_channels, out_channels, kernel_size, stride=1,
-                              bias=False, padding="same", padding_mode=padding_mode)
+                              bias=False, padding=padding padding_mode=padding_mode)
         self.norm2 = nn.BatchNorm2d(out_channels)
         self.activation2 = activation()
 
