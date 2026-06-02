@@ -150,7 +150,8 @@ class ResNetTBD(nn.Module):
                                             stride if _ != 0 else 1,
                                             activation, **kwargs))
             previous_filters = current_filters
-            current_filters *= 2
+            if _ != 0 or n_levels == 1:
+                current_filters = min(current_filters * 2, channel_max)
             if current_filters > channel_max:
                 current_filters = channel_max
 
