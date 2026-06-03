@@ -106,7 +106,7 @@ class ResNetLevelTBD(nn.Module):
         self.layers = nn.Sequential()
         for ind in range(n_layers):
             self.layers.append(ResidualBlockTBD(in_channels if ind == 0 else out_channels, out_channels, kernel_size,
-                                                stride if ind== 0 else 1, activation, **kwargs))
+                                                stride if ind == 0 else 1, activation, **kwargs))
 
     def forward(self,
                 inputs: torch.Tensor) -> torch.Tensor:
