@@ -124,6 +124,8 @@ class ResNetTBD(nn.Module):
                  stride: int,
                  activation: type[nn.Module] = nn.Mish,
                  channel_max: int = 512,
+                 n_fc_layers: int = 0,
+                 fc_units: int = 0,
                  **kwargs):
         """Wrapper for a full CNN with multiple "levels" and a final classification "head".
         
