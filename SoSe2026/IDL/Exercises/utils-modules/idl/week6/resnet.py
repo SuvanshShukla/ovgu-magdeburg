@@ -7,7 +7,7 @@ class HiddenLinear(nn.Module):
                  out_units: int,
                  activation: type[nn.Module] = nn.Mish):
         """Fully connected layer with batchnorm and activation function.
-        
+
         Parameters:
             out_units: Number of output units. Note that input units does not need to be specified due to usage of
                        LazyLinear.
@@ -48,20 +48,20 @@ class ResidualBlockTBD(nn.Module):
         padding = kernel_size // 2
 
         # Layer 1
-        self.conv1 = nn.Conv2d(in_channels, bottleneck_channels, kernel_size, stride,
+        self.conv1 = nn.Conv2d(in_channels, bottleneck_channels, kernel_size=1, stride=1,
                               bias=False, padding=0, padding_mode=padding_mode)
         self.norm1 = nn.BatchNorm2d(bottleneck_channels)
         self.activation1 = activation()
 
         # Layer 2
-        self.conv2 = nn.Conv2d(bottleneck_channels, bottleneck_channels, kernel_size, stride=1,
-                              bias=False, padding=padding padding_mode=padding_mode)
+        self.conv2 = nn.Conv2d(bottleneck_channels, bottleneck_channels, kernel_size, stride=stride,
+                              bias=False, padding=padding, padding_mode=padding_mode)
         self.norm2 = nn.BatchNorm2d(bottleneck_channels)
         self.activation2 = activation()
         
         # Layer 3
-        self.conv3 = nn.Conv2d(bottleneck_channels, out_channels, kernel_size=1, stride=1, 
-                               bias=False, padding=padding, padding_mode=padding_mode)
+        self.conv3 = nn.Conv2d(bottleneck_channels, out_channels, kernel_size=1, stride=1,
+                               bias=False, padding=0, padding_mode=padding_mode)
         self.norm3 = nn.BatchNorm2d(out_channels)
         self.activation3 = activation()
 
