@@ -54,3 +54,4 @@ The basic problem that should be solved when visualizing biclusters is their **o
 ## References
 
 [^1]: Eduardo N Castanho, Helena Aidos, Sara C Madeira, Biclustering data analysis: a comprehensive survey, Briefings in Bioinformatics, Volume 25, Issue 4, July 2024, bbae342, https://doi.org/10.1093/bib/bbae342
+[^2]: Aouabed, H., Elloumi, M. & Santamaría, R. (2021). An evaluation study of biclusters visualization techniques of gene expression data. Journal of Integrative Bioinformatics, 18(4), 20210019. https://doi.org/10.1515/jib-2021-0019
