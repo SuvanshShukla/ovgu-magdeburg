@@ -58,6 +58,12 @@ Scatter plots can be used for the following[^3]:
 3. Create a time series plot with irregular time-dependent data.
 4. Evaluate the fit of a regression model.
 
+## Question 4
+
+When we have lots of data points to plot, this can run into the issue of overplotting. Overplotting is the case where data points overlap to a degree where we have difficulty seeing relationships between points and variables. It can be difficult to tell how densely-packed data points are when many of them are in a small area.[^4]
+
+There are a few common ways to alleviate this issue. One alternative is to sample only a subset of data points: a random selection of points should still give the general idea of the patterns in the full data. We can also change the form of the dots, adding transparency to allow for overlaps to be visible, or reducing point size so that fewer overlaps occur. As a third option, we might even choose a different chart type like the heatmap, where color indicates the number of points in each bin. Heatmaps in this use case are also known as 2-d histograms.[^4]
+
 ---
 
 ## References
