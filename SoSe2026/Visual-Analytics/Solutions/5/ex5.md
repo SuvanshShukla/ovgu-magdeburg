@@ -64,6 +64,14 @@ When we have lots of data points to plot, this can run into the issue of overplo
 
 There are a few common ways to alleviate this issue. One alternative is to sample only a subset of data points: a random selection of points should still give the general idea of the patterns in the full data. We can also change the form of the dots, adding transparency to allow for overlaps to be visible, or reducing point size so that fewer overlaps occur. As a third option, we might even choose a different chart type like the heatmap, where color indicates the number of points in each bin. Heatmaps in this use case are also known as 2-d histograms.[^4]
 
+## Question 5
+
+The following are some advanced scatterplot representations and what they solve[^5]:
+
+1. Color encoding: helps for distinguishing between two or more sets of plotted data.
+2. Use a trend line: helps estimate relationship between two variables
+3. 3D scatter: render data in three dimensions to include a third variable for the data points
+
 ---
 
 ## References
