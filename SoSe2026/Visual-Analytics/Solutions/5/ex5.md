@@ -64,3 +64,4 @@ Scatter plots can be used for the following[^3]:
 
 [^1]: Eduardo N Castanho, Helena Aidos, Sara C Madeira, Biclustering data analysis: a comprehensive survey, Briefings in Bioinformatics, Volume 25, Issue 4, July 2024, bbae342, https://doi.org/10.1093/bib/bbae342
 [^2]: Aouabed, H., Elloumi, M. & Santamaría, R. (2021). An evaluation study of biclusters visualization techniques of gene expression data. Journal of Integrative Bioinformatics, 18(4), 20210019. https://doi.org/10.1515/jib-2021-0019
+[^3]: https://statisticsbyjim.com/graphs/scatterplots/#:~:text=Use%20scatterplots%20to%20assess%20the%20following%20features%20of%20your%20dataset
