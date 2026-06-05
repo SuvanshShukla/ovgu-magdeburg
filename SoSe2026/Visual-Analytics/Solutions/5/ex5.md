@@ -80,3 +80,4 @@ The following are some advanced scatterplot representations and what they solve[
 [^2]: Aouabed, H., Elloumi, M. & Santamaría, R. (2021). An evaluation study of biclusters visualization techniques of gene expression data. Journal of Integrative Bioinformatics, 18(4), 20210019. https://doi.org/10.1515/jib-2021-0019
 [^3]: https://statisticsbyjim.com/graphs/scatterplots/#:~:text=Use%20scatterplots%20to%20assess%20the%20following%20features%20of%20your%20dataset
 [^4]: https://www.atlassian.com/data/charts/what-is-a-scatter-plot#:~:text=Overplotting
+[^5]: https://inforiver.com/insights/visualizing-scatterplot-charts-a-comprehensive-guide/
