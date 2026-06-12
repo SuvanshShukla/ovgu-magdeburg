@@ -1,0 +1,137 @@
+---
+title: "ex_6_soln"
+output: html_document
+date: "2026-06-11"
+author: "Suvansh Shukla"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Question 1
+
+```{r cars}
+library(tidyverse)
+library(flexclust)
+library(biclust)
+library(reshape)
+library(ggplot2) 
+library(GGally)
+library(hexbin)
+
+# get girth, height & volume from default tree dataset
+h <- trees$Height
+g <- trees$Girth
+v <- trees$Volume
+
+plot(g, h, main="Girth vs Height", xlab="Girth", ylab="Height")
+plot(g, v, main="Girth vs Volume", xlab="Girth", ylab="Volume")
+plot(h, v, main="Height vs Volume", xlab="Height", ylab="Volume")
+```
+
+From the scatter plots, it seems pretty clear that "Girth" and "Volume" have some correlation.
+
+```{r}
+ggplot(trees, aes(x = Girth, y = Volume)) +
+  geom_point(color = "blue", size = 2) +
+  geom_smooth(method = "lm", color = "red", se = FALSE) +
+  labs(title = "Scatter Plot with Pearson Correlation",
+       x = "Girth", y = "Volume") +
+  theme_minimal()
+
+input_trees = trees[, c("Girth", "Height", "Volume")]
+pairs(input_trees, labels = colnames(input_trees), pt.bg = c("red", "green3", "blue", "yellow2"),
+      pch = 21, bty = "n", ncol = 2)
+```
+
+```{r}
+data(trees)
+
+#pairs(trees, upper.panel= main="Scatter plot matrix for trees dataset" ,pch=20, cex=1.5, col="steelblue")
+Scatter_matrix <- ggpairs(trees, title="Scatter plot matrix for trees dataset", axisLabels="show")
+Scatter_matrix
+
+correlation_nums <- function(x, y, ...){
+  r <- cor(x, y, method="pearson")
+  txt <- format(c(r, 0.123456789), digits=2)[1]
+  usr <- par("usr")
+  on.exit(par(usr))
+  par(usr = c(0, 1, 0, 1))
+  text(0.5, 0.5, txt, cex=2)
+}
+pairs(trees, lower.panel=points, upper.panel=correlation_nums, main="Scatter plot matrix for Trees dataset")
+```
+
+## Question 2
+
+This question involves using a biclustering algorithm and heatmaps.
+
+```{r}
+# Create bipartite graph data
+game_matrix <- matrix(c(1, 0, 0, 1, 1, 1, 0,
+                        0, 1, 1, 0, 1, 0, 0,
+                        0, 0, 0, 0, 1, 0, 1,
+                        1, 1, 0, 0, 0, 0, 0,
+                        0, 0, 1, 0, 0, 0, 1,
+                        0, 1, 0, 1, 1, 0, 0,
+                        0, 0, 0, 0, 0, 1, 0),
+                        nrow = 7,
+                        ncol = 7,
+                        byrow = TRUE)
+colnames(game_matrix) <- c("The Witcher 3","Terraria","Hollow Knight","Cities: Skylines","GTA V","Divinity","XCOM 2")
+rownames(game_matrix) <- c("Tarek", "Sam", "Ebele", "Kim", "Ali", "Aiko", "Parvati")
+
+bc_res <- biclust(game_matrix, method=BCCC(), delta=0.5, number=5)
+summary(bc_res)
+
+image(1:ncol(game_matrix), 1:nrow(game_matrix), t(game_matrix), 
+      col = c("white", "black"), axes = FALSE, xlab = "Games", ylab = "Students",
+      main = "Heatmap 1: Original Game Data (Black = Plays)")
+axis(1, at=1:ncol(game_matrix), labels=colnames(game_matrix), las=2, cex.axis=0.7)
+axis(2, at=1:nrow(game_matrix), labels=rownames(game_matrix), las=1, cex.axis=0.7)
+
+color_matrix <- matrix(0, nrow=nrow(game_matrix), ncol=ncol(game_matrix))
+
+if(bc_res@Number > 0) {
+  for(i in 1:bc_res@Number) {
+    rows_in_bc <- bc_res@RowxNumber[, i]
+    cols_in_bc <- bc_res@NumberxCol[i, ]
+    
+    color_matrix[rows_in_bc, cols_in_bc] <- i
+  }
+}
+
+image(1:ncol(color_matrix), 1:nrow(color_matrix), t(color_matrix), 
+      col = c("white", "tomato", "skyblue", "lightgreen"), axes = FALSE,
+      xlab = "Games", ylab = "Students", main = "Heatmap 2: Bicluster Cell Grid")
+axis(1, at=1:ncol(game_matrix), labels=colnames(game_matrix), las=2, cex.axis=0.7)
+axis(2, at=1:nrow(game_matrix), labels=rownames(game_matrix), las=1, cex.axis=0.7)
+grid(nx=7, ny=7, col="gray", lty="solid")
+```
+
+The core issue is overlapping biclusters.
+
+## Question 3
+
+```{r}
+# Define data
+# Set seed
+set.seed(48)
+get_rand <- function(d) {
+  return(rnorm(1, mean = d, sd = 1))
+}
+m <- round(runif(50000, 0, 1)) * 2 + 1
+point_data = tibble(x = sapply(m, get_rand), y = sapply(m, get_rand))
+
+plot(point_data$x, point_data$y, main="X vs Y", xlab="X", ylab="Y")
+
+x <- point_data$x
+y <- point_data$y
+hb <- hexbin(x, y, xbins=50)
+
+plot(hb, main="HexBin plot")
+
+```
+
+The second "HexBin" plot is far better, it allows for "transparency", which makes the plot easier to read and understand. Changing the plot params helps in increasing/reducing the dark area in the hexbin plot.
