@@ -1,15 +1,15 @@
 # Visual Analytics Exercise 7
 
 ---
-author: Suvansh Shukla,
-date: 2026-06-18,
-subject: Visual Analytics,
+author: Suvansh Shukla
+date: 2026-06-18
+subject: Visual Analytics
 type: exercise
 ---
 
 ## Question 1
 
-Dimension reduction is done to counter the curse of dimensionality. Large datasets may have many features or dimensions this makes it hard to cluster the data as the distance between points may be close in some dimensions but far in others.
+In high-dimensional spaces, the normally intuitive concept of proximity or similarity may not be qualitatively meaningful. This is because the ratio of an object’s nearest neighbor over its farthest neighbor approaches one for high-dimensional spaces. In other words, all objects are approximately equidistant from each other[^1].
 
 Dimensionality reduction refers to the process of mapping an n-dimensional point, into a lower k-dimensional space[^1]
 
