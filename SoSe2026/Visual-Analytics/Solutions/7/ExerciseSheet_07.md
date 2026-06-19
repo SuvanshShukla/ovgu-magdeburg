@@ -1,11 +1,11 @@
-# Visual Analytics Exercise 7
-
 ---
 author: Suvansh Shukla
-date: 2026-06-18
+created_date: 2026-06-18
 subject: Visual Analytics
 type: exercise
 ---
+
+# Visual Analytics Exercise 7
 
 ## Question 1
 
