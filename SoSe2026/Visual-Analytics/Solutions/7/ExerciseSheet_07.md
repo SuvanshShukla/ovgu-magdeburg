@@ -13,11 +13,13 @@ In high-dimensional spaces, the normally intuitive concept of proximity or simil
 
 Dimensionality reduction refers to the process of mapping an n-dimensional point, into a lower k-dimensional space[^1]
 
-Dimensionality reduction can be a useful tool for the following[^1]:
+Dimension reduction is particularly useful for high-dimensional data for the following reasons[^1]:
 
-(a) making tractable classification schemes that are super-linear with respect to dimensionality
-(b) reducing the variance of classifiers that are plagued by large variance in higher dimensionalities
-(c) removing the noise that may be present, thus boosting classification accuracy
+1. Data compression: same data represented in fewer dimensions
+2. Better data visualization: relations between original high-dimensional data can be visualized using two or three dimensions instead
+3. Improved classification accuracy: thanks to reduction in variance and noise removal
+4. More efficient data retrieval: compresses data allowing for filtered retrieval
+5. Boosting index performance: compressed data improves indexing
 
 ---
 
