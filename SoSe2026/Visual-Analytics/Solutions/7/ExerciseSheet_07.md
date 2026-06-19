@@ -1,10 +1,3 @@
----
-author: Suvansh Shukla
-created_date: 2026-06-18
-subject: Visual Analytics
-type: exercise
----
-
 # Visual Analytics Exercise 7
 
 ## Question 1
