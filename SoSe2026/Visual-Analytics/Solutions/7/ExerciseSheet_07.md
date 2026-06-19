@@ -33,6 +33,17 @@ PCA or principal component analysis attempts to discover axes or components onto
 
 Consider, for example, a dataset that contains records of environmental measurements over a period of time, such as humidity and temperature. The two attributes can be highly correlated. By deploying PCA, this trend will be discovered, and the original two-dimensional points can be reduced to one-dimensional by projecting the original points onto the first principal component. In that way, the derived dataset can be stored in less space.[^3]
 
+## Question 4
+
+The transformed coordinate system in the figure would look like the following:
+
+![./pca_transformed_coordinate_system.png]
+
+The density distribution for the first component would look like the following:
+
+![./pca_first_component_density_distribution.png]
+
+
 ---
 
 ## References
