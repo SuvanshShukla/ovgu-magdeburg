@@ -37,24 +37,23 @@ Consider, for example, a dataset that contains records of environmental measurem
 
 The transformed coordinate system in the figure would look like the following:
 
-![./pca_transformed_coordinate_system.png]
+![pca_transformed_coordinate_system](./pca_transformed_coordinate_system.png)
 
 The density distribution for the first component would look like the following:
 
-![./pca_first_component_density_distribution.png]
-
+![pca_first_component_density_distribution](./pca_first_component_density_distribution.png)
 
 ## Question 5
 
 Below is an example of a scree plot:
 
-![./Screeplotr.png]
+![scree_plot](./Screeplotr.png)
 
 A scree plot is a line plot the eigenvalues of principal components in an analysis. It is used to determine the number of factors to retain in a exploratory factor analysis or principal components to keep in a PCA. The procedure of finding statistically significant factors or components using a scree plot is called a scree test.[^4]
 
 Below is an example of a Loading Plot:
 
-![./loadingplot.png]
+![loading_plot](./loadingplot.png)
 
 A loading plot is a visualization tool in PCA that shows the relationship between original variables and the first two or more principal components. In loadings plot, each variable’s loadings are represented by vectors, with the graph axes corresponding to the principal components.[^5]
 
