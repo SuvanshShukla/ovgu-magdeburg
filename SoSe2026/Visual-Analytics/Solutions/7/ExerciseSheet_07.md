@@ -21,8 +21,23 @@ Dimension reduction is particularly useful for high-dimensional data for the fol
 4. More efficient data retrieval: compresses data allowing for filtered retrieval
 5. Boosting index performance: compressed data improves indexing
 
+## Question 2
+
+Dimensionality reduction is a way to tackle the primary problem when performing subspace clustering. In order for subspace clustering to be viable and effective, we need to consider only a subset of dimensions of the original dataset, because when trying to perform full-dimensional clustering on a high-dimensional dataset, we may fail to discover significantly correlated subsets[^2].
+
+Subspace clustering can in this context be viewed as a generalized Dimensionality reduction method, in which different subsets of data are projected on different subspaces[^2].
+
+## Question 3
+
+PCA or principal component analysis attempts to discover axes or components onto which the data can be projected while maintaining the original correlation between the dimensions[^3].
+
+Consider, for example, a dataset that contains records of environmental measurements over a period of time, such as humidity and temperature. The two attributes can be highly correlated. By deploying PCA, this trend will be discovered, and the original two-dimensional points can be reduced to one-dimensional by projecting the original points onto the first principal component. In that way, the derived dataset can be stored in less space.[^3]
+
 ---
 
 ## References
 
-[^1]: https://link.springer.com/rwe/10.1007/978-1-4899-7687-1_192
+[^1]: Claude Sammut and Geoffrey I. Webb (eds.)Encyclopedia of Machine Learning and Data
+Mining10.1007/978-1-4899-7687-1_676, Curse of Dimensionality, page 725.
+[^2]: Claude Sammut and Geoffrey I. Webb (eds.)Encyclopedia of Machine Learning and Data Mining10.1007/978-1-4899-7687-1_676, Projective Clustering, page 2381.
+[^3]: Claude Sammut and Geoffrey I. Webb (eds.)Encyclopedia of Machine Learning and Data Mining10.1007/978-1-4899-7687-1_676, Dimensionality Reduction, page 823.
