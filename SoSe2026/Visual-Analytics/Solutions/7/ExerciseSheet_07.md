@@ -57,6 +57,9 @@ Below is an example of a Loading Plot:
 
 A loading plot is a visualization tool in PCA that shows the relationship between original variables and the first two or more principal components. In loadings plot, each variable’s loadings are represented by vectors, with the graph axes corresponding to the principal components.[^5]
 
+> [!Question]
+> After linearizing two dimensions into one, how do we reconstruct the original dimensions from the regression line?
+
 ---
 
 ## References
