@@ -47,6 +47,16 @@ Four approaches to assisted dimension reduction are[^4]:
 3. Isomap (Isometric Mapping): Isomap extends classical Multidimensional Scaling (MDS) by incorporating geodesic distances among points. It's particularly effective for datasets where the manifold (geometric surface) is roughly isometric to a Euclidean space, allowing global properties to be preserved.
 4. Locally Linear Embedding (LLE): LLE reconstructs high-dimensional data points from their nearest neighbors, assuming the manifold is locally linear. By preserving local relationships, LLE can unfold twisted or folded manifolds.
 
+## Question 4
+
+t-SNE is a way of converting a high-dimensional dataset into a matrix of pair-wise similarities. t-SNE  
+is capable of capturing much of the local structure of the high-dimensional data very well, while also  
+revealing a global structure such as the presence of clusters at several scales.[^5]
+
+The t-SNE algorithm comprises two main stages. First, t-SNE constructs a probability distribution over pairs of high-dimensional objects in such a way that similar objects are assigned a higher probability while dissimilar points are assigned a lower probability. Second, t-SNE defines a similar probability distribution over the points in the low-dimensional map, and it minimizes the Kullback–Leibler divergence (KL divergence) between the two distributions with respect to the locations of the points in the map. While the original algorithm uses the Euclidean distance between objects as the base of its similarity metric, this can be changed as appropriate. A Riemannian variant is UMAP.[^6]
+
+t-SNE is particularly effective for visualizing high-dimensional datasets, such as the Swiss Roll. It can help "unroll" the Swiss Roll data, revealing its underlying structure in a lower-dimensional space.
+
 ---
 
 ## References
@@ -55,3 +65,5 @@ Four approaches to assisted dimension reduction are[^4]:
 [^2]: https://sites.math.washington.edu/~conroy/m381-general/lectureSlides/lecMDS01.pdf
 [^3]: https://en.wikipedia.org/wiki/Multidimensional_scaling#Procedure
 [^4]: https://encord.com/blog/dimentionality-reduction-techniques-machine-learning/
+[^5]: Visualizing data using t-SNE, L.v.d. Maaten, G. Hinton. Journal of Machine Learning Research, Vol 9(Nov), pp. 2579—2605. 2008.
+[^6]: https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding#:~:text=The%20t%2DSNE,UMAP%2E
