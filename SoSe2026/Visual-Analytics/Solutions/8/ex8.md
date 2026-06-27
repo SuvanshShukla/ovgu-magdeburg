@@ -37,6 +37,15 @@ original point distances appropriately.
 > 2. How to know which metric to take, for evaluating performance?
 > 3. How to decide number of relevant dimensions?
 
+## Question 3
+
+Four approaches to assisted dimension reduction are[^4]:
+
+1. t-Distributed Stochastic Neighbor Embedding (t-SNE): t-SNE is powerful for visualizing high-dimensional data in two or three dimensions. It converts similarities between data points to joint probabilities and minimizes the divergence between them in different spaces, excelling in revealing clusters within data.
+2. Uniform Manifold Approximation and Projection (UMAP): UMAP is a relatively recent technique that balances the preservation of local and global data structures for superior speed and scalability. It's computationally efficient and has gained popularity for its ability to handle large datasets and complex topologies.
+3. Isomap (Isometric Mapping): Isomap extends classical Multidimensional Scaling (MDS) by incorporating geodesic distances among points. It's particularly effective for datasets where the manifold (geometric surface) is roughly isometric to a Euclidean space, allowing global properties to be preserved.
+4. Locally Linear Embedding (LLE): LLE reconstructs high-dimensional data points from their nearest neighbors, assuming the manifold is locally linear. By preserving local relationships, LLE can unfold twisted or folded manifolds.
+
 ---
 
 ## References
@@ -44,3 +53,4 @@ original point distances appropriately.
 [^1]: https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction#:~:text=toolkit%2E-,Nonlinear,analysis%2E
 [^2]: https://sites.math.washington.edu/~conroy/m381-general/lectureSlides/lecMDS01.pdf
 [^3]: https://en.wikipedia.org/wiki/Multidimensional_scaling#Procedure
+[^4]: https://encord.com/blog/dimentionality-reduction-techniques-machine-learning/
