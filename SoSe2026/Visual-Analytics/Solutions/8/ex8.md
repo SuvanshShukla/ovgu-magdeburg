@@ -36,6 +36,7 @@ original point distances appropriately.
 > 1. Why always try to represent in 2D (easier to understand or does it better capture info?)?  
 > 2. How to know which metric to take, for evaluating performance?
 > 3. How to decide number of relevant dimensions?
+> 4. What type of structure does MDS capture exactly? Local or Global?
 
 ## Question 3
 
