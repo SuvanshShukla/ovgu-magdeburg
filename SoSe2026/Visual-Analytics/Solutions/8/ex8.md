@@ -1,7 +1,7 @@
 # Visual Analytics Exercise 8
 
-Author: Suvansh Shukla
-Matriculation: 256245
+Author: Suvansh Shukla  
+Matriculation: 256245  
 
 ---
 
