@@ -31,6 +31,12 @@ would perform poorly for a dataset with tens of thousands of points. A good metr
 is _stress_[^3]. Stress tells us if the correlation in the new scaled distances between points captures the  
 original point distances appropriately.
 
+> [!NOTE]
+>
+> 1. Why always try to represent in 2D (easier to understand or does it better capture info?)?  
+> 2. How to know which metric to take, for evaluating performance?
+> 3. How to decide number of relevant dimensions?
+
 ---
 
 ## References
