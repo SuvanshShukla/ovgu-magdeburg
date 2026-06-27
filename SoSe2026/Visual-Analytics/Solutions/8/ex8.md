@@ -28,8 +28,8 @@ though easier to interpret, may be due to underfitting resulting is missing dime
 
 The performance of MDS depends greatly on the dataset size. Having a time complexity of O(n^2), the technique  
 would perform poorly for a dataset with tens of thousands of points. A good metric to check for goodness-of-fit  
-is _stress_[^3]. Stress tells us if the correlation in the new scaled distances between points captures the original  
-point distances appropriately.
+is _stress_[^3]. Stress tells us if the correlation in the new scaled distances between points captures the  
+original point distances appropriately.
 
 ---
 
