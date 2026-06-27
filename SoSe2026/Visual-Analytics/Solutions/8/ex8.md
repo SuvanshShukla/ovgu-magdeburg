@@ -57,6 +57,27 @@ The t-SNE algorithm comprises two main stages. First, t-SNE constructs a probabi
 
 t-SNE is particularly effective for visualizing high-dimensional datasets, such as the Swiss Roll. It can help "unroll" the Swiss Roll data, revealing its underlying structure in a lower-dimensional space.
 
+## Question 5
+
+_False Neighbors_ are points that look very close or are neighbors in lower dimensions but no longer stay  
+that way when we increase the number of embedding dimensions.[^7]
+
+_Tears_ occur when points that are close in high dimensional space are ripped apart (separated) from each  
+other at low dimensional space. Image two points on a six faced dice one at the top-side of the edge and  
+the other at the bottom side of the edge (facing towards you). When we reduce the dice to 2 dimensions  
+(make its net) the points may be separated from each other.
+
+A second feature of t-SNE is a tuneable parameter, “perplexity,” which says (loosely) how to balance attention between local and global aspects of your data. The parameter is, in a sense, a guess about the number of close neighbors each point has. The perplexity value has a complex effect on the resulting pictures. The original paper[^5] says, “The performance of SNE is fairly robust to changes in the perplexity, and typical values are between 5 and 50.” But the story is more nuanced than that. Getting the most from t-SNE may mean analyzing multiple plots with different perplexities.[^8]
+
+At lower perplexity, tsne can place points into smaller clusters, with strong separation leading to more  
+tears. At higher perplexity, tsne can reduce tearing, preserve larger structures and merge nearby clusters.
+
+In the context of false neighbors, a low perplexity may produce more false neighbors. This is due to  
+tsne preserving local structures, ignoring distant points and possibly placing more unrelated groups  
+near each other. A high perplexity on the other hand, generally reduces the number of false neighbors  
+this is because pair-wise relationships become more important, false neighbors become more costly  
+and the embedding tends to keep the global structure better.
+
 ---
 
 ## References
@@ -67,3 +88,5 @@ t-SNE is particularly effective for visualizing high-dimensional datasets, such 
 [^4]: https://encord.com/blog/dimentionality-reduction-techniques-machine-learning/
 [^5]: Visualizing data using t-SNE, L.v.d. Maaten, G. Hinton. Journal of Machine Learning Research, Vol 9(Nov), pp. 2579—2605. 2008.
 [^6]: https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding#:~:text=The%20t%2DSNE,UMAP%2E
+[^7]: https://en.wikipedia.org/wiki/False_nearest_neighbor_algorithm#:~:text=In%20too,determined
+[^8]: https://distill.pub/2016/misread-tsne/
