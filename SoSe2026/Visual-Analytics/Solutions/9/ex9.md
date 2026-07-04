@@ -59,9 +59,7 @@ The following may be reasons for correlations in regression models:
 
 - genuine relation between attributes, for example high humidity may indicate rain
 - presence of a third attribute affecting two others, for example high demand of oil can increase its price as well as reduce its availability
-- correlation may be the result of random chance, they may be increasing/decreasing by coincidence, an interesting example is Muenster cheese consumption correlating with the distance between Saturn and the sun.
-
-
+- correlation may be the result of random chance, they may be increasing/decreasing by coincidence, an interesting example is Muenster cheese consumption correlating with the distance between Saturn and the sun.[^4]
 
 ---
 
@@ -70,3 +68,4 @@ The following may be reasons for correlations in regression models:
 [^1]:<https://fastercapital.com/content/Visualization-Techniques--Decision-Trees--Visualizing-Pathways-to-Choices.html?__cf_chl_f_tk=ObkP7tkmKdInyhq02qavtj5LG7TMczm2108CwQWf_7I-1783144424-1.0.1.1-RBgnsVCwJf9dnUf66jG7BItp6KPGoaXTt.L81j36luk>
 [^2]: https://journals.sagepub.com/doi/10.1177/17483026231198181
 [^3]: https://scikit-learn.org/stable/modules/tree.html#:~:text=The%20disadvantages%20of%20decision%20trees%20include
+[^4]: https://www.tylervigen.com/spurious/correlation/9256_muenster-cheese-consumption_correlates-with_the-distance-between-saturn-and-the-sun
