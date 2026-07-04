@@ -53,6 +53,16 @@ The disadvantages of decision trees include[^3]:
 5. There are concepts that are hard to learn because decision trees do not express them easily, such as XOR, parity or multiplexer problems.
 6. Decision tree learners create biased trees if some classes dominate. It is therefore recommended to balance the dataset prior to fitting with the decision tree.
 
+## Question 5
+
+The following may be reasons for correlations in regression models:
+
+- genuine relation between attributes, for example high humidity may indicate rain
+- presence of a third attribute affecting two others, for example high demand of oil can increase its price as well as reduce its availability
+- correlation may be the result of random chance, they may be increasing/decreasing by coincidence, an interesting example is Muenster cheese consumption correlating with the distance between Saturn and the sun.
+
+
+
 ---
 
 ## References
