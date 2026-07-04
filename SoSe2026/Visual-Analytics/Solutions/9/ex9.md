@@ -61,6 +61,14 @@ The following may be reasons for correlations in regression models:
 - presence of a third attribute affecting two others, for example high demand of oil can increase its price as well as reduce its availability
 - correlation may be the result of random chance, they may be increasing/decreasing by coincidence, an interesting example is Muenster cheese consumption correlating with the distance between Saturn and the sun.[^4]
 
+## Question 6
+
+Residual plots are graphical representations of the residuals against the predictor variables in a regression analysis. These plots help assess the assumptions and adequacy of the regression model.
+
+In residual plots, if the residuals exhibit a random pattern around the horizontal axis, it indicates that the regression model is appropriate and adequately captures the variability in the data. However, if the residuals show a systematic pattern, such as a curve or funnel shape, it suggests that the regression model may not be the best fit for the data.[^5]
+
+Residual plots also help identify outliers or influential data points that may disproportionately affect the regression analysis results. By examining residual plots, statisticians can make informed decisions about the validity and reliability of the regression model and make any necessary adjustments to improve its accuracy.
+
 ---
 
 ## References
@@ -69,3 +77,4 @@ The following may be reasons for correlations in regression models:
 [^2]: https://journals.sagepub.com/doi/10.1177/17483026231198181
 [^3]: https://scikit-learn.org/stable/modules/tree.html#:~:text=The%20disadvantages%20of%20decision%20trees%20include
 [^4]: https://www.tylervigen.com/spurious/correlation/9256_muenster-cheese-consumption_correlates-with_the-distance-between-saturn-and-the-sun
+[^5]: https://www.geeksforgeeks.org/maths/residual-analysis/#:~:text=Residual%20Plots,-Residual
