@@ -18,3 +18,9 @@ The single filename from `ls + head` combination is then inputted into `tail` co
 
 We use `-f` flag to follow the latest file.
 
+> [!NOTE]
+> You want to avoid using `ls -t outputs/* | head -n 1 | xargs tail -n 3`  
+> This is because hittig `Ctrl + c` would first kill the `xargs` command  
+> and not the `tail` command leaving it running in the background as  
+> an orphaned process, which is bad.
+
