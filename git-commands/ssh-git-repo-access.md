@@ -25,3 +25,14 @@ $ ssh-add -k key-name
 Identity added: key-name (ants-clstr)
 ```
 
+## Connect to remote env
+
+You just need to your username and the remote env's URL
+
+```bash
+$ user@DESKTOP:/mnt/c/Users/user$ ssh username@url.pre.domain.de
+remote host connected
+```
+
+The last line `remote host connecte` is just for show, you'll see something different.
+
