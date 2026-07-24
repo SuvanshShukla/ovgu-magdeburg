@@ -46,3 +46,26 @@ winget install sxyazi.yazi
 
 Here's the link to the [exact installation command](https://yazi-rs.github.io/docs/installation#install-with-winget)
 
+## Add Shell wrapper script to your powershell profile
+
+Find where your powershell profile is:
+
+```powershell
+$PROFILE
+```
+
+Then open whatever the output to the previous command was in notepad or nvim or whatever.
+Then paste the following script into it:
+
+```powershell
+function y {
+	$tmp = (New-TemporaryFile).FullName
+	yazi.exe @args --cwd-file="$tmp"
+	$cwd = Get-Content -Path $tmp -Encoding UTF8
+	if ($cwd -and $cwd -ne $PWD.Path -and (Test-Path -LiteralPath $cwd -PathType Container)) {
+		Set-Location -LiteralPath (Resolve-Path -LiteralPath $cwd).Path
+	}
+	Remove-Item -Path $tmp
+}
+```
+
