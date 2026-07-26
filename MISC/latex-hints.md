@@ -160,3 +160,13 @@ To write expressions like out of n items make 2 pairs, or all 2 pairs in n items
 
 Here's how it renders:
 $$\binom{n}{k}$$
+
+## Writing literals or block-text
+
+This means entering block-text of literals like we do in markdown thanks to backtiks "\`".
+
+```latex
+\texttt{user_id}
+```
+
+This will print it like `user_id` no need for '\\'.
