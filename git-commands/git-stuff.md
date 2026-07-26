@@ -21,3 +21,9 @@ or simply add as an alias:
 ```bash
 alias glp='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --abbrev-commit'
 ```
+
+## Only output tracked and modified files
+
+```bash
+git ls-files -m
+```
