@@ -82,11 +82,11 @@ and the embedding tends to keep the global structure better.
 
 ## References
 
-[^1]: https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction#:~:text=toolkit%2E-,Nonlinear,analysis%2E
-[^2]: https://sites.math.washington.edu/~conroy/m381-general/lectureSlides/lecMDS01.pdf
-[^3]: https://en.wikipedia.org/wiki/Multidimensional_scaling#Procedure
-[^4]: https://encord.com/blog/dimentionality-reduction-techniques-machine-learning/
+[^1]: <https://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction#:~:text=toolkit%2E-,Nonlinear,analysis%2E>
+[^2]: <https://sites.math.washington.edu/~conroy/m381-general/lectureSlides/lecMDS01.pdf>
+[^3]: <https://en.wikipedia.org/wiki/Multidimensional_scaling#Procedure>
+[^4]: <https://encord.com/blog/dimentionality-reduction-techniques-machine-learning/>
 [^5]: Visualizing data using t-SNE, L.v.d. Maaten, G. Hinton. Journal of Machine Learning Research, Vol 9(Nov), pp. 2579—2605. 2008.
-[^6]: https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding#:~:text=The%20t%2DSNE,UMAP%2E
-[^7]: https://en.wikipedia.org/wiki/False_nearest_neighbor_algorithm#:~:text=In%20too,determined
-[^8]: https://distill.pub/2016/misread-tsne/
+[^6]: <https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding#:~:text=The%20t%2DSNE,UMAP%2E>
+[^7]: <https://en.wikipedia.org/wiki/False_nearest_neighbor_algorithm#:~:text=In%20too,determined>
+[^8]: <https://distill.pub/2016/misread-tsne/>
