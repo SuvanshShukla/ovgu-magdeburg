@@ -27,3 +27,11 @@ alias glp='git log --graph --pretty=format:'\''%Cred%h%Creset -%C(yellow)%d%Cres
 ```bash
 git ls-files -m
 ```
+
+## Restore/undo all changes to a file
+
+This command will put the file back to the latest commit it was on and remove all your local uncommitted changes.
+
+```bash
+git restore path/to/file.py
+```
