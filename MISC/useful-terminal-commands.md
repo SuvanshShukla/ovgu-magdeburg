@@ -36,3 +36,18 @@ touch file_name_{1..5}.txt
 
 This will create `file_name_1.txt`, `file_name_2.txt` etc...
 
+## Watch or monitor your script
+
+Here's the command to keep and eye on whether your job has left the queue and is running now:
+
+```bash
+watch -n 2 "squeue -j 1660442"
+```
+
+Use your username instead:
+
+```bash
+watch -n 2 "squeue -u \$USER"
+```
+
+(Note the backslash `\$USER` so `watch` evaluates your username correctly on every refresh).
