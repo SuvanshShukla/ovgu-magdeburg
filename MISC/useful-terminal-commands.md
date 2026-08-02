@@ -51,3 +51,9 @@ watch -n 2 "squeue -u \$USER"
 ```
 
 (Note the backslash `\$USER` so `watch` evaluates your username correctly on every refresh).
+
+---
+
+## Notes to other terminal/CLI tools
+
+1. EZA, alternative to `ls` - [eza notes](./CLI-tools/eza-notes.md)
