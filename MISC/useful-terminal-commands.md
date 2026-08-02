@@ -57,3 +57,5 @@ watch -n 2 "squeue -u \$USER"
 ## Notes to other terminal/CLI tools
 
 1. EZA, alternative to `ls` - [eza notes](./CLI-tools/eza-notes.md)
+2. yazi, CLI file manager - [yazi](./CLI-tools/yazi-install.md)
+3. psql, CLI postgres - [psql in the terminal](./CLI-tools/psql-commands.md)
