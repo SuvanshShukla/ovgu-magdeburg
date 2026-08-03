@@ -35,3 +35,9 @@ This command will put the file back to the latest commit it was on and remove al
 ```bash
 git restore path/to/file.py
 ```
+
+## See only files in a dir when using `git status`
+
+```bash
+git status -- path/to/folder
+```
