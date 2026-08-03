@@ -61,3 +61,8 @@ WSLENV=TERM:COLORTERM:TERM_PROGRAM:TERM_PROGRAM_VERSION
 ZES_ENABLE_SYSMAN=1
 ```
 
+## Open folder in explorer when in WSL
+
+```bash
+explorer.exe
+```
