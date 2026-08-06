@@ -41,3 +41,17 @@ git restore path/to/file.py
 ```bash
 git status -- path/to/folder
 ```
+
+## Print all branches and when they were updated
+
+Simple version:
+
+```bash
+git branch --sort=-committerdate -v
+```
+
+More advanced, with author and commit message:
+
+```bash
+git for-each-ref --sort=-committerdate refs/heads/ refs/remotes/ --format="%(refname:short)%09%(committerdate:relative)%09%(authorname)%09%(subject)"
+```
