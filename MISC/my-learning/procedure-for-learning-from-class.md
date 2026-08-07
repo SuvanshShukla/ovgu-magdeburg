@@ -29,3 +29,5 @@ It is difficult to know how deep the questions will be, especially given how vas
 ---
 
 Checkout this 14 step schedule by [Justin Sung](https://www.youtube.com/c/JustinSung): ![learning-guide](./justin-sung-learning-14-steps.jpeg)
+
+Exact vide source: [LINK](https://youtu.be/CQQTwvDb5xg?si=G2JPMD_Y-CWSPH4b)
