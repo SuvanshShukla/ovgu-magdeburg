@@ -55,3 +55,14 @@ More advanced, with author and commit message:
 ```bash
 git for-each-ref --sort=-committerdate refs/heads/ refs/remotes/ --format="%(refname:short)%09%(committerdate:relative)%09%(authorname)%09%(subject)"
 ```
+
+# View a file on a different branch
+
+You need to use the following:
+
+```bash
+git show main:path/to/file
+```
+
+Change the branch name from `main` to whatever your branch name is.  
+Change the file path too
