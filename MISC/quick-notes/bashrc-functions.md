@@ -51,4 +51,6 @@ qnote ()
 }
 ```
 
+You can also use `type my_function` or `declare -f my_function`. Both work.
+
 Link to other bash related stuff: [bash command notes](../bash-tips-tricks.md)
