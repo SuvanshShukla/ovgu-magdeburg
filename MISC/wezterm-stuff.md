@@ -27,3 +27,11 @@ You'll need to have `0xProto Nerd Font` installed!
 ## Selection mode
 
 Use vim-like selection mode in Wezterm. Use: `Ctrl+Shift+x`, then you can navigate around using `hjkl` like in vim and select with `v` or `V` then copy with `y`.
+
+## Open an image in Wezterm
+
+Use:
+
+```bash
+wezterm imgcat /path/to/image.png
+```
