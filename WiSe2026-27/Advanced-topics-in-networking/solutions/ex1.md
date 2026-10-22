@@ -67,3 +67,10 @@ Multiple problems can occur in step 4:
 3. The request type may be incorrect, require POST instead
 4. The peer may take too long to respond, and thus the requester may time out
 
+## 3 Gnutella
+
+### Question 1
+
+According to the Gnutella protocol the response would follow the same path backwards to the source.
+A better approach would be to use an optimized way to respond directly to the searcher/requester.
+
