@@ -54,3 +54,7 @@ Napster is a central P2P architecture because it has a central node that acts as
 This is why removing this central node allowed the authorities to take down the service. It could be transformed
 into a decentralized P2P architecture by having nodes take over the service provided by the central node.
 
+### Question 3
+
+Yes, it would turn the initial centralized P2P network into a hybrid P2P network with multiple dynamic central entities.
+
