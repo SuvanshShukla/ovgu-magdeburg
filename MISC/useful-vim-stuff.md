@@ -21,10 +21,10 @@ Here I post useful vim/nvim commands that I have found.
 ## How to properly indent a markdown table
 
 This amazing article by [Heitor](https://heitorpb.github.io/bla/format-tables-in-vim/) makes it so easy!    
-Just use the below command:
+Just select the entire table & use the below command:
 
-```
-:!column -t -s '|' -o '|'
+```text
+:'<,'>!column -t -s '|' -o '|'
 ```
 
 ## How to replace every char in a line except for one (useful for tables)
