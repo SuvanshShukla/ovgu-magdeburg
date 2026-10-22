@@ -48,3 +48,9 @@ wouldn't be lost entirely, they would merely be inaccessible.
 Yes, Napster does match the derived key characteristics of P2P systems as defined in the lecture.
 Particularly in the features of each peer being equal and removal of terminals not reducing functionality.
 
+### Question 2
+
+Napster is a central P2P architecture because it has a central node that acts as an indexer or group database.
+This is why removing this central node allowed the authorities to take down the service. It could be transformed
+into a decentralized P2P architecture by having nodes take over the service provided by the central node.
+
