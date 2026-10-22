@@ -20,3 +20,12 @@ wouldn't be lost entirely, they would merely be inaccessible.
 5. In a hybrid P2P network any terminal entity can be removed without loss of functionality. -- TRUE
 6. A hybrid P2P network suffers from a single point of failure. -- FALSE
 
+## Question 3
+
+| Client Server Architecture | Centralized P2P Architecture |
+|----------------------------|------------------------------|
+| Central Server, containing primary resources | Central "coordinator" for indexing and routing |
+| Looses resources and data if server is removed | No loss in resources or data, only coordination if central node is removed |
+| Server is more powerful | central entity is less powerful, usually just a database |
+| Clients are less powerful | Clients or peers usually equally powerful |
+
