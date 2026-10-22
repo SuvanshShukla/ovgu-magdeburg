@@ -27,6 +27,19 @@ Just use the below command:
 :!column -t -s '|' -o '|'
 ```
 
+## How to replace every char in a line except for one (useful for tables)
+
+Suppose you have the following line:
+
+`| application type | information | files | bandwidth | storage | CPU cycles |`
+
+And you just want to add a line of dashes for the table header. Just use the
+following substitution snippet:
+
+```text
+:s/[^|]/-/g
+```
+
 ## How to add an empty line above and below the line with your cursor
 
 Use the following key-maps (which were found here: [StackExchange answer by Eric Mathison](https://superuser.com/a/617687):
