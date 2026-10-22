@@ -29,3 +29,12 @@ wouldn't be lost entirely, they would merely be inaccessible.
 | Server is more powerful | central entity is less powerful, usually just a database |
 | Clients are less powerful | Clients or peers usually equally powerful |
 
+## Question 4
+
+| application type    | information  | files  | bandwidth | storage  | CPU cycles |
+|---------------------|------------- |------- |-----------|--------- |------------|
+| File Sharing        | ✔            | ✔      |           | ✔        |            |
+| Cloud Computing     | ✔            | ✔      | ✔         | ✔        | ✔          |
+| Instant Messaging   | ✔            | ✔      |           |          |            |
+| Collaboration       | ✔            | ✔      |           | ✔        |            |
+| Distributed Storage | ✔            | ✔      |           | ✔        |            |
