@@ -41,3 +41,10 @@ wouldn't be lost entirely, they would merely be inaccessible.
 | Collaboration       | ✔            | ✔      |           | ✔        |            |
 | Distributed Storage | ✔            | ✔      |           | ✔        |            |
 
+## 2 Napster
+
+### Question 1
+
+Yes, Napster does match the derived key characteristics of P2P systems as defined in the lecture.
+Particularly in the features of each peer being equal and removal of terminals not reducing functionality.
+
