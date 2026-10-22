@@ -58,3 +58,12 @@ into a decentralized P2P architecture by having nodes take over the service prov
 
 Yes, it would turn the initial centralized P2P network into a hybrid P2P network with multiple dynamic central entities.
 
+### Question 4
+
+Multiple problems can occur in step 4:
+
+1. The GET request never reaches the peer
+2. The Response from the peer never reaches the requester
+3. The request type may be incorrect, require POST instead
+4. The peer may take too long to respond, and thus the requester may time out
+
