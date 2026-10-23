@@ -85,3 +85,12 @@ Yes, it is possible to use just one field, TTL. Since Napster has a central node
 
 The reason to include both of them would be to help better manage network traffic
 
+### 3 Question 3
+
+The following information is required to configure the TTL field in Gnutella:
+
+- no. of peers
+- size of query
+- distance of peers
+- no. of peers with results that match a query
+
