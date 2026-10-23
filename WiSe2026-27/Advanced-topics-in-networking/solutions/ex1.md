@@ -74,3 +74,14 @@ Multiple problems can occur in step 4:
 According to the Gnutella protocol the response would follow the same path backwards to the source.
 A better approach would be to use an optimized way to respond directly to the searcher/requester.
 
+### 3 Question 2
+
+TTL stands for Time To Live. It specifies how long this packet of response request should be valid for.
+If the TTL for a packet hits 0, then the packet has expired.
+
+Hops is used to store the number of peers a packet passed through to arrive to the requester.
+
+Yes, it is possible to use just one field, TTL. Since Napster has a central node that allows for querying, hops wouldn't really make any sense.
+
+The reason to include both of them would be to help better manage network traffic
+
