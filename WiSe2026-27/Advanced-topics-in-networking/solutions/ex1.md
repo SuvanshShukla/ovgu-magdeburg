@@ -94,3 +94,10 @@ The following information is required to configure the TTL field in Gnutella:
 - distance of peers
 - no. of peers with results that match a query
 
+### 3 Question 4
+
+Other than TTL and Hops, Gnutella uses:
+
+- PING: message to discover other active peers
+- PONG: response sent back from a peer that includes its address and info about the files it is Sharing
+
