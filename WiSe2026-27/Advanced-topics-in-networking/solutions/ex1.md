@@ -107,7 +107,7 @@ Since, no duplicate nodes would be traversed that means the no. of available nod
 every transfer. This means the message can potentially travel across n! (n factorial) nodes. However,
 depending on the available time-to-live of the message this may be longer or shorter.
 
-There fore the formula should be f(n,t) = n!/t
+Therefore the formula should be f(n,t) = n!/t
 
 For t = 8 and n = 5, the value would be = 120/8 = 15
 
