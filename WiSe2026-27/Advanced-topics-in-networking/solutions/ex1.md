@@ -113,3 +113,12 @@ For t = 8 and n = 5, the value would be = 120/8 = 15
 
 For t = 7 and n = 8, the value would be = 40320/7 = 5760
 
+### 3 Question 6
+
+Since the way to consider successive nodes is still the same, the number of possible nodes after a direct
+node would still be n-1. But since we have a minimum number we must reach and a maximum number we must
+never surpass, we will add and subtract the minimum, i.e. x and maximum, i.e. y.
+
+So the new equation will be: g(n, x, y, t) = (y! - n! + x!)/t
+
+So for reachable users between 6 & 8 with neighbours being 6 will be: (8! - 6! + 6!)1 = 40320
