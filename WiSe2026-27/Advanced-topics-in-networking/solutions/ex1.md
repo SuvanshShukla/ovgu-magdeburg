@@ -101,3 +101,15 @@ Other than TTL and Hops, Gnutella uses:
 - PING: message to discover other active peers
 - PONG: response sent back from a peer that includes its address and info about the files it is Sharing
 
+### 3 Question 5
+
+Since, no duplicate nodes would be traversed that means the no. of available nodes will decrease after
+every transfer. This means the message can potentially travel across n! (n factorial) nodes. However,
+depending on the available time-to-live of the message this may be longer or shorter.
+
+There fore the formula should be f(n,t) = n!/t
+
+For t = 8 and n = 5, the value would be = 120/8 = 15
+
+For t = 7 and n = 8, the value would be = 40320/7 = 5760
+
