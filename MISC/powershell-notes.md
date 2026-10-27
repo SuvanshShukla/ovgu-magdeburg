@@ -54,3 +54,14 @@ sometimes it is also aliased as `gcm` in powershell.
 ## Where are `winget` packages installed?
 
 They are kept here: `%LOCALAPPDATA%\Microsoft\WinGet\Packages`
+
+## WSL - open windows explorer at CWD
+
+You can't simply use `explorer.exe .` this opens windows explorer
+but it doesn't open the explorer at the current working directory.
+
+To get it to open at the current working directory, use:
+
+```bash
+explorer.exe "$(wslpath -w .)"
+```
