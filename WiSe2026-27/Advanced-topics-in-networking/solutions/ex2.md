@@ -44,6 +44,13 @@ This stoppage may occur right before the query reaches the node actually
 carrying the requested information, thus giving us a false negative result
 of the search, even when it is present in the network.
 
+## Q 2.3
+
+It is important that node and data IDs are (nearly) random and equally
+distributed in a DHT to avoid crowding. Crowding reduces the performance
+of such a search approach, forcing the network to process through every node
+thus reducing efficiency.
+
 ---
 
 [^1]: Dinger, J., Waldhorst, O.P. (2009). Decentralized Bootstrapping
