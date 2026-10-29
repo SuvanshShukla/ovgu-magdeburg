@@ -22,6 +22,16 @@ active BitTorrent hosts as entry points for re-entering the BitTorrent DHT.
 2. _Random access probing_: where randomly generated IP addresses are scanned
 to discover active BitTorrent peers as entry points.
 
+## Q 2.1
+
+1. Search complexity of O(1) is not possible in a DHT. -- TRUE
+
+2. DHTs use different address spaces for data and nodes. -- FALSE
+
+3. Flooding has performance problems in large scale P2P networks. -- TRUE
+
+4. Structured overlay networks can only be used for file sharing applications. -- FALSE
+
 ---
 
 [^1]: Dinger, J., Waldhorst, O.P. (2009). Decentralized Bootstrapping
