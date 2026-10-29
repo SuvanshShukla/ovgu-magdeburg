@@ -1,6 +1,6 @@
 # ATN Exercise 2
 
-Author: Suvansh Shukla
+Author: Suvansh Shukla  
 Matriculation No: 256245
 
 ---
