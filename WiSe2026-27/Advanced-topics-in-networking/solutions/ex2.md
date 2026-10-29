@@ -72,6 +72,13 @@ Fuzzy queries are simply not realizable using Distributed Hash Tables
 because conducting fuzzy searches requires an index of content or
 preemptive knowledge of what nodes store what.
 
+## Q 2.7
+
+DHTs like _chord_ exhibit an order of O(log(n)) lookup complexity because
+they cover exponentially increasing distances.
+
+To reduce the complexity down to O(1) you would need a central index to
+keep track of which nodes carry which keys.
 
 ---
 
