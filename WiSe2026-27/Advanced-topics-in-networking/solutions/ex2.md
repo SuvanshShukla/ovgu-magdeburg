@@ -11,6 +11,17 @@ Bootstrapping in the P2P context is the central problem of integrating a new
 node into the pre-existing decentralized system by finding an appropriate
 entry point to the network.[^1]
 
+## Q 1.2
+
+There are two mechanisms as described in [^1] using a widely deployed P2P system,
+the BitTorrent DHT. They are explained in my own words as follows:
+
+1. _Local host cache_: this is used to store addresses of several recently
+active BitTorrent hosts as entry points for re-entering the BitTorrent DHT.
+
+2. _Random access probing_: where randomly generated IP addresses are scanned
+to discover active BitTorrent peers as entry points.
+
 ---
 
 [^1]: Dinger, J., Waldhorst, O.P. (2009). Decentralized Bootstrapping
