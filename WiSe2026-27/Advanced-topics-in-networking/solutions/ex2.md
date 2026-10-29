@@ -51,6 +51,14 @@ distributed in a DHT to avoid crowding. Crowding reduces the performance
 of such a search approach, forcing the network to process through every node
 thus reducing efficiency.
 
+## Q 2.4
+
+Two advantages of unstructured (flooding-based) P2P architectures over
+structured ones are:
+
+1. The possibility of getting O(1) time in search
+2. Fuzzy queries are supported
+
 ---
 
 [^1]: Dinger, J., Waldhorst, O.P. (2009). Decentralized Bootstrapping
