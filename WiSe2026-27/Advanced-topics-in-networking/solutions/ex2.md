@@ -32,6 +32,18 @@ to discover active BitTorrent peers as entry points.
 
 4. Structured overlay networks can only be used for file sharing applications. -- FALSE
 
+## Q 2.2
+
+A _false negative_ basically means that a search in the network returned
+nothing even though the requested data item exists somewhere in the network.
+This is particularly possible in the flood search methodology, because
+every node is sent a request with a certain TTL or hop limit. This restricts
+the amount of nodes that the search query can reach in the network. Meaning,
+that when the query times-out or reaches it hop limit, the search stops.
+This stoppage may occur right before the query reaches the node actually
+carrying the requested information, thus giving us a false negative result
+of the search, even when it is present in the network.
+
 ---
 
 [^1]: Dinger, J., Waldhorst, O.P. (2009). Decentralized Bootstrapping
