@@ -59,6 +59,15 @@ structured ones are:
 1. The possibility of getting O(1) time in search
 2. Fuzzy queries are supported
 
+## Q 2.5
+
+## Q 2.6
+
+Fuzzy queries are simply not realizable using Distributed Hash Tables
+because conducting fuzzy searches requires an index of content or
+preemptive knowledge of what nodes store what.
+
+
 ---
 
 [^1]: Dinger, J., Waldhorst, O.P. (2009). Decentralized Bootstrapping
