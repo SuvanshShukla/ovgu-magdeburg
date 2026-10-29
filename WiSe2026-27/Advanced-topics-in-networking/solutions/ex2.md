@@ -61,6 +61,11 @@ structured ones are:
 
 ## Q 2.5
 
+Lookup operations in DHT have a comp of O(log(n)) because not every
+node stores every single key. But, maintenance operations in DHT
+have a complexity of O(log^2(n)) because they require a lookup operation
+followed by an update operation, which is O(log(n)) too.
+
 ## Q 2.6
 
 Fuzzy queries are simply not realizable using Distributed Hash Tables
