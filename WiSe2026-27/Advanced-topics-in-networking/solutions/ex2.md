@@ -80,6 +80,20 @@ they cover exponentially increasing distances.
 To reduce the complexity down to O(1) you would need a central index to
 keep track of which nodes carry which keys.
 
+## Q 2.10
+
+Advantages of a meshed DHT include:
+
+- simultaneous transmission of data by multiple nodes
+- availability is higher because even if a node goes down others would be available
+- addition and removal of nodes can be done without affecting other nodes
+
+And disadvantages are:
+
+- high chances of redundancy (you never know if two nodes carry the same data)
+- higher cost
+- administration of network is difficult due to decentralized nature
+
 ## Q 2.11
 
 Plain DHTs do not support _wildcard_ queries because they do not have a central
