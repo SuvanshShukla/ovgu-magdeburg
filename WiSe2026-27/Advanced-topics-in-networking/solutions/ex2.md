@@ -160,6 +160,14 @@ At node 1 we again check the finger table, which tells us that 7 falls
 at node 8, so we go to node 8. This concludes our hops, and the total  
 count stands at 2.  
 
+## Q 3.3
+
+In order, for _chord_ to handle a departure of a node, it needs to do the following:
+
+- key handover
+- successor & predecessor point updates
+- finger table update, so that old node details are removed
+
 ---
 
 Sources:
