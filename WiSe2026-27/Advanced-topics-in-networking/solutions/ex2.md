@@ -132,6 +132,25 @@ This is also technically possible to achieve in an unstructured P2P system, but 
 requires storing the information of every node in every other node, basically every
 system would have to know what every other system has stored.
 
+## Q 3.1
+
+For a GUID range of 0-99, a total of 10 fingers would be needed, as we would only
+need to store `log(n)` of them.
+
+The equation: `successor(n + 2^(i-1))` provides the location of the ith finger.
+
+| i | start | successor |
+|---|-------|-----------|
+| 1 | 83    | 86        |
+| 2 | 84    | 86        |
+| 3 | 86    | 86        |
+| 4 | 90    | 1         |
+| 5 | 98    | 1         |
+| 6 | 14    | 32        |
+| 7 | 46    | 67        |
+
+The responsibility area of node 82 is everything from 72 to 82.
+
 ---
 
 Sources:
