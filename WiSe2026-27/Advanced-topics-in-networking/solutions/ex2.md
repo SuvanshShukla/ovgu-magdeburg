@@ -80,6 +80,20 @@ they cover exponentially increasing distances.
 To reduce the complexity down to O(1) you would need a central index to
 keep track of which nodes carry which keys.
 
+## Q 2.11
+
+Plain DHTs do not support _wildcard_ queries because they do not have a central
+location or node where all the other node's information is stored, so ultimately
+every request must be forwarded to multiple nodes to get a response.
+
+It is possible to achieve this in a central P2P system by storing what information
+is available at every node in a central _index_. This allows every node to just
+send a single request to the _index_ to get all possible matches.
+
+This is also technically possible to achieve in an unstructured P2P system, but it
+requires storing the information of every node in every other node, basically every
+system would have to know what every other system has stored.
+
 ---
 
 Sources:
