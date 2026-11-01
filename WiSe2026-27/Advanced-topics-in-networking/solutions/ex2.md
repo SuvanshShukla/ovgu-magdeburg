@@ -82,6 +82,18 @@ they cover exponentially increasing distances.
 To reduce the complexity down to O(1) you would need a central index to
 keep track of which nodes carry which keys.
 
+## Q 2.9
+
+The method `put(key, value)` takes two inputs, a key and a value. The `key`
+is an identifier of where to put the value and `value` is the literal information
+that needs to be stored.
+
+The method `value_get(key)` takes only one input. The `key` specifies where to
+look for and retrieve the value stored at the key's location.
+
+The common function used by both the methods is `hash()`. This function returns
+the hashed value to tell the which space of the DHT corresponds to the given key.
+
 ## Q 2.10
 
 Advantages of a meshed DHT include:
