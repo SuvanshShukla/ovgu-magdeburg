@@ -153,11 +153,11 @@ The responsibility area of node 82 is everything from 72 to 82.
 
 ## Q 3.2
 
-Since node 82 is searching for key 7, we start at node 82.  
-We check through the fingers of node 82, which are: 86, 1, 32 and 67.  
-Since 7 is closest to 1, we forward the request or travel to node 1.  
-At node 1 we again check the finger table, which tells us that 7 falls  
-at node 8, so we go to node 8. This concludes our hops, and the total  
+Since node 82 is searching for key 7, we start at node 82.
+We check through the fingers of node 82, which are: 86, 1, 32 and 67.
+Since 7 is closest to 1, we forward the request or travel to node 1.
+At node 1 we again check the finger table, which tells us that 7 falls
+at node 8, so we go to node 8. This concludes our hops, and the total
 count stands at 2.  
 
 ## Q 3.3
