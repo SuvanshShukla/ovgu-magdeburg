@@ -82,6 +82,16 @@ they cover exponentially increasing distances.
 To reduce the complexity down to O(1) you would need a central index to
 keep track of which nodes carry which keys.
 
+## Q 2.8
+
+An identifier such as `NodeID` may be created in a structured overlay network
+by including the location of data in intermediate systems in the same address
+space.
+
+Arbitrary `NodeID` creation would require requests to flood the network to
+reach the relevant node. This would create a vulnerability to allow malicious
+actors to perform DDoS attacks.
+
 ## Q 2.9
 
 The method `put(key, value)` takes two inputs, a key and a value. The `key`
