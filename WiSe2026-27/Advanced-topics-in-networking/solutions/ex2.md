@@ -137,7 +137,7 @@ system would have to know what every other system has stored.
 For a GUID range of 0-99, a total of 10 fingers would be needed, as we would only
 need to store `log(n)` of them.
 
-The equation: `successor(n + 2^(i-1))` provides the location of the ith finger.
+The equation: `successor(n + 2^(i-1))` provides the location of the i-th finger.
 
 | i | start | successor |
 |---|-------|-----------|
