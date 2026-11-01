@@ -168,6 +168,12 @@ In order, for _chord_ to handle a departure of a node, it needs to do the follow
 - successor & predecessor point updates
 - finger table update, so that old node details are removed
 
+## Q 3.4
+
+If a calculation scheme using the power of 3 were to be considered in place of 2
+it would reduce the number of finger tables required, as well as fewer worst-case
+scenario hops.
+
 ---
 
 Sources:
