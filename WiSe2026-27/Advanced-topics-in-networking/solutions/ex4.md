@@ -33,11 +33,11 @@ the total available bandwidth of the LAN.
 
 Total traffic rate = object size X requests per second
 
-traffic rate = 100Kbits X 20 = 2000 kbits per second = 2MPBS
+traffic rate = 100 Kbits X 20 = 2000 kbits per second = 2MPBS
 
 Net Util over LAN = traffic rate / LAN bandwidth X 100
 
-Net Util over LAN = 2Mbps / 10 Mbps X 100 = 0.2 X 100 = 20%
+Net Util over LAN = 2 Mbps / 10 Mbps X 100 = 0.2 X 100 = 20%
 
 Net Util over Access-link = traffic rate / Access-link bandwidth X 100
 
