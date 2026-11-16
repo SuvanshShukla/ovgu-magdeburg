@@ -66,3 +66,21 @@ Now, a cache is installed and it has a 60% hit rate, meaning it misses 40% of re
 This means that the number of requests reaching origin servers = No. of requests/sec X miss rate
 
 No. of requests reaching origin servers = 20 requests/sec X 40% = 20 X 0.4 = 8 requests/sec.
+
+To calculate the new network utilization on the Access-link after adding a cache server, we
+would only need to account for the traffic brought on by the missed requests.
+
+New traffic rate = 100 Kbits X 8 = 800 Kbps or 0.8 Mbps
+
+New Net Util of Access-link = traffic rate / Access-link bandwidth X 100
+
+New Net Util of Access-link = 0.8 Mbps / 1.5 Mbps X 100 = 0.5333 X 100 = 53.33%
+
+Now to consider the weighted average delay in downloading objects requires the use of both
+cache hits and misses.
+
+Average download delay = cache hit rate X delay in hit + cache miss rate X delay in miss
+
+Average download delay = 60% X 10 millisecond + 40% X 2 seconds
+
+Average download delay = 0.6 X 0.01 + 0.4 X 2 = 0.806 seconds
