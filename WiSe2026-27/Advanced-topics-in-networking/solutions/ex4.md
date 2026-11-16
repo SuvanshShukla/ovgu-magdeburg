@@ -93,3 +93,9 @@ The following problems can be solved by CDNs:
 2. Reduce origin server load by caching content
 3. Improves availability allowing more nearby requests to be handled
 4. Provides protection against DDoS attacks
+
+CDNs use the following mechanisms to direct users to content:
+
+1. DNS based redirection to direct requests to nearest server
+2. Anycast routing (BGP): multiple edge servers share IP, and routers forward traffic to server that can be reached with fewest hops
+3. Application-layer routing (URL re-write & HTTP redirects): send links to content instead of the entire content, reducing load
