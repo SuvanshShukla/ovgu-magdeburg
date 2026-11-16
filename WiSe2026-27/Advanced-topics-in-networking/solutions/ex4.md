@@ -27,3 +27,5 @@ Solution file is: ![SVG diagram](./ex4-q1-kademlia-dht-solve.svg)
 |Maintain persistent connections to avoid TCP setup delay (handshake, slow start)|       |
 
 ## Q 3
+
+
