@@ -84,3 +84,12 @@ Average download delay = cache hit rate X delay in hit + cache miss rate X delay
 Average download delay = 60% X 10 millisecond + 40% X 2 seconds
 
 Average download delay = 0.6 X 0.01 + 0.4 X 2 = 0.806 seconds
+
+## Q 4
+
+The following problems can be solved by CDNs:
+
+1. Reduce latency in request and response
+2. Reduce origin server load by caching content
+3. Improves availability allowing more nearby requests to be handled
+4. Provides protection against DDoS attacks
