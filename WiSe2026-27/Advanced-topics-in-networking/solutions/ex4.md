@@ -28,4 +28,17 @@ Solution file is: ![SVG diagram](./ex4-q1-kademlia-dht-solve.svg)
 
 ## Q 3
 
+Network utilization on the LAN depends on the amount of bandwidth consumed by requests divided by
+the total available bandwidth of the LAN.
 
+Total traffic rate = object size X requests per second
+
+traffic rate = 100Kbits X 20 = 2000 kbits per second = 2MPBS
+
+Net Util over LAN = traffic rate / LAN bandwidth X 100
+
+Net Util over LAN = 2Mbps / 10 Mbps X 100 = 0.2 X 100 = 20%
+
+Net Util over Access-link = traffic rate / Access-link bandwidth X 100
+
+Net Util over Access-link = 2 Mbps / 1.5 Mbps = 1.33 X 100 = 133.33%
