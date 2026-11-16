@@ -42,3 +42,21 @@ Net Util over LAN = 2Mbps / 10 Mbps X 100 = 0.2 X 100 = 20%
 Net Util over Access-link = traffic rate / Access-link bandwidth X 100
 
 Net Util over Access-link = 2 Mbps / 1.5 Mbps = 1.33 X 100 = 133.33%
+
+Increasing the bandwidth of the Access-link can lead to the following disadvantages:
+
+1. Requires upgrading network infrastructure
+2. Upgrades like this can be costly
+3. There may have been other ways to reduce traffic, like proxy caching popular content
+
+Net Util of LAN (after upgrade) = traffic rate / LAN bandwidth X 100
+
+Net Util of LAN (after upgrade) = 2 Mbps / 10 Mbps X 100 = 0.2 X 100 = 20%
+
+The network utilization of LAN even after upgrade remains unchanged.
+
+Net Util of Access-link (after upgrade) = traffic rate / Access-link bandwidth X 100
+
+Net Util of Access-link (after upgrade) = 2 Mbps / 10 X 100 = 0.2 X 100 = 20%
+
+The network utilization of the Access-link has reduced significantly, and is no longer overloaded.
