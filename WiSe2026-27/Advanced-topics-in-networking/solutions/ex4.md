@@ -99,3 +99,30 @@ CDNs use the following mechanisms to direct users to content:
 1. DNS based redirection to direct requests to nearest server
 2. Anycast routing (BGP): multiple edge servers share IP, and routers forward traffic to server that can be reached with fewest hops
 3. Application-layer routing (URL re-write & HTTP redirects): send links to content instead of the entire content, reducing load
+
+This is the response received from `cdn.cnn.com` as captured from wireshark:
+
+```text
+Answers
+    cdn.cnn.com: type CNAME, class IN, cname ion-ma.turner.com.edgekey.net
+        Name: cdn.cnn.com
+        Type: CNAME (5) (Canonical NAME for an alias)
+        Class: IN (0x0001)
+        Time to live: 120 (2 minutes)
+        Data length: 31
+        CNAME: ion-ma.turner.com.edgekey.net
+    ion-ma.turner.com.edgekey.net: type CNAME, class IN, cname e12596.dscj.akamaiedge.net
+        Name: ion-ma.turner.com.edgekey.net
+        Type: CNAME (5) (Canonical NAME for an alias)
+        Class: IN (0x0001)
+        Time to live: 120 (2 minutes)
+        Data length: 25
+        CNAME: e12596.dscj.akamaiedge.net
+    e12596.dscj.akamaiedge.net: type A, class IN, addr 104.86.63.51
+        Name: e12596.dscj.akamaiedge.net
+        Type: A (1) (Host Address)
+        Class: IN (0x0001)
+        Time to live: 20 (20 seconds)
+        Data length: 4
+        Address: 104.86.63.51
+```
