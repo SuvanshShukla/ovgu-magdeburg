@@ -60,3 +60,9 @@ Net Util of Access-link (after upgrade) = traffic rate / Access-link bandwidth X
 Net Util of Access-link (after upgrade) = 2 Mbps / 10 X 100 = 0.2 X 100 = 20%
 
 The network utilization of the Access-link has reduced significantly, and is no longer overloaded.
+
+Now, a cache is installed and it has a 60% hit rate, meaning it misses 40% of requests.
+
+This means that the number of requests reaching origin servers = No. of requests/sec X miss rate
+
+No. of requests reaching origin servers = 20 requests/sec X 40% = 20 X 0.4 = 8 requests/sec.
