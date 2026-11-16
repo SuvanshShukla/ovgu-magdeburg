@@ -15,16 +15,16 @@ Solution file is: ![SVG diagram](./ex4-q1-kademlia-dht-solve.svg)
 
 ## Q 2
 
-| Action                                                                         | types |
-|--------------------------------------------------------------------------------|-------|
-|Reactively replicates popular content                                           |       |
-|Reduces origin server costs                                                     |       |
-|Reduces client ISP costs                                                        |       |
-|Intelligent load balancing between origin servers                               |       |
-|Offload form submissions (POSTs) and user auth                                  |       |
-|Content reassembly or transcoding on behalf of origin                           |       |
-|Smaller round-trip times to clients                                             |       |
-|Maintain persistent connections to avoid TCP setup delay (handshake, slow start)|       |
+| Action                                                                         | types        |
+|--------------------------------------------------------------------------------|--------------|
+|Reactively replicates popular content                                           |    Both      |
+|Reduces origin server costs                                                     |    Reverse   |
+|Reduces client ISP costs                                                        |    Forward   |
+|Intelligent load balancing between origin servers                               |    Reverse   |
+|Offload form submissions (POSTs) and user auth                                  |    Reverse   |
+|Content reassembly or transcoding on behalf of origin                           |    Both      |
+|Smaller round-trip times to clients                                             |    Both      |
+|Maintain persistent connections to avoid TCP setup delay (handshake, slow start)|    Both      |
 
 ## Q 3
 
